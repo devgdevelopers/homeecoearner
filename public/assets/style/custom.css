@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-banner {
+  background-image: url("/assets/images/banner.jpg");
+  z-index: 1px;
+}
+.text-dark {
+  color: #022201;
+}
+.link-div-head ul li {
+  color: #022201;
+  font-weight: 600;
+}
+.product-sec-bg {
+  background-color: #b8edc5;
+}
