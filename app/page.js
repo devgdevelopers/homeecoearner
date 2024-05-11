@@ -1,16 +1,20 @@
+"use client";
 import Image from "next/image";
+import EmailIcon from "@mui/icons-material/Email";
+import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between absolute top-0 left-0 w-full">
+    <main className="flex min-h-screen flex-col items-center justify-between relative top-0 left-0 w-full">
       {/* banner section  */}
-      <section className="main-banner w-full h-[50vh] lg:h-screen  flex flex-col justify-end">
-        <div className="mx-auto pb-20 ">
-          <p className="text-white text-2xl font-semibold">
+      <section className="main-banner w-full h-[50vh] lg:h-screen  flex flex-col justify-end relative ">
+        <div className="mx-auto absolute bottom-5 px-auto banner-text-div">
+          <p className="text-2xl font-semibold text-center text-dark lg:text-white">
             Ready to get your electricity costs under control and give your self
             the chance to transform your costs into income?
           </p>
-          <p className="text-white text-center text-xl font-semibold">
+          <p className=" text-center md:text-xl text-sm font-semibold">
             Join us today!
           </p>
         </div>
@@ -211,18 +215,65 @@ export default function Home() {
               <strong>Ultimate Package</strong> - Solar + Battery + Wind + Power
               Booster
             </h1>
-            <div className="text-white  p-5">
+            <div className="text-white p-5">
               <p>• Everything in Hybrid plus </p>
               <p>
-                • Power Booster - enables you to generate excess electricity *
+                • Power Booster - enables you to generate excess electricity *{" "}
               </p>
               <p>• Gives you priority access to our new technology </p>
               <p>• No up front cost </p>
-              <p>
-                • Cost-free upgrade for Basic , Premium and Hybrid Packages
-              </p>
+              <p>• Cost-free upgrade for Basic , Premium and Hybrid Packages</p>
               <p>• Convert a cost cost into an income </p>
               <p>• Potential to earn a meaningful regular income </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* contact form section  */}
+      <section className="contact-form-section py-10">
+        <div className="container mx-auto grid grid-cols-2 gap-10">
+          <div className=" w-[100%] lg:w-[70%] mx-auto flex flex-col gap-5">
+            <h1 className="text-3xl text-green font-semibold">Contact Us</h1>
+            <p className="text-dark">
+              Feel free to contact us anytime, we will get back to you as soon
+              as we can !
+            </p>
+            <form action="" className="form-div-contact flex flex-col gap-5 ">
+              <div className="flex flex-col">
+                <label htmlFor="Name">Name</label>
+                <input type="text" id="Name" className="border-1" />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="Email">Email</label>
+                <input type="email" id="Email" />
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="Message">Message</label>
+                <input type="text" id="Message" />
+              </div>
+              <div>
+                <button className="bg-green text-white p-3" type="submit">Send a Message</button>
+              </div>
+            </form>
+          </div>
+          <div className="bg-dark text-[#b3ebc7] flex flex-col gap-5 py-10 px-5  rounded-3xl w-[100%] lg:w-[70%]">
+            <h1 className="text-3xl text-white font-semibold mb-3">
+              Info
+            </h1>
+            <div className="flex flex-col gap-5 justify-center ">
+
+              <span className="text-lg">
+                <EmailIcon className="text-3xl"/> info@homecoearner.com
+              </span>
+              <span className="text-lg" >
+                <PhoneInTalkIcon className="text-3xl" />
+                +020 3286 5350
+              </span>
+
+              <span className="text-lg" >
+                <LocationOnIcon className="text-3xl" /> 2 Brunel Place, Slough, SL1 1FQ, UK
+              </span>
             </div>
           </div>
         </div>

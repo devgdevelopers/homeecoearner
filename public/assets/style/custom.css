@@ -17,11 +17,14 @@
 .bg-green {
   background-color: #0a890d;
 }
+.bg-green-light{
+  background-color: #b5eec2ba;
+} 
 .text-green {
   color: #15a135;
 }
 
-.bg-dark{
+.bg-dark {
   background-color: #002101;
 }
 .link-div-head ul li {
@@ -65,7 +68,7 @@
   background: linear-gradient(#b5eec2ba, #b5eec2ba);
   background-repeat: no-repeat;
   background-position: center;
-  
+
   height: auto;
   z-index: 2;
   border: 10px solid #0a890d;
@@ -76,13 +79,56 @@
   z-index: 1;
 }
 
-.customer-pack-section{
+.customer-pack-section {
   background-repeat: no-repeat;
   background-position: bottom;
   width: 100% !important;
   height: auto;
   background-color: #0a890d;
-  background: linear-gradient(#b5eec2ba, #b5eec2ba),
-    url(/assets/images/grey-dots.jpg);
- 
+  background: linear-gradient(#0a890d1f, #0a890d4a);
+}
+
+.contact-form-section {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100% !important;
+  height: auto;
+  background-color: #0a890d;
+  background: linear-gradient(#a8e5c494, #0a890d36), url(/assets/images/grey-dots.jpg);
+}
+
+ul.z-30.px-6.fixed.flex.max-w-full.top-\[var\(--navbar-height\)\].inset-x-0.bottom-0.w-screen.flex-col.gap-2.overflow-y-auto.backdrop-blur-xl.backdrop-saturate-150.pt-36.h-screen.bg-white {
+  width: 100%;
+  padding-left: 20px;
+}
+.banner-text-div {
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.footer-section {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100% !important;
+  height: auto;
+  background-color: #0a890d;
+  background: linear-gradient(#6ad38fb3, #6ad38f42), url(/assets/images/flowersbg.jpg);
+  z-index: 1;
+  background-size: cover;
+}
+
+.form-div-contact{
+
+  
+}
+.form-div-contact input{
+border-bottom: 1px solid #002101;
+outline: none;
+width: 70%;
+background-color: inherit;
+
+}
+.form-div-contact label{
+  color:  #0a890d;
 }

@@ -18,27 +18,27 @@ import Image from "next/image";
 export default function page() {
   const menuItems = [
     {
-      page: "Home",
-      link: "/",
-    },
-    {
       page: "Products",
       link: "/products",
+    },
+    {
+      page: "Packages",
+      link: "/packages",
     },
     {
       page: "Services",
       link: "/services",
     },
     {
-      page: "About",
-      link: "/about",
-    },
-    {
       page: "News",
       link: "/news",
     },
     {
-      page: "Contact",
+      page: "FAQs",
+      link: "/faqs",
+    },
+    {
+      page: "Contact Us",
       link: "/contact-us",
     },
   ];
@@ -64,7 +64,7 @@ export default function page() {
 
           <NavbarContent className="flex gap-5 justify-center link-div-head">
             <NavbarItem>
-              <Link href="/" className="font-bold">
+              <Link href="/products" className="font-bold">
                 Products
               </Link>
             </NavbarItem>
@@ -116,7 +116,7 @@ export default function page() {
           <NavbarContent className="">
             <NavbarBrand>
               <Image
-                className=" w-[200px] h-[auto]"
+                className=" w-[150px] h-[auto]"
                 src="/assets/images/logo.png"
                 width={100}
                 height={100}
