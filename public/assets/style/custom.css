@@ -10,10 +10,79 @@
 .text-dark {
   color: #022201;
 }
+.border-green {
+  border: 2px solid #15a135;
+  border-left: 20px solid #15a135;
+}
+.bg-green {
+  background-color: #0a890d;
+}
+.text-green {
+  color: #15a135;
+}
+
+.bg-dark{
+  background-color: #002101;
+}
 .link-div-head ul li {
   color: #022201;
   font-weight: 600;
 }
 .product-sec-bg {
   background-color: #b8edc5;
+}
+
+.joinform-section {
+  /* background-image: url('/assets/images/form-bg.jpg'); */
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100% !important;
+  height: 50vh;
+  background-color: #0a890d;
+  /* background-blend-mode: color-burn; */
+  background: /* top, transparent red */ linear-gradient(#0a890d1f, #0a890d4a),
+    /* bottom, image */ url(/assets/images/form-bg.jpg);
+}
+.join-form-innerdiv {
+  background-color: #ffffff75;
+  padding: 40px;
+  border: 3px solid white !important;
+}
+
+.signup-step-section {
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100% !important;
+  height: auto;
+  background-color: #0a890d;
+  background: linear-gradient(#b5eec2ba, #b5eec2ba),
+    url(/assets/images/grey-dots.jpg);
+  z-index: 1;
+  background-size: cover;
+}
+
+.solar-house-div {
+  background: linear-gradient(#b5eec2ba, #b5eec2ba);
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  height: auto;
+  z-index: 2;
+  border: 10px solid #0a890d;
+  border-radius: 25px;
+}
+
+.solar-house-img {
+  z-index: 1;
+}
+
+.customer-pack-section{
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 100% !important;
+  height: auto;
+  background-color: #0a890d;
+  background: linear-gradient(#b5eec2ba, #b5eec2ba),
+    url(/assets/images/grey-dots.jpg);
+ 
 }
