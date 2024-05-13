@@ -1,12 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  /* font-family: "Lato", sans-serif; */
 }
 .main-banner {
   background-image: url("/assets/images/banner.jpg");
   z-index: 1px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
+
+
+
 .text-dark {
   color: #022201;
 }
@@ -27,7 +35,11 @@
 .bg-dark {
   background-color: #002101;
 }
-.link-div-head ul li {
+.link-div-head li a {
+  color: #022201;
+  font-weight: 600;
+}
+.link-div-head-bg li a {
   color: #022201;
   font-weight: 600;
 }
@@ -46,9 +58,10 @@
   background: /* top, transparent red */ linear-gradient(#0a890d1f, #0a890d4a),
     /* bottom, image */ url(/assets/images/form-bg.jpg);
 }
+
 .join-form-innerdiv {
   background-color: #ffffff75;
-  padding: 40px;
+  padding: 40px 20px;
   border: 3px solid white !important;
 }
 
@@ -102,7 +115,7 @@ ul.z-30.px-6.fixed.flex.max-w-full.top-\[var\(--navbar-height\)\].inset-x-0.bott
   padding-left: 20px;
 }
 .banner-text-div {
-  bottom: 30px;
+   bottom: 50px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -118,17 +131,55 @@ ul.z-30.px-6.fixed.flex.max-w-full.top-\[var\(--navbar-height\)\].inset-x-0.bott
   background-size: cover;
 }
 
-.form-div-contact{
 
-  
-}
 .form-div-contact input{
 border-bottom: 1px solid #002101;
 outline: none;
-width: 70%;
+width: 80%;
 background-color: inherit;
 
 }
 .form-div-contact label{
   color:  #0a890d;
+}
+
+@media screen and (max-width: 1023px) {
+  .main-banner {
+   
+    background-position:  left center;
+  }
+  .form-div-contact input{
+    
+    width: 100%;
+    
+    
+    }
+}
+
+
+.data-\[justify\=start\]\:justify-start[data-justify=start] {
+  justify-content: flex-end;
+}
+header.z-40.flex.px-6.gap-4.w-full.flex-row.relative.flex-nowrap.items-center.justify-between.h-\[var\(--navbar-height\)\].max-w-\[1024px\] {
+  max-width: 100%;
+}
+nav.z-40.h-auto.items-center.justify-center.data-\[menu-open\=true\]\:border-none.sticky.top-0.inset-x-0.backdrop-blur-lg.data-\[menu-open\=true\]\:backdrop-blur-xl.backdrop-saturate-150.hidden.w-full.mx-auto.md\:flex.py-3.bg-transparent.main-nav {
+  background: none;
+  filter: none;
+  backdrop-filter: none;
+}
+
+ul.h-full.flex-nowrap.items-center.data-\[justify\=start\]\:justify-start.data-\[justify\=start\]\:flex-grow.data-\[justify\=start\]\:basis-0.data-\[justify\=center\]\:justify-center.data-\[justify\=end\]\:justify-end.data-\[justify\=end\]\:flex-grow.data-\[justify\=end\]\:basis-0.flex.flex-col.gap-5 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 9px;
+}
+
+ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-start.data-\[justify\=start\]\:flex-grow.data-\[justify\=start\]\:basis-0.data-\[justify\=center\]\:justify-center.data-\[justify\=end\]\:justify-end.data-\[justify\=end\]\:flex-grow.data-\[justify\=end\]\:basis-0.flex.gap-5.justify-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 10px;
 }
