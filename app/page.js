@@ -11,8 +11,7 @@ export default function Home() {
       <section className="main-banner w-full h-[50vh] lg:h-screen  flex flex-col justify-end relative ">
         <div className=" absolute top-[50%] md:top-[auto] bottom-4 px-auto banner-text-div w-full text-none lg:text-white">
           <p className="text-2xl font-semibold text-center  ">
-            Ready to get your electricity costs under control and give your self
-            the chance to transform your costs into income?
+            Ready to get your electricity costs under control and give your self the chance to transform your costs into income?
           </p>
           <p className=" text-center text-xl font-semibold">Join us today!</p>
         </div>
@@ -79,7 +78,7 @@ export default function Home() {
                 <button className="bg-green w-full text-white p-3 rounded-3xl font-semibold">
                   Join Waiting List
                 </button>
-                <span className="text-green text-center text-sm block mt-3
+                <span className="text-dark   text-center text-sm block mt-3
                 ">
                   Privacy Policy : We promise to keep your data safe.
                 </span>
@@ -99,13 +98,13 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-center">
             <div className="w-[100%] md:w-[60%] flex justify-center ">
               <div className="flex flex-col gap-5 justify-center">
-                <div className="flex gap-5 ">
+                <div className="flex">
                   <Image
                     src="/assets/images/step1.jpg"
                     width={100}
                     height={100}
                     alt="step1"
-                    className="w-[70px] h-[70px]"
+                    className="w-[70px] h-[70px] p-2"
                   ></Image>
                   <ul className="text-sm md:text-xl text-dark font-medium flex  flex-col gap-1">
                     <li>• Get Your electricity costs under control</li>
@@ -114,13 +113,13 @@ export default function Home() {
                     <li>• No more electricity price hikes </li>
                   </ul>
                 </div>
-                <div className="flex gap-5">
+                <div className="flex">
                   <Image
                     src="/assets/images/step2.jpg"
                     width={100}
                     height={100}
                     alt="step2"
-                    className="w-[70px] h-[70px] bg-inherit"
+                    className="w-[70px] h-[70px] bg-inherit p-2"
                   ></Image>
                   <ul className="text-sm md:text-xl text-dark font-medium flex  flex-col gap-1">
                     <li>
@@ -177,8 +176,8 @@ export default function Home() {
         </h1>
         <div className=" mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
           <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
-            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-xl">
-              <strong>Basic Package</strong> - Solar
+            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
+              <strong>Basic Package</strong> <span className="text-base">- Solar</span>
             </h1>
             <div className="text-white p-5">
               <p> • 2.7kW PV solar panels + inverter + controller</p>
@@ -188,8 +187,8 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
-            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-xl">
-              <strong>Premium Package</strong> - Power System - Solar + Battery
+            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
+              <strong>Premium Package</strong> <span className="text-base">- Power System - Solar + Battery</span>
             </h1>
             <div className="text-white p-5">
               <p> • 2.7kW PV solar panels + inverter + controller</p>
@@ -201,8 +200,8 @@ export default function Home() {
         </div>
         <div className="mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
           <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
-            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-xl">
-              <strong>Hybrid Package </strong> - Solar + Battery + Wind
+            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
+              <strong>Hybrid Package </strong> <span className="text-base">- Solar + Battery + Wind</span>
             </h1>
             <div className="text-white p-5">
               <p>• Everything in Premium plus </p>
@@ -212,9 +211,9 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
-            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-xl">
-              <strong>Ultimate Package</strong> - Solar + Battery + Wind + Power
-              Booster
+            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
+              <strong>Ultimate Package</strong> <span className="text-base">- Solar + Battery + Wind + Power
+              Booster</span>
             </h1>
             <div className="text-white p-5">
               <p>• Everything in Hybrid plus </p>
@@ -232,9 +231,9 @@ export default function Home() {
       </section>
 
       {/* contact form section  */}
-      <section className="contact-form-section py-10 md:p-10">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className=" w-[90%] lg:w-[70%] mx-auto flex flex-col gap-5">
+      <section className="contact-form-section py-10 md:p-10 mx-auto">
+        <div className="w-[80%] mx-auto flex md:flex-row flex-col md:justify-start justify-center gap-5">
+          <div className="w-[90%] md:w-[50%] mx-auto flex flex-col gap-5 justify-center m-auto">
             <h1 className="text-3xl text-dark font-semibold">Contact Us</h1>
             <p className="text-dark">
               Feel free to contact us anytime, we will get back to you as soon
@@ -260,7 +259,8 @@ export default function Home() {
               </div>
             </form>
           </div>
-          <div className="bg-dark text-[#b3ebc7] flex flex-col gap-5 py-10 px-5  rounded-3xl w-[90%] lg:w-[70%] mx-auto">
+          <div className=" w-[100%] md:w-[40%] flex md:justify-start items-center justify-center mt-5 md:mt-0">
+          <div className=" bg-dark text-[#b3ebc7] flex flex-col ml-0 gap-5 py-10 px-5  rounded-3xl ml">
             <h1 className="text-3xl text-white font-semibold mb-3">Info</h1>
             <div className="flex flex-col gap-5 justify-center ">
               <span className="text-lg">
@@ -277,6 +277,8 @@ export default function Home() {
               </span>
             </div>
           </div>
+          </div>
+    
         </div>
       </section>
     </main>

@@ -160,9 +160,7 @@ background-color: inherit;
 .data-\[justify\=start\]\:justify-start[data-justify=start] {
   justify-content: flex-end;
 }
-header.z-40.flex.px-6.gap-4.w-full.flex-row.relative.flex-nowrap.items-center.justify-between.h-\[var\(--navbar-height\)\].max-w-\[1024px\] {
-  max-width: 100%;
-}
+
 nav.z-40.h-auto.items-center.justify-center.data-\[menu-open\=true\]\:border-none.sticky.top-0.inset-x-0.backdrop-blur-lg.data-\[menu-open\=true\]\:backdrop-blur-xl.backdrop-saturate-150.hidden.w-full.mx-auto.md\:flex.py-3.bg-transparent.main-nav {
   background: none;
   filter: none;
@@ -182,4 +180,15 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
   justify-content: start;
   align-items: flex-start;
   gap: 10px;
+}
+
+.team-member-img{
+  border: 10px solid #c4ffc5;
+}
+
+
+@media screen and (min-width:1250px){
+  header.z-40.flex.px-6.gap-4.w-full.flex-row.relative.flex-nowrap.items-center.justify-between.h-\[var\(--navbar-height\)\].max-w-\[1024px\] {
+    max-width: 80%;
+  }
 }

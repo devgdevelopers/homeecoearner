@@ -20,6 +20,10 @@ export default function Page() {
 
   const menuItems = [
     {
+      page: "About",
+      link: "/about",
+    },
+    {
       page: "Products",
       link: "/products",
     },
@@ -45,8 +49,6 @@ export default function Page() {
     },
   ];
 
-
-
   return (
     <>
       <header className="fixed top-0 left-0 z-50 w-full">
@@ -67,6 +69,11 @@ export default function Page() {
           </NavbarContent>
 
           <NavbarContent className="flex gap-5 justify-center  link-div-head">
+            <NavbarItem>
+              <Link href="/about" className="font-bold text-dark">
+                About
+              </Link>
+            </NavbarItem>
             <NavbarItem>
               <Link href="/products" className="font-bold">
                 Products
@@ -99,19 +106,19 @@ export default function Page() {
             </NavbarItem>
           </NavbarContent>
 
-          <NavbarContent className="hidden xl:flex gap-5 justify-end">
+          <NavbarContent className="hidden xl:flex gap-2 justify-end">
             <Link
               href="mailto:enquiry@organicco.uk"
-              className=" bg-[#022201] text-white p-1 rounded-3xl"
+              className=" text-sm bg-[#022201]  font-bold rounded-3xl text-[#022201]"
             >
-              <EmailIcon className="" />
+              <EmailIcon className="text-white bg-[#022201] rounded-3xl text-3xl w-auto  p-[3px] m-[2px]" />
             </Link>
             <Link
               href="tel:+44 (0)20 8133 3129"
-              className="text-sm bg-white p-1 font-bold rounded-3xl text-[#022201]"
+              className="text-sm bg-white p-[3px] font-bold rounded-3xl text-[#022201] pr-4 "
             >
-              <PhoneIcon className="text-white bg-[#022201] rounded-3xl p-1 text-xl" />{" "}
-              +44 (0)20 8133 3129
+              <PhoneIcon className="text-white bg-[#022201] rounded-3xl text-3xl w-auto mx-1 p-[3px]" />{" "}
+              +44 (0)20 3286 5350
             </Link>
           </NavbarContent>
         </Navbar>
@@ -119,16 +126,16 @@ export default function Page() {
         <Navbar className="sticky md:hidden py-4 flex bg-white justify-end z-[1000] ">
           {/* Mobile Navbar */}
           <NavbarBrand>
-          <Link href="/">
-                <Image
-                  className=" w-[200px] h-[auto]"
-                  src="/assets/images/logo.png"
-                  width={100}
-                  height={100}
-                  alt="logo"
-                  unoptimized
-                />
-                </Link>
+            <Link href="/">
+              <Image
+                className=" w-[200px] h-[auto]"
+                src="/assets/images/logo.png"
+                width={100}
+                height={100}
+                alt="logo"
+                unoptimized
+              />
+            </Link>
           </NavbarBrand>
 
           <NavbarContent>
@@ -141,13 +148,17 @@ export default function Page() {
           </NavbarContent>
 
           {menuOpen && (
-            <NavbarMenu className="pt-2 h-screen bg-white">
+            <NavbarMenu className="pt-8 h-screen bg-white">
               {menuItems.map((item, index) => (
                 <NavbarMenuItem
                   key={`${item}-${index}`}
                   className="link-div-head"
                 >
-                  <Link className="w-full text-dark font-semibold" href={item.link} size="lg">
+                  <Link
+                    className="w-full text-dark font-semibold"
+                    href={item.link}
+                    size="lg"
+                  >
                     {item.page}
                   </Link>
                 </NavbarMenuItem>
@@ -162,9 +173,9 @@ export default function Page() {
                 </Link>
                 <Link
                   href="tel:+44 020 3286 5350"
-                  className="bg-dark text-white  text-sm p-2 rounded-lg"
+                  className="bg-dark text-white  text-sm p-2 rounded-lg px-2"
                 >
-                  <PhoneIcon className="text-sm" /> +44 020 3286 5350
+                  <PhoneIcon className="text-sm " /> +44 020 3286 5350
                 </Link>
               </NavbarContent>
             </NavbarMenu>

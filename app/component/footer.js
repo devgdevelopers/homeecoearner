@@ -10,10 +10,10 @@ const footer = () => {
   return (
     <section className='w-full flex flex-col footer-section '>
     <div className='container mx-auto grid grid-cols-1 md:grid-cols-4 p-5 gap-5 py-10'>
-      <div className='flex flex-col gap-5'>
+      <div className='flex flex-col gap-3'>
       <Image src="/assets/images/logo.png" className='w-[250px]' width={100} height={100} alt='logo' unoptimized></Image>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus, asperiores?</p>
-      <div className='flex gap-2 text-lg'>
+      <div className='flex gap-2 text-lg justify-center w-[70%]'>
       <InstagramIcon />
       <FacebookIcon />
       <XIcon />
