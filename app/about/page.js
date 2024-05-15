@@ -31,7 +31,7 @@ const page = () => {
                 <p className="text-base text-dark font-bold text-center">
                   Co-Founder / Director
                 </p>
-                <p className="text-sm text-dark font-semibold text-justify">
+                <p className="text-sm text-dark text-justify">
                   Home EcoEarner Ltd, Secretary Association for Renewable Energy
                   and Clean Technology (REA), Head of Renewables, Prospect Law.
                   Former solicitor, 30 years’ experience advising companies
@@ -68,7 +68,7 @@ const page = () => {
                 <p className="text-base text-dark text-center font-bold">
                   Co-Founder / Business Development Director
                 </p>
-                <p className="text-sm text-dark font-semibold text-justify">
+                <p className="text-sm text-dark text-justify">
                   Home EcoEarner Ltd. 30 years’ experience establishing
                   businesses and arranging asset finance in the transport and
                   renewable energy sectors. Accounting, Tax, Corporate advisory,

@@ -13,8 +13,9 @@
   background-position: center center;
 }
 
-
-
+p{
+  font-size: 15px !important;
+}
 .text-dark {
   color: #022201;
 }
@@ -191,4 +192,31 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
   header.z-40.flex.px-6.gap-4.w-full.flex-row.relative.flex-nowrap.items-center.justify-between.h-\[var\(--navbar-height\)\].max-w-\[1024px\] {
     max-width: 80%;
   }
+}
+
+.accordion-title {
+  background-color: #f0f0f0; /* Change this to your desired background color */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.accordion-item {
+  border: none; /* Remove the border */
+  box-shadow: none; /* Remove any shadow if present */
+}
+.group.is-splitted .group-\[\.is-splitted\]\:shadow-medium {
+  --tw-shadow: none;
+  --tw-shadow-colored: none;
+  box-shadow: none !important;
+}
+
+.faq-banner-section{
+  background-color: #15a13685;
+}
+
+.accordion h2 button{
+padding: 0 !important;
+padding-top: 0 !important;
+padding-bottom: 0 !important;
+gap: 0 !important;
 }

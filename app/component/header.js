@@ -80,7 +80,7 @@ export default function Page() {
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/products" className="font-bold">
+              <Link href="/packages" className="font-bold">
                 Packages
               </Link>
             </NavbarItem>
@@ -90,12 +90,12 @@ export default function Page() {
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/about" className="font-bold">
+              <Link href="/news" className="font-bold">
                 News
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/news" className="font-bold">
+              <Link href="/faqs" className="font-bold">
                 FAQs
               </Link>
             </NavbarItem>

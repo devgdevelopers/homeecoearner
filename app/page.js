@@ -10,10 +10,11 @@ export default function Home() {
       {/* banner section  */}
       <section className="main-banner w-full h-[50vh] lg:h-screen  flex flex-col justify-end relative ">
         <div className=" absolute top-[50%] md:top-[auto] bottom-4 px-auto banner-text-div w-full text-none lg:text-white">
-          <p className="text-2xl font-semibold text-center  ">
-            Ready to get your electricity costs under control and give your self the chance to transform your costs into income?
-          </p>
-          <p className=" text-center text-xl font-semibold">Join us today!</p>
+          <h2 className="text-2xl font-semibold text-center  ">
+            Ready to get your electricity costs under control and give your self
+            the chance to transform your costs into income?
+          </h2>
+          <h3 className=" text-center text-xl font-semibold">Join us today!</h3>
         </div>
       </section>
 
@@ -78,8 +79,10 @@ export default function Home() {
                 <button className="bg-green w-full text-white p-3 rounded-3xl font-semibold">
                   Join Waiting List
                 </button>
-                <span className="text-dark   text-center text-sm block mt-3
-                ">
+                <span
+                  className="text-dark   text-center text-sm block mt-3
+                "
+                >
                   Privacy Policy : We promise to keep your data safe.
                 </span>
               </div>
@@ -177,7 +180,8 @@ export default function Home() {
         <div className=" mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
           <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
             <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
-              <strong>Basic Package</strong> <span className="text-base">- Solar</span>
+              <strong>Basic Package</strong>{" "}
+              <span className="text-base">- Solar</span>
             </h1>
             <div className="text-white p-5">
               <p> • 2.7kW PV solar panels + inverter + controller</p>
@@ -188,7 +192,10 @@ export default function Home() {
           </div>
           <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
             <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
-              <strong>Premium Package</strong> <span className="text-base">- Power System - Solar + Battery</span>
+              <strong>Premium Package</strong>{" "}
+              <span className="text-base">
+                - Power System - Solar + Battery
+              </span>
             </h1>
             <div className="text-white p-5">
               <p> • 2.7kW PV solar panels + inverter + controller</p>
@@ -201,7 +208,8 @@ export default function Home() {
         <div className="mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
           <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
             <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
-              <strong>Hybrid Package </strong> <span className="text-base">- Solar + Battery + Wind</span>
+              <strong>Hybrid Package </strong>{" "}
+              <span className="text-base">- Solar + Battery + Wind</span>
             </h1>
             <div className="text-white p-5">
               <p>• Everything in Premium plus </p>
@@ -212,8 +220,10 @@ export default function Home() {
           </div>
           <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
             <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
-              <strong>Ultimate Package</strong> <span className="text-base">- Solar + Battery + Wind + Power
-              Booster</span>
+              <strong>Ultimate Package</strong>{" "}
+              <span className="text-base">
+                - Solar + Battery + Wind + Power Booster
+              </span>
             </h1>
             <div className="text-white p-5">
               <p>• Everything in Hybrid plus </p>
@@ -260,25 +270,24 @@ export default function Home() {
             </form>
           </div>
           <div className=" w-[100%] md:w-[40%] flex md:justify-start items-center justify-center mt-5 md:mt-0">
-          <div className=" bg-dark text-[#b3ebc7] flex flex-col ml-0 gap-5 py-10 px-5  rounded-3xl ml">
-            <h1 className="text-3xl text-white font-semibold mb-3">Info</h1>
-            <div className="flex flex-col gap-5 justify-center ">
-              <span className="text-lg">
-                <EmailIcon className="text-3xl" /> info@homecoearner.com
-              </span>
-              <span className="text-lg">
-                <PhoneInTalkIcon className="text-3xl" />
-                +020 3286 5350
-              </span>
+            <div className=" bg-dark text-[#b3ebc7] flex flex-col ml-0 gap-5 py-10 px-5  rounded-3xl ml">
+              <h1 className="text-3xl text-white font-semibold mb-3">Info</h1>
+              <div className="flex flex-col gap-5 justify-center ">
+                <span className="text-lg">
+                  <EmailIcon className="text-3xl" /> info@homecoearner.com
+                </span>
+                <span className="text-lg">
+                  <PhoneInTalkIcon className="text-3xl" />
+                  +020 3286 5350
+                </span>
 
-              <span className="text-lg">
-                <LocationOnIcon className="text-3xl" /> 2 Brunel Place, Slough,
-                SL1 1FQ, UK
-              </span>
+                <span className="text-lg">
+                  <LocationOnIcon className="text-3xl" /> 2 Brunel Place,
+                  Slough, SL1 1FQ, UK
+                </span>
+              </div>
             </div>
           </div>
-          </div>
-    
         </div>
       </section>
     </main>
