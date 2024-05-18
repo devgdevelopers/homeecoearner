@@ -4,7 +4,7 @@ import Link from "next/link";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
-import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
+import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 
 const page = () => {
   return (
@@ -17,7 +17,7 @@ const page = () => {
           <div className="flex flex-col md:flex-row gap-10 w-[100%] md:w-[70%] mx-auto">
             <div className="w-[90%] md:w-[50%] flex flex-col justify-center mx-auto">
               <Image
-                src="/assets/images/rory-team1.png"
+                src="/assets/images/rory.png"
                 width={100}
                 height={100}
                 alt="team-member"
@@ -94,32 +94,73 @@ const page = () => {
           </div>
         </section>
 
-        <section className="container mx-auto my-20">
-          <div className="mx-auto">
+        <section className=" mx-auto py-5 md:20 bg-green-light">
+          <div className="mx-auto container">
             <h2 className="text-[20px] md:text-[30px] text-green font-semibold text-center mb-5 w-[100%] md:-[50%]">
               What Do We Do?
             </h2>
+
             <div className="flex md:flex-row flex-col justify-center gap-10 my-10">
-              <div className="w-[90%] md:w-[50%] flex flex-row justify-end mx-auto" >
+              <div className=" w-[100%] md:w-[50%] mx-auto">
                 <Image
-                className="w-[100%] md:w-[50%] team-member-img"
+                  className="w-[100%] md:w-[50%] team-member-img  mx-auto"
                   src="/assets/images/about-serve-img.jpg"
                   width={100}
                   height={100}
                   unoptimized
                 ></Image>
               </div>
-              <div className="w-[50%] p-5 flex flex-col justify-center ">
+              <div className="w-[50%] flex flex-col  mx-auto my-auto">
                 <h2 className="text-2xl text-dark font-semibold ">We serve:</h2>
-                <ul className="py-4">
-                  <li> <RadioButtonCheckedIcon className="text-sm text-green" /> Homeowners</li>
-                  <li> <RadioButtonCheckedIcon className="text-sm text-green" /> Tenants</li>
-                  <li><RadioButtonCheckedIcon className="text-sm text-green" /> Councils</li>
-                  <li><RadioButtonCheckedIcon className="text-sm text-green" /> Landlords</li>
-                  <li><RadioButtonCheckedIcon className="text-sm text-green" /> Social housing associations</li>
+                <ul className="py-4 ">
+                  <li>
+                    <RadioButtonCheckedIcon className="text-sm text-green" />
+                    Homeowners
+                  </li>
+                  <li>
+                    <RadioButtonCheckedIcon className="text-sm text-green" />
+                    Tenants
+                  </li>
+                  <li>
+                    <RadioButtonCheckedIcon className="text-sm text-green" />
+                    Councils
+                  </li>
+                  <li>
+                    <RadioButtonCheckedIcon className="text-sm text-green" />
+                    Landlords
+                  </li>
+                  <li>
+                    <RadioButtonCheckedIcon className="text-sm text-green" />
+                    Social housing associations
+                  </li>
                 </ul>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className="container mx-auto flex md:flex-row flex-col mb-10 p-3 gap-3">
+          <div className=" mx-auto my-auto pb-5">
+            <h2 className="text-[25px] font-semibold">So they can:</h2>
+            <p>While doing their bit to help the planet get to Net Zero.</p>
+            <p>Free themselves from electricity bills.</p>
+            <p>Generate their own electricity.</p>
+            <p>Free themselves from future electricity price increases.</p>
+            <p>
+              Potentially earn a meaningful income from their home electricity
+              generation.
+            </p>
+            <p>All with no up-front cost.</p>
+          </div>
+          <div className="md:mx-auto">
+            <Image
+              src="/assets/images/about-theycan-image.jpg"
+              width={100}
+              height={100}
+              alt="content image"
+              className="w-full  md:w-[300px] overflow-x-hidden mx-auto"
+              unoptimized
+            ></Image>
           </div>
         </section>
       </main>

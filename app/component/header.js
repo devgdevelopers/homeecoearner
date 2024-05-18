@@ -20,6 +20,10 @@ export default function Page() {
 
   const menuItems = [
     {
+      page: "Home",
+      link: "/",
+    },
+    {
       page: "About",
       link: "/about",
     },
@@ -53,7 +57,7 @@ export default function Page() {
     <>
       <header className="fixed top-0 left-0 z-50 w-full">
         <Navbar className="hidden w-full mx-auto md:flex py-3 bg-transparent main-nav">
-          <NavbarContent className="text-white  flex justify-start">
+          <NavbarContent className="text-white flex justify-start">
             <NavbarBrand className="flex justify-start">
               <Link href="/">
                 <Image
@@ -68,7 +72,12 @@ export default function Page() {
             </NavbarBrand>
           </NavbarContent>
 
-          <NavbarContent className="flex gap-5 justify-center  link-div-head">
+          <NavbarContent className="flex gap-5 justify-center link-div-head">
+            <NavbarItem>
+              <Link href="/" className="font-bold text-dark">
+                Home
+              </Link>
+            </NavbarItem>
             <NavbarItem>
               <Link href="/about" className="font-bold text-dark">
                 About
@@ -167,15 +176,15 @@ export default function Page() {
               <NavbarContent className="flex gap-5 justify-end">
                 <Link
                   href="mailto:enquiry@organicco.uk"
-                  className="bg-dark text-white  text-sm p-2 rounded-lg"
+                  className="bg-dark text-white text-sm p-2 rounded-lg"
                 >
-                  <EmailIcon className="text-sm" /> info@homeecoearner.com
+                  <EmailIcon className="text-sm" />info@homeecoearner.com
                 </Link>
                 <Link
                   href="tel:+44 020 3286 5350"
                   className="bg-dark text-white  text-sm p-2 rounded-lg px-2"
                 >
-                  <PhoneIcon className="text-sm " /> +44 020 3286 5350
+                  <PhoneIcon className="text-sm" />+44 020 3286 5350
                 </Link>
               </NavbarContent>
             </NavbarMenu>

@@ -20,6 +20,10 @@ const HeaderBg = () => {
 
   const menuItems = [
     {
+      page: "Home",
+      link: "/",
+    },
+    {
       page: "About",
       link: "/about",
     },
@@ -70,7 +74,14 @@ const HeaderBg = () => {
 
           <NavbarContent className="flex font-semibold gap-5 justify-center link-div-head-bg">
             <NavbarItem>
-              <Link href="/about" className="font-bold text-dark">About</Link>
+              <Link href="/" className="font-bold text-dark">
+                Home
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link href="/about" className="font-bold text-dark">
+                About
+              </Link>
             </NavbarItem>
             <NavbarItem>
               <Link href="/products">Products</Link>
