@@ -249,18 +249,18 @@ export default function Home() {
               Feel free to contact us anytime, we will get back to you as soon
               as we can !
             </p>
-            <form action="" className="form-div-contact flex flex-col gap-5 ">
+            <form action="" className="form-div-contact flex flex-col gap-5 bg-inherit ">
               <div className="flex flex-col">
                 <label htmlFor="Name">Name</label>
-                <input type="text" id="Name" className="border-1" />
+                <input type="text" id="Name" className="my-1" />
               </div>
               <div className="flex flex-col">
                 <label htmlFor="Email">Email</label>
-                <input type="email" id="Email" />
+                <input type="email" id="Email" className="my-1" required/>
               </div>
               <div className="flex flex-col">
                 <label htmlFor="Message">Message</label>
-                <input type="text" id="Message" />
+                <input type="text" id="Message" className="my-1" required/>
               </div>
               <div>
                 <button className="bg-green text-white p-3" type="submit">

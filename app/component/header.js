@@ -117,7 +117,7 @@ export default function Page() {
 
           <NavbarContent className="hidden xl:flex gap-2 justify-end">
             <Link
-              href="mailto:enquiry@organicco.uk"
+              href="mailto:info@homeecoearner.com"
               className=" text-sm bg-[#022201]  font-bold rounded-3xl text-[#022201]"
             >
               <EmailIcon className="text-white bg-[#022201] rounded-3xl text-3xl w-auto  p-[3px] m-[2px]" />
@@ -175,7 +175,7 @@ export default function Page() {
 
               <NavbarContent className="flex gap-5 justify-end">
                 <Link
-                  href="mailto:enquiry@organicco.uk"
+                  href="mailto:info@homeecoearner.com"
                   className="bg-dark text-white text-sm p-2 rounded-lg"
                 >
                   <EmailIcon className="text-sm" />info@homeecoearner.com

@@ -105,7 +105,7 @@ const HeaderBg = () => {
 
           <NavbarContent className="hidden xl:flex gap-2 justify-end">
             <Link
-              href="mailto:enquiry@organicco.uk"
+              href="mailto:info@homeecoearner.com"
               className=" text-sm bg-[#022201]  font-bold rounded-3xl text-[#022201]"
             >
               <EmailIcon className="text-white bg-[#022201] rounded-3xl text-3xl w-auto  p-[3px] m-[2px]" />
