@@ -2,8 +2,10 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div>
-      Product Page
+    <div className='flex flex-col  md:mt-[6.5rem] py-10 bg-purple-light min-h-screen'>
+      <p className='text-center'>
+        Product Page
+      </p>
     </div>
   )
 }

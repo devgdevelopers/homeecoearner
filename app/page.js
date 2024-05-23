@@ -245,7 +245,7 @@ export default function Home() {
         <div className="w-[80%] mx-auto flex md:flex-row flex-col md:justify-start justify-center gap-5">
           <div className="w-[90%] md:w-[50%] mx-auto flex flex-col gap-5 justify-center m-auto">
             <h1 className="text-3xl text-dark font-semibold">Contact Us</h1>
-            <p className="text-dark">
+            <p className="text-dark font-medium">
               Feel free to contact us anytime, we will get back to you as soon
               as we can !
             </p>

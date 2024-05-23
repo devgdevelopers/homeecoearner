@@ -23,25 +23,23 @@ const footer = () => {
      <div className= 'w-auto flex flex-col justify-center lg:pl-20'>
       <h3 className='mb-3'><strong>About</strong></h3>
       <ul className='flex flex-col gap-2'>  
-        <Link href="/">Products</Link>   
-        <Link href="/">Our Services</Link>   
-        <Link href="/">Packages</Link>   
+        <Link href="/about">About Us</Link>   
+        <Link href="/faqs">FAQs</Link>
        </ul>
      </div>
      <div className='flex flex-col justify-center lg:pl-20'>
-      <h3 className='mb-3'><strong>Services</strong></h3>
+      <h3 className='mb-3'><strong>Our Services</strong></h3>
       <ul className='flex flex-col gap-2'>  
-        <Link href="/">Products</Link>   
-        <Link href="/">Our Services</Link>   
-        <Link href="/">Products</Link>   
+        <Link href="/services">Services</Link> 
+        <Link href="/packages">Packages</Link>     
        </ul>
      </div>
      <div className='flex flex-col justify-center lg:pl-20'>
       <h3 className='mb-3'><strong>Other</strong></h3>
       <ul className='flex flex-col gap-2'>  
-        <Link href="/">Contact Us</Link>   
-        <Link href="/">News</Link>   
-        <Link href="/">Privacy Policy</Link>   
+        <Link href="/contact-us">Contact Us</Link>   
+        <Link href="/news">News</Link>   
+        <Link href="/privacy-policy">Privacy Policy</Link>   
        </ul>
      </div>
      
