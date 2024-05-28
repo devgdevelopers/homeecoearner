@@ -4,10 +4,10 @@ import Image from "next/image";
 const page = () => {
   return (
     <>
-      <section className="mt-[5.5rem]  pt-10 bg-green-light ">
+      <section className=" pt-14 py-10 bg-[#b5eec2] mt-14 md:mt-0">
         <div className="container mx-auto flex flex-col md:flex-row">
           <div className="md:w-[50%] w-[90%] mx-auto  my-auto">
-            <h2 className="text-left text-3xl font-semibold text-green mb-3">
+            <h2 className="text-[20px] md:text-[40px] text-green mx-auto text-center text-white md:text-left my-auto font-bold block">
               Contact Information
             </h2>
             <p className=" text-justify mx-auto my-auto font-medium">
@@ -45,7 +45,9 @@ const page = () => {
             </div>
             <div>
               <p className="text-green font-semibold">Location:</p>
-              <p className="text-dark font-medium">2 Brunel Place, Slough, SL1 1FQ, UK</p>
+              <p className="text-dark font-medium">
+                2 Brunel Place, Slough, SL1 1FQ, UK
+              </p>
             </div>
           </div>
           <div className="w-[90%] mx-auto md:w-2/4">
@@ -79,7 +81,7 @@ const page = () => {
 
       <section className="bg-green-light signup-step-section py-10 ">
         <div className="container mx-auto flex flex-col md:flex-row">
-          <div className="w-[90%] mx-auto md:w-2/5 my-auto">
+          <div className="my-auto">
             <h2 className="text-2xl font-semibold text-green">
               Find Us On Google Map
             </h2>

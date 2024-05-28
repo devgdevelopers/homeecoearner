@@ -121,7 +121,7 @@ const HeaderBg = () => {
         </Navbar>
 
         {/* Mobile Navbar */}
-        <Navbar className="sticky md:hidden py-4 flex bg-white justify-between items-center z-[1000]">
+        <Navbar className="sticky md:hidden py-2 flex bg-white justify-between items-center z-[1000]">
           <NavbarBrand>
             <Link href="/">
               <Image

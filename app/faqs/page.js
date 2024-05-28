@@ -339,32 +339,32 @@ const Page = () => {
     color: "#022201", // Change this to your desired background color
     padding: "10px",
     fontWeight: "600",
-    borderRadius: "5px",
+    borderRadius: "5px",  
     fontSize: "15px",
   };
 
   return (
     <>
-      <section className="relative mt-[5rem]  faq-banner-section">
+      <section className="relative  faq-banner-section py-10">
         <div className=" container mx-auto pt-10  flex flex-col md:flex-row">
-          <div className="my-auto max-w-[100%]  md:w-[50%] pl-10">
-            <h1 className="text-[25px] md:text-[30px] mx-auto text-center text-white md:text-left my-auto font-bold block">
+          <div className="my-auto max-w-[100%]  md:w-[50%]">
+            <h1 className="text-[25px] md:text-[40px] text-green mx-auto text-center text-white md:text-left my-auto font-bold block">
               FAQs
             </h1>
-            <h2 className="mx-auto md:text-left my-auto text-base font-semibold text-white">
+            <h2 className="mx-auto md:text-left my-auto text-base font-semibold text-dark">
               Have questions? We have answers!
             </h2>
             <p className="mx-auto text-center md:text-left my-auto">
               Here are some common responses that may be helpful.
             </p>
           </div>
-          <div className="w-[100%] md:w-[50%] flex justify-start">
+          <div className="w-[100%] md:w-[70%] flex justify-start">
             <Image
               src="/assets/images/faq-img.png"
               width={100}
               height={100}
               alt="FAQ image"
-              className="w-[100%] md:w-[60%]"
+              className="w-[100%] md:w-[60%] mx-auto"
               unoptimized
             />
           </div>
@@ -417,7 +417,7 @@ const Page = () => {
                 title={<div style={titleStyle}>{item.title}</div>}
                 className="py-1"
               >
-                <p style={{}}>{parse(item.content)}</p>
+                <span style={{}}>{parse(item.content)}</span>
               </AccordionItem>
             ))}
           </Accordion>

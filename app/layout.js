@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <NextUIProvider>
-          {pathname === "/" ? <HomeHeader /> : <HeaderBg />}
+           <HomeHeader /> 
           {children}
           <footer>
             <Footer />

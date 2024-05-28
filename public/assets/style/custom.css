@@ -11,7 +11,7 @@ font-family: "Raleway", sans-serif;
 background-image: url("/assets/images/banner.jpg");
 z-index: 1px;
 background-repeat: no-repeat;
-background-position: center center;
+background-position: top left !important;
 }
 
 p{
@@ -99,8 +99,8 @@ background-repeat: no-repeat;
 background-position: bottom;
 width: 100% !important;
 height: auto;
-background-color: #0a890d;
-background: linear-gradient(#0a890d1f, #0a890d4a);
+background-image: url(/assets/images/customer-package-bg.png);
+background-color: linear-gradient(#0a890d1f, #0a890d4a);
 }
 
 .contact-form-section {
@@ -109,7 +109,10 @@ background-position: bottom;
 width: 100% !important;
 height: auto;
 background-color: #0a890d;
-background: linear-gradient(#a8e5c494, #0a890d36), url(/assets/images/grey-dots.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+background-image: url(/assets/images/ContactInfo.png);
 }
 
 ul.z-30.px-6.fixed.flex.max-w-full.top-\[var\(--navbar-height\)\].inset-x-0.bottom-0.w-screen.flex-col.gap-2.overflow-y-auto.backdrop-blur-xl.backdrop-saturate-150.pt-36.h-screen.bg-white
@@ -118,7 +121,7 @@ width: 100%;
 padding-left: 20px;
 }
 .banner-text-div {
-bottom: 50px;
+bottom: 10%;
 left: 50%;
 transform: translateX(-50%);
 }
@@ -219,7 +222,7 @@ box-shadow: none !important;
 }
 
 .faq-banner-section{
-background-color: #15a13685;
+background-color: #b5eec2;
 }
 
 .accordion h2 button{
@@ -247,6 +250,15 @@ max-width: none !important;
 background: none !important;
 }
 
-.footer-section ul li:hover{
- transform: scale(1.1);
+.services-bg-images {
+background: linear-gradient(#0a890d00, #ffffffa3), url(/assets/images/services-bg.png);
+width: 100%;
+background-position: top center;
+display: flex;
+}
+.services-light-bg{
+background-image: url(/assets/images/services-light-bg.png);
+}
+.signup-newsletter-bg{
+    background-image: url(/assets/images/Green-signup-bg.png);
 }

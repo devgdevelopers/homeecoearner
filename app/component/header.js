@@ -132,7 +132,7 @@ export default function Page() {
           </NavbarContent>
         </Navbar>
 
-        <Navbar className="sticky md:hidden py-4 flex bg-white justify-end z-[1000] ">
+        <Navbar className="sticky md:hidden py-2 flex bg-white justify-end z-[1000] ">
           {/* Mobile Navbar */}
           <NavbarBrand>
             <Link href="/">
