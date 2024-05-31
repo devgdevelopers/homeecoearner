@@ -5,6 +5,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import XIcon from "@mui/icons-material/X";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
+import DoneAllIcon from '@mui/icons-material/DoneAll';
+
 
 const page = () => {
   return (
@@ -95,7 +97,6 @@ const page = () => {
             <h2 className="text-[20px] md:text-[30px] text-green font-semibold text-center mb-5 w-[100%] md:-[50%]">
               What Do We Do?
             </h2>
-
             <div className="flex md:flex-row flex-col justify-center gap-10 my-10">
               <div className=" w-[100%] md:w-[50%] mx-auto">
                 <Image
@@ -137,18 +138,18 @@ const page = () => {
 
         <section className="container mx-auto flex md:flex-row flex-col p-3 gap-3">
           <div className=" mx-auto my-auto pb-5">
-            <h2 className="text-[25px] font-semibold text-green">
+            <h2 className="text-[25px] font-semibold text-green py-4">
               So they can:
             </h2>
-            <p>While doing their bit to help the planet get to Net Zero.</p>
-            <p>Free themselves from electricity bills.</p>
-            <p>Generate their own electricity.</p>
-            <p>Free themselves from future electricity price increases.</p>
-            <p>
+            <p className="font-bold"> While doing their bit to help the planet get to Net Zero.</p>
+            <p> <span><DoneAllIcon className="mx-2 text-green" /></span>Free themselves from electricity bills.</p>
+            <p> <span><DoneAllIcon className="mx-2 text-green" /></span>Generate their own electricity.</p>
+            <p><span><DoneAllIcon className="mx-2 text-green"/></span> Free themselves from future electricity price increases.</p>
+            <p> <span><DoneAllIcon className="mx-2 text-green"/></span>
               Potentially earn a meaningful income from their home electricity
               generation.
             </p>
-            <p>All with no up-front cost.</p>
+            <p> <span><DoneAllIcon className="mx-2 text-green"/></span>All with no up-front cost.</p>
           </div>
           <div className="md:mx-auto">
             <Image

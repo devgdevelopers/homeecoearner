@@ -12,7 +12,7 @@ const page = () => {
             </h2>
             <p className=" text-justify mx-auto my-auto font-medium">
               If you have any questions, need assistance, or want to learn more
-              about how HomeEcoEarner can transform your energy costs into
+              about how Home EcoEarner can transform your energy costs into
               income, please don't hesitate to contact us. Our team is ready to
               provide you with the information and support you need.
             </p>

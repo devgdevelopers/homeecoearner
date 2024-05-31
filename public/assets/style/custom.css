@@ -262,3 +262,16 @@ background-image: url(/assets/images/services-light-bg.png);
 .signup-newsletter-bg{
     background-image: url(/assets/images/Green-signup-bg.png);
 }
+.products-bg-section{
+    background-image: url(/assets/images/Products.png);
+}
+.custom-pagination li a {
+    background-color: #32CD32 !important; /* Change to your desired green color */
+    color: white; /* Ensure text is visible on green background */
+  }
+  
+  .custom-pagination li.active a {
+    background-color: #228B22; /* Darker green for active page */
+    color: white; /* Ensure text is visible on darker green background */
+  }
+  
