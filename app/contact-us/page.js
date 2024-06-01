@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import ContactForm from "../component/contactForm";
 
 const page = () => {
   return (
@@ -52,7 +53,7 @@ const page = () => {
           </div>
           <div className="w-[90%] mx-auto md:w-2/4">
             <p className="py-4 text-green font-semibold">Send A Message</p>
-            <form action="" className="flex flex-col gap-4">
+            {/* <form action="" className="flex flex-col gap-4">
               <input
                 type="text"
                 placeholder="Your Name"
@@ -74,7 +75,8 @@ const page = () => {
               >
                 Send Now
               </button>
-            </form>
+            </form> */}
+            <ContactForm />
           </div>
         </div>
       </section>
