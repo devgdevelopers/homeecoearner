@@ -1,31 +1,5 @@
-"use client";
+'use client'
 import React, { useState } from "react";
-import axios from "axios";
-
-// Utility function to validate input (unchanged)
-const validateInput = (fieldName, value) => {
-  let error = "";
-  switch (fieldName) {
-    case "name":
-      if (!value) {
-        error = "Name is required";
-      }
-      break;
-    case "email":
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-        error = "Invalid email format";
-      }
-      break;
-    case "message":
-      if (value.length < 10) {
-        error = "Message must be at least 10 characters long";
-      }
-      break;
-    default:
-      break;
-  }
-  return error;
-};
 
 export default function ContactForm() {
   const [data, setData] = useState({
@@ -58,40 +32,27 @@ export default function ContactForm() {
 
     const hasErrors = nameError || emailError || messageError;
 
-    setData((prev) => ({
-      ...prev,
-      errors: {
-        ...prev.errors,
-        name: nameError,
-        email: emailError,
-        message: messageError,
-      },
-    }));
-    console.log("Sending request with method:", axios.defaults.method); // Should be "POST"
-
     if (!hasErrors) {
       setLoading(true);
-
-      // Display the form data on the console
-      console.log("Form Data:", { name, email, message });
-
       try {
-        const response = await axios.post("/api/sendMail", {
-          name,
-          email,
-          message,
+        const response = await fetch("/api/mail", { // Adjusted endpoint URL
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, message }),
         });
 
-        if (response.status !== 200) {
-          throw new Error("Network response was not ok");
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
         }
 
-        const result = response.data;
-        if (result.success) {
+        const result = await response.json();
+        if (result.message) {
           setSuccess(true);
           setData({ name: "", email: "", message: "", errors: {} });
         } else {
-          console.error("API error:", result.message);
+          console.error("Failed to send email");
         }
       } catch (error) {
         console.error("Error submitting form:", error);
@@ -101,6 +62,30 @@ export default function ContactForm() {
     } else {
       console.warn("Form submission failed due to errors:", errors);
     }
+  };
+
+  const validateInput = (fieldName, value) => {
+    let error = "";
+    switch (fieldName) {
+      case "name":
+        if (!value) {
+          error = "Name is required";
+        }
+        break;
+      case "email":
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          error = "Invalid email format";
+        }
+        break;
+      case "message":
+        if (value.length < 10) {
+          error = "Message must be at least 10 characters long";
+        }
+        break;
+      default:
+        break;
+    }
+    return error;
   };
 
   return (
@@ -115,7 +100,7 @@ export default function ContactForm() {
           className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input"
         />
         {data.errors.name && (
-          <p className="error-message text-red-500">{data.errors.name}</p>
+          <p className="error-message text-[red]">{data.errors.name}</p>
         )}
 
         <input
@@ -127,30 +112,29 @@ export default function ContactForm() {
           className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input"
         />
         {data.errors.email && (
-          <p className="error-message text-red-500">{data.errors.email}</p>
+          <p className="error-message text-[red]">{data.errors.email}</p>
         )}
 
-        <textarea
+        <input
+          type="text"
           name="message"
           value={data.message}
           onChange={onChangeHandler}
-          placeholder="How Can We Help You?"
+          placeholder="How Can We help You ?"
           className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input"
         />
         {data.errors.message && (
-          <p className="error-message text-red-500">{data.errors.message}</p>
+          <p className="error-message text-[red]">{data.errors.message}</p>
         )}
 
         <button
           type="submit"
-          className="bg-green-500 text-white w-48 p-3"
+          className="bg-green text-white w-[200px] p-3"
           disabled={loading}
         >
           {loading ? "Sending..." : "Send Now"}
         </button>
-        {success && (
-          <div className="text-green-500">Email sent successfully!</div>
-        )}
+        {success && <div>Email sent successfully!</div>}
       </form>
     </>
   );

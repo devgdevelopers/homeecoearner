@@ -6,6 +6,7 @@ import Footer from "./component/footer";
 import HomeHeader from "./component/HomeHeader";
 import HeaderBg from "./component/headerBg";
 import { NextUIProvider } from "@nextui-org/react";
+import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
             <Footer />
           </footer>
         </NextUIProvider>
+        <Script src="https://smtpjs.com/v3/smtp.js" strategy="beforeInteractive" />
       </body>
     </html>
   );
