@@ -42,7 +42,6 @@ return (
       <ul className='flex flex-col gap-2'>
         <Link href="/news">News</Link>
         <Link href="/privacy-policy">Privacy Policy</Link>
-        <a href='https://www.bark.com/en/gb/company/organicco-ltd/aMVpo/' target='_blank' class='bark-widget' data-type='pro' data-id='aMVpo' data-image='medium-navy' data-version='3.0'>Organicco Ltd</a><script type='text/javascript' src='https://d3a1eo0ozlzntn.cloudfront.net/assets/js/frontend-v2/widgets-v2.24a197bed6.v2.js' defer></script>
       </ul>
     </div>
 
