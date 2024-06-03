@@ -131,11 +131,19 @@ return (
     </div>
   </section>
 
+
+
+
+
+
+
   {/* customer packages */}
   <section className="customer-pack-section py-2 md:py-20">
     <h1 className="text-[30px] md:text-[40px] text-dark font-bold text-center mb-5 w-[100%] md:-[50%]">
       Customer Packages
     </h1>
+
+
     <div className=" mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
       <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
         <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">

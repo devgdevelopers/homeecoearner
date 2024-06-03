@@ -254,6 +254,15 @@ width: 100%;
 background-position: top center;
 display: flex;
 }
+.services-images {
+  background: linear-gradient(#0a890d00, #ffffffa3), url(/assets/images/services-bg.png);
+  width: 100%;
+  background-position: top center;
+  background-position-y: 0px; 
+   background-size: cover;  
+  display: flex;
+}
+
 .services-light-bg{
 background-image: url(/assets/images/services-light-bg.png);
 }
@@ -272,70 +281,40 @@ background-image: url(/assets/images/services-light-bg.png);
     background-color: #228B22; /* Darker green for active page */
     color: white; /* Ensure text is visible on darker green background */
   }
-  .team-member-div{
-    border-radius: 20px;
-    background-color: white;
+  .left_section{
 
   }
- 
+  .mid_section{
+    background-color: #002202;
+      }
+      .main_section{
+        background-color: #e8ffed;
+      }
+      .smalll{
+        width: 75px;
+        height: 75px;
+        border-radius: 10px;
+        background-color: #159f35;
+      }
+      .right_section h1{
+        margin-bottom: 25px;
+        font-size: 27px;
 
+      }
+      .right_section p{
+        margin-bottom: 25px;
 
-
-
-
-
-  /* flip card css */
-  .flip-card {
-    background-color: transparent;
-    width: 300px;
-    height: 340px;
-    perspective: 1000px;
-    z-index: 0;
-    color: #002101;
-  }
-  
-  .flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.5s;
-    transform-style: preserve-3d;
-  }
-  
-  .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-    cursor: pointer;
-  }
-  
-  .flip-card-front,
-  .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    cursor: pointer;
-    backface-visibility: hidden;
-
-  }
- 
-  .tilted-item {
-    transform: rotate(5deg);
-  }
-
-  .flip-card-front {
-    /* filter: blur(1px); */
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-   
-  }
-
-  .flip-card-back {
-    background-color: rgb(255, 255, 255);
-    color: rgb(19, 19, 19);
-    transform: rotateY(180deg);
-  }
- 
+      }
+      .__section2 p{
+        margin-left: 35px;
+        margin-top: 20px;
+      }
+      .__section2 h1{
+        margin-top: 20px;
+      }
+      .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 8px; 
+    }
+    

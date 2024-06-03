@@ -1,72 +1,90 @@
 "use client";
-import React,{useState} from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Pagination } from "@nextui-org/react";
+import Link from 'next/link';
+
+
+
 import SignupNewsletter from "../component/SignupNewsletter";
 
 const products = [
   {
-    src: "/assets/images/Product01.jpg",
+    src: "/assets/images/__img1.jpg",
     alt: "Battery Energy Storage System",
     title: "Battery Energy Storage System",
+    customClass:"p-10 rounded-tr-[50%]   " ,
   },
   {
-    src: "/assets/images/Product02.jpg",
+    src: "/assets/images/__img2.jpg",
     alt: "HF-H Series Inverter",
     title: "HF-H Series Inverter",
+    customClass:"p-14 rounded-t-[50%] " ,
   },
   {
-    src: "/assets/images/Product03.jpg",
+    src: "/assets/images/__img3.jpg",
     alt: "SR-182 Series Solar Panels",
     title: "SR-182 Series Solar Panels",
+    customClass:"p-10 rounded-tl-[50%] " ,
   },
   {
-    src: "/assets/images/left.png",
+    src: "",
     alt: "Product Image 1",
     title: "Lorem, ipsum dolor.",
+        customClass:"p-5 rounded-tr-[50%] " ,
   },
   {
-    src: "/assets/images/middle.png",
+    src: "",
     alt: "Product Image 2",
     title: "Lorem, ipsum dolor.",
+        customClass:"p-5 rounded-t-[50%] " ,
   },
   {
-    src: "/assets/images/right.png",
+    src: "",
     alt: "Product Image 3",
     title: "Lorem, ipsum dolor.",
+        customClass:"p-5 rounded-tl-[50%] " ,
   },
   {
-    src: "/assets/images/left.png",
+    src: "",
     alt: "Product Image 4",
     title: "Lorem, ipsum dolor.",
+        customClass:"p-5 rounded-tr-[50%] " ,
   },
   {
-    src: "/assets/images/middle.png",
+    src: "",
     alt: "Product Image 5",
     title: "Lorem, ipsum dolor.",
+        customClass:"p-5 rounded-t-[50%] " ,
   },
   {
-    src: "/assets/images/right.png",
+    src: "",
     alt: "Product Image 6",
     title: "Lorem, ipsum dolor.",
+        customClass:"p-5 rounded-tl-[50%] " ,
   },
   {
-    src: "/assets/images/left.png",
-    alt: "Product Image 6",
+    src: "",
+    alt: "Product Image 7",
     title: "Lorem, ipsum dolor.",
+        customClass:"p-5 rounded-tr-[50%] " ,
   },
   {
-    src: "/assets/images/middle.png",
-    alt: "Product Image 6",
+    src: "",
+    alt: "Product Image 8",
     title: "Lorem, ipsum dolor.",
+        customClass:"p-5 rounded-t-[50%] " ,
+    
+
   },
   {
-    src: "/assets/images/right.png",
-    alt: "Product Image 6",
+    src: "",
+    alt: "Product Image 9",
     title: "Lorem, ipsum dolor.",
+    customClass:"p-5 rounded-tl-[50%] " ,
   },
 ];
 
@@ -204,31 +222,70 @@ const Page = () => {
           Our Products
         </h2>
         <div className="grid md:grid-cols-3 grid-cols-1 w-[90%] xl:w-[70%] mx-auto gap-10 py-10">
-          {currentProducts.map((product, index) => (
-            <div
-              key={index}
-              className="bg-white grid justify-center p-5 rounded-3xl"
-            >
-              <Image
+        {currentProducts.map((product, index) => (
+          <div key={index} className="bg-white grid justify-center p-5 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out ">
+
+<Link href={`/products/${index}`}>
+      <div
+              className={`flex justify-center items-center rounded-xl h-60 sm:h-72 md:h-80 w-full  overflow-hidden bg-[#15a135] ${product.customClass}`}
+            >           <Image
                 src={product.src}
                 width={300}
-                height={100}
-                alt={product.alt}
+                height={200}
+                objectFit="contain"
+                alt={product.alt}  
+                className=" transition-all duration-300 hover:scale-110 "
+
               />
-              <h3 className="text-[18px] text-center text-green-600 font-semibold my-2">
-                {product.title}
-              </h3>
-            </div>
-          ))}
-        </div>
-        <Pagination 
-        className="mx-auto text-center py-10 custom-pagination"
+            </div> 
+    </Link>
+
+
+            <h3 className="text-[18px] text-center text-green-600 font-semibold my-2">
+              {product.title}
+            </h3>
+          </div>
+        ))}
+      </div>
+
+        <Pagination
+          className="mx-auto text-center py-10 custom-pagination"
           total={totalPages}
           initialPage={currentPage}
           onChange={handlePageChange}
         />
       </section>
-      <SignupNewsletter />
+      <section className="bg-[#00a241] py-20 signup-newsletter-bg shadow-inner">
+        <div className="container mx-auto">
+          <h2 className="text-center text-white  text-2xl lg:text-5xl font-semibold">
+            Subscribe Newsletter
+          </h2>
+          <div className="flex justify-center items-center gap-2">
+            <div className="w-[50px] md:w-[100px] h-[1px] bg-[#ffffff8a]"></div>
+            <h2 className="text-xl md:text-2xl text-[#ffffff8a]">
+              Get the latest news & offers
+            </h2>
+            <div className="w-[50px] md:w-[100px] h-[1px] bg-[#ffffff8a]"></div>
+          </div>
+
+          <div className="mx-auto py-10">
+            <form action="" className="mx-auto flex flex-col md:flex-row justify-center items-center gap-3 md:gap-0">
+              <input type="email" placeholder="Your Email Address "
+                className="p-5 services-light-bg md:rounded-l-full text-black outline-none placeholder:text-black placeholder:font-semibold px-20 shadow-xl "
+                required />
+              <button type="submit" className="p-5 text-white  md:rounded-r-full  bg-dark shadow-xl">
+                Subscibe Now
+              </button>
+            </form>
+          </div>
+
+          <p className="text-center text-white">
+            True environmental protection lies in loving the mountains, the
+            oceans and in cherishing all creation.
+          </p>
+
+        </div>
+      </section>
   
     </>
   );
