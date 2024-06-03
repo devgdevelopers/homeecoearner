@@ -24,7 +24,7 @@ return (
     <div className='w-auto flex flex-col justify-start lg:pl-20'>
       <h3 className='mb-3 font-bold'>About</h3>
       <ul className='flex flex-col gap-2 font-medium'>
-        <Link href="/about">About Us</Link>
+        <Link href="/about-us">About Us</Link>
         <Link href="/faqs">FAQs</Link>
         <Link href="/contact-us">Contact Us</Link>
 

@@ -120,8 +120,8 @@ const page = () => {
       </section>
 
       <section className="md:h-[50vh] bg-green my-auto flex justify-center">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center my-auto items-center">
-          <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md">
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center my-auto items-center gap-3">
+          <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md mx-auto">
             <h1 className="text-center text-white text-5xl mb-2">
               {" "}
               <strong>20+ </strong>{" "}
@@ -130,14 +130,14 @@ const page = () => {
               Years of experience
             </p>
           </div>
-          <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md">
+          <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md mx-auto">
             <h1 className="text-center text-white text-5xl mb-2">
               {" "}
               <strong>35+ </strong>{" "}
             </h1>
             <p className="text-white text-5xl text-center">Award Win </p>
           </div>
-          <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md">
+          <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md mx-auto">
             <h1 className="text-center text-white text-5xl mb-2">
               {" "}
               <strong>1750+ </strong>{" "}
@@ -146,7 +146,7 @@ const page = () => {
               Happy Customers
             </p>
           </div>
-          <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md">
+          <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md mx-auto">
             <h1 className="text-center text-white text-5xl mb-2">
               {" "}
               <strong>120+ </strong>{" "}
@@ -221,9 +221,58 @@ const page = () => {
         </div>
       </section>
 
-     <section>
-      
-     </section>
+<section className="what-we-do">
+<div className="mx-auto container">
+ <div className="do-inner flex flex-col md:flex-row">
+<div className="do-left w-full lg:w-1/2">
+<h2>What Do We Do?</h2>
+<h4>We Serve:</h4>
+<ul>
+  <li>• Homeowners</li>
+  <li>• Tenants</li>
+  <li>• Social housing associations</li>
+  <li>• Landlords</li>
+  <li>• Councils</li>
+</ul>
+</div>
+<div className="do-right w-full lg:w-1/2">
+  <div className="do-green mx-auto">
+
+  </div>
+</div>
+ </div>
+</div>
+</section>
+
+
+{/* so they can start */}
+
+<section className="what-we-do so-they-can p-5">
+<div className="mx-auto container ">
+ <div className="do-inner flex flex-col md:flex-row">
+<div className="do-left w-full lg:w-1/2 p-5">
+<h4>So they can:</h4>
+<ol>
+  <li>1.Generate their own electricity.</li>
+  <li>2. Free themselves from electricity bills.</li>
+  <li>3. Free themselves from future electricity
+price increases.</li>
+  <li>4. Potentially earn a meaningful income
+from their home electricity generation.</li>
+  <li>5. All with no up-front cost.</li>
+  <li>6. While doing their bit to help the planet
+get to Net Zero.</li>
+</ol>
+</div>
+<div className="do-right mx-auto w-full lg:w-1/2 p-5 ">
+  <div className="do-green mx-auto ">
+
+  </div>
+</div>
+ </div>
+</div>
+</section>
+
     </>
   );
 };

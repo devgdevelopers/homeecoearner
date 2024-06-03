@@ -127,7 +127,7 @@ const Page = () => {
   <div className="relative w-full md:w-[27rem] h-[27rem] mid_section">
     <Image src={currentImage} alt="Current" layout="fill" objectFit="contain" className="rounded-lg" />
   </div>
-  <div className="w-full md:w-auto md:flex-1 ml-5 right_section md:text-[20px] text-[10px]">
+  <div className="w-full md:w-auto md:flex-1 md:ml-5 right_section md:text-[20px] text-[10px]">
     <h1 className="text-[#002202] text-2xl font-bold">Battery Energy Storage System</h1>
     <p>Our Lithium Battery Energy Storage System (BESS) is a comprehensive solution tailored for various energy storage needs.</p>
     <p>This system is versatile, suitable for large-scale energy storage, distribution network storage, microgrid storage, as well as industrial, commercial, and household applications.</p>

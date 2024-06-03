@@ -25,7 +25,7 @@ export default function Page() {
     },
     {
       page: "About",
-      link: "/about",
+      link: "/about-us",
     },
     {
       page: "Products",
@@ -79,7 +79,7 @@ export default function Page() {
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/about" className="font-bold text-dark">
+              <Link href="/about-us" className="font-bold text-dark">
                 About
               </Link>
             </NavbarItem>
