@@ -118,6 +118,20 @@ const HeaderBg = () => {
               +44 (0)20 3286 5350
             </Link>
           </NavbarContent>
+
+{/* 
+          <NavbarContent className="flex font-semibold gap-5 justify-center link-div-head-bg">
+            <NavbarItem>
+              <Link href="/login" className="font-bold text-dark">
+                Login
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link href="/signup" className="font-bold text-dark">
+                Signup
+              </Link>
+            </NavbarItem>
+          </NavbarContent> */}
         </Navbar>
 
         {/* Mobile Navbar */}
@@ -156,6 +170,13 @@ const HeaderBg = () => {
                   </Link>
                 </NavbarMenuItem>
               ))}
+{/* 
+              <NavbarMenuItem className="link-div-head">
+                <Link href="/login" className="font-bold text-dark">Login</Link>
+              </NavbarMenuItem>
+              <NavbarMenuItem className="link-div-head">
+                <Link href="/signup" className="font-bold text-dark">Signup</Link>
+              </NavbarMenuItem> */}
               <NavbarContent className="flex flex-col gap-5 ">
                 <Link
                   href="mailto:info@homeecoearner.com"

@@ -3,6 +3,23 @@ import Image from "next/image";
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+export const projects = [
+  {
+    title: "Basic Package- Solar",
+    description: "• 2.7kW PV solar panels + inverter + controller\n\n• No upfront cost\n\n• Own your own power system\n\n• No more electricity bills",
+    link: "https://stripe.com",
+  }
+  
+  ,
+  {
+    title: "Netflix",
+    description:
+      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+    link: "https://netflix.com",
+  },
+
+
+];
 
 export default function Home() {
 return (
@@ -131,11 +148,19 @@ return (
     </div>
   </section>
 
+
+
+
+
+
+
   {/* customer packages */}
   <section className="customer-pack-section py-2 md:py-20">
     <h1 className="text-[30px] md:text-[40px] text-dark font-bold text-center mb-5 w-[100%] md:-[50%]">
       Customer Packages
     </h1>
+
+
     <div className=" mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
       <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
         <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">

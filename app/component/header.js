@@ -130,7 +130,23 @@ export default function Page() {
               +44 (0)20 3286 5350
             </Link>
           </NavbarContent>
+
+
+          {/* <NavbarContent className="flex font-semibold gap-5 justify-center link-div-head-bg">
+            <NavbarItem>
+              <Link href="/login" className="font-bold text-dark">
+                Login
+              </Link>
+            </NavbarItem>
+            <NavbarItem>
+              <Link href="/signup" className="font-bold text-dark">
+                Signup
+              </Link>
+            </NavbarItem>
+          </NavbarContent> */}
         </Navbar>
+
+
 
         <Navbar className="sticky md:hidden py-2 flex bg-white justify-end z-[1000] ">
           {/* Mobile Navbar */}
@@ -172,6 +188,12 @@ export default function Page() {
                   </Link>
                 </NavbarMenuItem>
               ))}
+              {/* <NavbarMenuItem className="link-div-head">
+                <Link href="/login" className="font-bold text-dark">Login</Link>
+              </NavbarMenuItem>
+              <NavbarMenuItem className="link-div-head">
+                <Link href="/signup" className="font-bold text-dark">Signup</Link>
+              </NavbarMenuItem> */}
 
               <NavbarContent className="flex gap-5 justify-end">
                 <Link
