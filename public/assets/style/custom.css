@@ -72,13 +72,18 @@ background-repeat: no-repeat;
 background-position: bottom;
 width: 100% !important;
 height: auto;
-background-color: #0a890d;
-background: linear-gradient(#b5eec2ba, #b5eec2ba),
-url(/assets/images/grey-dots.jpg);
+
+background: linear-gradient(#adeabb, #b5eec2ba), url(/assets/images/grey-dots.jpg);
 z-index: 1;
 background-size: cover;
 }
-
+.customer-pack-section {
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100% !important;
+    height: auto;
+    background: linear-gradient(#aceaba, #aceaba), url(/assets/images/customer-package-bg.png);
+}
 .solar-house-div {
 background: linear-gradient(#b5eec2ba, #b5eec2ba);
 background-repeat: no-repeat;
@@ -94,14 +99,7 @@ border-radius: 25px;
 z-index: 1;
 }
 
-.customer-pack-section {
-background-repeat: no-repeat;
-background-position: bottom;
-width: 100% !important;
-height: auto;
-background-image: url(/assets/images/customer-package-bg.png);
-background-color: linear-gradient(#0a890d1f, #0a890d4a);
-}
+
 
 .contact-form-section {
 background-repeat: no-repeat;
@@ -121,7 +119,7 @@ width: 100%;
 padding-left: 20px;
 }
 .banner-text-div {
-bottom: 10%;
+bottom: 50px;
 left: 50%;
 transform: translateX(-50%);
 }

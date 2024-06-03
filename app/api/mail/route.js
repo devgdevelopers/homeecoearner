@@ -8,14 +8,14 @@ export async function POST(req) {
     return NextResponse.json({ error: 'Email and message are required' }, { status: 400 });
   }
 
-  // Create a transporter object using SMTP transport with SSL
+  
   let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 465, // SSL port
-    secure: true, // true for 465, false for other ports
+    port: 465, 
+    secure: true, 
     auth: {
-      user: process.env.EMAIL_USER, // Your Gmail address from environment variables
-      pass: process.env.EMAIL_PASS, // Your Gmail app-specific password from environment variables
+      user: process.env.EMAIL_USER, 
+      pass: process.env.EMAIL_PASS, 
     },
   });
 

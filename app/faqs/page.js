@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import parse from "html-react-parser";
-import { color } from "framer-motion";
+
 
 const Page = () => {
   const HomeEcoEarnerPowerSystem = [
@@ -409,7 +409,7 @@ const Page = () => {
             variant="splitted"
             className="accordion"
           >
-            {HomeEcoEarnerPowerSystem.map((item, index) => (
+            {HomeEcoearnerBoosterSystem.map((item, index) => (
               <AccordionItem
                 showDivider={false}
                 key={index}

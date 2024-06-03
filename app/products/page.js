@@ -9,6 +9,7 @@ import Link from 'next/link';
 
 
 
+import SignupNewsletter from "../component/SignupNewsletter";
 
 const products = [
   {
@@ -285,6 +286,7 @@ const Page = () => {
 
         </div>
       </section>
+  
     </>
   );
 };

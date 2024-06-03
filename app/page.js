@@ -95,7 +95,7 @@ return (
           <div className="flex flex-col gap-5 justify-center">
             <div className="flex">
               <Image src="/assets/images/step1.png" width={100} height={100} alt="step1"
-                className="w-[70px] h-[70px] p-2"></Image>
+                className="w-[70px] h-[70px]"></Image>
               <ul className="text-sm md:text-xl text-dark font-medium flex  flex-col gap-1">
                 <li>• Get Your electricity costs under control</li>
                 <li>• No up-front cost </li>
@@ -104,8 +104,8 @@ return (
               </ul>
             </div>
             <div className="flex">
-              <Image src="/assets/images/step2.jpg" width={100} height={100} alt="step2"
-                className="w-[70px] h-[70px] bg-inherit p-2"></Image>
+              <Image src="/assets/images/step2.png" width={100} height={100} alt="step2"
+                className="w-[70px] h-[70px]"></Image>
               <ul className="text-sm md:text-xl text-dark font-medium flex  flex-col gap-1">
                 <li>
                   • Line yourself up for cost-free access to our new
@@ -276,38 +276,7 @@ return (
   </section>
 
 
-  {/* <section className="bg-[#00a241] py-20 signup-newsletter-bg shadow-inner">
-    <div className="container mx-auto">
-      <h2 className="text-center text-white  text-2xl lg:text-5xl font-semibold">
-        Subscribe Newsletter{" "}
-      </h2>
-      <div className="flex justify-center items-center gap-2">
-        <div className="w-[50px] md:w-[100px] h-[1px] bg-[#ffffff8a]"></div>
-        <h2 className="text-xl md:text-2xl text-[#ffffff8a]">
-          {" "}
-          Get the latest news & offers{" "}
-        </h2>
-        <div className="w-[50px] md:w-[100px] h-[1px] bg-[#ffffff8a]"></div>
-      </div>
 
-      <div className="mx-auto py-10">
-        <form action="" className="mx-auto flex flex-col md:flex-row justify-center items-center gap-3 md:gap-0">
-          <input type="email" placeholder="Your Email Address "
-            className="p-5 services-light-bg md:rounded-l-full text-black outline-none placeholder:text-black placeholder:font-semibold px-20 shadow-xl "
-            required />
-          <button type="submit" className="p-5 text-white  md:rounded-r-full  bg-dark shadow-xl">
-            Subscibe Now
-          </button>
-        </form>
-      </div>
-
-      <p className="text-center text-white">
-        True environmental protection lies in loving the mountains, the
-        oceans and in cherishing all creation.
-      </p>
-
-    </div>
-  </section> */}
 </main>
 );
 }

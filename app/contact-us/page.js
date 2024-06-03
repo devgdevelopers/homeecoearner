@@ -53,29 +53,6 @@ const page = () => {
           </div>
           <div className="w-[90%] mx-auto md:w-2/4">
             <p className="py-4 text-green font-semibold">Send A Message</p>
-            {/* <form action="" className="flex flex-col gap-4">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input"
-              />
-              <input
-                type="email"
-                placeholder="Your Email"
-                className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input"
-              />
-              <input
-                type="text"
-                placeholder="How Can We help You ?"
-                className="bg-inherit placeholder:text-dark  outline-none border-gray-500 p-3 contact-page-input"
-              />
-              <button
-                type="submit"
-                className="bg-green text-white w-[200px] p-3"
-              >
-                Send Now
-              </button>
-            </form> */}
             <ContactForm />
           </div>
         </div>

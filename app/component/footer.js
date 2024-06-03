@@ -21,24 +21,25 @@ return (
         <WhatsAppIcon />
       </div>
     </div>
-    <div className='w-auto flex flex-col justify-center lg:pl-20'>
-      <h3 className='mb-3'><strong>About</strong></h3>
-      <ul className='flex flex-col gap-2'>
+    <div className='w-auto flex flex-col justify-start lg:pl-20'>
+      <h3 className='mb-3 font-bold'>About</h3>
+      <ul className='flex flex-col gap-2 font-medium'>
         <Link href="/about">About Us</Link>
         <Link href="/faqs">FAQs</Link>
+        <Link href="/contact-us">Contact Us</Link>
+
       </ul>
     </div>
-    <div className='flex flex-col justify-center lg:pl-20'>
-      <h3 className='mb-3'><strong>Our Services</strong></h3>
+    <div className='flex flex-col justify-start lg:pl-20'>
+      <h3 className='mb-3 font-bold'>Our Services</h3>
       <ul className='flex flex-col gap-2'>
         <Link href="/services">Services</Link>
         <Link href="/packages">Packages</Link>
       </ul>
     </div>
-    <div className='flex flex-col justify-center lg:pl-20'>
-      <h3 className='mb-3'><strong>Other</strong></h3>
+    <div className='flex flex-col justify-start lg:pl-20'>
+      <h3 className='mb-3 font-bold'>Other</h3>
       <ul className='flex flex-col gap-2'>
-        <Link href="/contact-us">Contact Us</Link>
         <Link href="/news">News</Link>
         <Link href="/privacy-policy">Privacy Policy</Link>
       </ul>
@@ -46,8 +47,10 @@ return (
 
   </div>
   <div className='w-full py-2 bg-dark text-white'>
+ 
     <h6 className=' text-center text-xs '>©2024 Home EcoEarner Limited, All Rights Reserved</h6>
   </div>
+  
 </section>
 )
 }
