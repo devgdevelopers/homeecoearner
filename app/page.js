@@ -3,23 +3,6 @@ import Image from "next/image";
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import PhoneInTalkOutlinedIcon from '@mui/icons-material/PhoneInTalkOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-export const projects = [
-  {
-    title: "Basic Package- Solar",
-    description: "• 2.7kW PV solar panels + inverter + controller\n\n• No upfront cost\n\n• Own your own power system\n\n• No more electricity bills",
-    link: "https://stripe.com",
-  }
-  
-  ,
-  {
-    title: "Netflix",
-    description:
-      "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
-    link: "https://netflix.com",
-  },
-
-
-];
 
 export default function Home() {
 return (
