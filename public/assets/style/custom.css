@@ -272,4 +272,70 @@ background-image: url(/assets/images/services-light-bg.png);
     background-color: #228B22; /* Darker green for active page */
     color: white; /* Ensure text is visible on darker green background */
   }
+  .team-member-div{
+    border-radius: 20px;
+    background-color: white;
+
+  }
+ 
+
+
+
+
+
+
+  /* flip card css */
+  .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 340px;
+    perspective: 1000px;
+    z-index: 0;
+    color: #002101;
+  }
   
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+  }
+  
+  .flip-card-front,
+  .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    cursor: pointer;
+    backface-visibility: hidden;
+
+  }
+ 
+  .tilted-item {
+    transform: rotate(5deg);
+  }
+
+  .flip-card-front {
+    /* filter: blur(1px); */
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+   
+  }
+
+  .flip-card-back {
+    background-color: rgb(255, 255, 255);
+    color: rgb(19, 19, 19);
+    transform: rotateY(180deg);
+  }
+ 

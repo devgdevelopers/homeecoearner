@@ -4,16 +4,18 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { TeamData } from "/public/data";
 
 const page = () => {
   const settings = {
     infinite: false,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
-    centerPadding: "30px",
+    centerPadding: "",
+
     arrows: true,
     responsive: [
       {
@@ -36,13 +38,14 @@ const page = () => {
           slidesToShow: 1,
           centerPadding: "10px",
         },
+        
+    arrows: false,
       },
-      // Add more responsive settings as needed
     ],
   };
   return (
     <>
-      <section className="md:mt-0 services-bg-images min-h-[50vh] bg-[#0a890d] my-auto text-white">
+      <section className="mt-7 md:mt-0 services-bg-images min-h-[50vh] bg-[#0a890d] my-auto text-white">
         <div className="container mx-auto flex flex-col justify-center items-center py-12">
           <h2 className="text-[20px] md:text-5xl font-bold mb-4 text-green">
             About Us
@@ -56,8 +59,8 @@ const page = () => {
         </div>
       </section>
 
-      <section className="py-10 bg-[#e8ffed]">
-        <div className="container mx-auto grid grid-cols-2">
+      <section className="py-10 bg-[#e8ffed] p-5">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2">
           <div className="flex justify-start flex-col items-start gap-2">
             <h2 className="text-xl bg-green text-white inline p-2 font-semibold">
               About Company{" "}
@@ -85,8 +88,9 @@ const page = () => {
           </div>
         </div>
       </section>
+
       <section className="py-10 bg-[#e8ffed]">
-        <div className="container mx-auto grid grid-cols-2">
+        <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2">
           <div className="flex justify-start flex-col items-start gap-2">
             <h2 className="text-xl bg-green text-white inline p-2 font-semibold">
               Our Mission{" "}
@@ -116,8 +120,7 @@ const page = () => {
       </section>
 
       <section className="md:h-[50vh] bg-green my-auto flex justify-center">
-        <div className="container mx-auto grid grid-cols-4 justify-center my-auto items-center">
-
+        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center my-auto items-center">
           <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md">
             <h1 className="text-center text-white text-5xl mb-2">
               {" "}
@@ -150,78 +153,77 @@ const page = () => {
             </h1>
             <p className="text-white text-5xl text-center">Our Expert Staffs</p>
           </div>
-
         </div>
       </section>
 
-
       {/* meet our leaders */}
 
-      <section className="py-10">
+      <section className="py-10 services-light-bg">
         <div className="container mx-auto">
-          <h1 className="md:text-3xl font-semibold text-center">Meet Our leaders</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio reiciendis, ipsum quaerat doloribus minima laudantium molestias, accusamus corporis dolores aspernatur. Natus itaque ut labore!</p>
+          <div
+            className="bg-white mx-auto flex justify-center align-middle items-center w-96
+        mb-3"
+          >
+            <h1 className="md:text-4xl font-semibold  text-green p-2">
+              Meet Our leaders
+            </h1>
+          </div>
+          <p className="w-3/4 text-center mx-auto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa odio
+            reiciendis, ipsum quaerat doloribus minima laudantium molestias,
+            accusamus corporis dolores aspernatur. Natus itaque ut labore!
+          </p>
           <div className="container mx-auto py-20">
-          <style>
-            {`
+            <style>
+              {`
               .slick-prev:before,
               .slick-next:before {
                 color: black !important;
                 font-size:25px;
               }
             `}
-          </style>
-          <Slider {...settings}>
-            <div className="carousel-item mx-auto">
-              <div className="text-center p-5 flex flex-col justify-center">
-               <Image src="/assets/images/rory.png" width={200} height={200}></Image> 
-               <h1>Rory Tait</h1>
-               <p>Co-Founder / Director</p>
-              </div>
-            </div>
-            <div className="carousel-item">
-            <div className="text-center p-5 flex justify-center">
-               <Image src="/assets/images/rory.png" width={200} height={200}></Image> 
-               <h1>Rory Tait</h1>
-               <p>Co-Founder / Director</p>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="text-center p-5 flex justify-center">
-                <Image
-                  width={500}
-                  height={100}
-                  src="/assets/images/ProductBattery.png"
-                  alt="product image"
-                ></Image>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="text-center p-5 flex justify-center">
-                <Image
-                  width={500}
-                  height={100}
-                  src="/assets/images/ProductBattery.png"
-                  alt="product image"
-                ></Image>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="text-center p-5 flex justify-center">
-                <Image
-                  width={500}
-                  height={100}
-                  src="/assets/images/ProductBattery.png"
-                  alt="product image"
-                ></Image>
-              </div>
-            </div>
-          </Slider>
-        </div>
-
+            </style>
+            <Slider {...settings} className="mx-auto">
+              {TeamData.map((item, id) => {
+                return (
+                  <div className="carousel-item mx-auto rounded-2xl p-5" key={id}>
+                    <div className="flip-card rounded-2xl mx-auto">
+                      <div className="flip-card-inner rounded-2xl bg-white">
+                        <div className={`flip-card-front rounded-2xl bg-white w-[80%]`}>
+                          <Image
+                            src={item.TeamPhotoSrc}
+                            className="mx-auto w-[300px] h-[200px] rounded-t-2xl"
+                            width={100}
+                            height={200}
+                            unoptimized
+                          ></Image>
+                        <div className="px-3 flex flex-col mx-auto my-auto">
+                        <h1 className="text-3xl text-green font-bold">
+                            {item.TeamName}
+                          </h1>
+                          <h2 className="text-sm text-black text-wrap teamdesignation">  
+                            {item.TeamDesignation}
+                          </h2>
+                        </div>
+                        </div>
+                        <div className="flip-card-back rounded-xl p-5 bg-white">
+                          <p className=" mb-5 text-justify text-black z-10 team-desc">
+                            {item.TeamDesc}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </Slider>
+          </div>
         </div>
       </section>
-     
+
+     <section>
+      
+     </section>
     </>
   );
 };
