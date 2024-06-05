@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { TeamData } from "/public/data";
+import Counter from '../component/counter'
 
 const page = () => {
   const settings = {
@@ -84,12 +85,12 @@ const page = () => {
             </p>
           </div>
           <div>
-            <div className="w-[400px] h-96 bg-green rounded-t-full mx-auto"></div>
+            <div className="w-full lg:w-[400px] h-96 bg-green rounded-none lg:rounded-t-full md:mx-auto my-4"></div>
           </div>
         </div>
       </section>
 
-      <section className="py-10 bg-[#e8ffed]">
+      <section className="md:py-10 bg-[#e8ffed] p-5">
         <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2">
           <div className="flex justify-start flex-col items-start gap-2">
             <h2 className="text-xl bg-green text-white inline p-2 font-semibold">
@@ -114,17 +115,17 @@ const page = () => {
             </p>
           </div>
           <div>
-            <div className="w-[400px] h-96 bg-green rounded-b-full mx-auto"></div>
+            <div className="w-full lg:w-[400px] h-96 bg-green rounded-none lg:rounded-b-full md:mx-auto my-4"></div>
           </div>
         </div>
       </section>
 
-      <section className="md:h-[50vh] bg-green my-auto flex justify-center">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center my-auto items-center gap-3">
+      <section className="md:h-[50vh] my-auto flex justify-center signup-newsletter-bg">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center my-auto items-center gap-3 py-10">
           <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md mx-auto">
             <h1 className="text-center text-white text-5xl mb-2">
               {" "}
-              <strong>20+ </strong>{" "}
+              <strong><Counter start={0} end={20} /> </strong>{" "}
             </h1>
             <p className="text-white text-5xl text-center">
               Years of experience
@@ -133,14 +134,14 @@ const page = () => {
           <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md mx-auto">
             <h1 className="text-center text-white text-5xl mb-2">
               {" "}
-              <strong>35+ </strong>{" "}
+              <strong><Counter start={0} end={35} />  </strong>{" "}
             </h1>
             <p className="text-white text-5xl text-center">Award Win </p>
           </div>
           <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md mx-auto">
             <h1 className="text-center text-white text-5xl mb-2">
               {" "}
-              <strong>1750+ </strong>{" "}
+              <strong><Counter start={0} end={1750} /> </strong>{" "}
             </h1>
             <p className="text-white text-5xl text-center block">
               Happy Customers
@@ -149,7 +150,7 @@ const page = () => {
           <div className="w-[250px] my-auto border-white border-2 border-solid p-10 rounded-md mx-auto">
             <h1 className="text-center text-white text-5xl mb-2">
               {" "}
-              <strong>120+ </strong>{" "}
+              <strong><Counter start={0} end={120} /> </strong>{" "}
             </h1>
             <p className="text-white text-5xl text-center">Our Expert Staffs</p>
           </div>
@@ -221,7 +222,7 @@ const page = () => {
         </div>
       </section>
 
-<section className="what-we-do">
+<section className="what-we-do p-5">
 <div className="mx-auto container">
  <div className="do-inner flex flex-col md:flex-row">
 <div className="do-left w-full lg:w-1/2">
@@ -236,7 +237,7 @@ const page = () => {
 </ul>
 </div>
 <div className="do-right w-full lg:w-1/2">
-  <div className="do-green mx-auto">
+  <div className="do-green mx-auto rounded-none">
 
   </div>
 </div>
@@ -266,7 +267,6 @@ get to Net Zero.</li>
 </div>
 <div className="do-right mx-auto w-full lg:w-1/2 p-5 ">
   <div className="do-green mx-auto ">
-
   </div>
 </div>
  </div>

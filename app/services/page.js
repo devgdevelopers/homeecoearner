@@ -5,7 +5,7 @@ import SignupNewsletter from '../component/SignupNewsletter'
 const page = () => {
   return (
     <>
-      <section className="md:mt-0 services-bg-images min-h-[50vh] bg-[#0a890d] my-auto">
+      <section className="md:mt-0 services-bg-images  min-h-[50vh]  my-auto">
         <div className="container mx-auto flex flex-col my-auto justify-center items-center ">
           <h2 className="text-[20px] md:text-5xl text-green font-bold">
             Services
@@ -20,23 +20,23 @@ const page = () => {
           </p>
         </div>
       </section>
-      <section className="bg-[#00a241] py-20">
+      <section className="bg-[#15a13538] py-20 ">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-5">
-          <div className="flex flex-col  justify-center items-center gap-2 p-0 md:p-5">
+          <div className="flex flex-col  justify-center items-center gap-2 p-0 md:p-5 services-p-div">
             <Image
               src="/assets/images/design.png"
               width={70}
               height={10}
-              className="bg-white p-2 rounded-md"
+              className="p-2 rounded-md"
             ></Image>
-            <h1 className="text-3xl font-bold text-white">Design</h1>
+            <h1 className="text-3xl font-bold">Design</h1>
             <p className="w-3/4 text-center text-white">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Accusamus, nisi reprehenderit! Deserunt, ad. Illum labore earum
               quaerat rerum perferendis dolorem?
             </p>
           </div>
-          <div className="flex flex-col  justify-center items-center gap-2 p-5">
+          <div className="flex flex-col  justify-center items-center gap-2 p-0 md:p-5 services-p-div">
             <Image
               src="/assets/images/supply.png"
               width={70}
@@ -50,7 +50,7 @@ const page = () => {
               quaerat rerum perferendis dolorem?
             </p>
           </div>
-          <div className="flex flex-col  justify-center items-center gap-2 p-5">
+          <div className="flex flex-col  justify-center items-center gap-2 p-0 md:p-5 services-p-div">
             <Image
               src="/assets/images/installation.png"
               width={70}
@@ -64,7 +64,7 @@ const page = () => {
               quaerat rerum perferendis dolorem?
             </p>
           </div>
-          <div className="flex flex-col  justify-center items-center gap-2 p-5">
+          <div className="flex flex-col  justify-center items-center gap-2 p-0 md:p-5 services-p-div">
             <Image
               src="/assets/images/monitor.png"
               width={70}
@@ -78,7 +78,7 @@ const page = () => {
               quaerat rerum perferendis dolorem?
             </p>
           </div>
-          <div className="flex flex-col  justify-center items-center gap-2 p-5">
+          <div className="flex flex-col  justify-center items-center gap-2 p-0 md:p-5 services-p-div">
             <Image
               src="/assets/images/tools.png"
               className="bg-white p-1 rounded-md"
@@ -92,7 +92,7 @@ const page = () => {
               quaerat rerum perferendis dolorem?
             </p>
           </div>
-          <div className="flex flex-col  justify-center items-center gap-2 p-5">
+          <div className="flex flex-col  justify-center items-center gap-2 p-0 md:p-5 services-p-div">
             <Image
               src="/assets/images/team.png"
               className="bg-white p-1 rounded-md"

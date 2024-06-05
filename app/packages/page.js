@@ -26,7 +26,7 @@ const page = () => {
         </h1>
         <div className=" mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] pb-5">
           <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
-            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
+            <h1 className="text-white bg-green my-3 py-4 px-3 text-lg">
               <strong>Basic Package</strong>
               <span className="text-base">- Solar</span>
             </h1>
@@ -38,7 +38,7 @@ const page = () => {
             </div>
           </div>
           <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
-            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
+            <h1 className="text-white bg-green my-3 py-4 px-3 text-lg">
               <strong>Premium Package</strong>
               <span className="text-base">
                 - Power System - Solar + Battery
@@ -54,7 +54,7 @@ const page = () => {
         </div>
         <div className="mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
           <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
-            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
+            <h1 className="text-white bg-green my-3 py-4 px-3 text-lg">
               <strong>Hybrid Package </strong>
               <span className="text-base">- Solar + Battery + Wind</span>
             </h1>
@@ -66,7 +66,7 @@ const page = () => {
             </div>
           </div>
           <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
-            <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
+            <h1 className="text-white bg-green my-3 py-4 px-3 text-lg">
               <strong>Ultimate Package</strong>
               <span className="text-base">
                 - Solar + Battery + Wind + Power Booster

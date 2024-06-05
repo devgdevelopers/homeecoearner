@@ -138,74 +138,73 @@ return (
 
 
   {/* customer packages */}
-  <section className="customer-pack-section py-2 md:py-20">
-    <h1 className="text-[30px] md:text-[40px] text-dark font-bold text-center mb-5 w-[100%] md:-[50%]">
-      Customer Packages
-    </h1>
 
-
-    <div className=" mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
-      <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
-        <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
-          <strong>Basic Package</strong>
-          <span className="text-base">- Solar</span>
+  <section className="customer-pack-section py-0 md:py-10">
+        <h1 className="text-[30px] md:text-[40px] text-dark font-bold text-center mb-5 w-[100%] md:-[50%]">
+          Customer Packages
         </h1>
-        <div className="text-white p-5">
-          <p> • 2.7kW PV solar panels + inverter + controller</p>
-          <p>• No upfront cost</p>
-          <p>• Own your own power system</p>
-          <p>• No more electricity bills</p>
+        <div className=" mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] pb-5">
+          <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
+            <h1 className="text-white bg-green my-3 py-4 px-3 text-lg">
+              <strong>Basic Package</strong>
+              <span className="text-base">- Solar</span>
+            </h1>
+            <div className="text-white p-5">
+              <p> • 2.7kW PV solar panels + inverter + controller</p>
+              <p>• No upfront cost</p>
+              <p>• Own your own power system</p>
+              <p>• No more electricity bills</p>
+            </div>
+          </div>
+          <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
+            <h1 className="text-white bg-green my-3 py-4 px-3 text-lg">
+              <strong>Premium Package</strong>
+              <span className="text-base">
+                - Power System - Solar + Battery
+              </span>
+            </h1>
+            <div className="text-white p-5">
+              <p> • 2.7kW PV solar panels + inverter + controller</p>
+              <p>• No upfront cost</p>
+              <p>• Own your own power system</p>
+              <p>• No more electricity bills</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="bg-dark w-[90%] md:w-[80%] rounded-xl mx-auto">
-        <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
-          <strong>Premium Package</strong>
-          <span className="text-base">
-            - Power System - Solar + Battery
-          </span>
-        </h1>
-        <div className="text-white p-5">
-          <p> • 2.7kW PV solar panels + inverter + controller</p>
-          <p>• No upfront cost</p>
-          <p>• Own your own power system</p>
-          <p>• No more electricity bills</p>
+        <div className="mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
+          <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
+            <h1 className="text-white bg-green my-3 py-4 px-3 text-lg">
+              <strong>Hybrid Package </strong>
+              <span className="text-base">- Solar + Battery + Wind</span>
+            </h1>
+            <div className="text-white p-5">
+              <p>• Everything in Premium plus </p>
+              <p>• 2x Mini wind turbines</p>
+              <p>• Submission for any Planning </p>
+              <p>• No upfront cost </p>
+            </div>
+          </div>
+          <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
+            <h1 className="text-white bg-green my-3 py-4 px-3 text-lg">
+              <strong>Ultimate Package</strong>
+              <span className="text-base">
+                - Solar + Battery + Wind + Power Booster
+              </span>
+            </h1>
+            <div className="text-white p-5">
+              <p>• Everything in Hybrid plus </p>
+              <p>
+                • Power Booster - enables you to generate excess electricity *
+              </p>
+              <p>• Gives you priority access to our new technology </p>
+              <p>• No up front cost </p>
+              <p>• Cost-free upgrade for Basic , Premium and Hybrid Packages</p>
+              <p>• Convert a cost cost into an income </p>
+              <p>• Potential to earn a meaningful regular income </p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div className="mx-auto flex flex-col sm:flex-row gap-5 w-[95%] md:w-[90%] lg:w-[70%] xl:w-[60%] mb-5">
-      <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
-        <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
-          <strong>Hybrid Package </strong>
-          <span className="text-base">- Solar + Battery + Wind</span>
-        </h1>
-        <div className="text-white p-5">
-          <p>• Everything in Premium plus </p>
-          <p>• 2x Mini wind turbines</p>
-          <p>• Submission for any Planning </p>
-          <p>• No upfront cost </p>
-        </div>
-      </div>
-      <div className="bg-dark w-[90%] md:w-[70%] rounded-xl mx-auto">
-        <h1 className="text-[#ffb800] bg-[#004202] my-3 py-4 px-3 text-lg">
-          <strong>Ultimate Package</strong>
-          <span className="text-base">
-            - Solar + Battery + Wind + Power Booster
-          </span>
-        </h1>
-        <div className="text-white p-5">
-          <p>• Everything in Hybrid plus </p>
-          <p>
-            • Power Booster - enables you to generate excess electricity *
-          </p>
-          <p>• Gives you priority access to our new technology </p>
-          <p>• No up front cost </p>
-          <p>• Cost-free upgrade for Basic , Premium and Hybrid Packages</p>
-          <p>• Convert a cost cost into an income </p>
-          <p>• Potential to earn a meaningful regular income </p>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
   {/* contact form section */}
   <section className="contact-form-section py-10 md:p-10 mx-auto">
@@ -241,15 +240,15 @@ return (
           <h1 className="text-3xl text-white font-semibold mb-3">Info</h1>
           <div className="flex flex-col gap-5 justify-center ">
             <span className="text-xl text-white">
-              <EmailOutlinedIcon className="text-xl lg:text-5xl text-[#b3ebc7] font-light" /> info@homecoearner.com
+              <EmailOutlinedIcon className="text-2xl mr-2 text-[#b3ebc7] font-light" /> info@homecoearner.com
             </span>
             <span className="text-xl text-white">
-              < PhoneInTalkOutlinedIcon className="text-xl lg:text-5xl text-[#b3ebc7]" />
+              < PhoneInTalkOutlinedIcon className="text-2xl mr-2  text-[#b3ebc7]" />
               +020 3286 5350
             </span>
 
             <span className="text-xl text-white">
-              <LocationOnOutlinedIcon className="text-xl lg:text-5xl text-[#b3ebc7] bg-none" /> 2 Brunel Place,
+              <LocationOnOutlinedIcon className="text-2xl mr-2  text-[#b3ebc7] bg-none" /> 2 Brunel Place,
               Slough, SL1 1FQ, UK
             </span>
           </div>
