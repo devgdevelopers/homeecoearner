@@ -78,7 +78,7 @@ const Page = () => {
       <section className="md:mt-0 services-images min-h-[40vh] bg-[#0a890d] my-auto text-white">
         <div className="container mx-auto flex flex-col justify-center items-center py-12">
           <h2 className="text-[20px] md:text-5xl font-bold mb-4 text-green">
-          Battery Energy Storage System
+          SR-182 Series Solar Panels
           </h2>
           <p className=" mx-auto text-center text-lg text-dark font-semibold">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est
@@ -92,31 +92,8 @@ const Page = () => {
       </section>
 
 
-{/* <section className="flex w-full xl:px-[300px] px-4 h-[55vh] main_section py-[50px] gap-2">
-      <div className="flex flex-col w-28 h-full gap-4 left_section ">
-        {images.map((image, index) => (
-          <div key={index} className="smalll cursor-pointer p-1 flex justify-center items-center" onClick={() => handleImageClick(image)}>
-            <Image src={image} alt={`Sample ${index + 1}`} width={90} height={90} className="rounded-lg" />
-          </div>
-        ))}
-      </div>
-      <div className="relative w-[27rem] h-[27rem] mid_section">
-        <Image src={currentImage} alt="Current" layout="fill" objectFit="contain" className="rounded-lg" />
-      </div>
-      <div className="flex-1 ml-5 right_section md:text-[20px] text-[10px]">
-        <h1 className="text-[#002202] text-2xl font-bold">Battery Energy Storage System</h1>
-        <p>Our Lithium Battery Energy Storage System (BESS) is a comprehensive solution tailored for various energy storage needs.</p>
-        <p>This system is versatile, suitable for large-scale energy storage, distribution network storage, microgrid storage, as well as industrial, commercial, and household applications.</p>
-        <p>It also extends to specialized scenarios like data center power storage and emergency backup, providing customers with targeted, all-encompassing system solutions.</p>
-        <hr/>
-        <span className="text-sm social-icons mt-6">
-    Share <BiLogoFacebook /><FaXTwitter /><FaPinterestP /><BsInstagram  /><FiMail  />
-</span>
 
-
-      </div>
-    </section> */}
-    <section className="flex flex-col md:flex-row w-full xl:px-[300px] px-4 py-[50px] gap-2 bg-[#e8ffed]">
+    <section className="flex flex-col md:flex-row w-full xl:px-[300px] px-4 py-[50px] gap-4 bg-[#e8ffed]">
   <div className="flex w-full md:w-auto h-auto md:h-[55vh] gap-4 md:gap-2 md:flex-col left_section">
     {images.map((image, index) => (
       <div key={index} className="smalll cursor-pointer p-1 flex justify-center items-center" onClick={() => handleImageClick(image)}>
@@ -128,7 +105,7 @@ const Page = () => {
     <Image src={currentImage} alt="Current" layout="fill" objectFit="contain" className="rounded-lg" />
   </div>
   <div className="w-full md:w-auto md:flex-1 md:ml-5 right_section md:text-[20px] text-[10px]">
-    <h1 className="text-[#002202] text-2xl font-bold">Battery Energy Storage System</h1>
+    <h1 className="text-[#002202] text-2xl font-bold">SR-182 Series Solar Panels</h1>
     <p>Our Lithium Battery Energy Storage System (BESS) is a comprehensive solution tailored for various energy storage needs.</p>
     <p>This system is versatile, suitable for large-scale energy storage, distribution network storage, microgrid storage, as well as industrial, commercial, and household applications.</p>
     <p>It also extends to specialized scenarios like data center power storage and emergency backup, providing customers with targeted, all-encompassing system solutions.</p>
@@ -139,49 +116,7 @@ const Page = () => {
   </div>
 </section>
 
-{/* <section className="flex w-full xl:px-[300px] px-4 h-[100vh] main_section py-[50px] flex-col __section2">
-  <div className="w-[350px] h-[65px] bg-[#d1fcda] flex justify-center items-center">
-    <span className="text-[#002202] text-xl font-medium">Key Features of Our BESS</span>
-  </div>
 
-
-  <h1 className="text-[#002202] text-xl font-bold">
-  • Advanced Battery Management Technology
-  </h1>
-  <p><span className="text-[#002202] text-xl font-semibold">Highly Integrated Chips & Unique Algorithm:</span> We employ advanced chips coupled with a unique battery equalization algorithm.This combination allows for bidirectional, large-current equalization,reaching currents up to 3A. </p>
-  <p><span className="text-[#002202] text-xl font-semibold">Efficient & Reliable:</span> Our system boasts an impressive energy efficiency of up
-to 94%, ensuring high equalizing efficiency and reliability. </p>
-  <p><span className="text-[#002202] text-xl font-semibold">Low Power Consumption & Scalability:</span> With ultra-low static power
-consumption, the system is designed for easy expansion and can be
-cascaded to suit larger requirements.</p>
-  <p><span className="text-[#002202] text-xl font-semibold">Battery Protection:</span>  Our technology accurately estimates the internal state of
-the battery, safeguarding both its safety and prolonging its lifespan. </p>
-
-
-
-  <h1 className="text-[#002202] text-xl font-bold">
-  • Active Safety Technology
-  </h1>
-  <p><span className="text-[#002202] text-xl font-semibold">Intelligent Fire Protection:</span>At the pack level, our BESS features an intelligent
-fire protection system. </p>
-  <p><span className="text-[#002202] text-xl font-semibold">Safety Isolation:</span> We incorporate battery-integrated system partition safety
-isolation, ensuring robust protection.</p>
-  <p><span className="text-[#002202] text-xl font-semibold">Active Fire Protection:</span>The system is equipped with full-time immersion
-capabilities for active fire prevention.</p>
-
-
-  <h1 className="text-[#002202] text-xl font-bold">
-  • Energy Management & Coordinated Control Technology
-  </h1>
-  <p><span className="text-[#002202] text-xl font-semibold">Comprehensive Data Handling:</span>Our system is adept at data acquisition,
-computation, event management, and processing. </p>
-  <p><span className="text-[#002202] text-xl font-semibold">Effective System Control:</span> We ensure efficient control of the entire system,
-coupled with real-time monitoring for seamless energy management.</p>
-
-
-
-
-</section> */}
 <section className="flex flex-col w-full xl:px-[300px] px-4 py-[50px]  __section2 bg-[#e8ffed]">
   <div className="w-[350px] h-[65px] bg-[#d1fcda] flex justify-center items-center">
     <span className="text-[#002202] text-xl font-medium">Key Features of Our BESS</span>
@@ -328,3 +263,4 @@ coupled with real-time monitoring for seamless energy management.</p>
 };
 
 export default Page;
+

@@ -4,12 +4,34 @@ import Link from "next/link";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import VerifiedIcon from '@mui/icons-material/Verified';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
+import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import Slider from "react-slick";
 import {Input} from "@nextui-org/input";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState, useEffect } from "react";
 
-export default function Home() {
+export default function Home({ productId }) {
+
+  const [productData, setProductData] = useState(null);
+
+  useEffect(() => {
+      async function fetchProduct(id) {
+          try {
+              const response = await fetch(`/api/products?id=${id}`);
+              const data = await response.json();
+              setProductData(data);
+          } catch (error) {
+              console.error('Fetch error:', error);
+          }
+      }
+      if (productId) {
+          fetchProduct(productId);
+      }
+  }, [productId]);
+  
   const settings = {
     infinite: true,
     speed: 500,
@@ -59,9 +81,9 @@ export default function Home() {
     dots: false,
   };
    const placements = [
-    
     "outside",
   ];
+
   return (
     <main className="flex min-h-screen flex-col items-center overflow-hidden relative top-0 left-0 w-full">
       {/* banner section */}
@@ -94,7 +116,7 @@ export default function Home() {
             </Slider>
 
             <button className="bg-[#FFB800] w-[145px] h-[44px] p-2 rounded-[50px]  buy-now-btn text-center font-bold">
-              Buy Now
+              Sign Up
             </button>
           </div>
           <div className="w-1/2 flex justify-end">
@@ -151,6 +173,7 @@ export default function Home() {
         <div className="grid container mx-auto grid-cols-3 gap-10 p-10 ">
           <div className=" p-5 w-[440px] py-10 flex justify-center items-center flex-col  product-div ">
             <Image
+              // src={`${product.}`}
               src="/assets/images/battery1-ws.svg"
               width={100}
               height={100}
@@ -167,6 +190,7 @@ export default function Home() {
               View More
             </Link>
           </div>
+
           <div className="p-5 w-[440px] py-10 flex justify-center items-center flex-col product-div">
             <Image
               src="/assets/images/battery2-ws.svg"
@@ -252,7 +276,7 @@ export default function Home() {
       {/* Steps Section  */}
       <section className="w-full steps-section relative ">
         <div className="container mx-auto ">
-          <div className="steps-inner-div absolute p-10 py-20 flex justify-center flex-col">
+          <div className="steps-inner-div absolute top-4 p-10 py-20 flex justify-center flex-col">
             <h1 className="text-5xl text-green font-semibold text-center my-1">
               For our Home EcoEarner Power System today <br /> and experience
               the future of renewable energy.{" "}
@@ -290,203 +314,251 @@ export default function Home() {
                   as they come to market
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2"/>
+                  <CheckCircleOutlineIcon className="mr-2" />
                   We promise to install our Home EcoEarner Power Booster upon
                   release.
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2"/>
+                  <CheckCircleOutlineIcon className="mr-2" />
                   You pay nothing upfront.
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2"/>
+                  <CheckCircleOutlineIcon className="mr-2" />
                   We buy excess electricity from you, putting money back into
                   your pocket.
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2"/>
+                  <CheckCircleOutlineIcon className="mr-2" />
                   Say goodbye to out-of-pocket expenses.
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2"/>
+                  <CheckCircleOutlineIcon className="mr-2" />
                   And when possible, we pay you instead of the other way around.
                 </span>
               </div>
             </div>
-            <button className="p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white">Join Our Priority List Today</button>
+            <button className="p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white">
+              Join Our Priority List Today
+            </button>
           </div>
         </div>
       </section>
 
       {/* packges  */}
-      <section className="w-full py-10 mt-[400px]">
+      <section className="w-full py-10 mt-[400px] mb-10">
         <div className="container mx-auto">
           <h1 className="font-bold text-[50px] text-center text-green mt-5 mb-10">
             Customer Packages
           </h1>
+        </div>
+        <div className="w-full grid grid-cols-3 px-20 container mx-auto packages-div justify-center">
+          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
+            <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
+              BRONZE - <span className="text-[22px]">Power</span>
+            </h1>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              2.7kW PV solar panels + inverter + controller
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              10.5kW battery
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              No upfront cost
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Free installation
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              System pays for itself
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Net cash benefit of £59/year
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Lifetime net cash benefit £47,944
+            </p>
           </div>
-          <div className="w-full grid grid-cols-3 px-20 container mx-auto packages-div justify-center">
-              <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
-                <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">BRONZE - <span className="text-[22px]">Power</span></h1>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon" />
-                  2.7kW PV solar panels + inverter + controller 
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon" />
-                  10.5kW battery
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon" />
-                  No upfront cost 
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"  />
-                  Free installation
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon" />
-                  System pays for itself
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon" />
-                  Net cash benefit of £59/year
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon" />
-                  Lifetime net cash benefit £47,944
-                </p>
-              </div>
-              <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
-              <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">SILVER - <span className="text-[22px]">Plus Wind</span></h1>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon" />
-                  Everything in Bronze plus
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  1 x Mini wind turbines
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Submission for any planning
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Free installation
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  System pays for itself
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Net cash benefit of £1,468/year
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Lifetime net cash benefit £102,662
-                </p>
-              </div>
-              <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
-              <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">GOLD - <span className="text-[22px]">Power Booster</span></h1>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon" />
-                  Power Booster - enables you to generate excess electricity
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Free installation
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Our customers get priority and a net cost-free upgrade when it is released
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Micro generator system
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Potential to earn a serious regular income
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  System pays for itself
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Net cash benefit £4,869/year
-                </p>
-                <p>
-                  <VerifiedIcon className="mr-2 verified-icon"/>
-                  Lifetime net cash benefit £286,425
-                </p>
-              </div>
-            </div>
-          </section>
+          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
+            <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
+              SILVER - <span className="text-[22px]">Plus Wind</span>
+            </h1>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Everything in Bronze plus
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />1 x Mini wind
+              turbines
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Submission for any planning
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Free installation
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              System pays for itself
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Net cash benefit of £1,468/year
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Lifetime net cash benefit £102,662
+            </p>
+          </div>
+          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
+            <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
+              GOLD - <span className="text-[22px]">Power Booster</span>
+            </h1>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Power Booster - enables you to generate excess electricity
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Free installation
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Our customers get priority and a net cost-free upgrade when it is
+              released
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Micro generator system
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Potential to earn a serious regular income
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              System pays for itself
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Net cash benefit £4,869/year
+            </p>
+            <p>
+              <VerifiedIcon className="mr-2 verified-icon" />
+              Lifetime net cash benefit £286,425
+            </p>
+          </div>
+        </div>
+      </section>
 
-          {/* contact us form  */}
-          <section className="w-full py-10 bg-green">
+      {/* contact us form  */}
+      <section className="w-full py-10 bg-green">
         <div className="container mx-auto">
-          <h1 className="font-bold text-[50px] text-center text-white mt-5 mb-10">
-          Contact Us
+          <h1 className="font-bold text-[50px] text-center text-white ">
+            Contact Us
           </h1>
-          <p className="text-white text-center">Feel free to contact us any time We will get back to you as soon as we can!  </p>
-          </div>
-          <div>
+          <p className="text-white text-center">
+            Feel free to contact us any time We will get back to you as soon as
+            we can!{" "}
+          </p>
+        </div>
+        <div className="container mx-auto grid grid-cols-2 my-10">
+          <div className="px-10">
             <form action="">
-              <div >
-                <label htmlFor="name">Your Name</label>
-                <input type="text" name="" id="" placeholder="Enter your full name" className="bg-white"/>
+              <div className="flex flex-col gap-1 mb-3">
+                <label htmlFor="name" className="text-white ">
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Enter your full name"
+                  className="bg-white p-2  outline-none"
+                />
+              </div>
+              <div className="flex flex-col gap-1 mb-3">
+                <label htmlFor="name" className="text-white ">
+                  Email Address
+                </label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Enter Your email address"
+                  className="bg-white p-2  outline-none"
+                />
+              </div>
+              <div className="flex flex-col gap-1 mb-3">
+                <label htmlFor="name" className="text-white ">
+                  Mobile Number
+                </label>
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="Enter Your mobile no."
+                  className="bg-white p-2  outline-none"
+                />
+              </div>
+
+              <div className="flex flex-col gap-1 mb-3">
+                <label htmlFor="name" className="text-white ">
+                  Message
+                </label>
+                <textarea
+                  type="text"
+                  rows={4}
+                  name=""
+                  id=""
+                  placeholder="Enter Your Message"
+                  className="bg-white p-2 outline-none"
+                />
               </div>
               <div>
-                <label htmlFor="name">Email Address</label>
-                <input type="text" name="" id="" placeholder="Enter Your email address" className="bg-white"/>
+                <button
+                  type="submit"
+                  className="text-xl font-bold p-2 px-9 rounded-3xl bg-[#FFB800]"
+                >
+                  Submit
+                </button>
               </div>
-              <div className="flex ">
-          {placements.map((placement) => (
-            <Input
-              key={placement}
-              type="email"
-              label="Email"
-              labelPlacement={placement}
-              description={placement}
-            />
-          ))}
-        </div>
-            
-              {/* <div>
-                <label htmlFor="name">Message</label>
-                <Input
-              key='outside'
-              type="email"
-              label="Email"
-              labelPlacement='outside'
-              placeholder="Enter your email"
-              description='outside'
-            />
-             <div className="flex flex-col gap-2">
-        <h3 className="text-default-500 text-small">With placeholder</h3>
-        <div className="flex w-full flex-wrap items-end md:flex-nowrap mb-6 md:mb-0 gap-4">
-          {placements.map((placement) => (
-            <Input
-              key={placement}
-              type="email"
-              label="Email"
-              labelPlacement={placement}
-              placeholder="Enter your email"
-              description={placement}
-            />
-          ))}
-        </div>
-      </div>  
-              </div> */}
-            
             </form>
           </div>
-          
-          </section>
+          <div className="px-10 cotact-div-left-border  ">
+            <div className="my-auto bg-white p-10 flex flex-col gap-3 mt-5 rounded-md shadow-xl">
+              <h2 className="text-xl font-bold">Info</h2>
+              <h2>
+                <span>
+                  <MailOutlineIcon className="mr-2 text-green" />
+                </span>
+                info@homeecoearner.com
+              </h2>
+              <h2>
+                <span>
+                  <LocalPhoneOutlinedIcon className="mr-2 text-green" />
+                </span>
+                020 3286 5350
+              </h2>
+              <h2 className="">
+                <span>
+                  <PlaceOutlinedIcon className="mr-2 text-green"/>
+                </span>
+                2 Brunel Place, Slough, SL1 1FQ, UK
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
   );
 }

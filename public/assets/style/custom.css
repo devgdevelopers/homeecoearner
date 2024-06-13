@@ -52,7 +52,7 @@
 
 }
 
-.buy-now-btn {
+/* .buy-now-btn {
   background: #FFB800;
   color: #000;
   cursor: pointer;
@@ -62,17 +62,17 @@
   border-radius: 50px;
   position: relative;
   overflow: hidden;
-  /* Ensures the icon is hidden initially */
+ 
 }
 
 .buy-now-btn::after {
   content: "";
-  /* Assuming this is the Font Awesome icon */
+ 
 
   font-weight: 400;
 
   transform: translateY(-50%) translateX(-10px);
-  /* Adjust initial position */
+
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s, left 0.5s;
 }
@@ -81,16 +81,16 @@
   background: #FFB800;
 
   padding-right: 3.5rem;
-  /* Increase padding on hover */
+
 }
 
 .buy-now-btn:hover::after {
   left: 85%;
-  /* Position the icon within the button */
+  
   opacity: 1;
   transform: translateY(-50%);
-  /* Adjust transform as needed */
-}
+  
+} */
 
 .product-div {
   background: #F5F5F5;
@@ -229,17 +229,23 @@ p {
 
 .packages-div div{
   background-color: #F5F5F5;
+  transition: .7s;
 }
 .packages-inner-div:hover{
-  background-color: #028921;
+  background-color: #15A135;
   color: white;
-  transition: .5s;
+  transition: .7s;
 }
 
 .packages-div div:hover h1,
 .packages-div div:hover p,
 .packages-div div:hover .verified-icon{
   color: #F5F5F5;
+
+}
+.cotact-div-left-border{
+  border-left: 1px solid #fff;
+
 
 }
 

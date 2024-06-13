@@ -8,6 +8,10 @@ import Header from './component/header'
 import { NextUIProvider } from "@nextui-org/react";
 import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
+import '@mantine/core/styles.css';
+import { createTheme, MantineProvider } from '@mantine/core';
+import { AuthProvider } from '../helpers/AuthContext'
+import { Toaster } from 'react-hot-toast';
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
