@@ -25,7 +25,7 @@ const HeaderBg = () => {
     },
     {
       page: "About",
-      link: "/about",
+      link: "/about-us",
     },
     {
       page: "Products",
@@ -79,7 +79,7 @@ const HeaderBg = () => {
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/about" className="font-bold text-dark">
+              <Link href="/about-us" className="font-bold text-dark">
                 About
               </Link>
             </NavbarItem>
