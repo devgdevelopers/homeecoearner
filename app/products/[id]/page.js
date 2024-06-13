@@ -1,36 +1,57 @@
 "use client"
-import React, { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useRouter } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
+import React, { useEffect, useState } from 'react';
 
-const UserProfile = ({ params }) => {
+const UserProfile = () => {
+  const router = useRouter();
   const searchParams = useSearchParams();
-  const userName = searchParams.get("name");
+  const userName = searchParams.get('name');
 
-  const [userPosts, setUserPosts] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [isLoading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
+  
   useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await fetch(`/api/users/${params?.id}`);
-        if (!response.ok) {
-          throw new Error("Failed to fetch user posts");
-        }
-        const data = await response.json();
-        setUserPosts(data);
-      } catch (error) {
-        console.error("Error fetching user posts:", error);
-      }
-    };
+    fetchProducts();
+}, []);
 
-    if (params?.id) {
-      fetchPosts();
-    }
-  }, [params?.id]);
+  const fetchProducts = () => {
+    fetch('/api/products')
+        .then(response => response.json())
+        .then(data => {
+            setProducts(data.data)
+setLoading(false);
+        })
+        .catch(error => {
+            console.error('Fetch error:', error)
+            setLoading(false);
+        });
+};
+  console.log(products);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
 
   return (
-
-
-    <p>hello</p>
+    <div>
+      {products.length === 0 ? (
+        <p>No products found.</p>
+      ) : (
+        products.map((product) => (
+          <div key={product._id}>
+            <h3>{product.cardHeading}</h3>
+            <img src={product.cardImg} alt={product.cardHeading} />
+          </div>
+        ))
+      )}
+    </div>
   );
 };
 
