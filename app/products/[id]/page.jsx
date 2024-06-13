@@ -35,13 +35,16 @@
 // export default ProductPage
 
 
-import React, { Suspense } from 'react'
+import React , { Suspense } from 'react'
 import UserProfile from '../../component/UserProfile'
 
 // Example data fetching function, replace with your actual data source
 const fetchProducts = async () => {
     // Mock data
     return [
+        { id: '1' },
+        { id: '2' },
+        { id: '3' }
     ]
 }
 
@@ -59,8 +62,7 @@ const ProductPage = ({ params }) => {
     return (
         <div>
             <Suspense fallback={<div>Loading...</div>}>
-            <UserProfile productId={id} />
-            </Suspense>
+            <UserProfile productId={id} /></Suspense>
         </div>
     )
 }
