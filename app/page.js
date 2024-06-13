@@ -13,24 +13,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect } from "react";
 
-export default function Home({ productId }) {
+export default function Home() {
 
-  const [productData, setProductData] = useState(null);
-
-  useEffect(() => {
-      async function fetchProduct(id) {
-          try {
-              const response = await fetch(`/api/products?id=${id}`);
-              const data = await response.json();
-              setProductData(data);
-          } catch (error) {
-              console.error('Fetch error:', error);
-          }
-      }
-      if (productId) {
-          fetchProduct(productId);
-      }
-  }, [productId]);
   
   const settings = {
     infinite: true,
