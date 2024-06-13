@@ -61,7 +61,7 @@ export default function Page() {
             <NavbarBrand className="flex justify-start">
               <Link href="/">
                 <Image
-                  className=" w-[200px] h-[auto]"
+                  className=" w-[200px] h-[40px]"
                   src="/assets/images/logo.png"
                   width={100}
                   height={100}

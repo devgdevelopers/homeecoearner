@@ -23,7 +23,7 @@ export async function POST(req) {
   let mailOptions = {
     from: process.env.EMAIL_USER,
     to: 'as77468@gmail.com',
-    subject: 'This is the subject',
+    subject: 'Message from Homeecoearner',
     text: `this message is sent by \n Username: ${name}\n Email: ${email}\n Message: ${message}` ,
   };
 

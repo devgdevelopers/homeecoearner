@@ -284,6 +284,13 @@ background-image: url(/assets/images/services-light-bg.png);
   .left_section{
 
   }
+  @media (max-width: 767px) {
+    .left_section {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
   .mid_section{
     background-color: #002202;
       }
@@ -317,4 +324,7 @@ background-image: url(/assets/images/services-light-bg.png);
         align-items: center;
         gap: 8px; 
     }
-    
+    .loader_ {
+      border-top-color: #196901; /* Tailwind CSS blue-400 color */
+      animation: spin 1s linear infinite;
+    }

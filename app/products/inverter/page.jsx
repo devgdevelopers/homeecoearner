@@ -4,93 +4,30 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Pagination } from "@nextui-org/react";
-import Link from 'next/link';
-
-
-const products = [
-  {
-    link:"battery",
-    src: "/assets/images/__img1.jpg",
-    alt: "Battery Energy Storage System",
-    title: "Battery Energy Storage System",
-    customClass:"p-10 rounded-tr-[50%]   " ,
-  },
-  {
-    link:"inverter",
-    src: "/assets/images/__img2.jpg",
-    alt: "HF-H Series Inverter",
-    title: "HF-H Series Inverter",
-    customClass:"p-14 rounded-t-[50%] " ,
-  },
-  {
-    link:"solarpanel",
-    src: "/assets/images/__img3.jpg",
-    alt: "SR-182 Series Solar Panels",
-    title: "SR-182 Series Solar Panels",
-    customClass:"p-10 rounded-tl-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 1",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tr-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 2",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-t-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 3",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tl-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 4",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tr-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 5",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-t-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 6",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tl-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 7",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tr-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 8",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-t-[50%] " ,
-    
-
-  },
-  {
-    src: "",
-    alt: "Product Image 9",
-    title: "Lorem, ipsum dolor.",
-    customClass:"p-5 rounded-tl-[50%] " ,
-  },
-];
+import { BiLogoFacebook } from "react-icons/bi";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaPinterestP } from "react-icons/fa6";
+import { BsInstagram } from "react-icons/bs";
+import { FiMail } from "react-icons/fi";
 
 const PER_PAGE = 6;
 
+
 const Page = () => {
+  const images = [
+    "/assets/images/__img1.jpg",
+    "/assets/images/__img2.jpg",
+    "/assets/images/__img3.jpg",
+    "/assets/images/__img1.jpg",
+  ];
+
+  const [currentImage, setCurrentImage] = useState(images[0]);
+
+  const handleImageClick = (image) => {
+    setCurrentImage(image);
+  };
+
+  
   const [currentPage, setCurrentPage] = useState(1);
 
   const handlePageChange = (page) => {
@@ -98,8 +35,8 @@ const Page = () => {
   };
 
   const offset = (currentPage - 1) * PER_PAGE;
-  const currentProducts = products.slice(offset, offset + PER_PAGE);
-  const totalPages = Math.ceil(products.length / PER_PAGE);
+//   const currentProducts = products.slice(offset, offset + PER_PAGE);
+//   const totalPages = Math.ceil(products.length / PER_PAGE);
   const settings = {
     infinite: false,
     speed: 500,
@@ -120,14 +57,14 @@ const Page = () => {
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 3,
           centerPadding: "20px",
         },
       },
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           centerPadding: "10px",
         },
       },
@@ -135,12 +72,13 @@ const Page = () => {
     ],
   };
 
+
   return (
     <>
-      <section className="md:mt-0 services-bg-images min-h-[50vh] bg-[#0a890d] my-auto text-white">
+      <section className="md:mt-0 services-images min-h-[40vh] bg-[#0a890d] my-auto text-white">
         <div className="container mx-auto flex flex-col justify-center items-center py-12">
           <h2 className="text-[20px] md:text-5xl font-bold mb-4 text-green">
-            Products
+          HF-H Series Inverter
           </h2>
           <p className=" mx-auto text-center text-lg text-dark font-semibold">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est
@@ -152,8 +90,79 @@ const Page = () => {
           </p>
         </div>
       </section>
-      <section className="products-bg-section">
-        <div className="container mx-auto py-20">
+
+
+
+    <section className="flex flex-col md:flex-row w-full xl:px-[300px] px-4 py-[50px] gap-4 bg-[#e8ffed]">
+  <div className="flex w-full md:w-auto h-auto md:h-[55vh] gap-4 md:gap-2 md:flex-col left_section">
+    {images.map((image, index) => (
+      <div key={index} className="smalll cursor-pointer p-1 flex justify-center items-center" onClick={() => handleImageClick(image)}>
+        <Image src={image} alt={`Sample ${index + 1}`} width={90} height={90} className="rounded-lg" />
+      </div>
+    ))}
+  </div>
+  <div className="relative w-full md:w-[27rem] h-[27rem] mid_section">
+    <Image src={currentImage} alt="Current" layout="fill" objectFit="contain" className="rounded-lg" />
+  </div>
+  <div className="w-full md:w-auto md:flex-1 md:ml-5 right_section md:text-[20px] text-[10px]">
+    <h1 className="text-[#002202] text-2xl font-bold">HF-H Series Inverter</h1>
+    <p>Our Lithium Battery Energy Storage System (BESS) is a comprehensive solution tailored for various energy storage needs.</p>
+    <p>This system is versatile, suitable for large-scale energy storage, distribution network storage, microgrid storage, as well as industrial, commercial, and household applications.</p>
+    <p>It also extends to specialized scenarios like data center power storage and emergency backup, providing customers with targeted, all-encompassing system solutions.</p>
+    <hr/>
+    <span className="text-sm social-icons mt-6">
+      Share <BiLogoFacebook /><FaXTwitter /><FaPinterestP /><BsInstagram  /><FiMail  />
+    </span>
+  </div>
+</section>
+
+
+<section className="flex flex-col w-full xl:px-[300px] px-4 py-[50px]  __section2 bg-[#e8ffed]">
+  <div className="w-[350px] h-[65px] bg-[#d1fcda] flex justify-center items-center">
+    <span className="text-[#002202] text-xl font-medium">Key Features of Our BESS</span>
+  </div>
+
+
+  <h1 className="text-[#002202] text-xl font-bold">
+  • Advanced Battery Management Technology
+  </h1>
+  <p><span className="text-[#002202] text-l font-semibold">Highly Integrated Chips & Unique Algorithm:</span> We employ advanced chips coupled with a unique battery equalization algorithm.This combination allows for bidirectional, large-current equalization,reaching currents up to 3A. </p>
+  <p><span className="text-[#002202] text-l font-semibold">Efficient & Reliable:</span> Our system boasts an impressive energy efficiency of up
+to 94%, ensuring high equalizing efficiency and reliability. </p>
+  <p><span className="text-[#002202] text-l font-semibold">Low Power Consumption & Scalability:</span> With ultra-low static power
+consumption, the system is designed for easy expansion and can be
+cascaded to suit larger requirements.</p>
+  <p><span className="text-[#002202] text-l font-semibold">Battery Protection:</span>  Our technology accurately estimates the internal state of
+the battery, safeguarding both its safety and prolonging its lifespan. </p>
+
+
+
+  <h1 className="text-[#002202] text-l font-bold">
+  • Active Safety Technology
+  </h1>
+  <p><span className="text-[#002202] text-l font-semibold">Intelligent Fire Protection:</span>At the pack level, our BESS features an intelligent
+fire protection system. </p>
+  <p><span className="text-[#002202] text-l font-semibold">Safety Isolation:</span> We incorporate battery-integrated system partition safety
+isolation, ensuring robust protection.</p>
+  <p><span className="text-[#002202] text-l font-semibold">Active Fire Protection:</span>The system is equipped with full-time immersion
+capabilities for active fire prevention.</p>
+
+
+  <h1 className="text-[#002202] text-l font-bold">
+  • Energy Management & Coordinated Control Technology
+  </h1>
+  <p><span className="text-[#002202] text-l font-semibold">Comprehensive Data Handling:</span>Our system is adept at data acquisition,
+computation, event management, and processing. </p>
+  <p><span className="text-[#002202] text-l font-semibold">Effective System Control:</span> We ensure efficient control of the entire system,
+coupled with real-time monitoring for seamless energy management.</p>
+</section>
+
+
+      <section className="products-bg">
+        <div className="container mx-auto py-20" >
+        <h2 className="text-[20px] md:text-[30px] text-center font-medium  mb-4 text-green">
+          Related Products
+          </h2>
           <style>
             {`
               .slick-prev:before,
@@ -217,44 +226,7 @@ const Page = () => {
           </Slider>
         </div>
       </section>
-      <section className="w-full product-sec-bg flex flex-col justify-center">
-        <h2 className="text-3xl text-center text-green font-semibold pt-10">
-          Our Products
-        </h2>
-        <div className="grid md:grid-cols-3 grid-cols-1 w-[90%] xl:w-[70%] mx-auto gap-10 py-10">
-        {currentProducts.map((product, index) => (
-          <div key={index} className="bg-white grid justify-center p-5 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out ">
 
-<Link href={`/products/${product.link}`}>
-      <div
-              className={`flex justify-center items-center rounded-xl h-60 sm:h-72 md:h-80 w-full  overflow-hidden bg-[#15a135] ${product.customClass}`}
-            >           <Image
-                src={product.src}
-                width={300}
-                height={200}
-                objectFit="contain"
-                alt={product.alt}  
-                className=" transition-all duration-300 hover:scale-110 "
-
-              />
-            </div> 
-    </Link>
-
-
-            <h3 className="text-[18px] text-center text-green-600 font-semibold my-2">
-              {product.title}
-            </h3>
-          </div>
-        ))}
-      </div>
-
-        <Pagination
-          className="mx-auto text-center py-10 custom-pagination"
-          total={totalPages}
-          initialPage={currentPage}
-          onChange={handlePageChange}
-        />
-      </section>
       <section className="bg-[#00a241] py-20 signup-newsletter-bg shadow-inner">
         <div className="container mx-auto">
           <h2 className="text-center text-white  text-2xl lg:text-5xl font-semibold">
@@ -286,9 +258,9 @@ const Page = () => {
 
         </div>
       </section>
-  
     </>
   );
 };
 
 export default Page;
+
