@@ -1,6 +1,10 @@
 import React from "react";
 import Image from "next/image";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import SignupNewsletter from '../component/SignupNewsletter'
+
+AOS.init();
 
 const page = () => {
   return (
@@ -22,7 +26,7 @@ const page = () => {
       </section>
       <section className="bg-[#15a13538] py-20 ">
         <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-5">
-          <div className="flex flex-col  justify-center items-center gap-2 p-0 md:p-5 services-p-div">
+          <div data-aos="fade-in" className="flex flex-col  justify-center items-center gap-2 p-0 md:p-5 services-p-div">
             <Image
               src="/assets/images/design.png"
               width={70}

@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { usePathname } from "next/navigation";
 import Footer from "./component/footer";
-import HomeHeader from "./component/HomeHeader";
-import HeaderBg from "./component/headerBg";
+import Header from './component/header'
+
 import { NextUIProvider } from "@nextui-org/react";
 import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <NextUIProvider>
-           <HomeHeader /> 
+           <Header /> 
           {children}
           <footer>
             <Footer />

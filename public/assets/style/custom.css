@@ -1,53 +1,167 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
-  /* font-family: "Lato", sans-serif; */
+  font-family: "Manrope", sans-serif;
+}
+
+.link-div-head li a {
+  font-weight: 500;
+}
+
+.home-link {
+  border-bottom: 2px solid #15a135;
+}
+
+.contact-btn-head:hover {
+  background-color: #15a135;
+  opacity: 1;
+}
+
+.contact-btn-head {
+  width: 164px;
+  height: 44px;
+  padding: 7px 32px 7px 32px;
+  gap: 10px;
+  font-family: Manrope;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 27px;
+  text-align: center;
+  color: white;
+}
+
+.call-btn-head {
+  padding: 7px 20px 7px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 27px;
+  border: 1.5px solid #15A135;
+  width: 220px;
+  height: 44px;
+  justify-content: center;
+  color: #15A135;
+}
+
+.call-btn-head:hover {
+  background-color: #FFB800;
+  color: black;
+  border: 1.5px solid #FFB800;
+
+}
+
+.buy-now-btn {
+  background: #FFB800;
+  color: #000;
+  cursor: pointer;
+  font-size: 15px;
+  border: 0;
+  transition: all 0.5s;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  /* Ensures the icon is hidden initially */
+}
+
+.buy-now-btn::after {
+  content: "";
+  /* Assuming this is the Font Awesome icon */
+
+  font-weight: 400;
+
+  transform: translateY(-50%) translateX(-10px);
+  /* Adjust initial position */
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s, left 0.5s;
+}
+
+.buy-now-btn:hover {
+  background: #FFB800;
+
+  padding-right: 3.5rem;
+  /* Increase padding on hover */
+}
+
+.buy-now-btn:hover::after {
+  left: 85%;
+  /* Position the icon within the button */
+  opacity: 1;
+  transform: translateY(-50%);
+  /* Adjust transform as needed */
+}
+
+.product-div {
+  background: #F5F5F5;
+  transition: .3s linear;
+
+}
+
+.product-div:hover {
+  background-image: url(/assets/images/yellow-bg-img.svg);
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.product-div:hover img {
+  transform: translateY(-15px);
+  transition: .2s linear;
+
 }
 
 .main-banner {
-  background-image: url("/assets/images/banner.jpg");
-  z-index: 1px;
+  background-image: url(/assets/images/banner.svg);
   background-repeat: no-repeat;
-  background-position: top left !important;
+  background-position: bottom center;
+  width: 100%;
+  background-size: cover;
+
 }
 
 p {
   font-size: 16px !important;
 }
-
-.text-dark {
-  color: #022201;
-}
-
-.border-green {
-  border: 2px solid #15a135;
-  border-left: 20px solid #15a135;
-}
-
-.bg-green {
-  background-color: #0a890d;
-}
-
-.bg-green-light {
-  background-color: #b5eec2ba;
+.bg-green{
+   background-color: #15A135;
 }
 
 .text-green {
-  color: #15a135;
+  color: #028921;
+}
+.text-green-dark{
+  color: #005C15;
+}
+.verified-icon{
+  color: #028921;
 }
 
-.bg-dark {
-  background-color: #002101;
+.slick-dots li button:before {
+  font-size: 15px;
+  color: #056b1d;
+  opacity: 1;
 }
 
-.link-div-head li a {
-  color: #022201;
-  font-weight: 600;
+.slick-dots li.slick-active button:before {
+  color: white;
 }
+
+.slick-dots {
+  bottom: -30px;
+
+}
+
+.slick-dots li {
+  margin: 0;
+}
+
+.image-slider .slick-track {
+  display: flex;
+  justify-content: center;
+  align-items: end !important;
+}
+
+
 
 .link-div-head-bg li a {
   color: #022201;
@@ -58,138 +172,87 @@ p {
   background-color: #b8edc5;
 }
 
-.joinform-section {
-  /* background-image: url('/assets/images/form-bg.jpg'); */
+.join-signup-form {
   background-repeat: no-repeat;
   background-position: bottom;
   width: 100% !important;
-  height: 50vh;
-  background-color: #0a890d;
-  /* background-blend-mode: color-burn; */
-  background:
-    /* top, transparent red */
-    linear-gradient(#0a890d1f, #0a890d4a),
-    /* bottom, image */
-    url(/assets/images/form-bg.jpg);
-}
-
-.join-form-innerdiv {
-  background-color: #ffffff75;
-  padding: 40px 20px;
-  border: 3px solid white !important;
-}
-
-.signup-step-section {
-  background-repeat: no-repeat;
-  background-position: bottom;
-  width: 100% !important;
-  height: auto;
-
-  background: linear-gradient(#adeabb, #b5eec2ba), url(/assets/images/grey-dots.jpg);
-  z-index: 1;
+  background-image: url(/assets/images/sign-up-form-bg.svg);
   background-size: cover;
-}
-
-.customer-pack-section {
-  background-repeat: no-repeat;
-  background-position: bottom;
-  width: 100% !important;
-  height: auto;
-  background: linear-gradient(#aceaba, #aceaba), url(/assets/images/customer-package-bg.png);
-}
-
-.solar-house-div {
-  background: linear-gradient(#b5eec2ba, #b5eec2ba);
-  background-repeat: no-repeat;
-  background-position: center;
-
-  height: auto;
-  z-index: 2;
-  border: 10px solid #0a890d;
-  border-radius: 25px;
-}
-
-.solar-house-img {
-  z-index: 1;
-}
-
-
-
-.contact-form-section {
-  background-repeat: no-repeat;
-  background-position: bottom;
-  width: 100% !important;
-  height: auto;
-  background-color: #0a890d;
   background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(/assets/images/ContactInfo.png);
+  background-repeat: initial;
 }
 
-ul.z-30.px-6.fixed.flex.max-w-full.top-\[var\(--navbar-height\)\].inset-x-0.bottom-0.w-screen.flex-col.gap-2.overflow-y-auto.backdrop-blur-xl.backdrop-saturate-150.pt-36.h-screen.bg-white {
-  width: 100%;
-  padding-left: 20px;
-}
-
-.banner-text-div {
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.footer-section {
-  background-repeat: no-repeat;
-  background-position: bottom;
-  width: 100% !important;
-  height: auto;
-  background-color: #0a890d;
-  background: linear-gradient(#6ad38fb3, #6ad38f42), url(/assets/images/flowersbg.jpg);
-  z-index: 1;
-  background-size: cover;
-}
-
-.form-div-contact {
-  background-color: w;
-}
-
-.form-div-contact input {
-  border-bottom: 1px solid #002101;
+.signup-form-input {
+  border-radius: 6px;
+  background: transparent;
+  border: 1px solid white;
+  padding: 15px 10px;
   outline: none;
-  width: 80%;
-  background-color: inherit;
+}
+
+.signup-form-input:focus {
+  background-color: white;
+  outline: none;
+}
+
+.sign-up-btn {
+  border: 1px solid white;
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 40px;
+  outline: none;
 
 }
 
-.form-div-contact input:focus {
-  background-color: inherit;
+
+.sign-up-btn:hover {
+  background-color: #FFB800;
+  color: #000;
+  border: 1px solid #FFB800;
 }
 
-.form-div-contact label {
-  color: #0a890d;
+.steps-section {
+
+  background-image: url(/assets/images/home-ecoearner-snippet.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  height: 670px;
 }
 
-@media screen and (max-width: 1023px) {
-  .main-banner {
 
-    background-position: left center;
-  }
-
-  .form-div-contact input {
-
-    width: 100%;
-
-  }
+.steps-inner-div {
+  background-color: #F5F5F5E5;
+  transform: translate(0%, 50%);
+  bottom: 0;
 }
 
-.data-\[justify\=start\]\:justify-start[data-justify=start] {
+.packages-div div{
+  background-color: #F5F5F5;
+}
+.packages-inner-div:hover{
+  background-color: #028921;
+  color: white;
+  transition: .5s;
+}
+
+.packages-div div:hover h1,
+.packages-div div:hover p,
+.packages-div div:hover .verified-icon{
+  color: #F5F5F5;
+
+}
+
+
+
+
+
+
+
+
+
+.data-\[justify\=start\]\:justify-start[data-justify="start"] {
   justify-content: flex-end;
-}
-
-nav.z-40.h-auto.items-center.justify-center.data-\[menu-open\=true\]\:border-none.sticky.top-0.inset-x-0.backdrop-blur-lg.data-\[menu-open\=true\]\:backdrop-blur-xl.backdrop-saturate-150.hidden.w-full.mx-auto.md\:flex.py-3.bg-transparent.main-nav {
-  background: none;
-  filter: none;
-  backdrop-filter: none;
 }
 
 ul.h-full.flex-nowrap.items-center.data-\[justify\=start\]\:justify-start.data-\[justify\=start\]\:flex-grow.data-\[justify\=start\]\:basis-0.data-\[justify\=center\]\:justify-center.data-\[justify\=end\]\:justify-end.data-\[justify\=end\]\:flex-grow.data-\[justify\=end\]\:basis-0.flex.flex-col.gap-5 {
@@ -207,267 +270,8 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
   gap: 10px;
 }
 
-.team-member-img {
-  border: 10px solid #c4ffc5;
-}
-
-@media screen and (min-width:1250px) {
+@media screen and (min-width: 1250px) {
   header.z-40.flex.px-6.gap-4.w-full.flex-row.relative.flex-nowrap.items-center.justify-between.h-\[var\(--navbar-height\)\].max-w-\[1024px\] {
     max-width: 80%;
   }
-}
-
-.accordion-title {
-  background-color: #f0f0f0;
-  /* Change this to your desired background color */
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.accordion-item {
-  border: none;
-  /* Remove the border */
-  box-shadow: none;
-  /* Remove any shadow if present */
-}
-
-.group.is-splitted .group-\[\.is-splitted\]\:shadow-medium {
-  --tw-shadow: none;
-  --tw-shadow-colored: none;
-  box-shadow: none !important;
-}
-
-.faq-banner-section {
-  background-color: #b5eec2;
-}
-
-.accordion h2 button {
-  padding: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  gap: 0 !important;
-}
-
-.contact-banner-section {
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  width: 100% !important;
-  background-color: #0a890d;
-  background:
-    /* top, transparent red */
-    linear-gradient(#0a890d1f, #0a890d4a),
-    /* bottom, image */
-    url(/assets/images/form-bg.jpg);
-}
-
-.contact-page-input {
-  border: 1px solid #0a890d;
-}
-
-#embed-map-canvas img {
-  max-height: none;
-  max-width: none !important;
-  background: none !important;
-}
-
-.services-bg-images {
-  background: linear-gradient(#0a890d00, #ffffffa3), url(/assets/images/services-bg.png);
-  width: 100%;
-  background-position: top center;
-  display: flex;
-  background-repeat: no-repeat;
-}
-.services-bg-images1 {
-  background: #fff;
-  width: 100%;
-  background-position: top center;
-  display: flex;
-  background-repeat: no-repeat;
-}
-
-.services-images {
-  background: linear-gradient(#0a890d00, #ffffffa3), url(/assets/images/services-bg.png);
-  width: 100%;
-  background-position: top center;
-  background-position-y: 0px;
-  background-size: cover;
-  display: flex;
-}
-
-.services-light-bg {
-  background-image: url(/assets/images/services-light-bg.png);
-}
-
-.signup-newsletter-bg {
-  background-image: url(/assets/images/Green-signup-bg.png);
-}
-
-.products-bg-section {
-  background-image: url(/assets/images/Products.png);
-}
-
-.custom-pagination li a {
-  background-color: #32CD32 !important;
-  /* Change to your desired green color */
-  color: white;
-  /* Ensure text is visible on green background */
-}
-
-.custom-pagination li.active a {
-  background-color: #228B22;
-  color: white;
-}
-
-.mid_section {
-  background-color: #002202;
-}
-
-.main_section {
-  background-color: #e8ffed;
-}
-
-.smalll {
-  width: 75px;
-  height: 75px;
-  border-radius: 10px;
-  background-color: #159f35;
-}
-
-.right_section h1 {
-  margin-bottom: 25px;
-  font-size: 27px;
-
-}
-
-.right_section p {
-  margin-bottom: 25px;
-
-}
-
-.__section2 p {
-  margin-left: 35px;
-  margin-top: 20px;
-}
-
-.__section2 h1 {
-  margin-top: 20px;
-}
-
-.social-icons {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.flip-card {
-  background-color: transparent;
-  width: 300px;
-  height: 300px;
-  perspective: 1000px;
-}
-
-
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-
-/* Position the front and back side */
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  /* Safari */
-  backface-visibility: hidden;
-}
-
-/* Style the front side (fallback if image is missing) */
-.flip-card-front {
-  background-color: #fff;
-  color: black;
-}
-
-/* Style the back side */
-.flip-card-back {
-  background-color: white;
-  color: white;
-  transform: rotateY(180deg);
-}
-
-
-
-/* what we do start css */
-
-section.what-we-do {
-  background-color: #eefff2;
-  padding: 50px 0;
-}
-
-.do-left h2 {
-  font-size: 50px;
-  font-weight: 800;
-  color: #008000;
-}
-
-.do-left h4 {
-  font-size: 33px;
-  font-weight: 600;
-  background: #008000;
-  width: fit-content;
-  padding: 1px 10px;
-  color: #fff;
-  margin: 20px 0;
-}
-
-.do-left li {
-  line-height: 30px;
-  font-size: 22px;
-  font-weight: 600;
-  color: #5e5e5e;
-  margin-bottom: 16px;
-}
-
-
-.do-green {
-  background: #008000;
-  height: 500px;
-  max-width: 460px;
-  border-radius: 60px 0;
-}
-
-
-.what-we-do.so-they-can {
-  background-color: #b6edc2;
-}
-
-.what-we-do.so-they-can .do-green {
-  border-radius: 60px;
-}
-
-.services-p-div {
-  border: 1px solid #00a241;
-  border-radius: 24px;
-  color: #002101;
-  margin: 10px;
-  background-color: #ffffffb3;
-}
-.services-p-div img{
-  background-color: transparent !important;
-}
-.services-p-div h1{
-  color: #008000;
-}
-.services-p-div p{
-  color: #008000;
 }
