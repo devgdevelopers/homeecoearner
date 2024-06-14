@@ -221,7 +221,7 @@ export default function Home() {
         <div className="mx-auto container">
           <form action="" className="flex flex-col w-1/2 mx-auto">
             <div className="flex flex-col">
-              <label for="Name" className="text-lg text-white my-2">
+              <label htmlFor="Name" className="text-lg text-white my-2">
                 Full Name
               </label>
               <input
@@ -233,7 +233,7 @@ export default function Home() {
               />
             </div>
             <div className="flex flex-col">
-              <label for="email" className="text-lg text-white my-2">
+              <label htmlFor="email" className="text-lg text-white my-2">
                 Email Address
               </label>
               <input
