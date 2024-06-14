@@ -126,7 +126,7 @@ export default function UpdateProducts() {
             {isEditing && (
                 <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
                     <div className="bg-white p-6 pt-32 rounded shadow-lg w-full max-w-2xl overflow-auto max-h-full">
-                        <h2 className="text-2xl mb-4 text-black">Edit Product</h2>
+                        <h2 className="text-2xl mb-4 text-black text-center">Edit Product</h2>
                         <div className="space-y-4">
                             <div>
                                 <label className="block mb-2 text-black font-medium">Card Heading</label>

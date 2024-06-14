@@ -100,15 +100,13 @@ export default function Home() {
               </div>
             </Slider>
             <button className="relative overflow-hidden p-3 px-6 bg-[#FFB800]  text-black group w-[155px]  rounded-[50px]  text-center font-bold priority-btn">
-    <span className="text relative z-10 text-[20px] my-auto">
-    Sign Up
-    </span>
-    <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-        <ArrowForwardOutlinedIcon className="ml-2" />
-    </span>
-</button>
-
-          
+              <span className="text relative z-10 text-[20px] my-auto">
+                Sign Up
+              </span>
+              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </button>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="w-3/4  flex justify-end">
@@ -152,8 +150,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    
- 
 
       {/* mobile view banner  */}
       <section className="flex md:hidden mob-main-banner w-full h-[690px] overflow-hidden    ">
@@ -163,8 +159,8 @@ export default function Home() {
               Home EcoEarner <br /> Power System
             </h1>
             <span className="text-[16px] text-white ">
-              Ready to get your electricity costs under control and give
-              your self the chance to transform your costs into income?
+              Ready to get your electricity costs under control and give your
+              self the chance to transform your costs into income?
             </span>
             <Slider {...verticalSlider}>
               <div className="carousel-item">
@@ -184,18 +180,16 @@ export default function Home() {
               </div>
             </Slider>
             <button className="relative overflow-hidden py-1 px-6 bg-[#FFB800]  text-black group w-[155px]  rounded-[50px]  text-center font-bold priority-btn">
-    <span className="text relative z-10 text-[20px] my-auto">
-    Sign Up
-    </span>
-    <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-        <ArrowForwardOutlinedIcon className="ml-2" />
-    </span>
-</button>
-
-          
+              <span className="text relative z-10 text-[20px] my-auto">
+                Sign Up
+              </span>
+              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </button>
           </div>
           <div className="">
-            <div className="w-3/4  flex justify-end">
+            <div className="w-full  flex justify-center">
               <Slider {...settings} className="w-3/4  image-slider">
                 <div className="carousel-item mx-auto overflow-hidden">
                   <div className="text-center flex justify-end items-center">
@@ -237,18 +231,15 @@ export default function Home() {
         </div>
       </section>
 
-
-
-
       {/* Products Section */}
 
       <section className="w-full py-10">
         <div className="container mx-auto">
-          <h1 className="font-bold text-[50px] text-center text-green mt-5 mb-10">
+          <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 md:mb-10">
             Our Products
           </h1>
         </div>
-        <div className="grid container mx-auto grid-cols-1 md:grid-cols-3 gap-10 p-10 ">
+        <div className="grid container mx-auto grid-cols-1 md:grid-cols-3 gap-10 px-10 md:p-10 ">
           <div className=" p-5 w-full py-10 flex justify-center items-center flex-col  product-div ">
             <Image
               // src={`${product.}`}
@@ -313,7 +304,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="mx-auto container">
-          <form action="" className="flex flex-col w-1/2 mx-auto">
+          <form action="" className="flex flex-col w-3/4 md:w-1/2 mx-auto">
             <div className="flex flex-col">
               <label htmlFor="Name" className="text-lg text-white my-2">
                 Full Name
@@ -352,19 +343,22 @@ export default function Home() {
       </section>
 
       {/* Steps Section  */}
-      <section className="w-full steps-section relative">
-        <div className="container mx-auto ">
-          <div className="steps-inner-div absolute -top-10 p-10 py-20 flex justify-center flex-col">
-            <h1 className="text-5xl text-green font-semibold text-center my-1">
-              For our Home EcoEarner Power System today <br /> and experience
-              the future of renewable energy.{" "}
+      <section className="w-full steps-section relative mb-[1100px] sm:mb-[900px] md:[860px] xl:mb-[280px]  ">
+        <div className="w-full ">
+          <Image src="/assets/images/home-ecoearner-snippet.svg" width={ 100} height={100} alt="bg image" className="w-full" unoptimized></Image>
+        </div>
+        <div className="w-[90%] md:w-[80%] top-10 md:top-[100px] xl:top-[320px] left-1/2 -translate-x-1/2 absolute">
+        <div className="steps-inner-div  p-5 py-10 ">
+            <h1 className="text-2xl xl:text-5xl text-green font-semibold text-center my-1">
+              For our Home EcoEarner Power System today <br className="hidden md:flex" /> and experience
+              the future of renewable energy.
             </h1>
-            <p className="text-center text-[18px] font-medium py-4">
+            <p className="text-center text-[18px] py-4">
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              <br />
+              <br className="hidden md:flex"  />
               industry. Lorem Ipsum has been the industry's standard
             </p>
-            <div className="w-full grid grid-cols-2 p-10 gap-10">
+            <div className="w-full grid grid-cols-1 md:grid-cols-2 md:p-10 gap-10">
               <div className="flex flex-col gap-3 bg-white p-5">
                 <h1 className="text-lg font-bold">Step-1</h1>
                 <span>
@@ -415,29 +409,28 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <button className="relative overflow-hidden p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white group priority-btn text-center font-bold">
-    <span className="text relative z-10">
-        Join Our Priority List Today
-    </span>
-    <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
-        <ArrowForwardOutlinedIcon className="ml-2" />
-    </span>
-</button>
-
-
+            <button className="relative overflow-hidden p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white group priority-btn text-center font-bold my-5">
+              <span className="text relative z-10">
+                Join Our Priority List Today
+              </span>
+              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </button>
           </div>
         </div>
+       
       </section>
 
       {/* packges  */}
-      <section className="w-full py-10 mt-[400px] mb-10">
+      <section className="w-full py-10   mb-10">
         <div className="container mx-auto">
-          <h1 className="font-bold text-[50px] text-center text-green mt-5 mb-10">
+          <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">
             Customer Packages
           </h1>
         </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 px-20 container mx-auto packages-div justify-center">
-          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3  container mx-auto packages-div justify-center  gap-5 lg:gap-20">
+          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-full ">
             <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
               BRONZE - <span className="text-[22px]">Power</span>
             </h1>
@@ -470,7 +463,7 @@ export default function Home() {
               Lifetime net cash benefit £47,944
             </p>
           </div>
-          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
+          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-full ">
             <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
               SILVER - <span className="text-[22px]">Plus Wind</span>
             </h1>
@@ -503,7 +496,7 @@ export default function Home() {
               Lifetime net cash benefit £102,662
             </p>
           </div>
-          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
+          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-full">
             <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
               GOLD - <span className="text-[22px]">Power Booster</span>
             </h1>
@@ -545,108 +538,106 @@ export default function Home() {
       </section>
 
       {/* contact us form  */}
-      <section className="w-full  bg-green h-[698px] py-10">
-       <div className="flex justify-center flex-col items-center">
-
-       <div className="container mx-auto">
-          <h1 className="font-bold text-[50px] text-center text-white ">
-            Contact Us
-          </h1>
-          <h1 className="text-white text-center text-lg">
-            Feel free to contact us any time We will get back to you as soon as
-            we can!{" "}
-          </h1>
-        </div>
-        <div className="container mx-auto grid grid-cols-2 my-10">
-          <div className="px-10">
-            <form action="">
-              <div className="flex flex-col gap-1 mb-3">
-                <label htmlFor="name" className="text-white ">
-                  Full Name
-                </label>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Enter your full name"
-                  className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
-                />
-              </div>
-              <div className="flex flex-col gap-1 mb-3">
-                <label htmlFor="name" className="text-white ">
-                  Email Address
-                </label>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Enter Your email address"
-                  className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
-                />
-              </div>
-              <div className="flex flex-col gap-1 mb-3">
-                <label htmlFor="name" className="text-white ">
-                  Mobile Number
-                </label>
-                <input
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Enter Your mobile no."
-                  className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
-                />
-              </div>
-
-              <div className="flex flex-col gap-1 mb-3">
-                <label htmlFor="name" className="text-white ">
-                  Message
-                </label>
-                <textarea
-                  type="text"
-                  rows={4}
-                  name=""
-                  id=""
-                  placeholder="Enter Your Message"
-                  className="bg-white p-2 text-[#525C60] outline-none h-[90px] rounded-md pl-[20px]"
-                />
-              </div>
-              <div>
-                <button
-                  type="submit"
-                  className="text-xl w-[134px] h-[45px] font-bold rounded-3xl bg-[#FFB800]"
-                >
-                  Submit
-                </button>
-              </div>
-            </form>
+      <section className="w-full  bg-green  py-10">
+        <div className="flex justify-center flex-col  items-center">
+          <div className="container mx-auto">
+            <h1 className="font-bold text-[50px] text-center text-white ">
+              Contact Us
+            </h1>
+            <h1 className="text-white text-center text-lg">
+              Feel free to contact us any time We will get back to you as soon
+              as we can!{" "}
+            </h1>
           </div>
-          <div className="px-10 cotact-div-left-border  ">
-            <div className="my-auto bg-white p-10 flex flex-col gap-4 mt-5 rounded-md shadow-xl h-[247px]">
-              <h2 className="text-[22px] font-bold text-[#385723]">Info</h2>
-              <h2 className="text-lg">
-                <span>
-                  <MailOutlineIcon className="mr-2 text-green" />
-                </span>
-                info@homeecoearner.com
-              </h2>
-              <h2 className="text-lg">
-                <span>
-                  <LocalPhoneOutlinedIcon className="mr-2 text-green" />
-                </span>
-                020 3286 5350
-              </h2>
-              <h2 className="text-lg">
-                <span>
-                  <PlaceOutlinedIcon className="mr-2 text-green"/>
-                </span>
-                2 Brunel Place, Slough, SL1 1FQ, UK
-              </h2>
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-10">
+            <div className="px-10">
+              <form action="">
+                <div className="flex flex-col gap-1 mb-3">
+                  <label htmlFor="name" className="text-white ">
+                    Full Name
+                  </label>
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Enter your full name"
+                    className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
+                  />
+                </div>
+                <div className="flex flex-col gap-1 mb-3">
+                  <label htmlFor="name" className="text-white ">
+                    Email Address
+                  </label>
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Enter Your email address"
+                    className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
+                  />
+                </div>
+                <div className="flex flex-col gap-1 mb-3">
+                  <label htmlFor="name" className="text-white ">
+                    Mobile Number
+                  </label>
+                  <input
+                    type="text"
+                    name=""
+                    id=""
+                    placeholder="Enter Your mobile no."
+                    className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
+                  />
+                </div>
+
+                <div className="flex flex-col gap-1 mb-3">
+                  <label htmlFor="name" className="text-white ">
+                    Message
+                  </label>
+                  <textarea
+                    type="text"
+                    rows={4}
+                    name=""
+                    id=""
+                    placeholder="Enter Your Message"
+                    className="bg-white p-2 text-[#525C60] outline-none h-[90px] rounded-md pl-[20px]"
+                  />
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    className="text-xl w-[134px] h-[45px] font-bold rounded-3xl bg-[#FFB800]"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+            <div className="px-10 cotact-div-left-border  ">
+              <div className="my-auto bg-white p-5 sm:p-10 flex flex-col gap-4 mt-5 rounded-md shadow-xl ">
+                <h2 className="text-[22px] font-bold text-[#385723]">Info</h2>
+                <h2 className="text-lg">
+                  <span>
+                    <MailOutlineIcon className="mr-2 text-green" />
+                  </span>
+                  info@homeecoearner.com
+                </h2>
+                <h2 className="text-lg">
+                  <span>
+                    <LocalPhoneOutlinedIcon className="mr-2 text-green" />
+                  </span>
+                  020 3286 5350
+                </h2>
+                <h2 className="text-lg">
+                  <span>
+                    <PlaceOutlinedIcon className="mr-2 text-green" />
+                  </span>
+                  2 Brunel Place, Slough, SL1 1FQ, UK
+                </h2>
+              </div>
             </div>
           </div>
         </div>
-       </div>
       </section>
-
     </main>
   );
 }

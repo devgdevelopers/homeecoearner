@@ -21,6 +21,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/style/custom.css" />
       </head>
       <body className={inter.className}>
+        <Toaster />
         <AuthProvider>
           <NextUIProvider>
             <Header />
