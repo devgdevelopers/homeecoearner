@@ -11,6 +11,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import EmailIcon from "@mui/icons-material/Email";
+import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MenuIcon from "@mui/icons-material/Menu";
 import Image from "next/image";
@@ -47,23 +48,19 @@ export default function Page() {
       page: "FAQs",
       link: "/faqs",
     },
-    {
-      page: "Contact Us",
-      link: "/contact-us",
-    },
   ];
 
   return (
     <>
-      <header className="fixed top-0 left-0 z-50 w-full">
-        <Navbar className="hidden w-full mx-auto md:flex py-3 bg-transparent main-nav">
+     
+        <Navbar className="sticky top-0 hidden w-full mx-auto md:flex py-3 bg-white main-nav px-0">
           <NavbarContent className="text-white flex justify-start">
             <NavbarBrand className="flex justify-start">
               <Link href="/">
                 <Image
-                  className=" w-[200px] h-[40px]"
+                  className=" min-w-[237px] h-[auto]"
                   src="/assets/images/logo.png"
-                  width={100}
+                  width={237}
                   height={100}
                   alt="logo"
                   unoptimized
@@ -74,63 +71,61 @@ export default function Page() {
 
           <NavbarContent className="flex gap-5 justify-center link-div-head">
             <NavbarItem>
-              <Link href="/" className="font-bold text-dark">
+              <Link
+                href="/"
+                className="  text-[#15A135] home-link active:text-[#15A135] hover:text-[#15A135]"
+              >
                 Home
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/about-us" className="font-bold text-dark">
+              <Link href="/about-us" className=" text-dark">
                 About
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/products" className="font-bold">
+              <Link href="/products" className="text-dark">
                 Products
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/packages" className="font-bold">
+              <Link href="/packages" className=" text-dark">
                 Packages
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/services" className="font-bold">
+              <Link href="/services" className="text-dark">
                 Services
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/news" className="font-bold">
+              <Link href="/news" className=" text-dark">
                 News
               </Link>
             </NavbarItem>
             <NavbarItem>
-              <Link href="/faqs" className="font-bold">
+              <Link href="/faqs" className=" text-dark">
                 FAQs
-              </Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Link href="/contact-us" className="font-bold">
-                Contact Us
               </Link>
             </NavbarItem>
           </NavbarContent>
 
           <NavbarContent className="hidden xl:flex gap-2 justify-end">
             <Link
-              href="mailto:info@homeecoearner.com"
-              className=" text-sm bg-[#022201]  font-bold rounded-3xl text-[#022201]"
-            >
-              <EmailIcon className="text-white bg-[#022201] rounded-3xl text-3xl w-auto  p-[3px] m-[2px]" />
-            </Link>
-            <Link
               href="tel:+44 (0)20 8133 3129"
-              className="text-sm bg-white p-[3px] font-bold rounded-3xl text-[#022201] pr-4 "
+              className="call-btn-head rounded-3xl "
             >
-              <PhoneIcon className="text-white bg-[#022201] rounded-3xl text-3xl w-auto mx-1 p-[3px]" />{" "}
-              +44 (0)20 3286 5350
+              <LocalPhoneOutlinedIcon />
+              0203 286 5350
+            </Link>
+
+            <Link
+              href="tel:+(0)20 8133 3129"
+              className="text-sm bg-[#005C15] p-[3px] font-bold rounded-3xl text-[#022201] pr-4 contact-btn-head "
+            >
+              Contact Us
             </Link>
           </NavbarContent>
-
 
           {/* <NavbarContent className="flex font-semibold gap-5 justify-center link-div-head-bg">
             <NavbarItem>
@@ -145,8 +140,6 @@ export default function Page() {
             </NavbarItem>
           </NavbarContent> */}
         </Navbar>
-
-
 
         <Navbar className="sticky md:hidden py-2 flex bg-white justify-end z-[1000] ">
           {/* Mobile Navbar */}
@@ -200,19 +193,21 @@ export default function Page() {
                   href="mailto:info@homeecoearner.com"
                   className="bg-dark text-white text-sm p-2 rounded-lg"
                 >
-                  <EmailIcon className="text-sm" />info@homeecoearner.com
+                  <EmailIcon className="text-sm" />
+                  info@homeecoearner.com
                 </Link>
                 <Link
                   href="tel:+44 020 3286 5350"
                   className="bg-dark text-white  text-sm p-2 rounded-lg px-2"
                 >
-                  <PhoneIcon className="text-sm" />+44 020 3286 5350
+                  <LocalPhoneOutlinedIcon className="text-sm" />
+                  +44 020 3286 5350
                 </Link>
               </NavbarContent>
             </NavbarMenu>
           )}
         </Navbar>
-      </header>
+     
     </>
   );
 }
