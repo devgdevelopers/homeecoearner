@@ -229,7 +229,7 @@ export default function Home() {
                 name=""
                 id="Name"
                 placeholder="Enter your Full Name"
-                className="text-white placeholder:text-white bg-transparent signup-form-input"
+                className="text-green placeholder:text-white bg-transparent signup-form-input"
               />
             </div>
             <div className="flex flex-col">
@@ -241,7 +241,7 @@ export default function Home() {
                 name=""
                 id="email"
                 placeholder="Enter your Email Address"
-                className="text-white placeholder:text-white bg-transparent signup-form-input"
+                className="text-green placeholder:text-white bg-transparent signup-form-input"
               />
             </div>
             <button

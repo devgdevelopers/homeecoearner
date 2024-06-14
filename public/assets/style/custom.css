@@ -184,7 +184,7 @@ p {
 
 .signup-form-input {
   border-radius: 6px;
-  background: transparent;
+  background: white;
   border: 1px solid white;
   padding: 15px 10px;
   outline: none;
@@ -248,9 +248,18 @@ p {
 
 
 }
+/* styles.css */
 
+.signup-form-input {
+  background-color: initial; /* Or any default background color */
+  color: white; /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
 
-
+.signup-form-input:focus {
+  background-color: white; /* Change background to white on focus */
+  color: #005C15; /* Change text color to black on focus */
+}
 
 
 
@@ -280,7 +289,6 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
   header.z-40.flex.px-6.gap-4.w-full.flex-row.relative.flex-nowrap.items-center.justify-between.h-\[var\(--navbar-height\)\].max-w-\[1024px\] {
     max-width: 80%;
   }
-<<<<<<< HEAD
 }
 
 .accordion-title {
@@ -540,6 +548,4 @@ section.what-we-do {
 .loader_ {
   border-top-color: #196901; /* Tailwind CSS blue-400 color */
   animation: spin 1s linear infinite;
-=======
->>>>>>> 09cd44a176cb055e8feca59d92143fe03ff3d0df
 }
