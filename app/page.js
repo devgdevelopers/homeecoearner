@@ -212,9 +212,9 @@ export default function Home() {
       </section>
 
       {/* Sign up Form  */}
-      <section className="w-full py-10 join-signup-form">
+      <section className="w-full py-14 join-signup-form flex justify-center flex-col items-center">
         <div className="container mx-auto">
-          <h1 className="font-bold text-[50px] text-center text-[#fff] mt-5 mb-10">
+          <h1 className="font-bold text-[50px] text-center text-[#fff] ">
             Sign Up Today
           </h1>
         </div>
@@ -258,9 +258,9 @@ export default function Home() {
       </section>
 
       {/* Steps Section  */}
-      <section className="w-full steps-section relative ">
+      <section className="w-full steps-section relative">
         <div className="container mx-auto ">
-          <div className="steps-inner-div absolute top-4 p-10 py-20 flex justify-center flex-col">
+          <div className="steps-inner-div absolute -top-10 p-10 py-20 flex justify-center flex-col">
             <h1 className="text-5xl text-green font-semibold text-center my-1">
               For our Home EcoEarner Power System today <br /> and experience
               the future of renewable energy.{" "}
@@ -444,15 +444,17 @@ export default function Home() {
       </section>
 
       {/* contact us form  */}
-      <section className="w-full py-10 bg-green">
-        <div className="container mx-auto">
+      <section className="w-full  bg-green h-[698px] py-10">
+       <div className="flex justify-center flex-col items-center">
+
+       <div className="container mx-auto">
           <h1 className="font-bold text-[50px] text-center text-white ">
             Contact Us
           </h1>
-          <p className="text-white text-center">
+          <h1 className="text-white text-center text-lg">
             Feel free to contact us any time We will get back to you as soon as
             we can!{" "}
-          </p>
+          </h1>
         </div>
         <div className="container mx-auto grid grid-cols-2 my-10">
           <div className="px-10">
@@ -466,7 +468,7 @@ export default function Home() {
                   name=""
                   id=""
                   placeholder="Enter your full name"
-                  className="bg-white p-2  outline-none"
+                  className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
                 />
               </div>
               <div className="flex flex-col gap-1 mb-3">
@@ -478,7 +480,7 @@ export default function Home() {
                   name=""
                   id=""
                   placeholder="Enter Your email address"
-                  className="bg-white p-2  outline-none"
+                  className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
                 />
               </div>
               <div className="flex flex-col gap-1 mb-3">
@@ -490,7 +492,7 @@ export default function Home() {
                   name=""
                   id=""
                   placeholder="Enter Your mobile no."
-                  className="bg-white p-2  outline-none"
+                  className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
                 />
               </div>
 
@@ -504,13 +506,13 @@ export default function Home() {
                   name=""
                   id=""
                   placeholder="Enter Your Message"
-                  className="bg-white p-2 outline-none"
+                  className="bg-white p-2 text-[#525C60] outline-none h-[90px] rounded-md pl-[20px]"
                 />
               </div>
               <div>
                 <button
                   type="submit"
-                  className="text-xl font-bold p-2 px-9 rounded-3xl bg-[#FFB800]"
+                  className="text-xl w-[134px] h-[45px] font-bold rounded-3xl bg-[#FFB800]"
                 >
                   Submit
                 </button>
@@ -518,21 +520,21 @@ export default function Home() {
             </form>
           </div>
           <div className="px-10 cotact-div-left-border  ">
-            <div className="my-auto bg-white p-10 flex flex-col gap-3 mt-5 rounded-md shadow-xl">
-              <h2 className="text-xl font-bold">Info</h2>
-              <h2>
+            <div className="my-auto bg-white p-10 flex flex-col gap-4 mt-5 rounded-md shadow-xl h-[247px]">
+              <h2 className="text-[22px] font-bold text-[#385723]">Info</h2>
+              <h2 className="text-lg">
                 <span>
                   <MailOutlineIcon className="mr-2 text-green" />
                 </span>
                 info@homeecoearner.com
               </h2>
-              <h2>
+              <h2 className="text-lg">
                 <span>
                   <LocalPhoneOutlinedIcon className="mr-2 text-green" />
                 </span>
                 020 3286 5350
               </h2>
-              <h2 className="">
+              <h2 className="text-lg">
                 <span>
                   <PlaceOutlinedIcon className="mr-2 text-green"/>
                 </span>
@@ -541,6 +543,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+       </div>
       </section>
 
     </main>
