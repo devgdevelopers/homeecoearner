@@ -18,6 +18,7 @@
 .contact-btn-head:hover {
   background-color: #15a135;
   opacity: 1;
+  transition: .5s;
 }
 
 .contact-btn-head {
@@ -31,6 +32,7 @@
   line-height: 27px;
   text-align: center;
   color: white;
+  transition: .5s;
 }
 
 .call-btn-head {
@@ -43,12 +45,16 @@
   height: 44px;
   justify-content: center;
   color: #15A135;
+  transition: .5s;
+
 }
 
 .call-btn-head:hover {
   background-color: #FFB800;
   color: black;
   border: 1.5px solid #FFB800;
+  transition: .5s;
+
 
 }
 
@@ -187,7 +193,7 @@ p {
 
 .signup-form-input {
   border-radius: 6px;
-  background: transparent;
+  background: white;
   border: 1px solid white;
   padding: 15px 10px;
   outline: none;
@@ -220,7 +226,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  height: 670px;
+  height: 740px;
 }
 
 
@@ -232,12 +238,12 @@ p {
 
 .packages-div div{
   background-color: #F5F5F5;
-  transition: .7s;
+  transition: 1s;
 }
 .packages-inner-div:hover{
   background-color: #15A135;
   color: white;
-  transition: .7s;
+  transition: 1s;
 }
 
 .packages-div div:hover h1,
@@ -251,9 +257,18 @@ p {
 
 
 }
+/* styles.css */
 
+.signup-form-input {
+  background-color: initial; /* Or any default background color */
+  color: white; /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
 
-
+.signup-form-input:focus {
+  background-color: white; /* Change background to white on focus */
+  color: #005C15; /* Change text color to black on focus */
+}
 
 
 
