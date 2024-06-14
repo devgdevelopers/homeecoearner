@@ -274,49 +274,49 @@ export default function Home() {
               <div className="flex flex-col gap-3 bg-white p-5">
                 <h1 className="text-lg font-bold">Step-1</h1>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   Get your electricity costs under control
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   No up-front cost
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   No more electricity bills
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   No more electricity price hikes
                 </span>
               </div>
               <div className="flex flex-col gap-3 bg-white p-5">
                 <h1 className="text-lg font-bold">Step-2</h1>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   Line yourself up for cost-free access to our new technologies
                   as they come to market
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   We promise to install our Home EcoEarner Power Booster upon
                   release.
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   You pay nothing upfront.
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   We buy excess electricity from you, putting money back into
                   your pocket.
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   Say goodbye to out-of-pocket expenses.
                 </span>
                 <span>
-                  <CheckCircleOutlineIcon className="mr-2" />
+                  <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                   And when possible, we pay you instead of the other way around.
                 </span>
               </div>

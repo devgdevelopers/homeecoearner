@@ -18,6 +18,7 @@
 .contact-btn-head:hover {
   background-color: #15a135;
   opacity: 1;
+  transition: .5s;
 }
 
 .contact-btn-head {
@@ -31,6 +32,7 @@
   line-height: 27px;
   text-align: center;
   color: white;
+  transition: .5s;
 }
 
 .call-btn-head {
@@ -43,12 +45,16 @@
   height: 44px;
   justify-content: center;
   color: #15A135;
+  transition: .5s;
+
 }
 
 .call-btn-head:hover {
   background-color: #FFB800;
   color: black;
   border: 1.5px solid #FFB800;
+  transition: .5s;
+
 
 }
 
@@ -229,12 +235,12 @@ p {
 
 .packages-div div{
   background-color: #F5F5F5;
-  transition: .7s;
+  transition: 1s;
 }
 .packages-inner-div:hover{
   background-color: #15A135;
   color: white;
-  transition: .7s;
+  transition: 1s;
 }
 
 .packages-div div:hover h1,
