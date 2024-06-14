@@ -124,7 +124,15 @@
   background-size: cover;
 
 }
+.mob-main-banner {
+  background-image: url(/assets/images/mobile-banner-home.svg);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  width: 100%;
+  background-size: cover;
 
+  padding-bottom: 40px;
+}
 p {
   font-size: 16px !important;
 }

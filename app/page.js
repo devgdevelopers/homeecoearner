@@ -38,7 +38,7 @@ export default function Home() {
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           centerPadding: "20px",
         },
       },
@@ -49,9 +49,9 @@ export default function Home() {
           centerPadding: "10px",
         },
       },
-      // Add more responsive settings as needed
     ],
   };
+
   const verticalSlider = {
     infinite: true,
     speed: 500,
@@ -64,6 +64,7 @@ export default function Home() {
     arrows: false,
     dots: false,
   };
+
    const placements = [
     "outside",
   ];
@@ -71,10 +72,10 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center overflow-hidden relative top-0 left-0 w-full">
       {/* banner section */}
-      <section className="main-banner w-full h-[690px] overflow-hidden  flex flex-col justify-end  ">
-        <div className=" container mx-auto my-auto z-10 flex">
+      <section className=" hidden md:flex main-banner w-full h-[690px] overflow-hidden   flex-col justify-end  ">
+        <div className=" container mx-auto my-auto z-10 flex md:flex-row flex-col">
           <div className="flex gap-10 flex-col w-1/2 justify-center">
-            <h1 className="text-7xl text-white font-bold">
+            <h1 className="text-4xl lg:text-7xl  text-white font-bold ">
               Home EcoEarner <br /> Power System
             </h1>
             <span className="text-[23px] text-white ">
@@ -98,12 +99,102 @@ export default function Home() {
                 </h3>
               </div>
             </Slider>
+            <button className="relative overflow-hidden p-3 px-6 bg-[#FFB800]  text-black group w-[155px]  rounded-[50px]  text-center font-bold priority-btn">
+    <span className="text relative z-10 text-[20px] my-auto">
+    Sign Up
+    </span>
+    <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+        <ArrowForwardOutlinedIcon className="ml-2" />
+    </span>
+</button>
 
-            <button className="bg-[#FFB800] w-[145px] h-[44px] p-2 rounded-[50px]  buy-now-btn text-center font-bold">
-              Sign Up
-            </button>
+          
           </div>
-          <div className="w-1/2 flex justify-end">
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <div className="w-3/4  flex justify-end">
+              <Slider {...settings} className="w-3/4  image-slider">
+                <div className="carousel-item mx-auto overflow-hidden">
+                  <div className="text-center flex justify-end items-center">
+                    <Image
+                      width={384}
+                      height={100}
+                      src="assets/images/battery1.svg"
+                      alt="product image"
+                      unoptimized
+                    ></Image>
+                  </div>
+                </div>
+                <div className="carousel-item flex justify-end items-center">
+                  <div className="text-center flex justify-center items-center my-auto">
+                    <Image
+                      width={384}
+                      height={100}
+                      src="assets/images/battery2.svg"
+                      alt="product image"
+                      className="my-auto flex justify-center items-center"
+                      unoptimized
+                    ></Image>
+                  </div>
+                </div>
+                <div className="carousel-item">
+                  <div className="text-center flex justify-end items-center">
+                    <Image
+                      width={384}
+                      height={100}
+                      src="/assets/images/solar-panel.svg"
+                      alt="product image"
+                      unoptimized
+                    ></Image>
+                  </div>
+                </div>
+              </Slider>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+ 
+
+      {/* mobile view banner  */}
+      <section className="flex md:hidden mob-main-banner w-full h-[690px] overflow-hidden    ">
+        <div className=" w-5/6 mx-auto my-auto z-10 flex flex-col gap-10">
+          <div className=" flex flex-col gap-5 ">
+            <h1 className="text-4xl   text-white font-bold ">
+              Home EcoEarner <br /> Power System
+            </h1>
+            <span className="text-[16px] text-white ">
+              Ready to get your electricity costs under control and give
+              your self the chance to transform your costs into income?
+            </span>
+            <Slider {...verticalSlider}>
+              <div className="carousel-item">
+                <h3 className="text-[24px] font-bold text-white">
+                  Energy Storage System
+                </h3>
+              </div>
+              <div className="carousel-item">
+                <h3 className="text-[24px] font-bold text-white">
+                  HF-H Series Inverter
+                </h3>
+              </div>
+              <div className="carousel-item">
+                <h3 className="text-[24px] font-bold text-white">
+                  SR-182 Series Solar Panels
+                </h3>
+              </div>
+            </Slider>
+            <button className="relative overflow-hidden py-1 px-6 bg-[#FFB800]  text-black group w-[155px]  rounded-[50px]  text-center font-bold priority-btn">
+    <span className="text relative z-10 text-[20px] my-auto">
+    Sign Up
+    </span>
+    <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+        <ArrowForwardOutlinedIcon className="ml-2" />
+    </span>
+</button>
+
+          
+          </div>
+          <div className="">
             <div className="w-3/4  flex justify-end">
               <Slider {...settings} className="w-3/4  image-slider">
                 <div className="carousel-item mx-auto overflow-hidden">
@@ -146,6 +237,9 @@ export default function Home() {
         </div>
       </section>
 
+
+
+
       {/* Products Section */}
 
       <section className="w-full py-10">
@@ -154,8 +248,8 @@ export default function Home() {
             Our Products
           </h1>
         </div>
-        <div className="grid container mx-auto grid-cols-3 gap-10 p-10 ">
-          <div className=" p-5 w-[440px] py-10 flex justify-center items-center flex-col  product-div ">
+        <div className="grid container mx-auto grid-cols-1 md:grid-cols-3 gap-10 p-10 ">
+          <div className=" p-5 w-full py-10 flex justify-center items-center flex-col  product-div ">
             <Image
               // src={`${product.}`}
               src="/assets/images/battery1-ws.svg"
@@ -175,7 +269,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="p-5 w-[440px] py-10 flex justify-center items-center flex-col product-div">
+          <div className="p-5 w-full py-10 flex justify-center items-center flex-col product-div">
             <Image
               src="/assets/images/battery2-ws.svg"
               width={100}
@@ -190,7 +284,7 @@ export default function Home() {
               View More{" "}
             </Link>
           </div>
-          <div className=" p-5 w-[440px] py-10 flex justify-center items-center flex-col product-div ">
+          <div className=" p-5 w-full py-10 flex justify-center items-center flex-col product-div ">
             <Image
               src="/assets/images/battery3-ws.svg"
               width={100}
@@ -321,9 +415,16 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <button className="p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white">
-              Join Our Priority List Today
-            </button>
+            <button className="relative overflow-hidden p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white group priority-btn text-center font-bold">
+    <span className="text relative z-10">
+        Join Our Priority List Today
+    </span>
+    <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
+        <ArrowForwardOutlinedIcon className="ml-2" />
+    </span>
+</button>
+
+
           </div>
         </div>
       </section>
@@ -335,7 +436,7 @@ export default function Home() {
             Customer Packages
           </h1>
         </div>
-        <div className="w-full grid grid-cols-3 px-20 container mx-auto packages-div justify-center">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 px-20 container mx-auto packages-div justify-center">
           <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-[85%]">
             <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
               BRONZE - <span className="text-[22px]">Power</span>
