@@ -26,6 +26,8 @@ import 'aos/dist/aos.css'
 import { LuPackageCheck } from "react-icons/lu";
 import { AiOutlineProduct } from "react-icons/ai";
 import { MdMiscellaneousServices } from "react-icons/md";
+import { IoClose } from "react-icons/io5";
+import { HiMenu } from "react-icons/hi";
 
 export default function ProfilePage() {
     const router = useRouter();
@@ -157,10 +159,10 @@ export default function ProfilePage() {
         <div className="flex min-h-screen ">
             {/* Hamburger Menu */}
             <button
-                className="md:hidden p-4 font-semibold text-xl z-20 fixed   text-black "
+                className="md:hidden p-4 font-semibold text-xl z-20 absolute   text-black "
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             >
-                {isSidebarOpen ? "X" : "☰"}
+                {isSidebarOpen ? <IoClose /> : <HiMenu />}
             </button>
 
 
@@ -352,7 +354,7 @@ export default function ProfilePage() {
                             <div className="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center group transition-all ease-in-out duration-300  gap-1">
                                 <MdMiscellaneousServices className="text-2xl group-hover:scale-150 transition-all ease-in-out duration-300 group-hover:text-blue-500" />
                                 <h2 className="text-xl font-semibold mb-2">Services</h2>
-                                <p className="text-3xl font-semibold text-blue-500">{serviceCount}</p>
+                                <span className="text-3xl font-semibold text-blue-500">{serviceCount}</span>
                                 <p className="text-gray-600">Total Services</p>
                             </div>
                         </div>
