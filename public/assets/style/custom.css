@@ -471,3 +471,7 @@ section.what-we-do {
 .services-p-div p{
   color: #008000;
 }
+.loader_ {
+  border-top-color: #196901; /* Tailwind CSS blue-400 color */
+  animation: spin 1s linear infinite;
+}

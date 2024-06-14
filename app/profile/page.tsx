@@ -31,7 +31,7 @@ export default function ProfilePage() {
     const router = useRouter();
     const [data, setData] = useState("nothing");
     const [activeSection, setActiveSection] = useState("profile");
-    const { logout } = useAuth();
+    const {logout} = useAuth();
     const [isBlogsOpen, setIsBlogsOpen] = useState(false);
     const [isProductOpen, setIsProductOpen] = useState(false);
     const [isServicesOpen, setIsServicesOpen] = useState(false);
