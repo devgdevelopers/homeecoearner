@@ -76,7 +76,7 @@ export default function AddPackage() {
     return (
         <div className="bg-white p-8 min-h-screen">
             <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg">
-                <form onSubmit={handleSubmit} className="space-y-4 w-[800px]">
+                <form onSubmit={handleSubmit} className="space-y-4 ">
                     <div>
                         <label htmlFor="title" className="block text-sm font-medium text-gray-700">Title:</label>
                         <QuillEditor value={title} onChange={setTitle} />

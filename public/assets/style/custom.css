@@ -104,6 +104,9 @@
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 
+.product-div img {
+    transition: all .2s linear;
+}
 .product-div:hover img {
   transform: translateY(-15px);
   transition: .2s linear;
@@ -280,7 +283,6 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
   header.z-40.flex.px-6.gap-4.w-full.flex-row.relative.flex-nowrap.items-center.justify-between.h-\[var\(--navbar-height\)\].max-w-\[1024px\] {
     max-width: 80%;
   }
-<<<<<<< HEAD
 }
 
 .accordion-title {
@@ -540,6 +542,11 @@ section.what-we-do {
 .loader_ {
   border-top-color: #196901; /* Tailwind CSS blue-400 color */
   animation: spin 1s linear infinite;
-=======
->>>>>>> 09cd44a176cb055e8feca59d92143fe03ff3d0df
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.shadow_menubar {
+  box-shadow: 5px 0 30px -10px rgba(0, 0, 0, 0.1);
 }

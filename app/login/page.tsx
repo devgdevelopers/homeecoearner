@@ -23,12 +23,10 @@ export default function LoginPage() {
             setLoading(true);
             const response = await axios.post("/api/users/login", user);
             console.log("Login success", response.data);
-            toast.success("Login success");
-
-            // Use context login function
             login(response.data.token);
-
+            toast.success("Login success");
             router.push("/profile");
+
         } catch (error) {
             console.log("Login failed", error.message);
             toast.error(error.message + "\nPlease enter correct id password");

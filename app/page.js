@@ -155,7 +155,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="grid container mx-auto grid-cols-3 gap-10 p-10 ">
-          <div className=" p-5 w-[440px] py-10 flex justify-center items-center flex-col  product-div ">
+          <div className=" p-5 w-[440px] py-10 flex justify-center items-center flex-col   product-div ">
             <Image
               // src={`${product.}`}
               src="/assets/images/battery1-ws.svg"

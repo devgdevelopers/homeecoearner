@@ -48,12 +48,12 @@ export default function UpdatePackages() {
         fetch(`/api/packages?id=${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ 
-                title: updatedTitle, 
-                content: updatedContent, 
-                shortDesc: updatedShortDesc, 
+            body: JSON.stringify({
+                title: updatedTitle,
+                content: updatedContent,
+                shortDesc: updatedShortDesc,
                 features: updatedFeatures.map(f => f.text),
-                img: updatedImage 
+                img: updatedImage
             })
         })
             .then(response => response.json())
@@ -116,7 +116,7 @@ export default function UpdatePackages() {
                     ) : (
                         packages.map(pack => (
                             <div key={pack._id} className="p-4">
-                                <div className="h-[340px] border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-md">
+                                <div className=" border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-md">
                                     <div className="p-6 flex flex-col gap-4 w-80 relative">
                                         <img src={pack.img} alt="" height={300} width={300} />
                                         <h2 className="text-xl font-semibold truncate">{pack.title}</h2>
@@ -134,8 +134,8 @@ export default function UpdatePackages() {
 
             {isEditing && (
                 <div className="fixed inset-0 bg-gray-900 bg-opacity-10 flex items-center justify-center backdrop-blur border border-frost rounded-lg shadow-md transition">
-                    <div className="bg-white p-6 rounded shadow-lg w-[800px] h-[700px]">
-                        <h2 className="text-2xl mb-4 text-black">Edit Package</h2>
+                    <div className="bg-white p-6 rounded shadow-lg ">
+                        <h2 className="text-2xl mb-4 text-black text-center">Edit Package</h2>
                         <label className="block mb-2 text-black font-medium">Title</label>
                         <input
                             className="w-full p-2 border border-gray-300 rounded mb-4 text-black"
@@ -152,7 +152,7 @@ export default function UpdatePackages() {
                         />
                         <label className="block mb-2 text-black font-medium">Content</label>
                         <QuillEditor value={updatedContent} onChange={setUpdatedContent} />
-                        
+
                         <label className="block mb-2 mt-4 text-black font-medium">Image</label>
                         <input
                             name="myFile"
@@ -162,7 +162,7 @@ export default function UpdatePackages() {
                             onChange={handleFileUpload}
                             className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         />
-                        
+
                         <label className="block mb-2 mt-4 text-black font-medium">Features</label>
                         {updatedFeatures.map((feature, index) => (
                             <div key={feature.id} className="flex items-center mb-2">
@@ -178,7 +178,7 @@ export default function UpdatePackages() {
                                 )}
                             </div>
                         ))}
-                        
+
                         <button onClick={() => updatePack(currentPack._id)} className="bg-blue-500 text-white p-2 rounded mt-6">Save</button>
                         <button onClick={() => { setIsEditing(false); setCurrentPack(null); }} className="bg-gray-500 text-white p-2 rounded ml-2 mt-6">Cancel</button>
                     </div>
