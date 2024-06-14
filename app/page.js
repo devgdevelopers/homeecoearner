@@ -343,7 +343,7 @@ export default function Home() {
       </section>
 
       {/* Steps Section  */}
-      <section className="w-full steps-section relative mb-[1100px] sm:mb-[900px] md:[860px] xl:mb-[280px]  ">
+      <section className="w-full steps-section relative mb-[1070px] sm:mb-[900px] md:[860px] xl:mb-[280px]  ">
         <div className="w-full ">
           <Image src="/assets/images/home-ecoearner-snippet.svg" width={ 100} height={100} alt="bg image" className="w-full" unoptimized></Image>
         </div>
