@@ -21,13 +21,15 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/style/custom.css" />
       </head>
       <body className={inter.className}>
-        <NextUIProvider>
-           <Header /> 
-          {children}
-          <footer>
-            <Footer />
-          </footer>
-        </NextUIProvider>
+        <AuthProvider>
+          <NextUIProvider>
+            <Header />
+            {children}
+            <footer>
+              <Footer />
+            </footer>
+          </NextUIProvider>
+        </AuthProvider>
         <Script src="https://smtpjs.com/v3/smtp.js" strategy="beforeInteractive" />
       </body>
     </html>
