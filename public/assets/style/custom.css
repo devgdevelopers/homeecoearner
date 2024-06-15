@@ -11,12 +11,46 @@
   font-weight: 500;
  
 }
-.link-div-head li a:hover{
-  color: #00a241;
-  border-bottom: 2px solid #15a135;
-  transition: .5s;
-  
+/* Navbar.module.css */
+
+.navLink {
+  position: relative;
+  padding: 5px;
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
 }
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color:  #15a135;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+.navLink:hover::after {
+  width: 100%;
+  left: 0;
+ 
+}
+.navLink:hover {
+  color: #15a135;
+}
+.active {
+  color: #15a135;
+}
+
+.active::after {
+  width: 100%;
+  left: 0;
+}
+
+
 .home-link {
   border-bottom: 2px solid #15a135;
 }
@@ -60,15 +94,11 @@
   color: black;
   border: 1.5px solid #FFB800;
   transition: .5s;
-
-
 }
 
 
 .product-div {
   background: #F5F5F5;
-  
-
 }
 
 .product-div:hover {
@@ -569,4 +599,14 @@ section.what-we-do {
 }
 .shadow_menubar {
   box-shadow: 5px 0 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.footerLink{
+  padding-left: 10px;
+}
+.footerLink:hover{
+  color: #00a241;
+  transition: .5s;
+  transform: scale(1.1);
+
 }
