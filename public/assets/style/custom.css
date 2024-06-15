@@ -607,6 +607,6 @@ section.what-we-do {
 .footerLink:hover{
   color: #00a241;
   transition: .5s;
-  transform: scale(1.1);
+  transform: translateX(10px);
 
 }

@@ -78,15 +78,7 @@ export default function Page() {
               Home
             </Link>
           </NavbarItem>
-          <NavbarItem>
-            <Link
-              href="/about-us"
-              className={`navLink ${pathname === "/about-us" ? "active " : ""}`}
-              passHref
-            >
-              About
-            </Link>
-          </NavbarItem>
+         
           <NavbarItem>
             <Link
               href="/products"

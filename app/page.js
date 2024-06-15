@@ -100,7 +100,7 @@ export default function Home() {
               </div>
             </Slider>
             <div>
-            <button className="relative overflow-hidden  py-1 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+            <button className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
               <span className="text relative z-10">
                 Sign Up
               </span>
@@ -377,7 +377,7 @@ export default function Home() {
               industry. Lorem Ipsum has been the industry's standard
             </p>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 md:p-10 gap-10">
-              <div className="flex flex-col gap-3 bg-white p-5">
+              <div className="flex flex-col gap-3 bg-white p-10 ">
                 <h1 className="text-lg font-bold">Step-1</h1>
                 <span>
                   <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
@@ -396,7 +396,7 @@ export default function Home() {
                   No more electricity price hikes
                 </span>
               </div>
-              <div className="flex flex-col gap-3 bg-white p-5">
+              <div className="flex flex-col gap-3 bg-white p-10  ">
                 <h1 className="text-lg font-bold">Step-2</h1>
                 <span>
                   <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
@@ -448,7 +448,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="w-full grid grid-cols-1 md:grid-cols-3  container mx-auto packages-div justify-center  gap-5 lg:gap-20">
-          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-full ">
+          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full ">
             <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
               BRONZE - <span className="text-[22px]">Power</span>
             </h1>
@@ -481,7 +481,7 @@ export default function Home() {
               Lifetime net cash benefit £47,944
             </p>
           </div>
-          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-full ">
+          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full ">
             <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
               SILVER - <span className="text-[22px]">Plus Wind</span>
             </h1>
@@ -514,7 +514,7 @@ export default function Home() {
               Lifetime net cash benefit £102,662
             </p>
           </div>
-          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-4 w-full">
+          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full">
             <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
               GOLD - <span className="text-[22px]">Power Booster</span>
             </h1>
@@ -645,7 +645,7 @@ export default function Home() {
                   <span>
                     <LocalPhoneOutlinedIcon className="mr-2 text-green" />
                   </span>
-                  020 3286 5350
+                  0203 286 5350
                 </h2>
                 <h2 className="text-lg">
                   <span>

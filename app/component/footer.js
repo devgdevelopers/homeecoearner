@@ -41,24 +41,36 @@ return (
           >
             Terms & Conditions
           </Link>
+          <Link
+            href="/terms-and-cond"
+            className="footerLink text-center md:text-start"
+          >
+            Privacy Policy
+          </Link>
         </ul>
       </div>
       <div className="flex flex-col justify-start lg:pl-20">
         <h3 className="mb-3 font-bold pl-3 text-center md:text-start">
-          Our Services
+          Services
         </h3>
         <ul className="flex flex-col gap-2">
           <Link
             href="/services"
             className="footerLink text-center md:text-start"
           >
-            Services
+            How To Order
+          </Link>
+          <Link
+            href="/services"
+            className="footerLink text-center md:text-start"
+          >
+            Our Products
           </Link>
           <Link
             href="/packages"
             className="footerLink text-center md:text-start"
           >
-            Packages
+            Order Status
           </Link>
           <Link
             href="/solar-maintenance"
