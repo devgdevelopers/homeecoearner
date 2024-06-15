@@ -52,7 +52,7 @@ export default function Page() {
 
   return (
     <>
-      <Navbar className="sticky top-0 hidden w-full mx-auto md:flex py-3 bg-white main-nav px-0">
+      <Navbar className="sticky top-0 hidden w-full mx-auto md:flex py-3 bg-white main-nav px-0 shadow-2xl">
         <NavbarContent className="text-white flex justify-start">
           <NavbarBrand className="flex justify-start">
             <Link href="/">
