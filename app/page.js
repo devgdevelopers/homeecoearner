@@ -441,7 +441,7 @@ export default function Home() {
       </section>
 
       {/* packges  */}
-      <section className="w-full py-10   mb-10">
+      <section className="w-full py-10   my-10">
         <div className="container mx-auto">
           <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">
             Customer Packages
