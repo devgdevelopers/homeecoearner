@@ -74,7 +74,7 @@ export default function Home() {
       {/* banner section */}
       <section className=" hidden md:flex main-banner w-full h-[690px] overflow-hidden   flex-col justify-end  ">
         <div className=" container mx-auto my-auto z-10 flex md:flex-row flex-col">
-          <div className="flex gap-10 flex-col w-1/2 justify-center">
+          <div className="flex flex-col w-1/2 justify-start gap-6">
             <h1 className="text-4xl lg:text-7xl  text-white font-bold ">
               Home EcoEarner <br /> Power System
             </h1>
@@ -99,14 +99,17 @@ export default function Home() {
                 </h3>
               </div>
             </Slider>
-            <button className="relative overflow-hidden p-3 px-6 bg-[#FFB800]  text-black group w-[155px]  rounded-[50px]  text-center font-bold priority-btn">
-              <span className="text relative z-10 text-[20px] my-auto">
+            <div>
+            <button className="relative overflow-hidden p-3 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+              <span className="text relative z-10">
                 Sign Up
               </span>
-              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
                 <ArrowForwardOutlinedIcon className="ml-2" />
               </span>
             </button>
+            </div>
+           
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="w-3/4  flex justify-end">
@@ -249,14 +252,18 @@ export default function Home() {
               alt="productimg"
               className="w-[255px] h-[250px] mx-auto "
             ></Image>
-            <h2 className="text-[22px] text-[#385723] font-semibold text-center mt-10">
+            <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
               Battery Energy Storage System{" "}
             </h2>
-            <Link
-              href="/products"
-              className="text-base text-center mx-auto text-[#028921]"
-            >
-              View More
+            <Link href="/products" className="text-lg text-[#028921]">
+            <button className="relative overflow-hidden py-1 px-6  group rounded-[50px]  text-center priority-btn">
+              <span className="text relative z-10 text-[20px] my-auto">
+                View More
+              </span>
+              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </button>
             </Link>
           </div>
 
@@ -268,11 +275,18 @@ export default function Home() {
               alt="productimg"
               className="w-[255px] h-[250px] mx-auto"
             ></Image>
-            <h2 className="text-[22px] text-[#385723] font-semibold text-center mt-10">
+            <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
               HF-H Series Inverter{" "}
             </h2>
             <Link href="/products" className="text-lg text-[#028921]">
-              View More{" "}
+            <button className="relative overflow-hidden py-1 px-6  group rounded-[50px]  text-center priority-btn">
+              <span className="text relative z-10 text-[20px] my-auto">
+                View More
+              </span>
+              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </button>
             </Link>
           </div>
           <div className=" p-5 w-full py-10 flex justify-center items-center flex-col product-div ">
@@ -283,14 +297,18 @@ export default function Home() {
               alt="productimg"
               className="w-[255px] h-[250px] mx-auto"
             ></Image>
-            <h2 className="text-[22px] text-[#385723] font-semibold text-center mt-10">
+            <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
               SR-182 Series Solar Panels{" "}
             </h2>
-            <Link
-              href="/products"
-              className="text-lg text-center text-[#028921]"
-            >
-              View More{" "}
+            <Link href="/products" className="text-lg text-[#028921]">
+            <button className="relative overflow-hidden py-1 px-6  group rounded-[50px]  text-center priority-btn">
+              <span className="text relative z-10 text-[20px] my-auto">
+                View More
+              </span>
+              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </button>
             </Link>
           </div>
         </div>
@@ -299,12 +317,12 @@ export default function Home() {
       {/* Sign up Form  */}
       <section className="w-full py-14 join-signup-form flex justify-center flex-col items-center">
         <div className="container mx-auto">
-          <h1 className="font-bold text-[50px] text-center text-[#fff] ">
+          <h1 className="font-bold text-[30px] md:text-[50px] text-center text-[#fff] ">
             Sign Up Today
           </h1>
         </div>
         <div className="mx-auto container">
-          <form action="" className="flex flex-col w-3/4 md:w-1/2 mx-auto">
+          <form action="" className="flex flex-col w-[90%] md:w-3/4  mx-auto">
             <div className="flex flex-col">
               <label htmlFor="Name" className="text-lg text-white my-2">
                 Full Name
@@ -343,7 +361,7 @@ export default function Home() {
       </section>
 
       {/* Steps Section  */}
-      <section className="w-full steps-section relative mb-[1070px] sm:mb-[900px] md:[860px] xl:mb-[280px]  ">
+      <section className="w-full steps-section relative mb-[1070px] md:[860px] xl:mb-[280px]  ">
         <div className="w-full ">
           <Image src="/assets/images/home-ecoearner-snippet.svg" width={ 100} height={100} alt="bg image" className="w-full" unoptimized></Image>
         </div>
@@ -549,7 +567,7 @@ export default function Home() {
               as we can!{" "}
             </h1>
           </div>
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-10">
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-10 gap-5 ">
             <div className="px-10">
               <form action="">
                 <div className="flex flex-col gap-1 mb-3">
@@ -603,16 +621,18 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                  <button
-                    type="submit"
-                    className="text-xl w-[134px] h-[45px] font-bold rounded-3xl bg-[#FFB800]"
-                  >
-                    Submit
-                  </button>
+                <button className="relative overflow-hidden p-3 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5">
+              <span className="text relative z-10">
+                Submit
+              </span>
+              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </button>
                 </div>
               </form>
             </div>
-            <div className="px-10 cotact-div-left-border  ">
+            <div className="px-10 cotact-div-top-border  cotact-div-left-border  ">
               <div className="my-auto bg-white p-5 sm:p-10 flex flex-col gap-4 mt-5 rounded-md shadow-xl ">
                 <h2 className="text-[22px] font-bold text-[#385723]">Info</h2>
                 <h2 className="text-lg">

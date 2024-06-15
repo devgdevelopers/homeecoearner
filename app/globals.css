@@ -5,12 +5,12 @@
 
 .priority-btn {
     position: relative;
-    font-size: 16px;
+    font-size: 17px;
     border: none;
     border-radius: 24px;
     cursor: pointer;
     overflow: hidden;
-   transition: padding-right 2.7s ease;
+   transition: padding-right  0.5s ease;
 }
 
 .priority-btn .text {
@@ -37,5 +37,5 @@
 .priority-btn:hover .icon {
     left: calc(100% - 25px); 
     opacity: 1; 
-    transition: .5s;
+    transition:  0.5s;
 }
