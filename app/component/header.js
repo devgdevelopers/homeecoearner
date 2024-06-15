@@ -52,7 +52,7 @@ export default function Page() {
 
   return (
     <>
-      <Navbar className="sticky top-0 hidden w-full mx-auto md:flex py-3 bg-white main-nav px-0 shadow-2xl">
+      <Navbar className="sticky top-0 hidden w-full mx-auto md:flex py-3 bg-white main-nav px-0 shadow-xl">
         <NavbarContent className="text-white flex justify-start">
           <NavbarBrand className="flex justify-start">
             <Link href="/">
@@ -140,7 +140,7 @@ export default function Page() {
         </NavbarContent>
       </Navbar>
 
-      <Navbar className="sticky top-0 md:hidden py-2 flex bg-white z-[1000] ">
+      <Navbar className="sticky top-0 md:hidden py-2 flex bg-white z-[1000] shadow-xl">
         {/* Mobile Navbar */}
         <NavbarBrand>
           <Link href="/">
