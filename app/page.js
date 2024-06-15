@@ -100,7 +100,7 @@ export default function Home() {
               </div>
             </Slider>
             <div>
-            <button className="relative overflow-hidden p-3 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+            <button className="relative overflow-hidden  py-1 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
               <span className="text relative z-10">
                 Sign Up
               </span>
@@ -322,7 +322,7 @@ export default function Home() {
           </h1>
         </div>
         <div className="mx-auto container">
-          <form action="" className="flex flex-col w-[90%] md:w-3/4  mx-auto">
+          <form action="" className="flex flex-col w-[90%] md:w-[545px]  mx-auto">
             <div className="flex flex-col">
               <label htmlFor="Name" className="text-lg text-white my-2">
                 Full Name
@@ -559,7 +559,7 @@ export default function Home() {
       <section className="w-full  bg-green  py-10">
         <div className="flex justify-center flex-col  items-center">
           <div className="container mx-auto">
-            <h1 className="font-bold text-[50px] text-center text-white ">
+            <h1 className="font-bold text-[35px] md:text-[50px] text-center text-white ">
               Contact Us
             </h1>
             <h1 className="text-white text-center text-lg">
@@ -621,7 +621,7 @@ export default function Home() {
                   />
                 </div>
                 <div>
-                <button className="relative overflow-hidden p-3 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5">
+                <button className="relative overflow-hidden py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5">
               <span className="text relative z-10">
                 Submit
               </span>

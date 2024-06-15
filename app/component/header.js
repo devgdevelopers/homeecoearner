@@ -58,7 +58,7 @@ export default function Page() {
             <Link href="/">
               <Image
                 className=" min-w-[237px] h-[auto] "
-                src="/assets/images/logo.png"
+                src="/assets/images/logo-final.svg"
                 width={237}
                 height={100}
                 alt="logo"
@@ -154,7 +154,7 @@ export default function Page() {
           <Link href="/">
             <Image
               className=" w-[200px] h-[auto]"
-              src="/assets/images/logo.png"
+              src="/assets/images/logo-final.svg"
               width={100}
               height={100}
               alt="logo"

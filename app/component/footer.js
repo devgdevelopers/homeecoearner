@@ -12,7 +12,7 @@ return (
     <div className="container mx-auto grid grid-cols-1 grid-flow-row md:grid-cols-4 p-5 gap-5 py-10">
       <div className="flex flex-col gap-3">
         <Image
-          src="/assets/images/logo.png"
+          src="/assets/images/logo-final.svg"
           className="w-[250px] md:ms-0 mx-auto"
           width={100}
           height={100}
@@ -20,7 +20,7 @@ return (
           unoptimized
         ></Image>
         <h2 className="text-lg text-dark font-semibold text-center md:text-start">
-          Energy Freedom At Your Fingertips
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, a?
         </h2>
       </div>
       <div className="w-auto flex flex-col justify-start lg:pl-20">
