@@ -8,13 +8,16 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import PlaceOutlinedIcon from '@mui/icons-material/PlaceOutlined';
 import Slider from "react-slick";
-import {Input} from "@nextui-org/input";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useState, useEffect } from "react";
 
 export default function Home() {
-
+  // title, content, shortDesc, img, features  services 
+  // cardHeading, cardImg products
   
   const settings = {
     infinite: true,
@@ -68,6 +71,51 @@ export default function Home() {
    const placements = [
     "outside",
   ];
+  const [products, setProducts] = useState([]);
+  const [productsLoading, setProductsLoading] = useState(true);
+  const [packages, setPackages] = useState([]);
+  const [packagesLoading, setPackagesLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('/api/products');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log('Fetched products:', data);
+        setProducts(data.data); // Assuming your API returns { data: productsArray }
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      } finally {
+        setProductsLoading(false); // Ensure loading is set to false even if there is an error
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    const fetchPackages = async () => {
+      try {
+        const response = await fetch('/api/packages');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log('Fetched packages:', data);
+        setPackages(data.data); // Assuming your API returns { data: packagesArray }
+      } catch (error) {
+        console.error('Error fetching packages:', error);
+      } finally {
+        setPackagesLoading(false); // Ensure loading is set to false even if there is an error
+      }
+    };
+
+    fetchPackages();
+  }, []);
+
 
   return (
     <main className="flex min-h-screen flex-col items-center overflow-hidden relative top-0 left-0 w-full">
@@ -100,14 +148,14 @@ export default function Home() {
               </div>
             </Slider>
             <div>
-            <button className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+            <Link href="/" className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
               <span className="text relative z-10">
                 Sign Up
               </span>
               <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
                 <ArrowForwardOutlinedIcon className="ml-2" />
               </span>
-            </button>
+            </Link>
             </div>
            
           </div>
@@ -236,84 +284,48 @@ export default function Home() {
 
       {/* Products Section */}
 
-      <section className="w-full py-10">
-        <div className="container mx-auto">
-          <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 md:mb-10">
-            Our Products
-          </h1>
-        </div>
-        <div className="grid container mx-auto grid-cols-1 md:grid-cols-3 gap-10 px-10 md:p-10 ">
-          <div className=" p-5 w-full py-10 flex justify-center items-center flex-col  product-div ">
-            <Image
-              // src={`${product.}`}
-              src="/assets/images/battery1-ws.svg"
-              width={100}
-              height={100}
-              alt="productimg"
-              className="w-[255px] h-[250px] mx-auto "
-            ></Image>
-            <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
-              Battery Energy Storage System{" "}
-            </h2>
-            <Link href="/products" className="text-lg text-[#028921]">
-            <button className="relative overflow-hidden py-1 px-6  group rounded-[50px]  text-center priority-btn">
-              <span className="text relative z-10 text-[20px] my-auto">
-                View More
-              </span>
-              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-                <ArrowForwardOutlinedIcon className="ml-2" />
-              </span>
-            </button>
-            </Link>
-          </div>
-
-          <div className="p-5 w-full py-10 flex justify-center items-center flex-col product-div">
-            <Image
-              src="/assets/images/battery2-ws.svg"
-              width={100}
-              height={100}
-              alt="productimg"
-              className="w-[255px] h-[250px] mx-auto"
-            ></Image>
-            <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
-              HF-H Series Inverter{" "}
-            </h2>
-            <Link href="/products" className="text-lg text-[#028921]">
-            <button className="relative overflow-hidden py-1 px-6  group rounded-[50px]  text-center priority-btn">
-              <span className="text relative z-10 text-[20px] my-auto">
-                View More
-              </span>
-              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-                <ArrowForwardOutlinedIcon className="ml-2" />
-              </span>
-            </button>
-            </Link>
-          </div>
-          <div className=" p-5 w-full py-10 flex justify-center items-center flex-col product-div ">
-            <Image
-              src="/assets/images/battery3-ws.svg"
-              width={100}
-              height={100}
-              alt="productimg"
-              className="w-[255px] h-[250px] mx-auto"
-            ></Image>
-            <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
-              SR-182 Series Solar Panels{" "}
-            </h2>
-            <Link href="/products" className="text-lg text-[#028921]">
-            <button className="relative overflow-hidden py-1 px-6  group rounded-[50px]  text-center priority-btn">
-              <span className="text relative z-10 text-[20px] my-auto">
-                View More
-              </span>
-              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-                <ArrowForwardOutlinedIcon className="ml-2" />
-              </span>
-            </button>
-            </Link>
-          </div>
+      <section className="container mx-auto mb-10">
+        <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 md:mb-10">
+          Our Products
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 md:p-10">
+          {productsLoading ? (
+            [1, 2, 3].map((_, index) => (
+              <div key={index} className="p-5 w-full py-10 flex justify-center items-center flex-col ">
+                <Skeleton width={255} height={250} />
+                <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
+                  <Skeleton width={150} />
+                </h2>
+                <Skeleton width={100} height={30} />
+              </div>
+            ))
+          ) : (
+            products.map((product) => (
+              <div key={product._id} className="p-5 w-full py-10 flex justify-center items-center flex-col product-div">
+                <Image
+                  src={product.cardImg}
+                  width={255}
+                  height={250}
+                  alt="productimg"
+                  className="w-[255px] h-[250px] mx-auto"
+                />
+                <h2
+                  className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10"
+                  dangerouslySetInnerHTML={{ __html: product.cardHeading }}
+                />
+                <Link href={`/products/${product._id}`} className="text-lg text-[#028921]">
+                  <button className="relative overflow-hidden py-1 px-6 group rounded-[50px] text-center priority-btn">
+                    <span className="text relative z-10 text-[20px] my-auto">View More</span>
+                    <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                      <ArrowForwardOutlinedIcon className="ml-2" />
+                    </span>
+                  </button>
+                </Link>
+              </div>
+            ))
+          )}
         </div>
       </section>
-
       {/* Sign up Form  */}
       <section className="w-full py-14 join-signup-form flex justify-center flex-col items-center">
         <div className="container mx-auto">
@@ -361,15 +373,14 @@ export default function Home() {
       </section>
 
       {/* Steps Section  */}
-      <section className="w-full steps-section relative mb-[1070px] md:[860px] xl:mb-[280px]  ">
+      <section className="w-full min-h-screen steps-section relative mb-[460px] md: sm:mb-[350px] lg:mb-[160px] 2xl:mb-[120px]  ">
         <div className="w-full ">
           <Image src="/assets/images/home-ecoearner-snippet.svg" width={ 100} height={100} alt="bg image" className="w-full" unoptimized></Image>
         </div>
         <div className="w-[90%] md:w-[80%] top-10 md:top-[100px] xl:top-[320px] left-1/2 -translate-x-1/2 absolute">
         <div className="steps-inner-div  p-5 py-10 ">
             <h1 className="text-2xl xl:text-5xl text-green font-semibold text-center my-1">
-              For our Home EcoEarner Power System today <br className="hidden md:flex" /> and experience
-              the future of renewable energy.
+              For our Home EcoEarner Power System today <br className="hidden md:flex" /> and experience the future of renewable energy.
             </h1>
             <p className="text-center text-[18px] py-4">
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -441,120 +452,43 @@ export default function Home() {
       </section>
 
       {/* packges  */}
-      <section className="w-full py-10   my-10">
-        <div className="container mx-auto">
-          <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">
-            Customer Packages
-          </h1>
-        </div>
-        <div className="w-full grid grid-cols-1 md:grid-cols-3  container mx-auto packages-div justify-center  gap-5 lg:gap-20">
-          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full ">
-            <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
-              BRONZE - <span className="text-[22px]">Power</span>
-            </h1>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              2.7kW PV solar panels + inverter + controller
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              10.5kW battery
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              No upfront cost
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Free installation
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              System pays for itself
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Net cash benefit of £59/year
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Lifetime net cash benefit £47,944
-            </p>
-          </div>
-          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full ">
-            <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
-              SILVER - <span className="text-[22px]">Plus Wind</span>
-            </h1>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Everything in Bronze plus
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />1 x Mini wind
-              turbines
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Submission for any planning
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Free installation
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              System pays for itself
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Net cash benefit of £1,468/year
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Lifetime net cash benefit £102,662
-            </p>
-          </div>
-          <div className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full">
-            <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
-              GOLD - <span className="text-[22px]">Power Booster</span>
-            </h1>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Power Booster - enables you to generate excess electricity
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Free installation
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Our customers get priority and a net cost-free upgrade when it is
-              released
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Micro generator system
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Potential to earn a serious regular income
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              System pays for itself
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Net cash benefit £4,869/year
-            </p>
-            <p>
-              <VerifiedIcon className="mr-2 verified-icon" />
-              Lifetime net cash benefit £286,425
-            </p>
-          </div>
-        </div>
-      </section>
-
+      <section className="w-full py-10 my-10">
+      <div className="container mx-auto">
+        <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">
+          Customer Packages
+        </h1>
+      </div>
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
+        {packagesLoading ? (
+          [1, 2, 3].map((_, index) => (
+            <div key={index} className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full">
+              <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
+                <Skeleton width={150} />
+              </h1>
+              {[...Array(7)].map((_, i) => (
+                <p key={i}>
+                  <Skeleton width={200} />
+                </p>
+              ))}
+            </div>
+          ))
+        ) : (
+          packages.map((pkg) => (
+            <div key={pkg._id} className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full">
+              <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
+                {pkg.title} - <span className="text-[22px]">{pkg.shortDesc}</span>
+              </h1>
+              {pkg.features.map((feature, index) => (
+                <p key={index}>
+                  <VerifiedIcon className="mr-2 verified-icon" />
+                  {feature}
+                </p>
+              ))}
+            </div>
+          ))
+        )}
+      </div>
+    </section>
       {/* contact us form  */}
       <section className="w-full  bg-green  py-10">
         <div className="flex justify-center flex-col  items-center">
@@ -577,38 +511,39 @@ export default function Home() {
                   <input
                     type="text"
                     name=""
-                    id=""
+                    id="name"
                     placeholder="Enter your full name"
                     className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
                   />
                 </div>
                 <div className="flex flex-col gap-1 mb-3">
-                  <label htmlFor="name" className="text-white ">
+                  <label htmlFor="email1" className="text-white ">
                     Email Address
                   </label>
                   <input
-                    type="text"
+                    type="email"
                     name=""
-                    id=""
+                    id="email1"
                     placeholder="Enter Your email address"
                     className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
                   />
                 </div>
                 <div className="flex flex-col gap-1 mb-3">
-                  <label htmlFor="name" className="text-white ">
+                  <label htmlFor="number" className="text-white ">
                     Mobile Number
                   </label>
                   <input
-                    type="text"
+                    type="tel"
                     name=""
-                    id=""
+                    id="number"
                     placeholder="Enter Your mobile no."
                     className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
                   />
                 </div>
+                
 
                 <div className="flex flex-col gap-1 mb-3">
-                  <label htmlFor="name" className="text-white ">
+                  <label htmlFor="message" className="text-white ">
                     Message
                   </label>
                   <textarea
