@@ -1,294 +1,86 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react'
+
 import Image from "next/image";
-import Slider from "react-slick";
+import Link from "next/link";
+import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
+
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Pagination } from "@nextui-org/react";
-import Link from 'next/link';
+import SignupNewsletter from '../component/SignupNewsletter';
 
 
-const products = [
-  {
-    link:"battery",
-    src: "/assets/images/__img1.jpg",
-    alt: "Battery Energy Storage System",
-    title: "Battery Energy Storage System",
-    customClass:"p-10 rounded-tr-[50%]   " ,
-  },
-  {
-    link:"inverter",
-    src: "/assets/images/__img2.jpg",
-    alt: "HF-H Series Inverter",
-    title: "HF-H Series Inverter",
-    customClass:"p-14 rounded-t-[50%] " ,
-  },
-  {
-    link:"solarpanel",
-    src: "/assets/images/__img3.jpg",
-    alt: "SR-182 Series Solar Panels",
-    title: "SR-182 Series Solar Panels",
-    customClass:"p-10 rounded-tl-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 1",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tr-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 2",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-t-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 3",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tl-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 4",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tr-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 5",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-t-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 6",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tl-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 7",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-tr-[50%] " ,
-  },
-  {
-    src: "",
-    alt: "Product Image 8",
-    title: "Lorem, ipsum dolor.",
-        customClass:"p-5 rounded-t-[50%] " ,
-    
+const page = () => {
+  const [products, setProducts] = useState([]);
+  const [productsLoading, setProductsLoading] = useState(true);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('/api/products');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        console.log('Fetched products:', data);
+        setProducts(data.data); // Assuming your API returns { data: productsArray }
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      } finally {
+        setProductsLoading(false); // Ensure loading is set to false even if there is an error
+      }
+    };
 
-  },
-  {
-    src: "",
-    alt: "Product Image 9",
-    title: "Lorem, ipsum dolor.",
-    customClass:"p-5 rounded-tl-[50%] " ,
-  },
-];
-
-const PER_PAGE = 6;
-
-const Page = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-
-  const offset = (currentPage - 1) * PER_PAGE;
-  const currentProducts = products.slice(offset, offset + PER_PAGE);
-  const totalPages = Math.ceil(products.length / PER_PAGE);
-  const settings = {
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    centerPadding: "30px",
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1424,
-        settings: {
-          slidesToShow: 3,
-          centerPadding: "30px",
-        },
-      },
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 2,
-          centerPadding: "20px",
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "10px",
-        },
-      },
-      // Add more responsive settings as needed
-    ],
-  };
-
+    fetchProducts();
+  }, []);
   return (
     <>
-      <section className="md:mt-0 services-bg-images min-h-[50vh] bg-[#0a890d] my-auto text-white">
-        <div className="container mx-auto flex flex-col justify-center items-center py-12">
-          <h2 className="text-[20px] md:text-5xl font-bold mb-4 text-green">
-            Products
-          </h2>
-          <p className=" mx-auto text-center text-lg text-dark font-semibold">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est
-            magni, unde ipsam illo corrupti, minus eveniet dolorum obcaecati,
-            tempora hic! Laborum eveniet voluptas labore. Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit. Exercitationem deleniti cumque
-            harum reiciendis illo, fuga itaque, enim, rem perspiciatis aperiam
-            sit voluptatum quis a magni.
-          </p>
-        </div>
-      </section>
-      <section className="products-bg-section">
-        <div className="container mx-auto py-20">
-          <style>
-            {`
-              .slick-prev:before,
-              .slick-next:before {
-                color: white;
-                font-size:25px;
-              }
-            `}
-          </style>
-          <Slider {...settings}>
-            <div className="carousel-item mx-auto">
-              <div className="text-center p-5 flex justify-center">
-                <Image
-                  width={500}
-                  height={100}
-                  src="/assets/images/ProductBattery.png"
-                  alt="product image"
-                ></Image>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="text-center p-5 flex justify-center">
-                <Image
-                  width={500}
-                  height={100}
-                  src="/assets/images/ProductBattery.png"
-                  alt="product image"
-                ></Image>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="text-center p-5 flex justify-center">
-                <Image
-                  width={500}
-                  height={100}
-                  src="/assets/images/ProductBattery.png"
-                  alt="product image"
-                ></Image>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="text-center p-5 flex justify-center">
-                <Image
-                  width={500}
-                  height={100}
-                  src="/assets/images/ProductBattery.png"
-                  alt="product image"
-                ></Image>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <div className="text-center p-5 flex justify-center">
-                <Image
-                  width={500}
-                  height={100}
-                  src="/assets/images/ProductBattery.png"
-                  alt="product image"
-                ></Image>
-              </div>
-            </div>
-          </Slider>
-        </div>
-      </section>
-      <section className="w-full product-sec-bg flex flex-col justify-center">
-        <h2 className="text-3xl text-center text-green font-semibold pt-10">
+      <section className="container mx-auto mb-10">
+        <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 md:my-10">
           Our Products
-        </h2>
-        <div className="grid md:grid-cols-3 grid-cols-1 w-[90%] xl:w-[70%] mx-auto gap-10 py-10">
-        {currentProducts.map((product, index) => (
-          <div key={index} className="bg-white grid justify-center p-5 rounded-3xl shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out ">
-
-<Link href={`/products/${product.link}`}>
-      <div
-              className={`flex justify-center items-center rounded-xl h-60 sm:h-72 md:h-80 w-full  overflow-hidden bg-[#15a135] ${product.customClass}`}
-            >           <Image
-                src={product.src}
-                width={300}
-                height={200}
-                objectFit="contain"
-                alt={product.alt}  
-                className=" transition-all duration-300 hover:scale-110 "
-
-              />
-            </div> 
-    </Link>
-
-
-            <h3 className="text-[18px] text-center text-green-600 font-semibold my-2">
-              {product.title}
-            </h3>
-          </div>
-        ))}
-      </div>
-
-        <Pagination
-          className="mx-auto text-center py-10 custom-pagination"
-          total={totalPages}
-          initialPage={currentPage}
-          onChange={handlePageChange}
-        />
-      </section>
-      <section className="bg-[#00a241] py-20 signup-newsletter-bg shadow-inner">
-        <div className="container mx-auto">
-          <h2 className="text-center text-white  text-2xl lg:text-5xl font-semibold">
-            Subscribe Newsletter
-          </h2>
-          <div className="flex justify-center items-center gap-2">
-            <div className="w-[50px] md:w-[100px] h-[1px] bg-[#ffffff8a]"></div>
-            <h2 className="text-xl md:text-2xl text-[#ffffff8a]">
-              Get the latest news & offers
-            </h2>
-            <div className="w-[50px] md:w-[100px] h-[1px] bg-[#ffffff8a]"></div>
-          </div>
-
-          <div className="mx-auto py-10">
-            <form action="" className="mx-auto flex flex-col md:flex-row justify-center items-center gap-3 md:gap-0">
-              <input type="email" placeholder="Your Email Address "
-                className="p-5 services-light-bg md:rounded-l-full text-black outline-none placeholder:text-black placeholder:font-semibold px-20 shadow-xl "
-                required />
-              <button type="submit" className="p-5 text-white  md:rounded-r-full  bg-dark shadow-xl">
-                Subscibe Now
-              </button>
-            </form>
-          </div>
-
-          <p className="text-center text-white">
-            True environmental protection lies in loving the mountains, the
-            oceans and in cherishing all creation.
-          </p>
-
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 md:p-10">
+          {productsLoading ? (
+            [1, 2, 3].map((_, index) => (
+              <div key={index} className="p-5 w-full py-10 flex justify-center items-center flex-col ">
+                <Skeleton width={255} height={250} />
+                <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
+                  <Skeleton width={150} />
+                </h2>
+                <Skeleton width={100} height={30} />
+              </div>
+            ))
+          ) : (
+            products.map((product) => (
+              <div key={product._id} className="p-5 w-full py-10 flex justify-center items-center flex-col product-div">
+                <Image
+                  src={product.cardImg}
+                  width={255}
+                  height={250}
+                  alt="productimg"
+                  className="w-[255px] h-[250px] mx-auto"
+                />
+                <h2
+                  className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10"
+                  dangerouslySetInnerHTML={{ __html: product.cardHeading }}
+                />
+                <Link href={`/products/${product._id}`} className="text-lg text-[#028921]">
+                  <button className="relative overflow-hidden py-1 px-6 group rounded-[50px] text-center priority-btn">
+                    <span className="text relative z-10 text-[20px] my-auto">View More</span>
+                    <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                      <ArrowForwardOutlinedIcon className="ml-2" />
+                    </span>
+                  </button>
+                </Link>
+              </div>
+            ))
+          )}
         </div>
       </section>
-  
+      <SignupNewsletter />
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default page

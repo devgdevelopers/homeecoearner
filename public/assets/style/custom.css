@@ -610,3 +610,8 @@ section.what-we-do {
   transform: translateX(10px);
 
 }
+.product-img-bg{
+  background-image: url('/assets/images/pro-bg-img.svg');
+  background-repeat: no-repeat;
+  background-position: center center;
+}

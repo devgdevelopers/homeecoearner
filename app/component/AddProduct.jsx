@@ -75,7 +75,7 @@ export default function AddProduct() {
                     </div>
 
 
-                    {/* <div>
+                    <div>
                         <label htmlFor="cardSubHeading" className="block text-sm font-medium text-gray-700">
                             Card Sub Heading:
                         </label>
@@ -129,7 +129,7 @@ export default function AddProduct() {
                             Content:
                         </label>
                         <QuillEditor value={content} onChange={setContent} />
-                    </div> */}
+                    </div>
 
                     <div>
                         <label htmlFor="cardImg" className="block text-sm font-medium text-gray-700">
@@ -145,7 +145,7 @@ export default function AddProduct() {
                         />
                     </div>
 
-                    {/* <div>
+                    <div>
                         <label htmlFor="images" className="block text-sm font-medium text-gray-700">
                             Additional Images:
                         </label>
@@ -164,7 +164,7 @@ export default function AddProduct() {
                                 className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             />
                         ))}
-                    </div> */}
+                    </div>
 
                     <button
                         type="submit"

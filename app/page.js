@@ -1,4 +1,5 @@
 "use client";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
@@ -13,7 +14,8 @@ import 'react-loading-skeleton/dist/skeleton.css';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useState, useEffect } from "react";
+import SignupHome from './component/SignUpHome'
+import ContactFormHome from './component/ContactFormHome'
 
 export default function Home() {
   // title, content, shortDesc, img, features  services 
@@ -84,7 +86,7 @@ export default function Home() {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log('Fetched products:', data);
+
         setProducts(data.data); // Assuming your API returns { data: productsArray }
       } catch (error) {
         console.error('Error fetching products:', error);
@@ -104,7 +106,7 @@ export default function Home() {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log('Fetched packages:', data);
+        // console.log('Fetched packages:', data);
         setPackages(data.data); // Assuming your API returns { data: packagesArray }
       } catch (error) {
         console.error('Error fetching packages:', error);
@@ -120,7 +122,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center overflow-hidden relative top-0 left-0 w-full">
       {/* banner section */}
-      <section className=" hidden md:flex main-banner w-full h-[690px] overflow-hidden   flex-col justify-end  ">
+      <section className=" hidden md:flex main-banner w-full h-[690px] overflow-hidden flex-col justify-end  ">
         <div className=" container mx-auto my-auto z-10 flex md:flex-row flex-col">
           <div className="flex flex-col w-1/2 justify-start gap-6">
             <h1 className="text-4xl lg:text-7xl  text-white font-bold ">
@@ -203,7 +205,7 @@ export default function Home() {
       </section>
 
       {/* mobile view banner  */}
-      <section className="flex md:hidden mob-main-banner w-full h-[690px] overflow-hidden    ">
+      <section className="flex md:hidden mob-main-banner w-full h-[690px] overflow-hidden">
         <div className=" w-5/6 mx-auto my-auto z-10 flex flex-col gap-10">
           <div className=" flex flex-col gap-5 ">
             <h1 className="text-4xl   text-white font-bold ">
@@ -283,94 +285,50 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-
       <section className="container mx-auto mb-10">
-        <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 md:mb-10">
-          Our Products
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 md:p-10">
-          {productsLoading ? (
-            [1, 2, 3].map((_, index) => (
-              <div key={index} className="p-5 w-full py-10 flex justify-center items-center flex-col ">
-                <Skeleton width={255} height={250} />
-                <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
-                  <Skeleton width={150} />
-                </h2>
-                <Skeleton width={100} height={30} />
-              </div>
-            ))
-          ) : (
-            products.map((product) => (
-              <div key={product._id} className="p-5 w-full py-10 flex justify-center items-center flex-col product-div">
-                <Image
-                  src={product.cardImg}
-                  width={255}
-                  height={250}
-                  alt="productimg"
-                  className="w-[255px] h-[250px] mx-auto"
-                />
-                <h2
-                  className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10"
-                  dangerouslySetInnerHTML={{ __html: product.cardHeading }}
-                />
-                <Link href={`/products/${product._id}`} className="text-lg text-[#028921]">
-                  <button className="relative overflow-hidden py-1 px-6 group rounded-[50px] text-center priority-btn">
-                    <span className="text relative z-10 text-[20px] my-auto">View More</span>
-                    <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-                      <ArrowForwardOutlinedIcon className="ml-2" />
-                    </span>
-                  </button>
-                </Link>
-              </div>
-            ))
-          )}
-        </div>
-      </section>
+      <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 md:my-10">
+        Our Products
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 md:p-10">
+        {productsLoading ? (
+          [1, 2, 3].map((_, index) => (
+            <div key={index} className="p-5 w-full py-10 flex justify-center items-center flex-col ">
+              <Skeleton width={255} height={250} />
+              <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
+                <Skeleton width={150} />
+              </h2>
+              <Skeleton width={100} height={30} />
+            </div>
+          ))
+        ) : (
+          products.slice(0, 3).map((product) => (
+            <div key={product._id} className="p-5 w-full py-10 flex justify-center items-center flex-col product-div">
+              <Image
+                src={product.cardImg}
+                width={255}
+                height={250}
+                alt="productimg"
+                className="w-[255px] h-[250px] mx-auto"
+              />
+              <h2
+                className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10"
+                dangerouslySetInnerHTML={{ __html: product.cardHeading }}
+              />
+              <Link href={`/products/${product._id}`} className="text-lg text-[#028921]">
+                <button className="relative overflow-hidden py-1 px-6 group rounded-[50px] text-center priority-btn">
+                  <span className="text relative z-10 text-[20px] my-auto">View More</span>
+                  <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                    <ArrowForwardOutlinedIcon className="ml-2" />
+                  </span>
+                </button>
+              </Link>
+            </div>
+          ))
+        )}
+      </div>
+    </section>
       {/* Sign up Form  */}
-      <section className="w-full py-14 join-signup-form flex justify-center flex-col items-center">
-        <div className="container mx-auto">
-          <h1 className="font-bold text-[30px] md:text-[50px] text-center text-[#fff] ">
-            Sign Up Today
-          </h1>
-        </div>
-        <div className="mx-auto container">
-          <form action="" className="flex flex-col w-[90%] md:w-[545px]  mx-auto">
-            <div className="flex flex-col">
-              <label htmlFor="Name" className="text-lg text-white my-2">
-                Full Name
-              </label>
-              <input
-                type="text"
-                name=""
-                id="Name"
-                placeholder="Enter your Full Name"
-                className="text-green placeholder:text-white bg-transparent signup-form-input"
-              />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="email" className="text-lg text-white my-2">
-                Email Address
-              </label>
-              <input
-                type="email"
-                name=""
-                id="email"
-                placeholder="Enter your Email Address"
-                className="text-green placeholder:text-white bg-transparent signup-form-input"
-              />
-            </div>
-            <button
-              type="submit"
-              className="sign-up-btn my-5 text-xl text-white hover:font-semibold"
-            >
-              Join Now
-            </button>
-            <h6 className="text-sm text-center text-white">
-              Privacy Policy: We promise to keep your email address safe
-            </h6>
-          </form>
-        </div>
-      </section>
+      <SignupHome />
 
       {/* Steps Section  */}
       <section className="w-full min-h-screen steps-section relative mb-[460px] md: sm:mb-[350px] lg:mb-[160px] 2xl:mb-[120px]  ">
@@ -503,69 +461,7 @@ export default function Home() {
           </div>
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-10 gap-5 ">
             <div className="px-10">
-              <form action="">
-                <div className="flex flex-col gap-1 mb-3">
-                  <label htmlFor="name" className="text-white ">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    name=""
-                    id="name"
-                    placeholder="Enter your full name"
-                    className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
-                  />
-                </div>
-                <div className="flex flex-col gap-1 mb-3">
-                  <label htmlFor="email1" className="text-white ">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    name=""
-                    id="email1"
-                    placeholder="Enter Your email address"
-                    className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
-                  />
-                </div>
-                <div className="flex flex-col gap-1 mb-3">
-                  <label htmlFor="number" className="text-white ">
-                    Mobile Number
-                  </label>
-                  <input
-                    type="tel"
-                    name=""
-                    id="number"
-                    placeholder="Enter Your mobile no."
-                    className="bg-white p-2 text-[#525C60]  outline-none rounded-md h-[45px] pl-[20px]"
-                  />
-                </div>
-                
-
-                <div className="flex flex-col gap-1 mb-3">
-                  <label htmlFor="message" className="text-white ">
-                    Message
-                  </label>
-                  <textarea
-                    type="text"
-                    rows={4}
-                    name=""
-                    id=""
-                    placeholder="Enter Your Message"
-                    className="bg-white p-2 text-[#525C60] outline-none h-[90px] rounded-md pl-[20px]"
-                  />
-                </div>
-                <div>
-                <button className="relative overflow-hidden py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5">
-              <span className="text relative z-10">
-                Submit
-              </span>
-              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
-                <ArrowForwardOutlinedIcon className="ml-2" />
-              </span>
-            </button>
-                </div>
-              </form>
+          <ContactFormHome />
             </div>
             <div className="px-10 cotact-div-top-border  cotact-div-left-border  ">
               <div className="my-auto bg-white p-5 sm:p-10 flex flex-col gap-4 mt-5 rounded-md shadow-xl ">

@@ -23,9 +23,11 @@ export async function generateStaticParams() {
 const ProductPage = ({ params }) => {
     const { id } = params
     return (
-        <div>
+        <div className=''>
             <Suspense fallback={<div>Loading...</div>}>
             <UserProfile productId={id} /></Suspense>
+
+
         </div>
     )
 }

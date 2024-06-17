@@ -5,8 +5,10 @@ export async function POST(req) {
     const client = await clientPromise;
     const db = client.db('homeeco');
 
+
+
     try {
-        const { cardHeading, cardImg } = await req.json();
+        const { cardHeading,cardSubHeading,cardFeatures,  cardImg,  images,content } = await req.json();
 
         const result = await db.collection('products').insertOne({ cardHeading, cardImg });
         return new Response(JSON.stringify(result.insertedId), { status: 201 });
