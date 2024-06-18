@@ -99,16 +99,25 @@
 
 .product-div {
   background: #F5F5F5;
-}
 
+}
 .product-div:hover {
   background-image: url(/assets/images/yellow-bg-img.svg);
   /* background-size: contain; */
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  background-position: top center;
+  background-position: top  center;
   background-repeat: no-repeat;
   background-color: white !important;
 }
+
+/* .product-div:hover {
+  background-image: url(/assets/images/yellow-bg-img.svg);
+
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  background-position: c center;
+  background-repeat: no-repeat;
+  background-color: white !important;
+} */
 
 .product-div img {
     transition:  .2s ;
@@ -416,10 +425,6 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
   background-image: url(/assets/images/services-light-bg.png);
 }
 
-.signup-newsletter-bg {
-  background-image: url(/assets/images/Green-signup-bg.png);
-}
-
 .products-bg-section {
   background-image: url(/assets/images/Products.png);
 }
@@ -614,4 +619,19 @@ section.what-we-do {
   background-image: url('/assets/images/pro-bg-img.svg');
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: contain;
+}
+
+.product-page-bg{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/assets/images/product-pg-banner.svg);
+}
+
+.talk-advisor-bg {
+  background-image: url(/assets/images/talkadvisor-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

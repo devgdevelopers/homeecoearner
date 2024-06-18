@@ -3,7 +3,48 @@
 @tailwind components;
 @tailwind utilities;
 
-.priority-btn {
+
+.product-div:hover .viewmore-btn{
+    position: relative;
+    font-size: 17px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    overflow: hidden;
+   transition: padding-right  0.5s ease;
+}
+
+
+.product-div:hover .viewmore-btn .text {
+    position: relative;
+    z-index: 20; 
+    background-color: inherit;
+}
+.product-div:hover .viewmore-btn .icon {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    transition: left 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+    z-index: 10; 
+}
+
+
+.priority-btn:hover {
+    padding-right: 45px; 
+ 
+}
+
+.priority-btn:hover .icon {
+    left: calc(100% - 25px); 
+    opacity: 1; 
+    transition:  0.5s;
+}
+
+
+
+ .priority-btn {
     position: relative;
     font-size: 17px;
     border: none;

@@ -188,7 +188,7 @@ export default function UpdateProducts() {
                             </div>
                             <div>
                                 <label className="block mb-2 mt-4 text-black font-medium">Additional Images</label>
-                                {/* {updatedImages.map((image, index) => (
+                                {updatedImages.map((image, index) => (
                                     <input
                                         key={index}
                                         name="additionalImage"
@@ -202,7 +202,7 @@ export default function UpdateProducts() {
                                         })}
                                         className="w-full p-2 border border-gray-300 rounded text-black mb-2"
                                     />
-                                ))} */}
+                                ))}
                             </div>
                             <div className="flex justify-end space-x-2">
                                 <button onClick={() => updateProduct(currentProduct._id)} className="bg-blue-500 text-white p-2 rounded">Save</button>

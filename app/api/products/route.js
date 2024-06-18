@@ -8,9 +8,9 @@ export async function POST(req) {
 
 
     try {
-        const { cardHeading,cardSubHeading,cardFeatures,  cardImg,  images,content } = await req.json();
+        const { cardHeading, cardSubHeading, cardImg, shortDesc, content, images } = await req.json();
 
-        const result = await db.collection('products').insertOne({ cardHeading, cardImg });
+        const result = await db.collection('products').insertOne({ cardHeading,cardSubHeading, cardImg, shortDesc, content, images });
         return new Response(JSON.stringify(result.insertedId), { status: 201 });
     } catch (error) {
         return new Response(JSON.stringify({ error: error.message }), { status: 500 });

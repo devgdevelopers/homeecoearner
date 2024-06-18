@@ -3,7 +3,7 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { useState, useEffect } from "react";
-import SignupNewsletter from '../component/SignupNewsletter';
+import SignupNewsletter from '../component/TalkAdvisor';
 
 const page = () => {
   const [packages, setPackages] = useState([]);

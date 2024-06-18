@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import SignupNewsletter from '../component/SignupNewsletter'
+import SignupNewsletter from '../component/TalkAdvisor'
 
 
 
