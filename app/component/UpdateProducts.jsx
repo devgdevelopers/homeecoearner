@@ -133,7 +133,7 @@ export default function UpdateProducts() {
 
                                 <QuillEditor value={updatedCardHeading} onChange={setUpdatedCardHeading}  />
                             </div>
-                            <div>
+                            {/* <div>
                                 <label className="block mb-2 text-black font-medium">Card Sub Heading</label>
                                 <input
                                     className="w-full p-2 border border-gray-300 rounded text-black"
@@ -142,10 +142,10 @@ export default function UpdateProducts() {
                                     value={updatedCardSubHeading}
                                     onChange={(e) => setUpdatedCardSubHeading(e.target.value)}
                                 />
-                            </div>
-                            <div>
+                            </div> */}
+                            {/* <div>
                                 <label className="block mb-2 text-black font-medium">Card Features</label>
-                                {/* {updatedCardFeatures.map((feature, index) => (
+                                {updatedCardFeatures.map((feature, index) => (
                                     <input
                                         key={index}
                                         className="w-full p-2 border border-gray-300 rounded mb-2 text-black"
@@ -158,8 +158,8 @@ export default function UpdateProducts() {
                                             setUpdatedCardFeatures(newFeatures);
                                         }}
                                     />
-                                ))} */}
-                            </div>
+                                ))}
+                            </div> */}
                             <div>
                                 <label className="block mb-2 text-black font-medium">Short Description</label>
                                 <textarea
@@ -188,7 +188,7 @@ export default function UpdateProducts() {
                             </div>
                             <div>
                                 <label className="block mb-2 mt-4 text-black font-medium">Additional Images</label>
-                                {/* {updatedImages.map((image, index) => (
+                                {updatedImages.map((image, index) => (
                                     <input
                                         key={index}
                                         name="additionalImage"
@@ -202,7 +202,7 @@ export default function UpdateProducts() {
                                         })}
                                         className="w-full p-2 border border-gray-300 rounded text-black mb-2"
                                     />
-                                ))} */}
+                                ))}
                             </div>
                             <div className="flex justify-end space-x-2">
                                 <button onClick={() => updateProduct(currentProduct._id)} className="bg-blue-500 text-white p-2 rounded">Save</button>

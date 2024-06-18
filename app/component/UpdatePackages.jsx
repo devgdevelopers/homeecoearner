@@ -133,18 +133,18 @@ export default function UpdatePackages() {
             )}
 
             {isEditing && (
-                <div className="fixed inset-0 bg-gray-900 bg-opacity-10 flex items-center justify-center backdrop-blur border border-frost rounded-lg shadow-md transition">
+                <div className="fixed inset-0 bg-gray-900 bg-opacity-10 flex items-center justify-center backdrop-blur border border-frost rounded-lg shadow-md transition ">
                     <div className="bg-white p-6 rounded shadow-lg ">
                         <h2 className="text-2xl mb-4 text-black text-center">Edit Package</h2>
                         <label className="block mb-2 text-black font-medium">Title</label>
                         <input
-                            className="w-full p-2 border border-gray-300 rounded mb-4 text-black"
+                            className="md:w-[700px] w-[400px] p-2 border border-gray-300 rounded mb-4 text-black"
                             placeholder='title'
                             type="text"
                             value={updatedTitle}
                             onChange={(e) => setUpdatedTitle(e.target.value)}
                         />
-                        <label className="block mb-2 text-black font-medium">Short Description</label>
+                        {/* <label className="block mb-2 text-black font-medium">Short Description</label>
                         <textarea
                             className="w-full p-2 border border-gray-300 rounded mb-4 text-black"
                             value={updatedShortDesc}
@@ -161,7 +161,7 @@ export default function UpdatePackages() {
                             accept='.jpeg, .png, .jpg'
                             onChange={handleFileUpload}
                             className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                        />
+                        /> */}
 
                         <label className="block mb-2 mt-4 text-black font-medium">Features</label>
                         {updatedFeatures.map((feature, index) => (
