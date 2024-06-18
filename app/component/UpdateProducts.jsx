@@ -133,7 +133,7 @@ export default function UpdateProducts() {
 
                                 <QuillEditor value={updatedCardHeading} onChange={setUpdatedCardHeading}  />
                             </div>
-                            <div>
+                            {/* <div>
                                 <label className="block mb-2 text-black font-medium">Card Sub Heading</label>
                                 <input
                                     className="w-full p-2 border border-gray-300 rounded text-black"
@@ -142,10 +142,10 @@ export default function UpdateProducts() {
                                     value={updatedCardSubHeading}
                                     onChange={(e) => setUpdatedCardSubHeading(e.target.value)}
                                 />
-                            </div>
-                            <div>
+                            </div> */}
+                            {/* <div>
                                 <label className="block mb-2 text-black font-medium">Card Features</label>
-                                {/* {updatedCardFeatures.map((feature, index) => (
+                                {updatedCardFeatures.map((feature, index) => (
                                     <input
                                         key={index}
                                         className="w-full p-2 border border-gray-300 rounded mb-2 text-black"
@@ -158,8 +158,8 @@ export default function UpdateProducts() {
                                             setUpdatedCardFeatures(newFeatures);
                                         }}
                                     />
-                                ))} */}
-                            </div>
+                                ))}
+                            </div> */}
                             <div>
                                 <label className="block mb-2 text-black font-medium">Short Description</label>
                                 <textarea
