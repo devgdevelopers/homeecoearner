@@ -32,6 +32,16 @@ const page = () => {
 
   return (
     <>
+     <section className="relative bg-green min-h-[396px] flex justify-center ">
+        <div className=" container mx-auto flex flex-col justify-center items-center">
+          <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
+          Customer Packages 
+          </h1>
+          <h2 className="w-1/2 text-base text-center font-semibold text-white mx-auto">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est magni, unde ipsam illo corrupti, minus eveniet dolorum obcaecati, tempora hic! Laborum eveniet voluptas labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit
+          </h2>
+        </div>
+      </section>
       <section className="w-full py-10 ">
         <div className="container mx-auto">
           <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">

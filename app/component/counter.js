@@ -9,7 +9,7 @@ function Counter({ start, end }) {
       if (count < end) {
         setCount(prevCount => prevCount + 1);
       }
-    }, 1);
+    }, 100);
     
     return () => clearInterval(interval);
   }, [count, end]);

@@ -364,10 +364,6 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
   box-shadow: none !important;
 }
 
-.faq-banner-section {
-  background-color: #b5eec2;
-}
-
 .accordion h2 button {
   padding: 0 !important;
   padding-top: 0 !important;
@@ -388,7 +384,9 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
 }
 
 .contact-page-input {
-  border: 1px solid #0a890d;
+  background-color: #F5F5F5;
+  color: #525C60;
+  margin-top: 4px;
 }
 
 #embed-map-canvas img {
@@ -398,19 +396,14 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
 }
 
 .services-bg-images {
-  background: linear-gradient(#0a890d00, #ffffffa3), url(/assets/images/services-bg.png);
+  background-image: url(/assets/images/services-bg.svg);
   width: 100%;
-  background-position: top center;
+  background-position: center center;
   display: flex;
   background-repeat: no-repeat;
+  background-size: cover;
 }
-.services-bg-images1 {
-  background: #fff;
-  width: 100%;
-  background-position: top center;
-  display: flex;
-  background-repeat: no-repeat;
-}
+
 
 .services-images {
   background: linear-gradient(#0a890d00, #ffffffa3), url(/assets/images/services-bg.png);
@@ -631,6 +624,12 @@ section.what-we-do {
 
 .talk-advisor-bg {
   background-image: url(/assets/images/talkadvisor-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.team-bg-section{
+  background-image: url(/assets/images/team-sec-bg.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

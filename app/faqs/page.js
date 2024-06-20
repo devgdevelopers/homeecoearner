@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
-import Image from "next/image";
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import parse from "html-react-parser";
-
+import AddIcon from "@mui/icons-material/Add";
+import TalkAdvisor from "../component/TalkAdvisor";
 
 const Page = () => {
   const HomeEcoEarnerPowerSystem = [
@@ -334,97 +334,100 @@ const Page = () => {
     },
   ];
 
+  const defaultContent =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+
   const titleStyle = {
-    backgroundColor: "#6ad38fb3",
-    color: "#022201", // Change this to your desired background color
-    padding: "10px",
+    backgroundColor: "#F5F5F5",
+    color: "#005C15", // Change this to your desired background color
+    padding: "12px",
     fontWeight: "600",
-    borderRadius: "5px",  
-    fontSize: "15px",
+    borderRadius: "5px",
+    fontSize: "22px",
   };
 
   return (
     <>
-      <section className="relative  faq-banner-section py-10">
-        <div className=" container mx-auto pt-10  flex flex-col md:flex-row">
-          <div className="my-auto max-w-[100%]  md:w-[50%]">
-            <h1 className="text-[25px] md:text-[40px] text-green mx-auto text-center text-white md:text-left my-auto font-bold block">
-              FAQs
-            </h1>
-            <h2 className="mx-auto md:text-left my-auto text-base font-semibold text-dark">
-              Have questions? We have answers!
-            </h2>
-            <p className="mx-auto text-center md:text-left my-auto">
-              Here are some common responses that may be helpful.
-            </p>
-          </div>
-          <div className="w-[100%] md:w-[70%] flex justify-start">
-            <Image
-              src="/assets/images/faq-img.png"
-              width={100}
-              height={100}
-              alt="FAQ image"
-              className="w-[100%] md:w-[60%] mx-auto"
-              unoptimized
-            />
-          </div>
+      <section className="relative bg-green min-h-[396px] flex justify-center">
+        <div className=" container mx-auto flex flex-col justify-center items-center">
+          <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
+            FAQs
+          </h1>
+          <h2 className="w-1/2 text-base text-center font-semibold text-white mx-auto">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est
+            magni, unde ipsam illo corrupti, minus eveniet dolorum obcaecati,
+            tempora hic! Laborum eveniet voluptas labore. Lorem ipsum, dolor sit
+            amet consectetur adipisicing elit
+          </h2>
         </div>
       </section>
 
-      <section className=" container mx-auto flex flex-col md:flex-row pt-10">
-        <div className="max-w-[100%]  md:max-w-[50%] mx-auto">
-          <h1 className="font-bold text-green text-2xl py-4">
+      <section className=" container mx-auto flex flex-col  p-10">
+        <div className="max-w-[100%]   mx-auto">
+          <h1 className="font-bold text-green text-[50px] py-4">
             Home EcoEarner Power System
           </h1>
         </div>
-        <div className="max-w-[100%]  md:max-w-[50%] mx-auto">
+        <div className="max-w-[100%]  mx-auto">
           <Accordion
-            defaultExpandedKeys={["0"]}
+            defaultExpandedKeys={HomeEcoEarnerPowerSystem.map((_, index) =>
+              index.toString()
+            )}
             variant="splitted"
             className="accordion"
           >
             {HomeEcoEarnerPowerSystem.map((item, index) => (
               <AccordionItem
-                showDivider={false}
-                key={index}
+                key={index.toString()} // Use a unique key based on your data structure
+                indicator={<AddIcon />}
                 aria-label={`Accordion ${index + 1}`}
                 title={<div style={titleStyle}>{item.title}</div>}
               >
-                {parse(item.content)}
+                <span style={{ color: "#525C60", fontSize: "19px" }}>
+                  {parse(item.content)}
+                </span>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
       </section>
-
-      <section className=" container mx-auto flex flex-col md:flex-row py-10">
-        <div className="max-w-[90%]  md:max-w-[50%] mx-auto">
-          <h1 className="font-bold text-green text-2xl py-4">
-            Home EcoEarner Booster System
+      
+      <section className=" container mx-auto flex flex-col  p-10">
+        <div className="max-w-[100%]   mx-auto">
+          <h1 className="font-bold text-green text-[50px] py-4">
+          Home EcoEarner Booster System
           </h1>
         </div>
-        <div className="max-w-[100%]  md:max-w-[50%] mx-auto">
+        <div className="max-w-[100%]  mx-auto">
           <Accordion
-            defaultExpandedKeys={["0"]}
+            defaultExpandedKeys={HomeEcoearnerBoosterSystem.map((_, index) =>
+              index.toString()
+            )}
             variant="splitted"
             className="accordion"
           >
             {HomeEcoearnerBoosterSystem.map((item, index) => (
               <AccordionItem
-                showDivider={false}
-                key={index}
+                key={index.toString()} // Use a unique key based on your data structure
+                indicator={<AddIcon />}
                 aria-label={`Accordion ${index + 1}`}
                 title={<div style={titleStyle}>{item.title}</div>}
-                className="py-1"
               >
-                <span style={{}}>{parse(item.content)}</span>
+                <span style={{ color: "#525C60", fontSize: "19px" }}>
+                  {parse(item.content)}
+                </span>
               </AccordionItem>
             ))}
           </Accordion>
         </div>
       </section>
+
+
+    <TalkAdvisor />
+     
     </>
   );
 };
 
 export default Page;
+

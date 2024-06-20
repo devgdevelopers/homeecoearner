@@ -45,6 +45,10 @@ export default function Page() {
       link: "/news",
     },
     {
+      page: "About Us",
+      link: "/about",
+    },
+    {
       page: "FAQs",
       link: "/faqs",
     },
@@ -110,6 +114,14 @@ export default function Page() {
               className={`navLink ${pathname === "/news" ? "active " : ""}`}
             >
               News
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link
+              href="/about"
+              className={`navLink ${pathname === "/about" ? "active " : ""}`}
+            >
+              About Us
             </Link>
           </NavbarItem>
           <NavbarItem>
