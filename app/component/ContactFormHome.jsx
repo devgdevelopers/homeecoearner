@@ -2,145 +2,96 @@ import React, { useState } from 'react';
 import ArrowForwardOutlinedIcon from '@mui/icons-material/ArrowForwardOutlined';
 
 const ContactFormHome = () => {
-  const [formData, setFormData] = useState({
-    formType: 'contactHome',
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-    errors: {
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-    },
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    message: "",
+    errors: {},
   });
-
   const [loading, setLoading] = useState(false);
-  const [submitError, setSubmitError] = useState('');
-  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [success, setSuccess] = useState(false);
+
+  const onChangeHandler = (e) => {
+    const { name, value } = e.target;
+    const error = validateInput(name, value);
+
+    setData((prev) => ({
+      ...prev,
+      [name]: value,
+      errors: { ...prev.errors, [name]: error },
+    }));
+  };
+
+  const onSubmitForm = async (e) => {
+    e.preventDefault();
+    const { name, email, message,phone, errors } = data;
+
+    const nameError = validateInput("name", name);
+    const emailError = validateInput("email", email);
+    const messageError = validateInput("message", message);
+
+    const hasErrors = nameError || emailError || messageError;
+
+    if (!hasErrors) {
+      setLoading(true);
+      try {
+        const response = await fetch("/api/mail", { // Adjusted endpoint URL
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ name, email, message, phone }),
+        });
+
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+
+        const result = await response.json();
+        if (result.message) {
+          setSuccess(true);
+          setData({ name: "", email: "", message: "",phone: "", errors: {} });
+        } else {
+          console.error("Failed to send email");
+        }
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      } finally {
+        setLoading(false);
+      }
+    } else {
+      console.warn("Form submission failed due to errors:", errors);
+    }
+  };
 
   const validateInput = (fieldName, value) => {
-    let error = '';
-
+    let error = "";
     switch (fieldName) {
-      case 'name':
-        if (!value.trim()) {
-          error = 'Name is required';
+      case "name":
+        if (!value) {
+          error = "Name is required";
         }
         break;
-      case 'email':
-        if (!value.trim()) {
-          error = 'Email is required';
-        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-          error = 'Invalid email format';
+      case "email":
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+          error = "Invalid email format";
         }
         break;
-      case 'phone':
-        if (!value.trim()) {
-          error = 'Phone number is required';
-        } else if (!/^\d{10}$/.test(value)) {
-          error = 'Invalid phone number (must be 10 digits)';
-        }
-        break;
-      case 'message':
-        if (!value.trim()) {
-          error = 'Message is required';
-        } else if (value.length < 10) {
-          error = 'Message must be at least 10 characters long';
+      case "message":
+        if (value.length < 10) {
+          error = "Message must be at least 10 characters long";
         }
         break;
       default:
         break;
     }
-
     return error;
-  };
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    const error = validateInput(name, value);
-
-    setFormData({
-      ...formData,
-      [name]: value,
-      errors: {
-        ...formData.errors,
-        [name]: error,
-      },
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // Clear previous success or error messages
-    setSubmitSuccess(false);
-    setSubmitError('');
-    
-    // Check for any validation errors before submitting
-    const { name, email, phone, message } = formData;
-    const nameError = validateInput('name', name);
-    const emailError = validateInput('email', email);
-    const phoneError = validateInput('phone', phone);
-    const messageError = validateInput('message', message);
-
-    if (nameError || emailError || phoneError || messageError) {
-      setFormData({
-        ...formData,
-        errors: {
-          name: nameError,
-          email: emailError,
-          phone: phoneError,
-          message: messageError,
-        },
-      });
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      const response = await fetch('/api/contactform', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      if (!response.ok) {
-        throw new Error('Failed to send message');
-      }
-
-      const data = await response.json();
-      console.log(data); // Handle success data as needed
-      setSubmitSuccess(true);
-      setFormData({
-        formType: 'contactHome',
-        name: '',
-        email: '',
-        phone: '',
-        message: '',
-        errors: {
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-        },
-      });
-    } catch (error) {
-      console.error('Error:', error);
-      setSubmitError('Failed to submit form. Please try again.');
-    } finally {
-      setLoading(false);
-    }
   };
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input type="hidden" name="formType" value={formData.formType} />
+      <form onSubmit={onSubmitForm}>
+        <input type="hidden" name="formType"  />
         
         {/* Full Name */}
         <div className="flex flex-col gap-1 mb-3">
@@ -151,14 +102,14 @@ const ContactFormHome = () => {
             type="text"
             id="name"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
+            value={data.name}
+            onChange={onChangeHandler}
             placeholder="Enter your full name"
             className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
           />
-          {formData.errors.name && (
-            <p className="text-red-500">{formData.errors.name}</p>
-          )}
+        {data.errors.name && (
+          <p className="error-message text-[red]">{data.errors.name}</p>
+        )}
         </div>
         
         {/* Email Address */}
@@ -170,14 +121,14 @@ const ContactFormHome = () => {
             type="email"
             id="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
+            value={data.email}
+            onChange={onChangeHandler}
             placeholder="Enter Your email address"
             className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
           />
-          {formData.errors.email && (
-            <p className="text-red-500">{formData.errors.email}</p>
-          )}
+        {data.errors.email && (
+          <p className="error-message text-[red]">{data.errors.email}</p>
+        )}
         </div>
         
         {/* Mobile Number */}
@@ -189,14 +140,12 @@ const ContactFormHome = () => {
             type="tel"
             id="phone"
             name="phone"
-            value={formData.phone}
-            onChange={handleChange}
+            value={data.phone}
+            onChange={onChangeHandler}
             placeholder="Enter Your mobile number"
             className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
           />
-          {formData.errors.phone && (
-            <p className="text-red-500">{formData.errors.phone}</p>
-          )}
+
         </div>
         
         {/* Message */}
@@ -208,14 +157,14 @@ const ContactFormHome = () => {
             rows={4}
             id="message"
             name="message"
-            value={formData.message}
-            onChange={handleChange}
+            value={data.message}
+            onChange={onChangeHandler}
             placeholder="Enter Your Message"
             className="bg-white p-2 text-[#525C60] outline-none h-[90px] rounded-md pl-[20px]"
           />
-          {formData.errors.message && (
-            <p className="text-red-900">{formData.errors.message}</p>
-          )}
+        {data.errors.message && (
+          <p className="error-message text-[red]">{data.errors.message}</p>
+        )}
         </div>
         
         {/* Submit Button */}
@@ -230,15 +179,16 @@ const ContactFormHome = () => {
               <ArrowForwardOutlinedIcon className="ml-2" />
             </span>
           </button>
+          {success && <div className="text-black font-bold">Email sent successfully!</div>}
         </div>
         
-        {/* Error and Success Messages */}
+        {/* Error and Success Messages
         {submitError && (
           <p className="text-red-500">{submitError}</p>
         )}
         {submitSuccess && (
-          <p className="text-green-500">Form submitted successfully!</p>
-        )}
+          <p className="text-black font-bold">Form submitted successfully!</p>
+        )} */}
       </form>
     </>
   );

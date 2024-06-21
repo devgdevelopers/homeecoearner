@@ -634,3 +634,10 @@ section.what-we-do {
   background-position: center;
   background-size: cover;
 }
+.bg_test{
+  background-image: url(/assets/images/Group-953.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 300px;
+}

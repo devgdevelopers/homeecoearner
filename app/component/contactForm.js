@@ -24,7 +24,7 @@ export default function ContactForm() {
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
-    const { name, email, message, errors } = data;
+    const { name, email, message,phone, errors } = data;
 
     const nameError = validateInput("name", name);
     const emailError = validateInput("email", email);
@@ -40,7 +40,7 @@ export default function ContactForm() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name, email, message }),
+          body: JSON.stringify({ name, email, message, phone }),
         });
 
         if (!response.ok) {
@@ -50,7 +50,7 @@ export default function ContactForm() {
         const result = await response.json();
         if (result.message) {
           setSuccess(true);
-          setData({ name: "", email: "", message: "", errors: {} });
+          setData({ name: "", email: "", message: "",phone: "", errors: {} });
         } else {
           console.error("Failed to send email");
         }
@@ -124,17 +124,15 @@ export default function ContactForm() {
  <div>
  <label htmlFor="mobile" className="text-[#385723] font-semibold block my-1">Mobile No.</label>
         <input
-          type="number"
-          name="mobile"
-          id="mobile"
-          value={data.email}
+          type="tel"
+          name="phone"
+          id="phone"
+          value={data.phone}
           onChange={onChangeHandler}
           placeholder="Enter Your Mobile No."
           className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input w-full md:w-3/4"
         />
-        {data.errors.email && (
-          <p className="error-message text-[red]">{data.errors.email}</p>
-        )}
+
  </div>
 
       
@@ -163,7 +161,7 @@ export default function ContactForm() {
                 <ArrowForwardOutlinedIcon className="ml-2" />
               </span>
             </button>
-        {success && <div>Email sent successfully!</div>}
+        {success && <div className="text-green">Email sent successfully!</div>}
       
       </form>
     </>

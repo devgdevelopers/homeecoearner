@@ -87,7 +87,7 @@ const UserProfile = () => {
           Key Features
         </h1>
         <div className="flex flex-col md:flex-row  ">
-        <div className=" w-[60%]">
+        <div className="w-full md:w-[60%]">
   <span
     className="text-[18px] text-black"
     dangerouslySetInnerHTML={renderCustomizedContent(product.content)}

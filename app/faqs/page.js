@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import parse from "html-react-parser";
 import AddIcon from "@mui/icons-material/Add";
@@ -345,6 +345,15 @@ const Page = () => {
     borderRadius: "5px",
     fontSize: "22px",
   };
+  const [expandedKeys, setExpandedKeys] = useState(['0']); // Initialize with the first item open
+
+  const handleAccordionChange = (key) => {
+    setExpandedKeys((prevKeys) => 
+      prevKeys.includes(key)
+        ? prevKeys.filter(k => k !== key)
+        : [...prevKeys, key]
+    );
+  };
 
   return (
     <>
@@ -370,9 +379,13 @@ const Page = () => {
         </div>
         <div className="max-w-[100%]  mx-auto">
           <Accordion
-            defaultExpandedKeys={HomeEcoEarnerPowerSystem.map((_, index) =>
-              index.toString()
-            )}
+                defaultExpandedKeys={expandedKeys}
+                onChange={handleAccordionChange}
+            // defaultExpandedKeys={['1']}
+
+            // {HomeEcoEarnerPowerSystem.map((_, index) =>
+            //   index.toString()
+            // )}
             variant="splitted"
             className="accordion"
           >
@@ -398,11 +411,13 @@ const Page = () => {
           Home EcoEarner Booster System
           </h1>
         </div>
-        <div className="max-w-[100%]  mx-auto">
+        <div className="max-w-[100%]  ">
           <Accordion
-            defaultExpandedKeys={HomeEcoearnerBoosterSystem.map((_, index) =>
-              index.toString()
-            )}
+            // defaultExpandedKeys={HomeEcoearnerBoosterSystem.map((_, index) =>
+            //   index.toString()
+            // )}
+            defaultExpandedKeys={expandedKeys}
+            onChange={handleAccordionChange}
             variant="splitted"
             className="accordion"
           >
@@ -412,6 +427,7 @@ const Page = () => {
                 indicator={<AddIcon />}
                 aria-label={`Accordion ${index + 1}`}
                 title={<div style={titleStyle}>{item.title}</div>}
+                
               >
                 <span style={{ color: "#525C60", fontSize: "19px" }}>
                   {parse(item.content)}

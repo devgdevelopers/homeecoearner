@@ -36,9 +36,10 @@ const page = () => {
   return (
     <>
       <div className="product-page-bg min-h-[310px] flex justify-center">
-        <h1 className="font-bold text-[35px] md:text-[50px] text-center text-white my-auto">
+        <h1 className="font-bold text-[35px] md:text-[60px] text-center text-white my-auto">
           All Products
         </h1>
+
       </div>
 
       <section className="container mx-auto my-10">
