@@ -57,21 +57,21 @@ export default function AddProduct() {
     };
     const handleFileUpload = async (e, setImageState) => {
         const file = e.target.files[0];
-        
+
         // Check if file exists
         if (!file) return;
-    
+
         // Check file size (limit to 150KB)
         if (file.size > 150 * 1024) {
             alert("File size exceeds 150KB. Please choose a smaller file.");
             e.target.value = null; // Clear the input
             return;
         }
-    
+
         const base64 = await convertToBase64(file);
         setImageState(base64);
     };
-    
+
 
     return (
         <div className="bg-white p-8 min-h-screen">
@@ -82,11 +82,11 @@ export default function AddProduct() {
                             Card Heading:
                         </label>
 
-                                                <QuillEditor value={cardHeading} onChange={setCardHeading}  />
+                        <QuillEditor value={cardHeading} onChange={setCardHeading} />
                     </div>
 
 
-                    {/* <div>
+                    <div>
                         <label htmlFor="cardSubHeading" className="block text-sm font-medium text-gray-700">
                             Card Sub Heading:
                         </label>
@@ -95,10 +95,10 @@ export default function AddProduct() {
                             type="text"
                             value={cardSubHeading}
                             onChange={(e) => setCardSubHeading(e.target.value)}
-                            
-                            className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+
+                            className= " bg-white text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         />
-                    </div> */}
+                    </div>
 
 
                     {/* <div>
@@ -120,9 +120,9 @@ export default function AddProduct() {
                             Content:
                         </label>
                         <QuillEditor value={content} onChange={setContent} />
-                    </div> 
+                    </div>
 
-<div>
+                    <div>
                         <label htmlFor="shortDesc" className="block text-sm font-medium text-gray-700">
                             Short Description:
                         </label>
@@ -131,7 +131,7 @@ export default function AddProduct() {
                             type="text"
                             value={shortDesc}
                             onChange={(e) => setShortDesc(e.target.value)}
-                            
+
                             className="bg-white text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         />
                     </div>
@@ -147,12 +147,12 @@ export default function AddProduct() {
                             type="file"
                             accept=".jpeg, .png, .jpg"
                             onChange={(e) => handleFileUpload(e, setCardImg)}
-                            
+
                             className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         />
                     </div>
 
-                     <div>
+                    <div>
                         <label htmlFor="images" className="block text-sm font-medium text-gray-700">
                             Additional Images:
                         </label>
@@ -167,11 +167,11 @@ export default function AddProduct() {
                                     newImages[index] = base64;
                                     setImages(newImages);
                                 })}
-                                
+
                                 className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             />
                         ))}
-                    </div> 
+                    </div>
 
                     <button
                         type="submit"
