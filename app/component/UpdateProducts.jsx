@@ -88,21 +88,21 @@ export default function UpdateProducts() {
 
     const handleFileUpload = async (e, setImageState) => {
         const file = e.target.files[0];
-        
+
         // Check if file exists
         if (!file) return;
-    
+
         // Check file size (limit to 150KB)
         if (file.size > 150 * 1024) {
             alert("File size exceeds 150KB. Please choose a smaller file.");
             e.target.value = null; // Clear the input
             return;
         }
-    
+
         const base64 = await convertToBase64(file);
         setImageState(base64);
     };
-    
+
 
     const removeImage = (index) => {
         const newImages = [...updatedImages];
@@ -110,8 +110,8 @@ export default function UpdateProducts() {
         setUpdatedImages(newImages);
         alert('Image removed successfully.'); // Alert the user
     };
-    
-    
+
+
     return (
         <div className="p-8 flex flex-col justify-center items-center">
             {loading ? (
@@ -152,6 +152,20 @@ export default function UpdateProducts() {
                             </div>
                             {/* Additional fields can be added similarly */}
                             <div>
+                        <label htmlFor="updatedCardSubHeading" className="block text-sm font-medium text-gray-700">
+                            Card Sub Heading:
+                        </label>
+                        <input
+                            id="updatedCardSubHeading"
+                            type="text"
+                            value={updatedCardSubHeading}
+                            onChange={(e) => setUpdatedCardSubHeading(e.target.value)}
+
+                            className= " bg-white text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        />
+                    </div>
+                            
+                            <div>
                                 <label className="block mb-2 text-black font-medium">Short Description</label>
                                 <textarea
                                     className="w-full p-2 border border-gray-300 rounded text-black bg-white"
@@ -178,30 +192,30 @@ export default function UpdateProducts() {
                                 />
                             </div>
                             <div>
-    <label className="block mb-2 mt-4 text-black font-medium">Additional Images</label>
-    {updatedImages.map((image, index) => (
-        <div key={index} className="flex items-center">
-            <input
-                name="additionalImage"
-                id={`file-upload-${index}`}
-                type="file"
-                accept=".jpeg, .png, .jpg"
-                onChange={(e) => handleFileUpload(e, (base64) => {
-                    const newImages = [...updatedImages];
-                    newImages[index] = base64;
-                    setUpdatedImages(newImages);
-                })}
-                className="w-full p-2 border border-gray-300 rounded text-black mb-2"
-            />
-            <button
-                className="ml-2 bg-red-500 text-white p-2 rounded"
-                onClick={() => removeImage(index)}
-            >
-                Remove
-            </button>
-        </div>
-    ))}
-</div>
+                                <label className="block mb-2 mt-4 text-black font-medium">Additional Images</label>
+                                {updatedImages.map((image, index) => (
+                                    <div key={index} className="flex items-center">
+                                        <input
+                                            name="additionalImage"
+                                            id={`file-upload-${index}`}
+                                            type="file"
+                                            accept=".jpeg, .png, .jpg"
+                                            onChange={(e) => handleFileUpload(e, (base64) => {
+                                                const newImages = [...updatedImages];
+                                                newImages[index] = base64;
+                                                setUpdatedImages(newImages);
+                                            })}
+                                            className="w-full p-2 border border-gray-300 rounded text-black mb-2"
+                                        />
+                                        <button
+                                            className="ml-2 bg-red-500 text-white p-2 rounded"
+                                            onClick={() => removeImage(index)}
+                                        >
+                                            Remove
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
 
                             <div className="flex justify-end space-x-2">
                                 <button onClick={() => updateProduct(currentProduct._id)} className="bg-blue-500 text-white p-2 rounded">Save</button>
