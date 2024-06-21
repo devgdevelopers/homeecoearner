@@ -30,7 +30,7 @@ const UserProfile = () => {
     };
 
     fetchProduct();
-  }, []);
+  }, [product]);
 
   if (isLoading) {
     return <p>Loading...</p>;
