@@ -343,7 +343,7 @@ const Page = () => {
     padding: "12px",
     fontWeight: "600",
     borderRadius: "5px",
-    fontSize: "22px",
+    fontSize: "20px",
   };
   const [expandedKeys, setExpandedKeys] = useState(['0']); // Initialize with the first item open
 
@@ -362,7 +362,7 @@ const Page = () => {
           <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
             FAQs
           </h1>
-          <h2 className="w-1/2 text-base text-center font-semibold text-white mx-auto">
+          <h2 className="w-[90%] md:w-1/2 text-base text-center font-semibold text-white mx-auto">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est
             magni, unde ipsam illo corrupti, minus eveniet dolorum obcaecati,
             tempora hic! Laborum eveniet voluptas labore. Lorem ipsum, dolor sit
@@ -371,9 +371,9 @@ const Page = () => {
         </div>
       </section>
 
-      <section className=" container mx-auto flex flex-col  p-10">
+      <section className=" container mx-auto flex flex-col p-2 md:p-10">
         <div className="max-w-[100%]   mx-auto">
-          <h1 className="font-bold text-green text-[50px] py-4">
+          <h1 className="font-bold text-center text-green text-[20px] md:text-[50px] py-4">
             Home EcoEarner Power System
           </h1>
         </div>
@@ -405,9 +405,9 @@ const Page = () => {
         </div>
       </section>
       
-      <section className=" container mx-auto flex flex-col  p-10">
+      <section className=" container mx-auto flex flex-col p-2 md:p-10">
         <div className="max-w-[100%]   mx-auto">
-          <h1 className="font-bold text-green text-[50px] py-4">
+          <h1 className="font-bold text-green text-[20px] md:text-[50px] py-4 text-center">
           Home EcoEarner Booster System
           </h1>
         </div>
