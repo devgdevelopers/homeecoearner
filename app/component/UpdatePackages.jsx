@@ -138,7 +138,7 @@ export default function UpdatePackages() {
                         <h2 className="text-2xl mb-4 text-black text-center">Edit Package</h2>
                         <label className="block mb-2 text-black font-medium">Title</label>
                         <input
-                            className="md:w-[700px] w-[400px] p-2 border border-gray-300 rounded mb-4 text-black"
+                            className="md:w-[700px] w-[400px] p-2 border border-gray-300 rounded mb-4 text-black bg-white"
                             placeholder='title'
                             type="text"
                             value={updatedTitle}
@@ -165,12 +165,12 @@ export default function UpdatePackages() {
 
                         <label className="block mb-2 mt-4 text-black font-medium">Features</label>
                         {updatedFeatures.map((feature, index) => (
-                            <div key={feature.id} className="flex items-center mb-2">
+                            <div key={feature.id} className="flex items-center mb-2 ">
                                 <input
                                     type="text"
                                     value={feature.text}
                                     onChange={(e) => handleFeatureChange(index, e.target.value)}
-                                    className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                    className="text-black mt-1 block w-full px-3 py-2 border bg-white border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                                 />
                                 <button type="button" onClick={addFeature} className="ml-2 p-1 text-4xl text-green-500">+</button>
                                 {updatedFeatures.length > 1 && (
