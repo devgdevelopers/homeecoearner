@@ -45,6 +45,10 @@ export default function Page() {
       link: "/news",
     },
     {
+      page: "About Us",
+      link: "/about",
+    },
+    {
       page: "FAQs",
       link: "/faqs",
     },
@@ -73,7 +77,7 @@ export default function Page() {
             <Link
               href="/"
               className={`navLink ${pathname === "/" ? "active " : ""}`}
-              passHref
+              passhref
             >
               Home
             </Link>
@@ -83,7 +87,7 @@ export default function Page() {
             <Link
               href="/products"
               className={`navLink ${pathname === "/products" ? "active" : ""}`}
-              passHref
+              passhref
             >
               Products
             </Link>
@@ -110,6 +114,14 @@ export default function Page() {
               className={`navLink ${pathname === "/news" ? "active " : ""}`}
             >
               News
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
+            <Link
+              href="/about"
+              className={`navLink ${pathname === "/about" ? "active " : ""}`}
+            >
+              About Us
             </Link>
           </NavbarItem>
           <NavbarItem>
@@ -177,7 +189,7 @@ export default function Page() {
                   className= { ` text-dark font-semibold navLink  ${pathname === `${item.link}` ? "active" : ""}`}
                   href={item.link}
                   size="lg"
-                  passHref
+                  passhref
                 >
                   {item.page}
                 </Link>

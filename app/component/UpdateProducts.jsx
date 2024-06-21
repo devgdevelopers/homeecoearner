@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useEffect, useState } from "react";
 import QuillEditor from './QuillEditor';
 
@@ -29,7 +27,6 @@ export default function UpdateProducts() {
     const [updatedContent, setUpdatedContent] = useState('');
     const [loading, setLoading] = useState(true);
 
-
     useEffect(() => {
         fetchProducts();
     }, []);
@@ -38,11 +35,11 @@ export default function UpdateProducts() {
         fetch('/api/products')
             .then(response => response.json())
             .then(data => {
-                setProducts(data.data)
-    setLoading(false);
+                setProducts(data.data);
+                setLoading(false);
             })
             .catch(error => {
-                console.error('Fetch error:', error)
+                console.error('Fetch error:', error);
                 setLoading(false);
             });
     };
@@ -65,7 +62,7 @@ export default function UpdateProducts() {
                 shortDesc: updatedShortDesc,
                 content: updatedContent,
                 cardImg: updatedCardImg,
-                images: updatedImages,
+                images: updatedImages.filter(img => img !== ''), // Remove empty placeholders
             })
         })
             .then(response => response.json())
@@ -95,34 +92,43 @@ export default function UpdateProducts() {
         setImageState(base64);
     };
 
+    const removeImage = (index) => {
+        const newImages = [...updatedImages];
+        newImages[index] = null; // Set to null or another placeholder value
+        setUpdatedImages(newImages);
+        alert('Image removed successfully.'); // Alert the user
+    };
+    
+    
     return (
         <div className="p-8 flex flex-col justify-center items-center">
-
-{loading ? (
+            {loading ? (
                 <div className="flex justify-center items-center h-64">
-  <div className="loader_ ease-linear rounded-full border-8 border-t-8 border-gray-200 h-12 w-12"></div>
-
+                    <div className="loader_ ease-linear rounded-full border-8 border-t-8 border-gray-200 h-12 w-12"></div>
                 </div>
-            ):
-            <div className="flex flex-wrap m-4 w-full justify-center">
-              {products.length === 0 ?  (<div className="text-center w-full text-xl text-gray-500">No Products to show</div>) : (products.map(product => (
-              <div key={product._id} className="p-4 max-w-xs">
-                  <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-md">
-                      <div className="p-6 flex flex-col gap-2">
-                          <img src={product.cardImg} alt="" className="object-cover h-48 w-full" />
-                          <h2 className="text-xl font-semibold truncate" dangerouslySetInnerHTML={{__html:product.cardHeading}}></h2>
-                          <p className="text-gray-600">{product.cardSubHeading}</p>
-                          <div className='flex gap-3'>
-                              <button onClick={() => deleteProduct(product._id)} className="bg-red-500 text-white rounded p-2 border border-red-500 hover:border-white">Delete</button>
-                              <button onClick={() => startEditing(product)} className="bg-green-500 text-white p-2 rounded border border-green-500 hover:border-white">Update</button>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          )))}
-
-            </div>
-}
+            ) : (
+                <div className="flex flex-wrap m-4 w-full justify-center">
+                    {products.length === 0 ? (
+                        <div className="text-center w-full text-xl text-gray-500">No Products to show</div>
+                    ) : (
+                        products.map(product => (
+                            <div key={product._id} className="p-4 max-w-xs">
+                                <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-md">
+                                    <div className="p-6 flex flex-col gap-2">
+                                        <img src={product.cardImg} alt="" className="object-cover h-48 w-full" />
+                                        <h2 className="text-xl font-semibold truncate" dangerouslySetInnerHTML={{ __html: product.cardHeading }}></h2>
+                                        <p className="text-gray-600">{product.cardSubHeading}</p>
+                                        <div className='flex gap-3'>
+                                            <button onClick={() => deleteProduct(product._id)} className="bg-red-500 text-white rounded p-2 border border-red-500 hover:border-white">Delete</button>
+                                            <button onClick={() => startEditing(product)} className="bg-green-500 text-white p-2 rounded border border-green-500 hover:border-white">Update</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    )}
+                </div>
+            )}
             {isEditing && (
                 <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center">
                     <div className="bg-white p-6 pt-32 rounded shadow-lg w-full max-w-2xl overflow-auto max-h-full">
@@ -130,36 +136,9 @@ export default function UpdateProducts() {
                         <div className="space-y-4">
                             <div>
                                 <label className="block mb-2 text-black font-medium">Card Heading</label>
-
-                                <QuillEditor value={updatedCardHeading} onChange={setUpdatedCardHeading}  />
+                                <QuillEditor value={updatedCardHeading} onChange={setUpdatedCardHeading} />
                             </div>
-                            {/* <div>
-                                <label className="block mb-2 text-black font-medium">Card Sub Heading</label>
-                                <input
-                                    className="w-full p-2 border border-gray-300 rounded text-black"
-                                    placeholder='Card Sub Heading'
-                                    type="text"
-                                    value={updatedCardSubHeading}
-                                    onChange={(e) => setUpdatedCardSubHeading(e.target.value)}
-                                />
-                            </div> */}
-                            {/* <div>
-                                <label className="block mb-2 text-black font-medium">Card Features</label>
-                                {updatedCardFeatures.map((feature, index) => (
-                                    <input
-                                        key={index}
-                                        className="w-full p-2 border border-gray-300 rounded mb-2 text-black"
-                                        placeholder={`Feature ${index + 1}`}
-                                        type="text"
-                                        value={feature}
-                                        onChange={(e) => {
-                                            const newFeatures = [...updatedCardFeatures];
-                                            newFeatures[index] = e.target.value;
-                                            setUpdatedCardFeatures(newFeatures);
-                                        }}
-                                    />
-                                ))}
-                            </div> */}
+                            {/* Additional fields can be added similarly */}
                             <div>
                                 <label className="block mb-2 text-black font-medium">Short Description</label>
                                 <textarea
@@ -187,23 +166,31 @@ export default function UpdateProducts() {
                                 />
                             </div>
                             <div>
-                                <label className="block mb-2 mt-4 text-black font-medium">Additional Images</label>
-                                {updatedImages.map((image, index) => (
-                                    <input
-                                        key={index}
-                                        name="additionalImage"
-                                        id={`file-upload-${index}`}
-                                        type="file"
-                                        accept='.jpeg, .png, .jpg'
-                                        onChange={(e) => handleFileUpload(e, (base64) => {
-                                            const newImages = [...updatedImages];
-                                            newImages[index] = base64;
-                                            setUpdatedImages(newImages);
-                                        })}
-                                        className="w-full p-2 border border-gray-300 rounded text-black mb-2"
-                                    />
-                                ))}
-                            </div>
+    <label className="block mb-2 mt-4 text-black font-medium">Additional Images</label>
+    {updatedImages.map((image, index) => (
+        <div key={index} className="flex items-center">
+            <input
+                name="additionalImage"
+                id={`file-upload-${index}`}
+                type="file"
+                accept=".jpeg, .png, .jpg"
+                onChange={(e) => handleFileUpload(e, (base64) => {
+                    const newImages = [...updatedImages];
+                    newImages[index] = base64;
+                    setUpdatedImages(newImages);
+                })}
+                className="w-full p-2 border border-gray-300 rounded text-black mb-2"
+            />
+            <button
+                className="ml-2 bg-red-500 text-white p-2 rounded"
+                onClick={() => removeImage(index)}
+            >
+                Remove
+            </button>
+        </div>
+    ))}
+</div>
+
                             <div className="flex justify-end space-x-2">
                                 <button onClick={() => updateProduct(currentProduct._id)} className="bg-blue-500 text-white p-2 rounded">Save</button>
                                 <button onClick={() => { setIsEditing(false); setCurrentProduct(null); }} className="bg-gray-500 text-white p-2 rounded">Cancel</button>
