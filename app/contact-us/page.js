@@ -13,7 +13,7 @@ const page = () => {
           <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
             Need to get in touch with us?
           </h1>
-          <h2 className="w-1/2 text-base text-center font-semibold text-white mx-auto">
+          <h2 className="w-[90%] md:w-1/2 text-base text-center font-semibold text-white mx-auto">
             We’d love to hear from you! Whether you have questions about our
             solar panels, need support with your existing system, or want to
             learn more about how solar energy can benefit your home, our team is
