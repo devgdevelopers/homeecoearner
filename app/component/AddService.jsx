@@ -58,11 +58,23 @@ export default function AddService() {
         }
     };
 
-    const handleFileUpload = async (e, setImageState, index) => {
+    const handleFileUpload = async (e, setImageState) => {
         const file = e.target.files[0];
+        
+        // Check if file exists
+        if (!file) return;
+    
+        // Check file size (limit to 150KB)
+        if (file.size > 150 * 1024) {
+            alert("File size exceeds 150KB. Please choose a smaller file.");
+            e.target.value = null; // Clear the input
+            return;
+        }
+    
         const base64 = await convertToBase64(file);
-        setImageState(base64, index);
+        setImageState(base64);
     };
+    
     const handleFeatureChange = (index, value) => {
         const newFeatures = features.map((feature, i) => (
             i === index ? { ...feature, text: value } : feature
