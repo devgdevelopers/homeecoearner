@@ -26,6 +26,7 @@ export default function UpdateServices() {
     const [updatedImages, setUpdatedImages] = useState(['', '', '']);
     const [updatedContent, setUpdatedContent] = useState('');
     const [loading, setLoading] = useState(true);
+    const [updatedFeatures, setUpdatedFeatures] = useState([{ id: 1, text: '' }]);
 
 
     useEffect(() => {
@@ -66,6 +67,8 @@ export default function UpdateServices() {
                 content: updatedContent,
                 cardImg: updatedCardImg,
                 images: updatedImages,
+                features: updatedFeatures.map(f => f.text),
+
             })
         })
             .then(response => response.json())
@@ -87,6 +90,8 @@ export default function UpdateServices() {
         setUpdatedContent(service.content);
         setUpdatedCardImg(service.cardImg);
         setUpdatedImages(service.images);
+        setUpdatedFeatures(service.features.map((feature, index) => ({ id: index + 1, text: feature })));
+
     };
 
     const handleFileUpload = async (e, setImageState) => {
@@ -94,7 +99,20 @@ export default function UpdateServices() {
         const base64 = await convertToBase64(file);
         setImageState(base64);
     };
+    const handleFeatureChange = (index, value) => {
+        const newFeatures = updatedFeatures.map((feature, i) => (
+            i === index ? { ...feature, text: value } : feature
+        ));
+        setUpdatedFeatures(newFeatures);
+    };
 
+    const addFeature = () => {
+        setUpdatedFeatures([...updatedFeatures, { id: updatedFeatures.length + 1, text: '' }]);
+    };
+
+    const removeFeature = (index) => {
+        setUpdatedFeatures(updatedFeatures.filter((_, i) => i !== index));
+    };
     return (
         <div className="p-8 flex flex-col justify-center items-center">
 
@@ -192,6 +210,25 @@ export default function UpdateServices() {
                                     />
                                 ))}
                             </div>
+                            <div>
+                            <label className="block mb-2 mt-4 text-black font-medium">Features</label>
+                        {updatedFeatures.map((feature, index) => (
+                            <div key={feature.id} className="flex items-center mb-2 ">
+                                <input
+                                    type="text"
+                                    value={feature.text}
+                                    onChange={(e) => handleFeatureChange(index, e.target.value)}
+                                    className="text-black mt-1 block w-full px-3 py-2 border bg-white border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                />
+                                <button type="button" onClick={addFeature} className="ml-2 p-1 text-4xl text-green-500">+</button>
+                                {updatedFeatures.length > 1 && (
+                                    <button type="button" onClick={() => removeFeature(index)} className="ml-2 p-1 text-4xl text-red-500">-</button>
+                                )}
+                            </div>
+                        ))}
+
+
+                                </div>
                             <div className="flex justify-end space-x-2">
                                 <button onClick={() => updateService(currentService._id)} className="bg-blue-500 text-white p-2 rounded">Save</button>
                                 <button onClick={() => { setIsEditing(false); setCurrentService(null); }} className="bg-gray-500 text-white p-2 rounded">Cancel</button>
