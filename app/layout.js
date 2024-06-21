@@ -12,6 +12,9 @@ import '@mantine/core/styles.css';
 import { createTheme, MantineProvider } from '@mantine/core';
 import { AuthProvider } from '../helpers/AuthContext'
 import { Toaster } from 'react-hot-toast';
+import { Analytics } from "@vercel/analytics/react"
+
+
 
 export default function RootLayout({ children }) {
   const pathname = usePathname();
@@ -22,6 +25,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className={inter.className}>
         <Toaster />
+        <Analytics />
         <AuthProvider>
           <NextUIProvider>
             <Header />
