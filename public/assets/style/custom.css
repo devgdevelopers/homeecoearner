@@ -628,6 +628,15 @@ section.what-we-do {
   background-position: center;
   background-size: cover;
 }
+@media (max-width: 768px) {
+  .advisor-mob-bg {
+    background-image: url(/assets/images/advisor-mob-bg.svg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: cover;
+  }
+}
+
 .team-bg-section{
   background-image: url(/assets/images/team-sec-bg.svg);
   background-repeat: no-repeat;
@@ -640,4 +649,8 @@ section.what-we-do {
   background-position: center;
   background-size: cover;
   min-height: 300px;
+}
+
+nav.z-40.h-auto.items-center.justify-center.data-\[menu-open\=true\]\:border-none.inset-x-0.backdrop-blur-lg.data-\[menu-open\=true\]\:backdrop-blur-xl.backdrop-saturate-150.sticky.top-0.hidden.w-full.mx-auto.md\:flex.py-3.bg-white.main-nav.px-0.shadow-xl {
+  overflow: hidden;
 }
