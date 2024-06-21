@@ -6,9 +6,9 @@ export async function POST(req) {
     const db = client.db('homeeco');
 
     try {
-        const { cardHeading, cardSubHeading , cardDesc, cardImg, shortDesc, images, content } = await req.json();
+        const { cardHeading, cardSubHeading , cardDesc, cardImg, shortDesc, images,features, content } = await req.json();
 
-        const result = await db.collection('services').insertOne({ cardHeading, cardSubHeading , cardDesc, cardImg, shortDesc, images, content });
+        const result = await db.collection('services').insertOne({ cardHeading, cardSubHeading , cardDesc, cardImg, shortDesc, images, content, features });
         return new Response(JSON.stringify(result.insertedId), { status: 201 });
     } catch (error) {
         return new Response(JSON.stringify({ error: error.message }), { status: 500 });

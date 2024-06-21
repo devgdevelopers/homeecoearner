@@ -22,6 +22,7 @@ export default function AddService() {
     const [cardImg, setCardImg] = useState("");
     const [images, setImages] = useState(["", "", ""]);
     const [content, setContent] = useState("");
+    const [features, setFeatures] = useState([{ id: 1, text: '' }]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -38,6 +39,7 @@ export default function AddService() {
                 content,
                 cardImg,
                 images,
+                features: features.map(f => f.text), 
             }),
         });
 
@@ -50,6 +52,7 @@ export default function AddService() {
             setShortDesc("");
             setCardImg("");
             setImages(["", "", ""]);
+            setFeatures([{ id: 1, text: '' }]);
         } else {
             alert("Failed to add Service.");
         }
@@ -60,6 +63,21 @@ export default function AddService() {
         const base64 = await convertToBase64(file);
         setImageState(base64, index);
     };
+    const handleFeatureChange = (index, value) => {
+        const newFeatures = features.map((feature, i) => (
+            i === index ? { ...feature, text: value } : feature
+        ));
+        setFeatures(newFeatures);
+    };
+
+    const addFeature = () => {
+        setFeatures([...features, { id: features.length + 1, text: '' }]);
+    };
+
+    const removeFeature = (index) => {
+        setFeatures(features.filter((_, i) => i !== index));
+    };
+
 
     return (
         <div className="bg-white p-8 min-h-screen">
@@ -142,6 +160,23 @@ export default function AddService() {
                                 required
                                 className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                             />
+                        ))}
+                    </div>
+                    <div>
+                        <label htmlFor="features" className="block text-sm font-medium text-gray-700">Features:</label>
+                        {features.map((feature, index) => (
+                            <div key={feature.id} className="flex items-center mb-2">
+                                <input
+                                    type="text"
+                                    value={feature.text}
+                                    onChange={(e) => handleFeatureChange(index, e.target.value)}
+                                    className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm bg-white"
+                                />
+                                <button type="button" onClick={addFeature} className="ml-2 p-1 text-4xl  text-green-500">+</button>
+                                {features.length > 1 && (
+                                    <button type="button" onClick={() => removeFeature(index)} className="ml-2 p-1 text-4xl text-red-500">-</button>
+                                )}
+                            </div>
                         ))}
                     </div>
                     <button
