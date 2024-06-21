@@ -13,13 +13,29 @@ import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick-theme.css"; 
 import SignupHome from './component/SignUpHome'
 import ContactFormHome from './component/ContactFormHome'
+import { Link as Linky,  animateScroll as scroll } from 'react-scroll';
 
 export default function Home() {
   // title, content, shortDesc, img, features  services 
   // cardHeading, cardImg products
+
+  useEffect(() => {
+    const section1 = document.getElementById('sectionscroll');
+    const handleScroll = () => {
+      const rect = section1.getBoundingClientRect();
+      if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        section1.classList.add('middle');
+      } else {
+        section1.classList.remove('middle');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   
   const settings = {
     infinite: true,
@@ -150,14 +166,14 @@ export default function Home() {
               </div>
             </Slider>
             <div>
-            <Link href="/" className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+            <Linky to="sectionscroll" smooth={true} duration={600}  className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
               <span className="text relative z-10">
                 Sign Up
               </span>
               <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
                 <ArrowForwardOutlinedIcon className="ml-2" />
               </span>
-            </Link>
+            </Linky>
             </div>
            
           </div>
@@ -232,14 +248,14 @@ export default function Home() {
                 </h3>
               </div>
             </Slider>
-            <button className="relative overflow-hidden py-1 px-6 bg-[#FFB800]  text-black group w-[155px]  rounded-[50px]  text-center font-bold priority-btn">
+            <Link href="#" className="relative overflow-hidden py-1 px-6 bg-[#FFB800]  text-black group w-[155px]  rounded-[50px]  text-center font-bold priority-btn">
               <span className="text relative z-10 text-[20px] my-auto">
                 Sign Up
               </span>
               <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
                 <ArrowForwardOutlinedIcon className="ml-2" />
               </span>
-            </button>
+            </Link>
           </div>
           <div className="">
             <div className="w-full  flex justify-center">
@@ -328,7 +344,10 @@ export default function Home() {
       </div>
     </section>
       {/* Sign up Form  */}
-      <SignupHome />
+      <div id="sectionscroll" className="w-full sectionscrollClass">
+      <SignupHome  />
+
+      </div>
 
       {/* Steps Section  */}
       <section className="w-full min-h-screen steps-section relative mb-[460px] md: sm:mb-[350px] lg:mb-[160px] 2xl:mb-[120px]  ">
