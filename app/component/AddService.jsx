@@ -20,7 +20,7 @@ export default function AddService() {
     const [cardDesc, setCardDesc] = useState("");
     const [shortDesc, setShortDesc] = useState("");
     const [cardImg, setCardImg] = useState("");
-    const [images, setImages] = useState(["", ""]);
+    const [images, setImages] = useState(["", "", ""]);
     const [content, setContent] = useState("");
 
     const handleSubmit = async (e) => {
@@ -49,7 +49,7 @@ export default function AddService() {
             setContent("");
             setShortDesc("");
             setCardImg("");
-            setImages(["", ""]);
+            setImages(["", "", ""]);
         } else {
             alert("Failed to add Service.");
         }
@@ -71,7 +71,7 @@ export default function AddService() {
                         </label>
                         <QuillEditor value={cardHeading} onChange={setCardHeading} />
                     </div>
-                    <div>
+                    {/* <div>
                         <label htmlFor="cardSubHeading" className="block text-sm font-medium text-gray-700">
                             Card Sub Heading:
                         </label>
@@ -81,7 +81,7 @@ export default function AddService() {
                             value={cardSubHeading}
                             onChange={(e) => setCardSubHeading(e.target.value)}
                             required
-                            className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            className="bg-white text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         />
                     </div>
                     <div>
@@ -94,7 +94,7 @@ export default function AddService() {
                             value={cardDesc}
                             onChange={(e) => setCardDesc(e.target.value)}
                             required
-                            className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            className= "bg-white text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         />
                     </div>
                     <div>
@@ -122,7 +122,8 @@ export default function AddService() {
                             required
                             className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         />
-                    </div>
+                    </div> */}
+
                     <div>
                         <label htmlFor="images" className="block text-sm font-medium text-gray-700">
                             Additional Images:

@@ -142,7 +142,7 @@ export default function UpdateProducts() {
                             <div>
                                 <label className="block mb-2 text-black font-medium">Short Description</label>
                                 <textarea
-                                    className="w-full p-2 border border-gray-300 rounded text-black"
+                                    className="w-full p-2 border border-gray-300 rounded text-black bg-white"
                                     value={updatedShortDesc}
                                     onChange={(e) => setUpdatedShortDesc(e.target.value)}
                                 />

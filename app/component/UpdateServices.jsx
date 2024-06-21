@@ -23,7 +23,7 @@ export default function UpdateServices() {
     const [updatedCardDesc, setUpdatedCardDesc] = useState('');
     const [updatedShortDesc, setUpdatedShortDesc] = useState('');
     const [updatedCardImg, setUpdatedCardImg] = useState('');
-    const [updatedImages, setUpdatedImages] = useState(['', '']);
+    const [updatedImages, setUpdatedImages] = useState(['', '', '']);
     const [updatedContent, setUpdatedContent] = useState('');
     const [loading, setLoading] = useState(true);
 
@@ -132,7 +132,7 @@ export default function UpdateServices() {
                                 <label className="block mb-2 text-black font-medium">Card Heading</label>
                                 <QuillEditor value={updatedCardHeading} onChange={setUpdatedCardHeading} />
                             </div>
-                            <div>
+                            {/* <div>
                                 <label className="block mb-2 text-black font-medium">Card Sub Heading</label>
                                 <input
                                     className="w-full p-2 border border-gray-300 rounded text-black"
@@ -171,7 +171,8 @@ export default function UpdateServices() {
                                     onChange={(e) => handleFileUpload(e, setUpdatedCardImg)}
                                     className="w-full p-2 border border-gray-300 rounded text-black"
                                 />
-                            </div>
+                            </div> */}
+
                             <div>
                                 <label className="block mb-2 mt-4 text-black font-medium">Additional Images</label>
                                 {updatedImages.map((image, index) => (

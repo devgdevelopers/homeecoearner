@@ -46,13 +46,13 @@ export default function LoginPage() {
     return (
         <div className='md:pt-[7rem] w-full'>
             <div className='container mx-auto min-h-[60vh] my-auto flex flex-col justify-center items-center'>
-                <Image src="/assets/images/logo.png" width={300} height={100} className='mx-auto' alt="Logo" />
+                <Image src="/assets/images/logo-final.svg" width={300} height={100} className='mx-auto' alt="Logo" />
                 <h4 className='text-2xl text-center my-10 text-green'>Admin, Please Login</h4>
                 <form onSubmit={onLogin} className='flex flex-col gap-3 md:w-[50%] mx-auto'>
                     <input
                         type="email"
                         placeholder='Your Email'
-                        className='border-1 p-2 placeholder:text-[#2e2e84] text-green outline-none border-[#2e2e84] rounded-md'
+                        className='border-1 p-2 placeholder:text-[#2e2e84] text-green outline-none border-[#2e2e84] rounded-md bg-white'
                         required
                         value={user.email}
                         onChange={(e) => setUser({ ...user, email: e.target.value })}
@@ -60,7 +60,7 @@ export default function LoginPage() {
                     <input
                         type="password"
                         placeholder='Your Password'
-                        className='border-1 p-2 placeholder:text-[#2e2e84] text-green outline-none border-[#2e2e84] rounded-md'
+                        className='border-1 p-2 placeholder:text-[#2e2e84] text-green outline-none border-[#2e2e84] rounded-md bg-white'
                         required
                         value={user.password}
                         onChange={(e) => setUser({ ...user, password: e.target.value })}
