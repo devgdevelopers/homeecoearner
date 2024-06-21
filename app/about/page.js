@@ -92,7 +92,7 @@ const page = () => {
       {/* whatdowedo */}
       <section className="min-h-[805px]  md:py-[82px] md:px-[120px] flex flex-col gap-[65px]">
         <div className="flex flex-col items-center justify-center text-center  w-full gap-4 pt-10">
-          <h1 className="text-[#15A135] text-[50px] font-extrabold leading-tight">
+          <h1 className="text-[#15A135] text-[30px] md:text-[50px] font-extrabold leading-tight">
             What Do We Do?
           </h1>
           <h3 className="text-[#385723] text-[25px] font-bold ">We serve to</h3>
@@ -220,7 +220,7 @@ const page = () => {
       {/* ourteam */}
       <section className="w-full team-bg-section py-20 flex flex-col gap-9">
         <div className="mb-[111px]">
-          <h1 className="text-center text-[50px] font-extrabold text-white">
+          <h1 className="text-center text-[30px] md:text-[50px] font-extrabold text-white">
             Our Team
           </h1>
         </div>
@@ -272,7 +272,7 @@ const page = () => {
           <h3 className="text-[#385723] text-[25px] font-bold text-center">
             Our Testimonials
           </h3>
-          <h1 className="text-[#15A135] text-[50px] font-extrabold text-center ">
+          <h1 className="text-[#15A135] text-[30px] md:text-[50px] font-extrabold text-center ">
             Customer Feedback
           </h1>
         </div>
