@@ -27,22 +27,22 @@ return (
         <h3 className="mb-3 font-bold pl-3 text-center md:text-start">About</h3>
         <ul className="flex flex-col gap-2 font-medium">
           <Link
-            href="/history"
+            href="/about"
             className="footerLink text-center md:text-start"
           >
             History
           </Link>
-          <Link href="/team" className="footerLink text-center md:text-start">
+          <Link href="/about" className="footerLink text-center md:text-start">
             Our Team
           </Link>
           <Link
-            href="/terms-and-cond"
+            href="/about"
             className="footerLink text-center md:text-start"
           >
             Terms & Conditions
           </Link>
           <Link
-            href="/terms-and-cond"
+            href="/about"
             className="footerLink text-center md:text-start"
           >
             Privacy Policy
@@ -54,24 +54,24 @@ return (
           Services
         </h3>
         <ul className="flex flex-col gap-2">
-          <Link
+          {/* <Link
             href="/services"
             className="footerLink text-center md:text-start"
           >
             How To Order
-          </Link>
+          </Link> */}
           <Link
-            href="/services"
+            href="/products"
             className="footerLink text-center md:text-start"
           >
             Our Products
           </Link>
-          <Link
+          {/* <Link
             href="/packages"
             className="footerLink text-center md:text-start"
           >
             Order Status
-          </Link>
+          </Link> */}
           <Link
             href="/solar-maintenance"
             className="footerLink text-center md:text-start"
@@ -89,7 +89,7 @@ return (
           >
             Contact Us
           </Link>
-          <Link href="/help" className="footerLink text-center md:text-start">
+          <Link href="/faqs" className="footerLink text-center md:text-start">
             Help
           </Link>
         </ul>
