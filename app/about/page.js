@@ -234,7 +234,7 @@ const page = () => {
             <h3 className="text-[25px] font-bold text-center my-5 text-[#385723]">
               David Sheldon
             </h3>
-            <h4 className=" px-10 text-[#525C60] text-[19px] font-medium">
+            <h4 className=" px-10 text-[#525C60] text-[19px] font-medium ">
               Co-Founder / Business Development Director - Home EcoEarner Ltd.
               30 years’ experience establishing businesses and arranging asset
               finance in the transport and renewable energy sectors. Accounting,
