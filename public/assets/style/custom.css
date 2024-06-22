@@ -621,6 +621,12 @@ section.what-we-do {
   background-size: cover;
   background-image: url(/assets/images/product-pg-banner.svg);
 }
+.product-page-bg-mob{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/assets/images/pro-bg-mob.svg);
+}
 
 .talk-advisor-bg {
   background-image: url(/assets/images/talkadvisor-bg.svg);

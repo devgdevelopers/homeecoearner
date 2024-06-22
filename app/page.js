@@ -324,7 +324,7 @@ export default function Home() {
                 width={255}
                 height={250}
                 alt="productimg"
-                className="w-[255px] h-[250px] mx-auto"
+                className="min-w-[280px] mx-auto"
               />
               <h2
                 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10"
@@ -415,14 +415,14 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <button className="relative overflow-hidden p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white group priority-btn text-center font-bold my-5">
+            <Link href="/contact-us" className="relative overflow-hidden p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white group priority-btn text-center font-bold my-5">
               <span className="text relative z-10">
                 Join Our Priority List Today
               </span>
               <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
                 <ArrowForwardOutlinedIcon className="ml-2" />
               </span>
-            </button>
+            </Link>
           </div>
         </div>
        

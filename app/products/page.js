@@ -35,7 +35,13 @@ const page = () => {
   }, []);
   return (
     <>
-      <div className="product-page-bg min-h-[310px] flex justify-center">
+      <div className="hidden product-page-bg min-h-[310px] md:flex justify-center">
+        <h1 className="font-bold text-[35px] md:text-[60px] text-center text-white my-auto">
+          All Products
+        </h1>
+
+      </div>
+      <div className="md:hidden product-page-bg-mob min-h-[310px] flex justify-center">
         <h1 className="font-bold text-[35px] md:text-[60px] text-center text-white my-auto">
           All Products
         </h1>
@@ -62,15 +68,15 @@ const page = () => {
               
               <div
                   key={product._id}
-                  className="  w-full  flex justify-start items-start flex-col "
+                  className="  w-full  flex flex-col "
                 >
-                  <div className="product-div py-10 w-full rounded-xl">
+                  <div className="product-div p-10 w-full md:min-w-[380px] h-[380px] flex justify-center">
                   <Image
                     src={product.cardImg}
                     width={280}
                     height={280}
                     alt="productimg"
-                    className="w-[280px] h-[280px] mx-auto"
+                    className=" mx-auto my-auto min-w-[280px]"
                   />
                  
                   </div>

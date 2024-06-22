@@ -20,7 +20,9 @@ return (
           unoptimized
         ></Image>
         <h2 className="text-lg text-dark font-semibold text-center md:text-start">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, a?
+        Install and save
+        <br />
+        Upgrade and earn
         </h2>
       </div>
       <div className="w-auto flex flex-col justify-start lg:pl-20">
@@ -54,12 +56,7 @@ return (
           Services
         </h3>
         <ul className="flex flex-col gap-2">
-          {/* <Link
-            href="/services"
-            className="footerLink text-center md:text-start"
-          >
-            How To Order
-          </Link> */}
+       
           <Link
             href="/products"
             className="footerLink text-center md:text-start"
@@ -83,15 +80,19 @@ return (
       <div className="flex flex-col justify-start lg:pl-20">
         <h3 className="mb-3 font-bold pl-3 text-center md:text-start">Other</h3>
         <ul className="flex flex-col gap-2">
+        <Link
+            href="/services"
+            className="footerLink text-center md:text-start"
+          >
+            How To Order
+          </Link>
           <Link
             href="/contact-us"
             className="footerLink text-center md:text-start"
           >
             Contact Us
           </Link>
-          <Link href="/faqs" className="footerLink text-center md:text-start">
-            Help
-          </Link>
+         
         </ul>
       </div>
     </div>

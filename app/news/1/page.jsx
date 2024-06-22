@@ -57,14 +57,14 @@ const page = () => {
           </h1>
           <article className="text-[19px] font-medium text-[#525C60] ml-7 mb-7">
           Enter solar and battery systems – a revolutionary solution that not only slashes your electricity bills but also empowers you to be part of the clean energy revolution.
-          By harnessing the power of the sun, you can generate your electricity, reducing reliance on the grid and minimizing your carbon footprint.
+          By harnessing the power of the sun, you can generate your electricity, reducing reliance on the grid and minimising your carbon footprint.
           </article>
         </div>
 
         
         <div className="flex flex-col gap-3 my-4">
           <h1 className="text-xl md:text-[25px] pl-5 md:pl-0 font-extrabold text-[#15A135] ">
-            3. Visualize the Benefits: See the Savings, Witness the Impact
+            3. Visualise the Benefits: See the Savings, Witness the Impact
           </h1>
           <div className="flex flex-col ml-7 ">          
             <h2 className="text-[20px]  font-semibold text-[#385723] ">• Monthly Savings:</h2>
@@ -81,7 +81,7 @@ The money you save can be redirected towards covering other living costs or even
           <div className="flex flex-col ml-7 ">          
             <h2 className="text-[20px] font-semibold text-[#385723] ">• Environmental Impact:</h2>
           <article className="text-[19px] font-medium text-[#525C60]  ">
-          Visualize your carbon footprint shrinking as you rely on clean, renewable energy.
+          Visualise your carbon footprint shrinking as you rely on clean, renewable energy.
           Each unit of electricity generated from your solar panels is a step towards a healthier planet.</article>
 </div>
           <div className="flex flex-col ml-7 ">          
@@ -101,7 +101,7 @@ The money you save can be redirected towards covering other living costs or even
           <div className="flex flex-col ml-7 ">          
             <h2 className="text-[20px] font-semibold text-[#385723] ">• Consultation:</h2>
           <article className="text-[19px] font-medium text-[#525C60]  ">
-          Reach out to Home EcoEarner by signing up on our Home page for a personalized consultation. Understand the potential savings and benefits tailored to your home's unique needs.</article>
+          Reach out to Home EcoEarner by signing up on our Home page for a personalised consultation. Understand the potential savings and benefits tailored to your home's unique needs.</article>
 </div>
           <div className="flex flex-col ml-7 ">          
             <h2 className="text-[20px] font-semibold text-[#385723] ">• Financing Options:</h2>
