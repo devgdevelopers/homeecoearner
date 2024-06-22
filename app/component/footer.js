@@ -19,7 +19,7 @@ return (
           alt="logo"
           unoptimized
         ></Image>
-        <h2 className="text-lg text-dark font-semibold text-center md:text-start">
+        <h2 className="mb-3 font-bold text-center md:text-start">
         Install and save
         <br />
         Upgrade and earn

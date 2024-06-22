@@ -100,7 +100,7 @@ export default function ContactForm() {
           value={data.name}
           onChange={onChangeHandler}
           placeholder="Your Name"
-          className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input w-full md:w-3/4"
+          className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input w-full md:w-5/6"
         />
         {data.errors.name && (
           <p className="error-message text-[red]">{data.errors.name}</p>
@@ -115,7 +115,7 @@ export default function ContactForm() {
           value={data.email}
           onChange={onChangeHandler}
           placeholder="Your Email"
-          className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input w-full md:w-3/4"
+          className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input w-full md:w-5/6"
         />
         {data.errors.email && (
           <p className="error-message text-[red]">{data.errors.email}</p>
@@ -130,7 +130,7 @@ export default function ContactForm() {
           value={data.phone}
           onChange={onChangeHandler}
           placeholder="Enter Your Mobile No."
-          className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input w-full md:w-3/4"
+          className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input w-full md:w-5/6"
         />
 
  </div>
@@ -145,7 +145,7 @@ export default function ContactForm() {
           value={data.message}
           onChange={onChangeHandler}
           placeholder="How Can We help You ?"
-          className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input w-full md:w-3/4"
+          className="bg-inherit placeholder:text-dark outline-none border-gray-500 p-3 contact-page-input w-full md:w-5/6"
         />
         {data.errors.message && (
           <p className="error-message text-[red]">{data.errors.message}</p>
