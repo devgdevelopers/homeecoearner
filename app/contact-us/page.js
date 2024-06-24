@@ -25,8 +25,8 @@ const page = () => {
       <section className=" bg-[#F5F5F5] pt-10">
         <div className="container mx-auto flex flex-col md:flex-row bg-white p-10">
          
-          <div className="w-[90%] mx-auto md:w-2/4 my-auto px-10">
-            <h1 className="text-[25px] font-extrabold py-4 text-green font-semibold"> Fill out the form with your details.</h1>
+          <div className="w-[90%] mx-auto md:w-2/4 my-auto lg:px-10">
+            <h1 className="text-[25px] py-4 text-green font-semibold"> Fill out the form with your details.</h1>
             <ContactForm />
           </div>
           <div className="flex flex-col gap-3 w-[90%] mx-auto md:w-2/4 my-auto">

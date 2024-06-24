@@ -318,7 +318,8 @@ export default function Home() {
           ))
         ) : (
           products.slice(0, 3).map((product) => (
-            <div key={product._id} className="p-5 w-full py-10 flex justify-center items-center flex-col product-div">
+            <div key={product._id} className="p-5 w-full py-10 flex justify-between items-center flex-col product-div">
+              <div className="my-auto">
               <Image
                 src={product.cardImg}
                 width={255}
@@ -326,18 +327,21 @@ export default function Home() {
                 alt="productimg"
                 className="min-w-[280px] mx-auto"
               />
-              <h2
+              </div>
+             <div className="flex justify-center flex-col items-center">
+             <h2
                 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10"
                 dangerouslySetInnerHTML={{ __html: product.cardHeading }}
               />
               <Link href={`/products/${product._id}`} className="text-lg text-[#028921]">
-                <button className="relative overflow-hidden py-1 px-6 group rounded-[50px] text-center priority-btn">
+                <button className="relative overflow-hidden py-1 px-6 group rounded-[50px] text-center priority-btn mx-auto">
                   <span className="text relative z-10 text-[20px] my-auto">View More</span>
                   <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
                     <ArrowForwardOutlinedIcon className="ml-2" />
                   </span>
                 </button>
               </Link>
+             </div>
             </div>
           ))
         )}
