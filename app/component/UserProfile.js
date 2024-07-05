@@ -43,7 +43,7 @@ const UserProfile = () => {
   const renderCustomizedContent = (content) => {
     // Custom styles for h1 and h2 tags
     content = content.replace(/<h1([^>]*)>/g, '<h1$1 style="font-size: 25px; font-weight: bold;">');
-    content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 20px; font-weight: 600;">');
+    content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 18px; font-weight: 500;">');
     content = content.replace(/<p([^>]*)>/g, '<h2$1 style="font-size: 18px; ">');
     return { __html: content };
 };
@@ -87,23 +87,24 @@ const UserProfile = () => {
           Key Features
         </h1>
         <div className="flex flex-col md:flex-row  ">
-        <div className="w-full md:w-[60%]">
+        <div className="w-[90%] md:w-[60%] mx-auto">
   <span
-    className="text-[18px] text-black"
+    className="text-[18px] text-black text-justify"
     dangerouslySetInnerHTML={renderCustomizedContent(product.content)}
   />
 </div>
 
-          <div className="flex flex-col justify-between items-center p-10 w-[40%]">
+          <div className="flex flex-col justify-between items-center p-10 w-full md:w-[40%]">
   {product.images && product.images.length > 0 ? (
     product.images.map((image, index) => (
       image ? ( // Check if image is truthy (not null or undefined)
-        <img
+        <Image
           key={`${product._id}-${index}`} // Ensure each key is unique
-          width="450px"
+          width={100}
+          height={100}
           src={image}
           alt={`Image ${index + 1}`}
-          className="mx-auto"
+          className="mx-auto  min-w-full md:min-w-[450px]"
         />
       ) : null // If image is null or undefined, do not render
     ))
