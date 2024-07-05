@@ -4,7 +4,7 @@ import Link from 'next/link'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import XIcon from '@mui/icons-material/X';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const footer = () => {
 return (
@@ -98,17 +98,17 @@ return (
     </div>
     <div className="container  bg-dark text-dark mx-auto flex gap-3 flex-col">
       <div className="flex gap-2 text-lg justify-center">
-        <Link href="">
+        <Link href="https://www.instagram.com/homeecoearner/" target='_blank'>
           <InstagramIcon className="text-white text-4xl bg-green rounded-full p-2" />
         </Link>
-        <Link href="">
+        <Link href="https://www.facebook.com/homeecoearner/ " target='_blank'>
           <FacebookIcon className="text-white text-4xl bg-green rounded-full p-2" />
         </Link>
-        <Link href="">
+        <Link href="https://x.com/Home_EcoE" target='_blank'>
           <XIcon className="text-white text-4xl bg-green rounded-full p-2" />
         </Link>
-        <Link href="">
-          <WhatsAppIcon className="text-white text-4xl bg-green rounded-full p-2" />
+        <Link href=" https://www.linkedin.com/company/home-ecoearner-limited/" target='_blank'>
+          <LinkedInIcon className="text-white text-4xl bg-green rounded-full p-2" />
         </Link>
       </div>
       <hr className="h-[2px] text-black bg-black" />
