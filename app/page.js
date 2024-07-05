@@ -364,9 +364,9 @@ export default function Home() {
               For our Home EcoEarner Power System today <br className="hidden md:flex" /> and experience the future of renewable energy.
             </h1>
             <p className="text-center text-[18px] py-4">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
+            Experience the future of renewable energy today with our Home EcoEarner Power System, designed to 
               <br className="hidden md:flex"  />
-              industry. Lorem Ipsum has been the industry's standard
+              seamlessly integrate sustainable power solutions into your home.
             </p>
             <div className="w-full grid grid-cols-1 md:grid-cols-2 md:p-10 gap-10">
               <div className="flex flex-col gap-3 bg-white p-10 ">

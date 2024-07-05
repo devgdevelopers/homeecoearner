@@ -15,10 +15,7 @@ const page = () => {
             News
           </h1>
           <h2 className="w-5/6 md:w-1/2 text-base  text-center font-semibold text-white mx-auto">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est
-            magni, unde ipsam illo corrupti, minus eveniet dolorum obcaecati,
-            tempora hic! Laborum eveniet voluptas labore. Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit
+          Stay updated with the latest News, featuring advancements in renewable energy, company updates, and exciting developments in the industry.
           </h2>
         </div>
       </section>

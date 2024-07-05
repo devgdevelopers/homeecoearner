@@ -19,10 +19,7 @@ const page = () => {
             About Us
           </h1>
           <h2 className="w-5/6 md:w-1/2 text-base text-center font-semibold text-white mx-auto">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est
-            magni, unde ipsam illo corrupti, minus eveniet dolorum obcaecati,
-            tempora hic! Laborum eveniet voluptas labore. Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit
+          Learn more About Us, our mission, and our commitment to providing innovative renewable energy solutions that empower your home and contribute to a sustainable future.
           </h2>
         </div>
       </section>
@@ -47,8 +44,7 @@ const page = () => {
             Reshaping Energy for the Future
           </h1>
           <p className="text-[#525C60] text-[19px] font-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          Our Ecological Way is dedicated to reshaping energy for the future through sustainable practices and innovative technologies. Join us in creating a greener, more sustainable world.
           </p>
           <div className="flex justify-center  mx-auto gap-5 md:mt-10">
             <div className="w-1/2  flex flex-col">
@@ -63,8 +59,7 @@ const page = () => {
               Reduce Your Daily Energy Use
               </h3>
               <p className="text-[#525C60] text-[19px] font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Cut down on your energy consumption with our advanced solutions designed to optimize efficiency and reduce costs.
               </p>
             </div>
             <div className="w-1/2  flex flex-col">
@@ -79,8 +74,7 @@ const page = () => {
               The Most Used Energy Systems
               </h3>
               <p className="text-[#525C60] text-[19px] font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-                tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+              Explore the top energy systems utilized worldwide, known for their reliability, efficiency, and sustainable benefits.
               </p>
             </div>
           </div>
@@ -172,7 +166,7 @@ const page = () => {
               Panels installed
             </h2>
             <p className="text-black text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Over 68 panels installed to power your sustainable future efficiently.
             </p>
           </div>
           <div className=" my-auto bg-white  p-10 rounded-md mx-auto">
@@ -183,7 +177,7 @@ const page = () => {
               Technical Support
             </h2>
             <p className="text-black text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reliable assistance anytime, ensuring seamless operations and peace of mind.
             </p>
           </div>
           <div className=" my-auto  bg-white  p-10 rounded-md mx-auto">
@@ -197,7 +191,7 @@ const page = () => {
               Years of Experience
             </h2>
             <p className="text-black text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Benefit from our extensive expertise in delivering reliable solutions.
             </p>
           </div>
           <div className=" my-auto bg-white p-10 rounded-md mx-auto">
@@ -211,7 +205,7 @@ const page = () => {
               Five Star Reviews
             </h2>
             <p className="text-black text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Our customers rate us highly for exceptional service and quality, reflecting our commitment to excellence.
             </p>
           </div>
         </div>

@@ -35,7 +35,7 @@ const Page = () => {
             Services
           </h1>
           <h2 className="w-3/4 md:w-1/2 text-base text-center font-semibold text-white mx-auto">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est magni, unde ipsam illo corrupti, minus eveniet dolorum obcaecati, tempora hic! Laborum eveniet voluptas labore. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Explore our comprehensive Services, including installation, maintenance, and support, ensuring a seamless transition to renewable energy for your home.
           </h2>
         </div>
       </section>

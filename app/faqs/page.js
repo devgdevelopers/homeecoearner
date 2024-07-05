@@ -363,10 +363,7 @@ const Page = () => {
             FAQs
           </h1>
           <h2 className="w-[90%] md:w-1/2 text-base text-center font-semibold text-white mx-auto">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est
-            magni, unde ipsam illo corrupti, minus eveniet dolorum obcaecati,
-            tempora hic! Laborum eveniet voluptas labore. Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit
+          Find answers to frequently asked questions about Home EcoEarner's power system. Discover how to manage electricity costs effectively and explore income opportunities through sustainable energy solutions.
           </h2>
         </div>
       </section>

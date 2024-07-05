@@ -40,10 +40,7 @@ const page = () => {
           Customer Packages 
           </h1>
           <h2 className="w-[90%] md:w-1/2 text-base text-center font-semibold text-white mx-auto">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia est
-            magni, unde ipsam illo corrupti, minus eveniet dolorum obcaecati,
-            tempora hic! Laborum eveniet voluptas labore. Lorem ipsum, dolor sit
-            amet consectetur adipisicing elit
+          Discover our tailored Customer Packages, designed to meet your unique energy needs and help you maximize the benefits of renewable power in your home.
           </h2>
         </div>
       </section>

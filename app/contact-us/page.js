@@ -22,7 +22,7 @@ const page = () => {
         </div>
       </section>
 
-      <section className=" bg-[#F5F5F5] pt-10">
+      <section className="bg-[#F5F5F5] pt-10">
         <div className="container mx-auto flex flex-col md:flex-row bg-white p-10">
          
           <div className="w-[90%] mx-auto md:w-2/4 my-auto lg:px-10">
