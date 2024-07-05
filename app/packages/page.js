@@ -40,7 +40,7 @@ const page = () => {
           Customer Packages 
           </h1>
           <h2 className="w-[90%] md:w-1/2 text-base text-center font-semibold text-white mx-auto">
-          Discover our tailored Customer Packages, designed to meet your unique energy needs and help you maximize the benefits of renewable power in your home.
+          Discover our tailored Customer Packages, designed to meet your unique energy needs and help you maximise the benefits of renewable power in your home.
           </h2>
         </div>
       </section>
@@ -74,7 +74,7 @@ const page = () => {
                   className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full"
                 >
                   <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
-                    {pkg.title} -{" "}
+                    {pkg.title} 
                     <span className="text-[22px]">{pkg.shortDesc}</span>
                   </h1>
                   {pkg.features.map((feature, index) => (

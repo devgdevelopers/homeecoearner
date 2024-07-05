@@ -19,7 +19,9 @@ const page = () => {
             About Us
           </h1>
           <h2 className="w-5/6 md:w-1/2 text-base text-center font-semibold text-white mx-auto">
-          Learn more About Us, our mission, and our commitment to providing innovative renewable energy solutions that empower your home and contribute to a sustainable future.
+            Learn more About Us, our mission, and our commitment to providing
+            innovative renewable energy solutions that empower your home and
+            contribute to a sustainable future.
           </h2>
         </div>
       </section>
@@ -27,60 +29,63 @@ const page = () => {
       {/* ecologicalway */}
       <section className=" bg-[#f5f5f5] py-10 md:py-20">
         <div className="container mx-auto flex flex-col md:flex-row gap-5 justify-center items-center">
-        <div className="w-3/4 md:w-1/2 ">
-          <Image
-            src="/assets/images/Group 951.svg"
-            alt="img"
-            width={1}
-            height={1}
-            className="w-3/4 mx-auto"
-          />
-        </div>
-        <div className="w-5/6 md:w-[40%] flex flex-col  relative gap-3 mx-auto">
-          <h3 className="text-[#385723] text-[22px] font-semibold">
-            Ecological Way
-          </h3>
-          <h1 className="text-[#15A135] text-3xl md:text-[50px] font-extrabold leading-tight">
-            Reshaping Energy for the Future
-          </h1>
-          <p className="text-[#525C60] text-[19px] font-medium">
-          Our Ecological Way is dedicated to reshaping energy for the future through sustainable practices and innovative technologies. Join us in creating a greener, more sustainable world.
-          </p>
-          <div className="flex justify-center  mx-auto gap-5 md:mt-10">
-            <div className="w-1/2  flex flex-col">
-              <Image
-                src="/assets/images/Group 795.svg"
-                alt="img"
-                width={1}
-                height={1}
-                className="w-[71.7px] h-[75.01px]"
-              />
-              <h3 className="text-[#385723] text-base md:text-[22px] font-bold">
-              Reduce Your Daily Energy Use
-              </h3>
-              <p className="text-[#525C60] text-[19px] font-medium">
-              Cut down on your energy consumption with our advanced solutions designed to optimize efficiency and reduce costs.
-              </p>
-            </div>
-            <div className="w-1/2  flex flex-col">
-              <Image
-                src="/assets/images/Group 793.svg"
-                alt="img"
-                width={1}
-                height={1}
-                className="w-[58px] h-[67px]"
-              />
-              <h3 className="text-[#385723] text-base md:text-[22px] font-bold">
-              The Most Used Energy Systems
-              </h3>
-              <p className="text-[#525C60] text-[19px] font-medium">
-              Explore the top energy systems utilized worldwide, known for their reliability, efficiency, and sustainable benefits.
-              </p>
+          <div className="w-3/4 md:w-1/2 ">
+            <Image
+              src="/assets/images/Group 951.svg"
+              alt="img"
+              width={1}
+              height={1}
+              className="w-3/4 mx-auto"
+            />
+          </div>
+          <div className="w-5/6 md:w-[40%] flex flex-col  relative gap-3 mx-auto">
+            <h3 className="text-[#385723] text-[22px] font-semibold">
+              Ecological Way
+            </h3>
+            <h1 className="text-[#15A135] text-3xl md:text-[50px] font-extrabold leading-tight">
+              Reshaping Energy for the Future
+            </h1>
+            <p className="text-[#525C60] text-[19px] font-medium">
+              Our Ecological Way is dedicated to reshaping energy for the future
+              through sustainable practices and innovative technologies. Join us
+              in creating a greener, more sustainable world.
+            </p>
+            <div className="flex justify-center  mx-auto gap-5 md:mt-10">
+              <div className="w-1/2  flex flex-col">
+                <Image
+                  src="/assets/images/Group 795.svg"
+                  alt="img"
+                  width={1}
+                  height={1}
+                  className="w-[71.7px] h-[75.01px]"
+                />
+                <h3 className="text-[#385723] text-base md:text-[22px] font-bold">
+                  Reduce Your Daily Energy Use
+                </h3>
+                <p className="text-[#525C60] text-[19px] font-medium">
+                  Cut down on your energy consumption with our advanced
+                  solutions designed to optimise efficiency and reduce costs.
+                </p>
+              </div>
+              <div className="w-1/2  flex flex-col">
+                <Image
+                  src="/assets/images/Group 793.svg"
+                  alt="img"
+                  width={1}
+                  height={1}
+                  className="w-[58px] h-[67px]"
+                />
+                <h3 className="text-[#385723] text-base md:text-[22px] font-bold">
+                  The Most Used Energy Systems
+                </h3>
+                <p className="text-[#525C60] text-[19px] font-medium">
+                  Explore the top energy systems utilised worldwide, known for
+                  their reliability, efficiency, and sustainable benefits.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-      
       </section>
 
       {/* whatdowedo */}
@@ -166,7 +171,8 @@ const page = () => {
               Panels installed
             </h2>
             <p className="text-black text-center">
-            Over 68 panels installed to power your sustainable future efficiently.
+              Over 68 panels installed to power your sustainable future
+              efficiently.
             </p>
           </div>
           <div className=" my-auto bg-white  p-10 rounded-md mx-auto">
@@ -177,7 +183,8 @@ const page = () => {
               Technical Support
             </h2>
             <p className="text-black text-center">
-            Reliable assistance anytime, ensuring seamless operations and peace of mind.
+              Reliable assistance anytime, ensuring seamless operations and
+              peace of mind.
             </p>
           </div>
           <div className=" my-auto  bg-white  p-10 rounded-md mx-auto">
@@ -191,21 +198,23 @@ const page = () => {
               Years of Experience
             </h2>
             <p className="text-black text-center">
-            Benefit from our extensive expertise in delivering reliable solutions.
+              Benefit from our extensive expertise in delivering reliable
+              solutions.
             </p>
           </div>
           <div className=" my-auto bg-white p-10 rounded-md mx-auto">
             <h1 className="text-center text-[#FFB800] text-5xl mb-2">
               {" "}
               <strong>
-                <Counter start={0} end={74} />{" "}
+                <Counter start={0} end={23} />{" "}
               </strong>{" "}
             </h1>
             <h2 className="text-[#385723] text-[25px] text-center font-bold">
               Five Star Reviews
             </h2>
             <p className="text-black text-center">
-            Our customers rate us highly for exceptional service and quality, reflecting our commitment to excellence.
+              Our customers rate us highly for exceptional service and quality,
+              reflecting our commitment to excellence.
             </p>
           </div>
         </div>
@@ -258,19 +267,18 @@ const page = () => {
         </div>
       </section>
 
-      
       {/* testimonial */}
       <section className="py-20">
-      <div className="container mx-auto py-10">
-      <div className="">
-          <h3 className="text-[#385723] text-[25px] font-bold text-center">
-            Our Testimonials
-          </h3>
-          <h1 className="text-[#15A135] text-[30px] md:text-[50px] font-extrabold text-center ">
-            Customer Feedback
-          </h1>
-        </div>
-        <div className=" w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="container mx-auto py-10">
+          <div className="">
+            <h3 className="text-[#385723] text-[25px] font-bold text-center">
+              Our Testimonials
+            </h3>
+            <h1 className="text-[#15A135] text-[30px] md:text-[50px] font-extrabold text-center ">
+              Customer Feedback
+            </h1>
+          </div>
+          <div className=" w-full grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="bg_test  flex flex-col justify-center gap-4 items-start pt-16 px-10 py-auto">
               <h3 className="text-[#525C60] text-[19px] font-medium">
                 I was very impresed by the new company service lorem ipsum is
@@ -343,13 +351,8 @@ const page = () => {
                 </div>
               </div>
             </div>
-
-
-
-
           </div>
-      </div>
-        
+        </div>
       </section>
 
       <TalkAdvisor />

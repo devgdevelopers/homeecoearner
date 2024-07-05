@@ -20,9 +20,9 @@ return (
           unoptimized
         ></Image>
         <h2 className="mb-3 font-bold text-center md:text-start">
-        Install and save
+        INSTALL AND SAVE
         <br />
-        Upgrade and earn
+        UPGRADE AND EARN
         </h2>
       </div>
       <div className="w-auto flex flex-col justify-start lg:pl-20">
