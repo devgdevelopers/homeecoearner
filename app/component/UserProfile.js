@@ -89,7 +89,7 @@ const UserProfile = () => {
         <div className="flex flex-col md:flex-row  ">
         <div className="w-[90%] md:w-[60%] mx-auto">
   <span
-    className="text-[18px] text-black text-justify"
+    className="text-[18px] text-black "
     dangerouslySetInnerHTML={renderCustomizedContent(product.content)}
   />
 </div>
