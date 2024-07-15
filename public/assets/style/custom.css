@@ -663,11 +663,11 @@ nav.z-40.h-auto.items-center.justify-center.data-\[menu-open\=true\]\:border-non
 
 
 .main-section{
-  background-image: url('/assets/images/home-ecoearner-snippet.svg');
+  background-image: url('/assets/images/packages-bg.svg');
 
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: contain;
-  width: 100%;
+ 
+  background-size: cover;
  
 }

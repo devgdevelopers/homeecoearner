@@ -363,26 +363,23 @@ export default function Home() {
         <SignupHome />
       </div>
 
-      
-
-      <section className="main-section w-full relative flex  ">
-       
-        <div className="w-full sticky top-10 left-0 z-10">
-          <div className="container mx-auto mt-[60px] xl:mt-[300px]">
-            <div className="steps-inner-div  p-5 py-10 ">
-              <h1 className="text-2xl xl:text-5xl text-green font-semibold text-center my-1">
-                For our Home EcoEarner Power System today{" "}
-                <br className="hidden md:flex" /> and experience the future of
-                renewable energy.
-              </h1>
-              <p className="text-center text-[18px] py-4">
-                Experience the future of renewable energy today with our Home
-                EcoEarner Power System, designed to
-                <br className="hidden md:flex" />
-                seamlessly integrate sustainable power solutions into your home.
-              </p>
-              <div className="w-full grid grid-cols-1 md:grid-cols-2 md:p-10 gap-10">
-                <div className="flex flex-col gap-3 bg-white p-10 ">
+      <section className="w-full steps-inner-div ">
+        <div className="container mx-auto">
+          <div className="p-5">
+            <h1 className="text-xl xl:text-5xl text-green font-semibold text-left my-1 px-4 md:px-10">
+              For our Home EcoEarner Power System today{" "}
+              <br className="hidden md:flex" /> and experience the future of
+              renewable energy.
+            </h1>
+            <p className="text-left text-[18px] py-4 px-4 md:px-10">
+              Experience the future of renewable energy today with our Home
+              EcoEarner Power System, designed to
+              <br className="hidden md:flex" />
+              seamlessly integrate sustainable power solutions into your home.
+            </p>
+            <div className="w-full grid  md:p-10 gap-10">
+              <div className="grid grid-cols-1 md:grid-cols-2  gap-10 bg-white p-5 md:p-10 ">
+                <div className="flex flex-col gap-3 my-auto">
                   <h1 className="text-lg font-bold">Step-1</h1>
                   <span>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
@@ -401,7 +398,29 @@ export default function Home() {
                     No more electricity and gas price hikes
                   </span>
                 </div>
-                <div className="flex flex-col gap-3 bg-white p-10  ">
+                <div>
+                  <Image
+                    src="/assets/images/fam1.jpg"
+                    width={100}
+                    height={100}
+                    alt="family-img1"
+                    className="w-full md:w-3/4 mx-auto"
+                    unoptimized
+                  ></Image>
+                </div>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2  gap-10 bg-white p-5 md:p-10">
+                <div>
+                  <Image
+                    src="/assets/images/fam2.jpg"
+                    width={100}
+                    height={100}
+                    alt="family-img2"
+                    className=" w-full md:w-3/4 mx-auto"
+                    unoptimized
+                  ></Image>
+                </div>
+                <div className="flex flex-col gap-3 my-auto">
                   <h1 className="text-lg font-bold">Step-2</h1>
                   <span>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
@@ -433,106 +452,129 @@ export default function Home() {
                   </span>
                 </div>
               </div>
-              <Link
-                href="/contact-us"
-                className="relative overflow-hidden p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white group priority-btn text-center font-bold my-5"
-              >
-                <span className="text relative z-10">
-                  Join Our Priority List Today
-                </span>
-                <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
-                  <ArrowForwardOutlinedIcon className="ml-2" />
-                </span>
-              </Link>
             </div>
+            <Link
+              href="/contact-us"
+              className="relative overflow-hidden p-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white group priority-btn text-center font-bold my-5 flex justify-center w-fit"
+            >
+              <span className="text relative z-10">
+                Join Our Priority List Today
+              </span>
+              <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </Link>
           </div>
-          <div className="w-full my-10">
-            <div className="container mx-auto">
-              <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">
-                Customer Packages
-              </h1>
-            </div>
-            <div className="w-full grid grid-cols-1 md:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
-              {packagesLoading
-                ? [1, 2, 3].map((_, index) => (
-                    <div
-                      key={index}
-                      className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full"
-                    >
-                      <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
-                        <Skeleton width={150} />
-                      </h1>
-                      {[...Array(7)].map((_, i) => (
-                        <p key={i}>
-                          <Skeleton width={200} />
-                        </p>
-                      ))}
-                    </div>
-                  ))
-                : packages.map((pkg) => (
-                    <div
-                      key={pkg._id}
-                      className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full"
-                    >
-                      <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
-                        {pkg.title}{" "}
-                        <span className="text-[22px]">{pkg.shortDesc}</span>
-                      </h1>
-                      {pkg.features.map((feature, index) => (
-                        <p key={index}>
-                          <VerifiedIcon className="mr-2 verified-icon" />
-                          {feature}
-                        </p>
-                      ))}
-                    </div>
+        </div>
+      </section>
+
+      <div className="container mx-auto">
+        <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">
+          Customer Packages
+        </h1>
+      </div>
+      <section className="w-full main-section py-20">
+        <div className="w-full  grid grid-cols-1 md:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
+          {packagesLoading
+            ? [1, 2, 3].map((_, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full"
+                >
+                  <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
+                    <Skeleton width={150} />
+                  </h1>
+                  {[...Array(7)].map((_, i) => (
+                    <p key={i}>
+                      <Skeleton width={200} />
+                    </p>
                   ))}
-            </div>
+                </div>
+              ))
+            : packages.map((pkg) => (
+                <div
+                  key={pkg._id}
+                  className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full"
+                >
+                  <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
+                    {pkg.title}{" "}
+                    <span className="text-[22px]">{pkg.shortDesc}</span>
+                  </h1>
+                  {pkg.features.map((feature, index) => (
+                    <p key={index}>
+                      <VerifiedIcon className="mr-2 verified-icon" />
+                      {feature}
+                    </p>
+                  ))}
+                </div>
+              ))}
+        </div>
+      </section>
+      <section className="w-full steps-inner-div p-10">
+        <div className="bg-white flex flex-col gap-5 container mx-auto p-5 md:p-10">
+          <h3 className="font-bold text-green text-xl">Note :</h3>
+          <p className="flex gap-2 justify-start items-start text-justify">
+            <img src="/assets/images/3-list.svg" alt="" />
+            Power Booster currently in product development, you will be put on a
+            priority list for installation and we will keep you updated.
+          </p>
+          <p className="flex gap-2 justify-start items-start text-justify">
+            <img src="/assets/images/2-list.svg" alt="" />2 Savings is based on
+            £58.80/month, an average UK household electricity cost of
+            £0.228/kWh, assuming the assets are paid over an 20-year payment
+            term.
+          </p>
+          <p className="flex gap-2 justify-start items-start text-justify">
+            <img src="/assets/images/1-list.svg" alt="" />
+            Projected lifetime savings are calculated on a fixed system price,
+            taking into account the Office for National Statistics' annual 7.3%
+            electricity bill increases over 20 years, alongside a 2% export
+            guarantee tariff rise with inflation. Actual savings may vary
+            depending on property features and market conditions.
+          </p>
+        </div>
+      </section>
+
+      <section className=" w-full  bg-green  py-10">
+        <div className="flex justify-center flex-col  items-center">
+          <div className="container mx-auto">
+            <h1 className="font-bold text-[35px] md:text-[50px] text-center text-white ">
+              Contact Us
+            </h1>
+            <h1 className="text-white text-center text-lg">
+              Feel free to contact us any time We will get back to you as soon
+              as we can!{" "}
+            </h1>
           </div>
-          <div className="  bg-green  py-10">
-            <div className="flex justify-center flex-col  items-center">
-              <div className="container mx-auto">
-                <h1 className="font-bold text-[35px] md:text-[50px] text-center text-white ">
-                  Contact Us
-                </h1>
-                <h1 className="text-white text-center text-lg">
-                  Feel free to contact us any time We will get back to you as
-                  soon as we can!{" "}
-                </h1>
-              </div>
-              <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-10 gap-5 ">
-                <div className="px-10">
-                  <ContactFormHome />
-                </div>
-                <div className="px-10 cotact-div-top-border  cotact-div-left-border  ">
-                  <div className="my-auto bg-white p-5 sm:p-10 flex flex-col gap-4 mt-5 rounded-md shadow-xl ">
-                    <h2 className="text-[22px] font-bold text-[#385723]">
-                      Info
-                    </h2>
-                    <h2 className="text-lg">
-                      <span>
-                        <MailOutlineIcon className="mr-2 text-green" />
-                      </span>
-                      info@homeecoearner.com
-                    </h2>
-                    <h2 className="text-lg">
-                      <span>
-                        <LocalPhoneOutlinedIcon className="mr-2 text-green" />
-                      </span>
-                      0203 286 5350
-                    </h2>
-                    <h2 className="text-lg">
-                      <span>
-                        <PlaceOutlinedIcon className="mr-2 text-green" />
-                      </span>
-                      2 Brunel Place, Slough, SL1 1FQ, UK
-                    </h2>
-                  </div>
-                </div>
+          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-10 gap-5 ">
+            <div className="px-10">
+              <ContactFormHome />
+            </div>
+            <div className="px-10 cotact-div-top-border  cotact-div-left-border  ">
+              <div className="my-auto bg-white p-5 sm:p-10 flex flex-col gap-4 mt-5 rounded-md shadow-xl ">
+                <h2 className="text-[22px] font-bold text-[#385723]">Info</h2>
+                <h2 className="text-lg">
+                  <span>
+                    <MailOutlineIcon className="mr-2 text-green" />
+                  </span>
+                  info@homeecoearner.com
+                </h2>
+                <h2 className="text-lg">
+                  <span>
+                    <LocalPhoneOutlinedIcon className="mr-2 text-green" />
+                  </span>
+                  0203 286 5350
+                </h2>
+                <h2 className="text-lg">
+                  <span>
+                    <PlaceOutlinedIcon className="mr-2 text-green" />
+                  </span>
+                  2 Brunel Place, Slough, SL1 1FQ, UK
+                </h2>
               </div>
             </div>
           </div>
         </div>
-
       </section>
     </main>
   );
