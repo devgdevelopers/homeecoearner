@@ -513,28 +513,32 @@ export default function Home() {
       <section className="w-full steps-inner-div p-10">
         <div className="bg-white flex flex-col gap-5 container mx-auto p-5 md:p-10">
           <h3 className="font-bold text-green text-xl">Note :</h3>
-          <p className="flex gap-2 justify-start items-start text-justify">
+          <span className="flex gap-2 justify-start items-start md:items-center text-justify">
             <img src="/assets/images/3-list.svg" alt="" />
+            <p className='my-auto'>
             Power Booster currently in product development, you will be put on a
             priority list for installation and we will keep you updated.
-          </p>
-          <p className="flex gap-2 justify-start items-start text-justify">
-            <img src="/assets/images/2-list.svg" alt="" />2 Savings is based on
+            </p>
+          </span>
+          <span className="flex gap-2 justify-start items-start text-justify">
+            <img src="/assets/images/2-list.svg" alt="" />
+            <p className='my-auto'>2 Savings is based on
             £58.80/month, an average UK household electricity cost of
             £0.228/kWh, assuming the assets are paid over an 20-year payment
-            term.
-          </p>
-          <p className="flex gap-2 justify-start items-start text-justify">
+            term.</p>
+          </span>
+          <span className="flex gap-2 justify-start items-start text-justify">
             <img src="/assets/images/1-list.svg" alt="" />
-            Projected lifetime savings are calculated on a fixed system price,
+           <p>
+           Projected lifetime savings are calculated on a fixed system price,
             taking into account the Office for National Statistics' annual 7.3%
             electricity bill increases over 20 years, alongside a 2% export
             guarantee tariff rise with inflation. Actual savings may vary
             depending on property features and market conditions.
-          </p>
+           </p>
+          </span>
         </div>
       </section>
-
       <section className=" w-full  bg-green  py-10">
         <div className="flex justify-center flex-col  items-center">
           <div className="container mx-auto">

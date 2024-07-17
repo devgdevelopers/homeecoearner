@@ -77,7 +77,7 @@ export default function Page() {
             <Link
               href="/"
               className={`navLink ${pathname === "/" ? "active " : ""}`}
-              passhref
+              passhref='true'
             >
               Home
             </Link>
@@ -87,7 +87,7 @@ export default function Page() {
             <Link
               href="/products"
               className={`navLink ${pathname === "/products" ? "active" : ""}`}
-              passhref
+              passhref='true'
             >
               Products
             </Link>
@@ -189,7 +189,7 @@ export default function Page() {
                   className= { ` text-dark font-semibold navLink  ${pathname === `${item.link}` ? "active" : ""}`}
                   href={item.link}
                   size="lg"
-                  passhref
+               passhref='true'
                 >
                   {item.page}
                 </Link>

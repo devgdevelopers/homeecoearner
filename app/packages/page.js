@@ -46,11 +46,7 @@ const page = () => {
       </section>
 
       <section className="w-full py-10 ">
-        <div className="container mx-auto">
-          <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">
-            Customer Packages
-          </h1>
-        </div>
+      
         <div className="w-full grid grid-cols-1 md:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
           {packagesLoading
             ? [1, 2, 3].map((_, index) => (
@@ -85,6 +81,35 @@ const page = () => {
                   ))}
                 </div>
               ))}
+        </div>
+      </section>
+      <section className="w-full steps-inner-div p-10">
+        <div className="bg-white flex flex-col gap-5 container mx-auto p-5 md:p-10">
+          <h3 className="font-bold text-green text-xl">Note :</h3>
+          <span className="flex gap-2 justify-start items-start md:items-center text-justify">
+            <img src="/assets/images/3-list.svg" alt="" />
+            <p className='my-auto'>
+            Power Booster currently in product development, you will be put on a
+            priority list for installation and we will keep you updated.
+            </p>
+          </span>
+          <span className="flex gap-2 justify-start items-start text-justify">
+            <img src="/assets/images/2-list.svg" alt="" />
+            <p className='my-auto'>2 Savings is based on
+            £58.80/month, an average UK household electricity cost of
+            £0.228/kWh, assuming the assets are paid over an 20-year payment
+            term.</p>
+          </span>
+          <span className="flex gap-2 justify-start items-start text-justify">
+            <img src="/assets/images/1-list.svg" alt="" />
+           <p>
+           Projected lifetime savings are calculated on a fixed system price,
+            taking into account the Office for National Statistics' annual 7.3%
+            electricity bill increases over 20 years, alongside a 2% export
+            guarantee tariff rise with inflation. Actual savings may vary
+            depending on property features and market conditions.
+           </p>
+          </span>
         </div>
       </section>
       <SignupNewsletter />
