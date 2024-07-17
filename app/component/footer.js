@@ -25,7 +25,7 @@ const footer = () => {
             UPGRADE AND EARN
           </h2>
         </div>
-        <div className="w-auto flex flex-col justify-start lg:pl-20">
+        <div className="w-auto flex flex-col justify-start lg:pl-10">
           <h3 className="mb-3 font-bold pl-3 text-center md:text-start">
             About
           </h3>
@@ -56,7 +56,7 @@ const footer = () => {
             </Link>
           </ul>
         </div>
-        <div className="flex flex-col justify-start lg:pl-20">
+        <div className="flex flex-col justify-start lg:pl-10">
           <h3 className="mb-3 font-bold pl-3 text-center md:text-start">
             Services
           </h3>
@@ -81,7 +81,7 @@ const footer = () => {
             </Link>
           </ul>
         </div>
-        <div className="flex flex-col justify-start lg:pl-20">
+        <div className="flex flex-col justify-start lg:pl-10">
           <h3 className="mb-3 font-bold pl-3 text-center md:text-start">
             Other
           </h3>
@@ -93,6 +93,7 @@ const footer = () => {
               How To Order
             </Link>
             <Link
+            
               href="/contact-us"
               className="footerLink text-center md:text-start"
             >
@@ -100,21 +101,27 @@ const footer = () => {
             </Link>
           </ul>
         </div>
-        <div className="flex flex-col justify-start gap-5 lg:pl-20 ">
-          <a
-            className="flex text-center md:text-start"
-            href="mailto:info@homeecoearner.com"
+        <div className="flex flex-col justify-start  lg:pl-2 ">
+        <h3 className="mb-3 font-bold  text-center md:text-start">
+            Contact
+          </h3>
+          <Link
+            
+           href="mailto:info@homeecoearner.com"
+            className=" text-center md:text-start"
           >
-            <strong>Email: </strong>{" "}
-            <span className="px-2">info@homeecoearner.com</span>
-          </a>
-          <a
+             <strong>E-mail:</strong>{" "}
+             <span className="px-2">info@homeecoearner.com</span>
+          </Link>
+          <Link
+            
             href="tel:0203 286 5350"
-            className="flex text-center md:text-start"
+            className=" text-center md:text-start"
           >
-            <strong>Contact: </strong>
-            <span className="px-2">0203 286 5350</span>
-          </a>
+             <strong>Mobile: </strong>
+             <span className="px-2">0203 286 5350</span>
+          </Link>
+        
         </div>
       </div>
 
