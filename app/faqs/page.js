@@ -338,9 +338,9 @@ const Page = () => {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
   const titleStyle = {
-    backgroundColor: "#F5F5F5",
+    backgroundColor: "#fff",
     color: "#005C15", // Change this to your desired background color
-    padding: "12px",
+    padding: "15px",
     fontWeight: "600",
     borderRadius: "5px",
     fontSize: "20px",

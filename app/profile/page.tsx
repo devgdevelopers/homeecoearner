@@ -159,7 +159,7 @@ export default function ProfilePage() {
         <div className="flex min-h-screen ">
             {/* Hamburger Menu */}
             <button
-                className="md:hidden p-4 font-semibold text-xl z-20 absolute   text-black "
+                className="2xl:hidden p-4 font-semibold text-xl z-20 absolute   text-black "
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             >
                 {isSidebarOpen ? <IoClose /> : <HiMenu />}
@@ -309,7 +309,7 @@ export default function ProfilePage() {
                     </div>
                 )}
 
-                <button
+                {/* <button
                     onClick={() => {
                         getUserDetails()
                         setIsSidebarOpen(!isSidebarOpen);
@@ -321,7 +321,7 @@ export default function ProfilePage() {
                         Get User Details
                     </div>
                     <FaAngleRight />
-                </button>
+                </button> */}
 
                 <button
                     onClick={handleLogout}

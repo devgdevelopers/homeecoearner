@@ -42,7 +42,7 @@ const page = () => {
                 Solar and Battery Systems!
               </article>
               <div className="w-full h-auto absolute bottom-3">
-                <Link href={`/news/1`} className="text-lg text-[#028921]">
+                <Link href={`/news/unleash-the-power-of-your-home`} className="text-lg text-[#028921]">
                   <button className="overflow-hidden py-1 w-fit rounded-[50px] gr_oup priority-btn">
                     <span className="text-[#15A135]   z-10 text-[20px] my-auto">
                       View More
@@ -72,7 +72,7 @@ const page = () => {
                 Energy Freedom At Your Fingertips!
               </article>
               <div className="w-full h-auto absolute bottom-3">
-                <Link href={`/news/2`} className="text-lg text-[#028921]">
+                <Link href={`/news/energy-freedom-at-your-fingertips`} className="text-lg text-[#028921]">
                   <button className="overflow-hidden py-1 w-fit rounded-[50px] gr_oup priority-btn">
                     <span className="text-[#15A135]   z-10 text-[20px] my-auto">
                       View More
