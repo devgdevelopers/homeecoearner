@@ -20,7 +20,7 @@ export async function POST(req) {
 
   let mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'as77468@gmail.com', // Replace with your email or recipient's email
+    to: 'nehasharma@digranknow.com', // Replace with your email or recipient's email
     subject: 'Message from Homeecoearner',
     text: `this message is sent by \n Username: ${name}\n Email: ${email}\n Message: ${message}` ,
   };

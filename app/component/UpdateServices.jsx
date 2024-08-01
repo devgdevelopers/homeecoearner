@@ -142,7 +142,7 @@ export default function UpdateServices() {
                                 {/* <img src={service.cardImg} alt="" className="object-cover h-48 w-full" /> */}
                                 <h2 className="text-xl font-semibold truncate w-auto my-5" dangerouslySetInnerHTML={{ __html: service.cardHeading }}></h2>
                                 <p className="text-gray-600">{service.cardSubHeading}</p>
-                                <div className='flex gap-3 flex justify-center'>
+                                <div className=' gap-3 flex justify-center'>
                                     <button onClick={() => deleteService(service._id)} className="bg-red-500 text-white rounded p-2 border border-red-500 hover:border-white">Delete</button>
                                     <button onClick={() => startEditing(service)} className="bg-green-500 text-white p-2 rounded border border-green-500 hover:border-white">Update</button>
                                 </div>
