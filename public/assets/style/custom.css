@@ -99,6 +99,7 @@
 
 .product-div {
   background: #F5F5F5;
+  width: 100%;
 
 }
 .product-div:hover {
@@ -107,7 +108,8 @@
  
   background-position: top  center;
   background-repeat: no-repeat;
-  background-color: white !important;
+ 
+  width: 100%;
 }
 
 /* .product-div:hover {
@@ -129,11 +131,12 @@
 }
 
 .main-banner {
-  background-image: url(/assets/images/banner.svg);
+  background-image: url(/assets/images/banner-2.svg);
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center;
   width: 100%;
   background-size: cover;
+  height: 80vh;
 
 }
 .mob-main-banner {

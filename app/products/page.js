@@ -35,7 +35,7 @@ const page = () => {
   }, []);
   return (
     <>
-      <div className="hidden product-page-bg min-h-[396px] md:flex justify-center">
+      <div className="hidden product-page-bg min-h-[396px] lg:flex justify-center">
         <h1 className="font-bold text-[35px] md:text-[60px] text-center text-white my-auto">
           All Products
         </h1>
@@ -44,7 +44,7 @@ const page = () => {
 
 
       {/* mob banner  */}
-      <div className="md:hidden product-page-bg-mob min-h-[310px] flex justify-center">
+      <div className="lg:hidden product-page-bg-mob min-h-[310px] flex justify-center">
         <h1 className="font-bold text-[35px] md:text-[60px] text-center text-white my-auto">
           All Products
         </h1>
@@ -52,7 +52,7 @@ const page = () => {
       </div>
 
       <section className="container mx-auto my-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 md:p-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-10 md:p-10">
           {productsLoading
             ? [1, 2, 3].map((_, index) => (
                 <div
@@ -79,7 +79,7 @@ const page = () => {
                     width={280}
                     height={280}
                     alt="productimg"
-                    className=" mx-auto my-auto min-w-[280px]"
+                    className=" mx-auto my-auto max-w-[280px]"
                   />
                  
                   </div>
