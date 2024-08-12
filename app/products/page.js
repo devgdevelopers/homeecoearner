@@ -35,12 +35,15 @@ const page = () => {
   }, []);
   return (
     <>
-      <div className="hidden product-page-bg min-h-[310px] md:flex justify-center">
+      <div className="hidden product-page-bg min-h-[396px] md:flex justify-center">
         <h1 className="font-bold text-[35px] md:text-[60px] text-center text-white my-auto">
           All Products
         </h1>
 
       </div>
+
+
+      {/* mob banner  */}
       <div className="md:hidden product-page-bg-mob min-h-[310px] flex justify-center">
         <h1 className="font-bold text-[35px] md:text-[60px] text-center text-white my-auto">
           All Products
@@ -80,10 +83,14 @@ const page = () => {
                   />
                  
                   </div>
-                  <h2
-                 className="text-[18px] md:text-[22px] text-[#385723] font-bold mt-2"
+                 <span
+                 className="font-bold text-[24px]  text-[#385723]  mt-2"
                  dangerouslySetInnerHTML={{ __html: product.cardHeading }}
                />
+               {/* <p>
+                {product.cardHeading}
+               </p> */}
+                
                   <h2
                  className="text-[18px]  text-black mt-2"
                  dangerouslySetInnerHTML={{ __html: product.cardSubHeading }}

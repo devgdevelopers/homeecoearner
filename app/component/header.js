@@ -41,7 +41,7 @@ export default function Page() {
       link: "/services",
     },
     {
-      page: "News",
+      page: "Blog",
       link: "/news",
     },
     {
@@ -56,7 +56,7 @@ export default function Page() {
 
   return (
     <>
-      <Navbar className="sticky top-0 hidden w-full mx-auto md:flex py-3 bg-white main-nav px-0 shadow-xl">
+      <Navbar className="sticky top-0 hidden w-full mx-auto lg:flex py-3 bg-white main-nav px-0 shadow-xl">
         <NavbarContent className="text-white flex justify-start">
           <NavbarBrand className="flex justify-start">
             <Link href="/">
@@ -113,7 +113,7 @@ export default function Page() {
               href="/news"
               className={`navLink ${pathname === "/news" ? "active " : ""}`}
             >
-              News
+              Blog
             </Link>
           </NavbarItem>
           <NavbarItem>
@@ -144,7 +144,7 @@ export default function Page() {
           </Link>
 
           <Link
-            href="tel:+(0)20 8133 3129"
+            href="/contact-us"
             className="text-sm bg-[#005C15] p-[3px] font-bold rounded-3xl text-[#022201] pr-4 contact-btn-head "
           >
             Contact Us
@@ -152,7 +152,7 @@ export default function Page() {
         </NavbarContent>
       </Navbar>
 
-      <Navbar className="sticky top-0 md:hidden py-2 flex bg-white z-[1000] shadow-xl">
+      <Navbar className="sticky top-0 lg:hidden py-2 flex bg-white z-[1000] shadow-xl">
         {/* Mobile Navbar */}
         <NavbarBrand>
           <Link href="/">
@@ -206,7 +206,7 @@ export default function Page() {
           </Link>
 
           <Link
-            href="tel:+(0)20 8133 3129"
+            href="/contact-us"
             className="text-sm bg-[#005C15] p-[3px] font-bold rounded-3xl text-[#022201] pr-4 contact-btn-head "
           >
             Contact Us

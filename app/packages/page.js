@@ -3,6 +3,7 @@ import VerifiedIcon from '@mui/icons-material/Verified';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { useState, useEffect } from "react";
+import Link from 'next/link';
 import SignupNewsletter from '../component/TalkAdvisor';
 
 const page = () => {
@@ -16,12 +17,11 @@ const page = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        // console.log('Fetched packages:', data);
-        setPackages(data.data); //  API returns { data: packagesArray }
+        setPackages(data.data); 
       } catch (error) {
         console.error('Error fetching packages:', error);
       } finally {
-        setPackagesLoading(false); // Ensure loading is set to false even if there is an error
+        setPackagesLoading(false); 
       }
     };
 
@@ -65,21 +65,28 @@ const page = () => {
                 </div>
               ))
             : packages.map((pkg) => (
-                <div
-                  key={pkg._id}
-                  className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full"
-                >
-                  <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
-                    {pkg.title} 
-                    <span className="text-[22px]">{pkg.shortDesc}</span>
-                  </h1>
-                  {pkg.features.map((feature, index) => (
-                    <p key={index}>
-                      <VerifiedIcon className="mr-2 verified-icon" />
-                      {feature}
-                    </p>
-                  ))}
-                </div>
+              <div
+              key={pkg._id}
+              className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full pb-20 relative"
+            >
+              <h1 className="text-[22px] lg:text-[30px] font-bold text-center my-3 text-green-dark">
+                {pkg.title}
+                <span className="text-[22px]">{pkg.shortDesc}</span>
+              </h1>
+              {pkg.features.map((feature, index) => (
+                  <p key={index}>
+                    <VerifiedIcon className="mr-2 verified-icon " />
+                    {feature}
+                  </p>
+                ))}
+            
+              <a
+                href="/contact-us"
+                className="absolute bg-green bottom-5 text-white px-4 py-2 rounded-full"
+              >
+                Get A Quote
+              </a>
+            </div>
               ))}
         </div>
       </section>
@@ -95,7 +102,7 @@ const page = () => {
           </span>
           <span className="flex gap-2 justify-start items-start text-justify">
             <img src="/assets/images/2-list.svg" alt="" />
-            <p className='my-auto'>2 Savings is based on
+            <p className='my-auto'> Savings is based on
             £58.80/month, an average UK household electricity cost of
             £0.228/kWh, assuming the assets are paid over an 20-year payment
             term.</p>

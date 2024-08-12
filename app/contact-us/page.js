@@ -23,7 +23,7 @@ const page = () => {
       </section>
 
       <section className="bg-[#F5F5F5] pt-10">
-        <div className="container mx-auto flex flex-col md:flex-row bg-white p-10">
+        <div className="container mx-auto flex flex-col md:flex-row bg-white md:p-10">
          
           <div className="w-[90%] mx-auto md:w-2/4 my-auto lg:px-10">
             <h1 className="text-[25px] py-4 text-green font-semibold"> Fill out the form with your details.</h1>
@@ -39,7 +39,7 @@ const page = () => {
       <section className="w-full  bg-[#F5F5F5]  py-10">
         <div className="container mx-auto bg-white flex justify-center flex-col  items-center">
           <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-10 gap-5 ">
-            <div className="px-10 my-auto">
+            <div className="md:px-10 my-auto">
               <div className="my-auto bg-white p-5 sm:p-10 flex flex-col gap-4 mt-5 ">
                 <h2 className="text-[25px] font-bold text-[#385723]">Info</h2>
                 <h2 className="text-lg">
@@ -62,7 +62,7 @@ const page = () => {
                 </h2>
               </div>
             </div>
-            <div className="px-10">
+            <div className="md:px-10">
               <div
                 className="mx-auto w-[90%] h-96 md:w-3/4"
                 style={{

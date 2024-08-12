@@ -103,8 +103,8 @@
 }
 .product-div:hover {
   background-image: url(/assets/images/yellow-bg-img.svg);
-  /* background-size: contain; */
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  background-size: auto;
+ 
   background-position: top  center;
   background-repeat: no-repeat;
   background-color: white !important;
@@ -145,9 +145,28 @@
 
   padding-bottom: 40px;
 }
-p {
-  font-size: 16px !important;
+ /* p {
+  font-size: 18px !important;
 }
+
+h1{
+  font-size: 48px;
+}
+h2{
+  font-size:36px;
+}
+h3{
+  font-size: 28px;
+}
+
+h4{
+  font-size: 24px;
+}
+
+h5{
+  font-size: 20px;
+}  */
+
 .bg-green{
    background-color: #15A135;
 }
@@ -269,22 +288,32 @@ p {
 
 
 
-.packages-div div{
+.packages-div div {
   background-color: #F5F5F5;
-  transition: 1s;
+  transition: background-color 1s, color 1s;
 }
-.packages-inner-div:hover{
+
+.packages-inner-div {
+  position: relative;
+}
+
+.packages-inner-div:hover {
   background-color: #15A135;
   color: white;
-  transition: 1s;
 }
 
-.packages-div div:hover h1,
-.packages-div div:hover p,
-.packages-div div:hover .verified-icon{
+.packages-inner-div:hover h1,
+.packages-inner-div:hover p,
+.packages-inner-div:hover .verified-icon {
   color: #F5F5F5;
-
 }
+
+.packages-inner-div:hover a {
+  color: #15A135;
+  background-color: #F5F5F5;
+}
+
+
 
 @media (max-width: 768px) {
   .cotact-div-top-border{
@@ -667,4 +696,19 @@ nav.z-40.h-auto.items-center.justify-center.data-\[menu-open\=true\]\:border-non
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+}
+
+.services-imgwrapper{
+  width: 400px;
+  overflow: hidden; 
+}
+
+.services-imgs:hover{
+transform: scale(1.1);
+transition: 2s;
+overflow: hidden;
+width: 400px;
+}
+.banner-header{
+line-height: 78px;
 }

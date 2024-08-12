@@ -135,16 +135,16 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center overflow-hidden relative top-0 left-0 w-full">
       {/* banner section */}
-      <section className=" hidden md:flex main-banner w-full h-[690px] overflow-hidden flex-col justify-end  ">
-        <div className=" container mx-auto my-auto z-10 flex md:flex-row flex-col">
-          <div className="flex flex-col w-1/2 justify-start gap-6">
-            <h1 className="text-4xl lg:text-7xl  text-white font-bold ">
+      <section className=" hidden lg:flex main-banner w-full min-h-[690px] overflow-hidden flex-col justify-end  ">
+        <div className=" container mx-auto my-auto z-10 flex lg:flex-row flex-col">
+          <div className="flex flex-col w-full lg:w-1/2 justify-start gap-6">
+            <h1 className=" lg:text-[78px] text-[48px]   text-white font-bold banner-header ">
               Home EcoEarner <br /> Power System
             </h1>
-            <span className="text-[23px] text-white ">
-              Ready to get your electricity costs under control <br /> and give
-              your self the chance to transform your <br /> costs into income?
-            </span>
+            <p className="text-[23px] text-white ">
+              Ready to get your electricity costs under control and give your
+              self <br /> the chance to transform your costs into income?
+            </p>
             <Slider {...verticalSlider}>
               <div className="carousel-item">
                 <h3 className="text-3xl font-bold text-white">
@@ -178,7 +178,7 @@ export default function Home() {
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
             <div className="w-3/4  flex justify-end">
-              <Slider {...settings} className="w-3/4  image-slider">
+              <Slider {...settings} className="w-3/4 xl:w-5/6  image-slider">
                 <div className="carousel-item mx-auto overflow-hidden">
                   <div className="text-center flex justify-end items-center">
                     <Image
@@ -188,6 +188,7 @@ export default function Home() {
                       alt="product image"
                       unoptimized
                     ></Image>
+                    🤞
                   </div>
                 </div>
                 <div className="carousel-item flex justify-end items-center">
@@ -220,16 +221,16 @@ export default function Home() {
       </section>
 
       {/* mobile view banner  */}
-      <section className="flex md:hidden mob-main-banner w-full h-[690px] overflow-hidden">
+      <section className="flex lg:hidden mob-main-banner w-full min-h-[690px] overflow-hidden">
         <div className=" w-5/6 mx-auto my-auto z-10 flex flex-col gap-10">
-          <div className=" flex flex-col gap-5 ">
+          <div className=" flex flex-col gap-5 p-10">
             <h1 className="text-4xl   text-white font-bold ">
-              Home EcoEarner <br /> Power System
+              Home EcoEarner <br className="hidden lg:block" /> Power System
             </h1>
-            <span className="text-[16px] text-white ">
+            <p className=" text-white ">
               Ready to get your electricity costs under control and give your
               self the chance to transform your costs into income?
-            </span>
+            </p>
             <Slider {...verticalSlider}>
               <div className="carousel-item">
                 <h3 className="text-[24px] font-bold text-white">
@@ -307,7 +308,7 @@ export default function Home() {
         <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 md:my-10">
           Our Products
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 md:p-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-10 md:p-10">
           {productsLoading
             ? [1, 2, 3].map((_, index) => (
                 <div
@@ -336,10 +337,10 @@ export default function Home() {
                     />
                   </div>
                   <div className="flex justify-center flex-col items-center">
-                    <h2
-                      className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10"
-                      dangerouslySetInnerHTML={{ __html: product.cardHeading }}
-                    />
+                  <span
+                 className="font-bold text-[24px]  text-[#385723]  mt-2"
+                 dangerouslySetInnerHTML={{ __html: product.cardHeading }}
+               />
                     <Link
                       href={`/products/${product._id}`}
                       className="text-lg text-[#028921]"
@@ -368,35 +369,35 @@ export default function Home() {
           <div className="p-5">
             <h1 className="text-xl xl:text-5xl text-green font-semibold text-left my-1 px-4 md:px-10">
               For our Home EcoEarner Power System today{" "}
-              <br className="hidden md:flex" /> and experience the future of
+              <br className="hidden lg:flex" /> and experience the future of
               renewable energy.
             </h1>
-            <p className="text-left text-[18px] py-4 px-4 md:px-10">
+            <p className="text-left  py-4 px-4 md:px-10">
               Experience the future of renewable energy today with our Home
               EcoEarner Power System, designed to
               <br className="hidden md:flex" />
               seamlessly integrate sustainable power solutions into your home.
             </p>
             <div className="w-full grid  md:p-10 gap-10">
-              <div className="grid grid-cols-1 md:grid-cols-2  gap-10 bg-white p-5 md:p-10 ">
+              <div className="grid grid-cols-1 lg:grid-cols-2  gap-10 bg-white p-5 md:p-10 ">
                 <div className="flex flex-col gap-3 my-auto">
                   <h1 className="text-lg font-bold">Step-1</h1>
-                  <span>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     Get your energy costs under control
-                  </span>
-                  <span>
+                  </p>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     No up-front cost
-                  </span>
-                  <span>
+                  </p>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     No more gas and electricity bills
-                  </span>
-                  <span>
+                  </p>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     No more electricity and gas price hikes
-                  </span>
+                  </p>
                 </div>
                 <div>
                   <Image
@@ -409,7 +410,7 @@ export default function Home() {
                   ></Image>
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2  gap-10 bg-white p-5 md:p-10">
+              <div className="grid grid-cols-1 lg:grid-cols-2  gap-10 bg-white p-5 md:p-10">
                 <div>
                   <Image
                     src="/assets/images/fam2.jpg"
@@ -422,34 +423,34 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-3 my-auto">
                   <h1 className="text-lg font-bold">Step-2</h1>
-                  <span>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     Line yourself up for cost-free access to our new
                     technologies as they come to market
-                  </span>
-                  <span>
+                  </p>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     We promise to install our Home EcoEarner Power Booster upon
                     release.
-                  </span>
-                  <span>
+                  </p>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     You pay nothing upfront.
-                  </span>
-                  <span>
+                  </p>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     We buy excess electricity from you, putting money back into
                     your pocket.
-                  </span>
-                  <span>
+                  </p>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     Say goodbye to out-of-pocket expenses.
-                  </span>
-                  <span>
+                  </p>
+                  <p>
                     <CheckCircleOutlineIcon className="mr-2 text-[#385723]" />
                     And when possible, we pay you instead of the other way
                     around.
-                  </span>
+                  </p>
                 </div>
               </div>
             </div>
@@ -468,74 +469,85 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="container mx-auto">
+      <div className="w-full bg-[#ccedd9]">
         <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">
           Customer Packages
         </h1>
       </div>
-      <section className="w-full main-section py-20">
-        <div className="w-full  grid grid-cols-1 md:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
-          {packagesLoading
-            ? [1, 2, 3].map((_, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full"
-                >
-                  <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
-                    <Skeleton width={150} />
-                  </h1>
-                  {[...Array(7)].map((_, i) => (
-                    <p key={i}>
-                      <Skeleton width={200} />
-                    </p>
-                  ))}
-                </div>
-              ))
-            : packages.map((pkg) => (
-                <div
-                  key={pkg._id}
-                  className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full"
-                >
-                  <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
-                    {pkg.title}{" "}
-                    <span className="text-[22px]">{pkg.shortDesc}</span>
-                  </h1>
-                  {pkg.features.map((feature, index) => (
-                    <p key={index}>
-                      <VerifiedIcon className="mr-2 verified-icon" />
-                      {feature}
-                    </p>
-                  ))}
-                </div>
+      <section className="w-full main-section py-2 lg:py-20">
+      <section className="w-full py-10 ">
+      
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
+        {packagesLoading
+          ? [1, 2, 3].map((_, index) => (
+              <div
+                key={index}
+                className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full"
+              >
+                <h1 className="text-[30px] font-bold text-center my-3 text-green-dark">
+                  <Skeleton width={150} />
+                </h1>
+                {[...Array(7)].map((_, i) => (
+                  <p key={i}>
+                    <Skeleton width={200} />
+                  </p>
+                ))}
+              </div>
+            ))
+          : packages.map((pkg) => (
+            <div
+            key={pkg._id}
+            className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full pb-20 relative"
+          >
+            <h1 className="text-[22px] lg:text-[30px] font-bold text-center my-3 text-green-dark">
+              {pkg.title}
+              <span className="text-[22px]">{pkg.shortDesc}</span>
+            </h1>
+            {pkg.features.map((feature, index) => (
+                <p key={index}>
+                  <VerifiedIcon className="mr-2 verified-icon " />
+                  {feature}
+                </p>
               ))}
-        </div>
+          
+            <a
+              href="/contact-us"
+              className="absolute bg-green bottom-5 text-white px-4 py-2 rounded-full"
+            >
+              Get A Quote
+            </a>
+          </div>
+            ))}
+      </div>
+    </section>
       </section>
-      <section className="w-full steps-inner-div p-10">
+      <section className="w-full steps-inner-div p-2 lg:p-10">
         <div className="bg-white flex flex-col gap-5 container mx-auto p-5 md:p-10">
           <h3 className="font-bold text-green text-xl">Note :</h3>
           <span className="flex gap-2 justify-start items-start md:items-center text-justify">
             <img src="/assets/images/3-list.svg" alt="" />
-            <p className='my-auto'>
-            Power Booster currently in product development, you will be put on a
-            priority list for installation and we will keep you updated.
+            <p className="my-auto">
+              Power Booster currently in product development, you will be put on
+              a priority list for installation and we will keep you updated.
             </p>
           </span>
           <span className="flex gap-2 justify-start items-start text-justify">
             <img src="/assets/images/2-list.svg" alt="" />
-            <p className='my-auto'>2 Savings is based on
-            £58.80/month, an average UK household electricity cost of
-            £0.228/kWh, assuming the assets are paid over an 20-year payment
-            term.</p>
+            <p className="my-auto">
+              Savings is based on £58.80/month, an average UK household
+              electricity cost of £0.228/kWh, assuming the assets are paid over
+              an 20-year payment term.
+            </p>
           </span>
           <span className="flex gap-2 justify-start items-start text-justify">
             <img src="/assets/images/1-list.svg" alt="" />
-           <p>
-           Projected lifetime savings are calculated on a fixed system price,
-            taking into account the Office for National Statistics' annual 7.3%
-            electricity bill increases over 20 years, alongside a 2% export
-            guarantee tariff rise with inflation. Actual savings may vary
-            depending on property features and market conditions.
-           </p>
+            <p>
+              Projected lifetime savings are calculated on a fixed system price,
+              taking into account the Office for National Statistics' annual
+              7.3% electricity bill increases over 20 years, alongside a 2%
+              export guarantee tariff rise with inflation. Actual savings may
+              vary depending on property features and market conditions.
+            </p>
           </span>
         </div>
       </section>

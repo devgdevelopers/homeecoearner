@@ -9,7 +9,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const footer = () => {
   return (
     <section className="w-full flex flex-col footer-section ">
-      <div className="container mx-auto grid grid-cols-1 grid-flow-row md:grid-cols-5 p-5 gap-5 py-10">
+      <div className="container mx-auto grid grid-cols-2 grid-flow-row lg:grid-cols-5 p-5 gap-5 py-10">
         <div className="flex flex-col gap-3">
           <Image
             src="/assets/images/logo-final.svg"
@@ -19,16 +19,16 @@ const footer = () => {
             alt="logo"
             unoptimized
           ></Image>
-          <h2 className="mb-3 font-bold text-center md:text-start">
+          <p className="mb-3 font-bold text-center md:text-start text-[#345828]">
             INSTALL AND SAVE
             <br />
             UPGRADE AND EARN
-          </h2>
+          </p>
         </div>
         <div className="w-auto flex flex-col justify-start lg:pl-10">
-          <h3 className="mb-3 font-bold pl-3 text-center md:text-start">
+          <h5 className="mb-3 font-bold pl-3 text-center md:text-start text-green">
             About
-          </h3>
+          </h5>
           <ul className="flex flex-col gap-2 font-medium">
             <Link
               href="/about"
@@ -37,7 +37,7 @@ const footer = () => {
               History
             </Link>
             <Link
-              href="/about"
+              href="/team"
               className="footerLink text-center md:text-start"
             >
               Our Team
@@ -56,10 +56,10 @@ const footer = () => {
             </Link>
           </ul>
         </div>
-        <div className="flex flex-col justify-start lg:pl-10">
-          <h3 className="mb-3 font-bold pl-3 text-center md:text-start">
+        <div className="flex flex-col justify-start lg:pl-2">
+          <h5 className="mb-3 font-bold pl-3 text-center md:text-start text-green">
             Services
-          </h3>
+          </h5>
           <ul className="flex flex-col gap-2">
             <Link
               href="/products"
@@ -81,10 +81,10 @@ const footer = () => {
             </Link>
           </ul>
         </div>
-        <div className="flex flex-col justify-start lg:pl-10">
-          <h3 className="mb-3 font-bold pl-3 text-center md:text-start">
+        <div className="flex flex-col justify-start lg:pl-2">
+          <h5 className="mb-3 font-bold pl-3 text-center md:text-start text-green">
             Other
-          </h3>
+          </h5>
           <ul className="flex flex-col gap-2">
             <Link
               href="/services"
@@ -102,9 +102,9 @@ const footer = () => {
           </ul>
         </div>
         <div className="flex flex-col justify-start  lg:pl-2 ">
-        <h3 className="mb-3 font-bold  text-center md:text-start">
+        <h5 className="mb-3 font-bold  text-center md:text-start text-green">
             Contact
-          </h3>
+          </h5>
           <Link
             
            href="mailto:info@homeecoearner.com"

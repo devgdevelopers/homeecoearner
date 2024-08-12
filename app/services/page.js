@@ -71,16 +71,19 @@ const Page = () => {
                   className="text-[25px] md:text-[50px] text-green font-extrabold text-center my-2 md:my-8"
                   dangerouslySetInnerHTML={{ __html: service.cardHeading }}
                 />
-                <div className="grid gap-0 justify-center grid-flow-col">
+                <div className="grid gap-0 justify-center grid-flow-row lg:grid-flow-col overflow-hidden image">
                   {service?.images.map((img, id) => (
-                    <Image
+                   <div className="services-imgwrapper">
+                     <Image
                       src={img}
                       width={200}
                       height={100}
                       alt={`services-grid-${id}`}
-                      className="w-[400px]"
+                      className="w-[400px] services-imgs"
                       key={id}
+                      unoptimized
                     />
+                   </div>
                   ))}
                 </div>
                 <div className="mx-auto w-5/6 flex justify-center flex-col gap-3 md:px-10 py-6">

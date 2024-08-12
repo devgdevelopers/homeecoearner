@@ -191,11 +191,11 @@ const page = () => {
             <h1 className="text-center text-[#FFB800] text-5xl mb-2">
               {" "}
               <strong>
-                <Counter start={0} end={10} />{" "}
+                <Counter start={0} end={50} />{" "}
               </strong>{" "}
             </h1>
             <h2 className="text-[#385723] text-[25px] text-center font-bold">
-              Years of Experience
+             Years of team experience
             </h2>
             <p className="text-black text-center">
               Benefit from our extensive expertise in delivering reliable
@@ -220,52 +220,7 @@ const page = () => {
         </div>
       </section>
 
-      {/* ourteam */}
-      <section className="w-full team-bg-section py-20 flex flex-col gap-9">
-        <div className="mb-[111px]">
-          <h1 className="text-center text-[30px] md:text-[50px] font-extrabold text-white">
-            Our Team
-          </h1>
-        </div>
-        <div className="container mx-auto flex flex-col md:flex-row justify-center items-center gap-32 md:gap-20 ">
-          <div className="bg-white w-[90%] md:w-1/2 xl:w-1/3 py-10 pb-20 rounded mx-auto">
-            <img
-              src="/assets/images/david.svg"
-              className="w-[170px] rounded-full -mt-[150px] mx-auto"
-              alt=""
-            />
-            <h3 className="text-[25px] font-bold text-center my-5 text-[#385723]">
-              David Sheldon
-            </h3>
-            <h4 className=" px-10 text-[#525C60] text-[19px] font-medium ">
-              Co-Founder / Business Development Director - Home EcoEarner Ltd.
-              30 years’ experience establishing businesses and arranging asset
-              finance in the transport and renewable energy sectors. Accounting,
-              Tax, Corporate advisory, Investment Banking, Asset finance /
-              Leasing, Renewable energy, Solar, Wind, Nuclear.
-            </h4>
-          </div>
-
-          <div className="bg-white w-[90%] md:w-1/2 xl:w-1/3 py-10 pb-20 rounded mx-auto">
-            <img
-              src="/assets/images/rory.svg"
-              className="w-[170px] rounded-full -mt-[150px] mx-auto"
-              alt=""
-            />
-            <h3 className="text-[25px] font-bold text-center my-5 text-[#385723]">
-              Rory Tait
-            </h3>
-            <h4 className=" px-10 text-[#525C60] text-[19px] font-medium">
-              Co-Founder / Director - Home EcoEarner Ltd, Secretary Association
-              for Renewable Energy and Clean Technology (REA), Head of
-              Renewables, Prospect Law. Former solicitor, 30 years’ experience
-              advising companies active in the energy sector, from developers of
-              projects through to network operators on a wide range of clean
-              energy technologies.
-            </h4>
-          </div>
-        </div>
-      </section>
+    
 
       {/* testimonial */}
       <section className="py-20">
@@ -281,21 +236,20 @@ const page = () => {
           <div className=" w-full grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="bg_test  flex flex-col justify-center gap-4 items-start pt-16 px-10 py-auto">
               <h3 className="text-[#525C60] text-[19px] font-medium">
-                I was very impresed by the new company service lorem ipsum is
-                simply free text used by copytyping refreshing. Neque porro est
-                qui dolor ipsum quia.
+              Generating our own electricity for over a year has been amazing. No more bills, no price hikes, and we're even earning from our excess power. It's a win for us and the planet.
               </h3>
               <div className="flex gap-3 items-center">
                 <Image
-                  src="/assets/images/Ellipse 32.svg"
+                  src="/assets/images/testi4.png"
                   alt="img"
                   width={1}
                   height={1}
-                  className="w-[49px] h-[49px]"
+                  className="w-[49px] h-[49px] rounded-full object-cover"
+                  unoptimized
                 />
                 <div className="flex flex-col justify-start ">
                   <h3 className="text-[#525C60] text-[22px] font-bold">
-                    Sarah Albert
+                  David K.
                   </h3>
                   <p className="text-[#525C60] text-[14px] font-medium">
                     Customer
@@ -305,21 +259,19 @@ const page = () => {
             </div>
             <div className="bg_test flex flex-col justify-center gap-4 items-start pt-16 px-10 py-auto">
               <h3 className="text-[#525C60] text-[19px] font-medium">
-                I was very impresed by the new company service lorem ipsum is
-                simply free text used by copytyping refreshing. Neque porro est
-                qui dolor ipsum quia.
+              Thanks to this service, we've freed ourselves from rising prices with no upfront cost. Generating our own electricity brings financial relief and helps the environment.
               </h3>
               <div className="flex gap-3 items-center">
                 <Image
-                  src="/assets/images/Ellipse 32.svg"
+                  src="/assets/images/Screenshot_3.png"
                   alt="img"
-                  width={1}
-                  height={1}
-                  className="w-[49px] h-[49px]"
+                  width={49}
+                  height={49}
+                  className="min-w-[49px] min-h-[49px] object-cover rounded-full"
                 />
                 <div className="flex flex-col justify-start ">
                   <h3 className="text-[#525C60] text-[22px] font-bold">
-                    Sarah Albert
+                  Emma T.
                   </h3>
                   <p className="text-[#525C60] text-[14px] font-medium">
                     Customer
@@ -329,9 +281,7 @@ const page = () => {
             </div>
             <div className="bg_test flex flex-col justify-center gap-4 items-start pt-16 px-10 py-auto">
               <h3 className="text-[#525C60] text-[19px] font-medium">
-                I was very impresed by the new company service lorem ipsum is
-                simply free text used by copytyping refreshing. Neque porro est
-                qui dolor ipsum quia.
+              Switching to home electricity generation changed everything. We eliminated our bills and now earn extra income each month. It feels great to be part of a greener future.
               </h3>
               <div className="flex gap-3 items-center">
                 <Image
@@ -339,11 +289,11 @@ const page = () => {
                   alt="img"
                   width={1}
                   height={1}
-                  className="w-[49px] h-[49px]"
+                  className="w-[49px] h-[49px] object-cover"
                 />
                 <div className="flex flex-col justify-start ">
                   <h3 className="text-[#525C60] text-[22px] font-bold">
-                    Sarah Albert
+                  Sarah L.
                   </h3>
                   <p className="text-[#525C60] text-[14px] font-medium">
                     Customer
