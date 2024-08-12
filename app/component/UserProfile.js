@@ -52,7 +52,7 @@ const UserProfile = () => {
     <>
       <section className="bg-green">
         <div className="container mx-auto" key={product._id}>
-          <div className="flex flex-col md:flex-row py-10 ">
+          <div className="flex flex-col md:flex-row py-10 gap-10">
             <div className="flex justify-center items-center w-full md:w-[40%] ">
               <div className="product-img-bg w-[360px] h-[330px] p-10 my-auto flex">
                 <Image
@@ -64,17 +64,17 @@ const UserProfile = () => {
                 />
               </div>
             </div>
-            <div className="w-[90%] md:w-[60%] flex justify-center gap-5 flex-col mx-auto text-center md:text-left">
-              <h3
-                className="text-4xl md:text-[60px] font-extrabold text-white"
+            <div className="w-[90%] md:w-[60%] flex justify-center gap-2 flex-col mx-auto text-center md:text-left ">
+              <span
+                className="text-[36px] lg:text-[52px] font-extrabold text-white"
                 dangerouslySetInnerHTML={{ __html: product.cardHeading }}
               />
-              <h3
-                className="text-xl md:text-[25px] font-extrabold text-white"
+              <span
+                className="text-[20px] md:text-[25px] font-extrabold text-white"
                 dangerouslySetInnerHTML={{ __html: product.cardSubHeading }}
               />
-              <h3
-                className="text-[20px] text-white"
+              <span
+                className="text-[18px] text-white"
                 dangerouslySetInnerHTML={{ __html: product.shortDesc }}
               />
             </div>
@@ -104,7 +104,7 @@ const UserProfile = () => {
           height={100}
           src={image}
           alt={`Image ${index + 1}`}
-          className="mx-auto  min-w-full md:min-w-[450px]"
+          className="mx-auto  min-w-full md:min-w-fulll"
         />
       ) : null // If image is null or undefined, do not render
     ))

@@ -117,7 +117,7 @@ export default function Page() {
               href="/news"
               className={`navLink ${pathname === "/news" ? "active " : ""}`}
             >
-              Blog
+              Blogs
             </Link>
           </NavbarItem>
           <NavbarItem>
@@ -146,7 +146,7 @@ export default function Page() {
           </NavbarItem>
         </NavbarContent>
 
-        <NavbarContent className="hidden xl:flex gap-2 justify-end">
+        <NavbarContent className="hidden 2xl:flex gap-2 justify-end ">
           <Link
             href="tel:+44 (0)20 8133 3129"
             className="call-btn-head rounded-3xl "

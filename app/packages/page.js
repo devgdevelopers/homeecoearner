@@ -47,7 +47,7 @@ const page = () => {
 
       <section className="w-full py-10 ">
       
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
           {packagesLoading
             ? [1, 2, 3].map((_, index) => (
                 <div

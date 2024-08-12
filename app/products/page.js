@@ -52,7 +52,7 @@ const page = () => {
       </div>
 
       <section className="container mx-auto my-10">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-10 md:p-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 px-10 md:p-10">
           {productsLoading
             ? [1, 2, 3].map((_, index) => (
                 <div
@@ -73,7 +73,7 @@ const page = () => {
                   key={product._id}
                   className="  w-full  flex flex-col "
                 >
-                  <div className="product-div p-10 w-full md:min-w-[380px] h-[380px] flex justify-center">
+                  <div className="product-div p-10 w-full min-w-[250px] lg:min-w-[380px] h-[380px] flex justify-center">
                   <Image
                     src={product.cardImg}
                     width={280}

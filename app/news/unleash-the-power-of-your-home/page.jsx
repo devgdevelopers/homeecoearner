@@ -6,7 +6,7 @@ const page = () => {
   return (
     <>
       <section className=" w-full">
-      <div className="container mx-auto flex flex-col md:flex-row items-center pt-16 pb-16">
+      <div className="container mx-auto flex flex-col lg:flex-row items-center pt-16 pb-16">
       <div className="w-[90%] md:w-2/3 gap-7 flex flex-col mx-auto">
           <h1 className="text-xl lg:text-[50px] font-extrabold text-[#15A135] leading-tight">
             Unleash the Power of Your Home: Turn Sunshine into Cash with Solar

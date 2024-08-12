@@ -31,7 +31,7 @@ const page = () => {
         <div className="container mx-auto flex flex-col md:flex-row gap-5 justify-center items-center">
           <div className="w-3/4 md:w-1/2 ">
             <Image
-              src="/assets/images/Group 951.svg"
+              src="/assets/images/abotu-usimg.svg"
               alt="img"
               width={1}
               height={1}
@@ -45,7 +45,7 @@ const page = () => {
             <h1 className="text-[#15A135] text-3xl md:text-[50px] font-extrabold leading-tight">
               Reshaping Energy for the Future
             </h1>
-            <p className="text-[#525C60] text-[19px] font-medium">
+            <p className="text-[#525C60]  font-medium">
               Our Ecological Way is dedicated to reshaping energy for the future
               through sustainable practices and innovative technologies. Join us
               in creating a greener, more sustainable world.
@@ -62,7 +62,7 @@ const page = () => {
                 <h3 className="text-[#385723] text-base md:text-[22px] font-bold">
                   Reduce Your Daily Energy Use
                 </h3>
-                <p className="text-[#525C60] text-[19px] font-medium">
+                <p className="text-[#525C60]  font-medium">
                   Cut down on your energy consumption with our advanced
                   solutions designed to optimise efficiency and reduce costs.
                 </p>
@@ -78,7 +78,7 @@ const page = () => {
                 <h3 className="text-[#385723] text-base md:text-[22px] font-bold">
                   The Most Used Energy Systems
                 </h3>
-                <p className="text-[#525C60] text-[19px] font-medium">
+                <p className="text-[#525C60]  font-medium">
                   Explore the top energy systems utilised worldwide, known for
                   their reliability, efficiency, and sustainable benefits.
                 </p>
@@ -128,31 +128,31 @@ const page = () => {
             <h3 className="text-[#385723] text-[25px] font-bold ">
               So they can
             </h3>
-            <h4 className="text-[#525C60] text-[20px] font-medium">
+            <p className="text-[#525C60]  font-medium">
               <CheckCircleOutlineIcon className="text-[#028921] mr-2" />
               Generate their own electricity.
-            </h4>
-            <h4 className="text-[#525C60] text-[20px] font-medium">
+            </p>
+            <p className="text-[#525C60]  font-medium">
               <CheckCircleOutlineIcon className="text-[#028921] mr-2" />
               Free themselves from electricity bills.
-            </h4>
-            <h4 className="text-[#525C60] text-[20px] font-medium">
+            </p>
+            <p className="text-[#525C60]  font-medium">
               <CheckCircleOutlineIcon className="text-[#028921] mr-2" />
               Free themselves from future electricity price increases.
-            </h4>
-            <h4 className="text-[#525C60] text-[20px] font-medium">
+            </p>
+            <p className="text-[#525C60]  font-medium">
               <CheckCircleOutlineIcon className="text-[#028921] mr-2" />
               Potentially earn a meaningful income from their home electricity
               generation.
-            </h4>
-            <h4 className="text-[#525C60] text-[20px] font-medium">
+            </p>
+            <p className="text-[#525C60]  font-medium">
               <CheckCircleOutlineIcon className="text-[#028921] mr-2" />
               All with no up-front cost.
-            </h4>
-            <h4 className="text-[#525C60] text-[20px] font-medium">
+            </p>
+            <p className="text-[#525C60]  font-medium">
               <CheckCircleOutlineIcon className="text-[#028921] mr-2" />
               While doing their bit to help the planet get to Net Zero.
-            </h4>
+            </p>
           </div>
         </div>
       </section>
@@ -235,9 +235,9 @@ const page = () => {
           </div>
           <div className=" w-full grid grid-cols-1 md:grid-cols-3 gap-5">
             <div className="bg_test  flex flex-col justify-center gap-4 items-start pt-16 px-10 py-auto">
-              <h3 className="text-[#525C60] text-[19px] font-medium">
+              <p className="text-[#525C60]  font-medium">
               Generating our own electricity for over a year has been amazing. No more bills, no price hikes, and we're even earning from our excess power. It's a win for us and the planet.
-              </h3>
+              </p>
               <div className="flex gap-3 items-center">
                 <Image
                   src="/assets/images/testi4.png"
@@ -258,9 +258,9 @@ const page = () => {
               </div>
             </div>
             <div className="bg_test flex flex-col justify-center gap-4 items-start pt-16 px-10 py-auto">
-              <h3 className="text-[#525C60] text-[19px] font-medium">
+              <p className="text-[#525C60] font-medium">
               Thanks to this service, we've freed ourselves from rising prices with no upfront cost. Generating our own electricity brings financial relief and helps the environment.
-              </h3>
+              </p>
               <div className="flex gap-3 items-center">
                 <Image
                   src="/assets/images/Screenshot_3.png"
@@ -280,9 +280,9 @@ const page = () => {
               </div>
             </div>
             <div className="bg_test flex flex-col justify-center gap-4 items-start pt-16 px-10 py-auto">
-              <h3 className="text-[#525C60] text-[19px] font-medium">
+              <p className="text-[#525C60] font-medium">
               Switching to home electricity generation changed everything. We eliminated our bills and now earn extra income each month. It feels great to be part of a greener future.
-              </h3>
+              </p>
               <div className="flex gap-3 items-center">
                 <Image
                   src="/assets/images/Ellipse 32.svg"

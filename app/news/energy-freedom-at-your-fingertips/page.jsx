@@ -5,8 +5,8 @@ const page = () => {
   return (
     <>
       <section className=" w-full  flex ">
-        <div className="container mx-auto flex flex-col md:flex-row py-10">
-          <div className="w-full md:w-1/2 gap-7 flex flex-col  justify-center p-3">
+        <div className="container mx-auto flex flex-col lg:flex-row py-10">
+          <div className="w-full lg:w-1/2 gap-7 flex flex-col  justify-center p-3">
             <h1 className="text-xl md:text-[50px] font-extrabold text-[#15A135] leading-tight ">
               Energy Freedom at Your Fingertips!
             </h1>
@@ -21,7 +21,7 @@ const page = () => {
               Look no further!
             </p>
           </div>
-          <div className="w-full md:w-1/2 ">
+          <div className="w-full lg:w-1/2 ">
             <Image
               width={1}
               height={1}

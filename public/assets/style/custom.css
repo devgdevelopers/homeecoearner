@@ -139,10 +139,18 @@
   height: 80vh;
 
 }
-.mob-main-banner {
-  background-image: url(/assets/images/mobile-banner-home.svg);
+.tab-banner{
+  background-image: url(/assets/images/tab-banner.svg);
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  height: auto;
+}
+.mob-main-banner {
+  background-image: url(/assets/images/mob-banner.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   background-size: cover;
 
@@ -712,6 +720,12 @@ transition: 2s;
 overflow: hidden;
 width: 400px;
 }
+
+
 .banner-header{
 line-height: 78px;
+}
+
+@media (min-width: 640px) {
+
 }

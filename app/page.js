@@ -42,29 +42,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
   arrows: false,
   dots: true,
 
-  responsive: [
-  {
-  breakpoint: 1424,
-  settings: {
-  slidesToShow: 3,
-  centerPadding: "30px",
-  },
-  },
-  {
-  breakpoint: 900,
-  settings: {
-  slidesToShow: 1,
-  centerPadding: "20px",
-  },
-  },
-  {
-  breakpoint: 600,
-  settings: {
-  slidesToShow: 1,
-  centerPadding: "10px",
-  },
-  },
-  ],
+ 
   };
 
   const verticalSlider = {
@@ -129,15 +107,15 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
   return (
   <main className="flex min-h-screen flex-col items-center overflow-hidden relative top-0 left-0 w-full">
     {/* banner section */}
-    <section className=" hidden lg:flex main-banner w-full min-h-[680px] overflow-hidden flex-col justify-end  ">
+    <section className=" flex hidden lg:flex main-banner w-full min-h-[680px] overflow-hidden flex-col justify-end  ">
       <div className=" container mx-auto my-auto z-10 flex lg:flex-row flex-col">
-        <div className="flex flex-col w-full lg:w-1/2 justify-start gap-6">
-          <h1 className=" lg:text-[78px] text-[48px]   text-white font-bold banner-header ">
-            Home EcoEarner <br /> Power System
+        <div className="flex flex-col mx-auto w-1/2 xl:w-1/2 justify-start gap-6 p-4">
+          <h1 className=" 2xl:text-[78px] sm:text-[48px] text-[25px]   text-white font-bold banner-header ">
+            Home EcoEarner <br className="hidden md:block" /> Power System
           </h1>
-          <p className="text-[23px] text-white ">
+          <p className=" text-white ">
             Ready to get your electricity costs under control and give your
-            self <br /> the chance to transform your costs into income?
+            self <br className="hidden lg:block" /> the chance to transform your costs into income?
           </p>
           <Slider {...verticalSlider}>
             <div className="carousel-item">
@@ -168,7 +146,74 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           </div>
         </div>
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <div className="w-3/4  flex justify-end">
+          <div className="lg:w-3/4  flex justify-center xl:justify-end">
+            <Slider {...settings} className="w-3/4 xl:w-5/6  image-slider">
+              <div className="carousel-item mx-auto overflow-hidden">
+                <div className="text-center flex justify-end items-center">
+                  <Image width={384} height={100} src="assets/images/battery1.svg" alt="product image" unoptimized>
+                  </Image>
+                 
+                </div>
+              </div>
+              <div className="carousel-item flex justify-end items-center">
+                <div className="text-center flex justify-center items-center my-auto">
+                  <Image width={384} height={100} src="assets/images/battery2.svg" alt="product image"
+                    className="my-auto flex justify-center items-center" unoptimized></Image>
+                </div>
+              </div>
+              <div className="carousel-item">
+                <div className="text-center flex justify-end items-center">
+                  <Image width={384} height={100} src="/assets/images/solar-panel.svg" alt="product image" unoptimized>
+                  </Image>
+                </div>
+              </div>
+            </Slider>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* tab-banner */}
+    <section className="  flex hidden sm:flex lg:hidden tab-banner w-full min-h-[680px] overflow-hidden flex-col justify-end  ">
+      <div className=" container mx-auto my-auto z-10 flex lg:flex-row flex-col">
+        <div className="flex flex-col w-full lg:w-1/2 justify-start gap-6 px-4">
+          <h1 className=" 2xl:text-[78px] sm:text-[48px] text-[25px]   text-white font-bold banner-header ">
+            Home EcoEarner <br className="hidden md:block" /> Power System
+          </h1>
+          <p className=" text-white ">
+            Ready to get your electricity costs under control and give your
+            self <br className="hidden lg:block" /> the chance to transform your costs into income?
+          </p>
+          <Slider {...verticalSlider}>
+            <div className="carousel-item">
+              <h3 className="text-3xl font-bold text-white">
+               Battery Energy Storage System
+              </h3>
+            </div>
+            <div className="carousel-item">
+              <h3 className="text-3xl font-bold text-white">
+                HF-H Series Inverter
+              </h3>
+            </div>
+            <div className="carousel-item">
+              <h3 className="text-3xl font-bold text-white">
+              Solar Panels
+              </h3>
+            </div>
+          </Slider>
+          <div>
+            <Linky to="sectionscroll" smooth={true} duration={600}
+              className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+              <span className="text relative z-10">Sign Up</span>
+              <span
+                className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </Linky>
+          </div>
+        </div>
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="w-1/2 lg:w-3/4  flex justify-end xl:justify-center">
             <Slider {...settings} className="w-3/4 xl:w-5/6  image-slider">
               <div className="carousel-item mx-auto overflow-hidden">
                 <div className="text-center flex justify-end items-center">
@@ -196,7 +241,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
     </section>
 
     {/* mobile view banner */}
-    <section className="flex lg:hidden mob-main-banner w-full min-h-[690px] overflow-hidden">
+    <section className="flex sm:hidden mob-main-banner w-full min-h-[690px] overflow-hidden">
       <div className=" w-5/6 mx-auto my-auto z-10 flex flex-col gap-10">
         <div className=" flex flex-col gap-5 p-10">
           <h1 className="text-4xl   text-white font-bold ">
@@ -429,7 +474,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
       </div>
     </section>
 
-    {/* launch banner section */}
+    {/* launch banner section screen */}
 
     <section className="w-full bg-white flex hidden lg:flex">
       <div className="container mx-auto pt-10">
@@ -445,7 +490,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
 
       </div>
     </section>
-    {/* launch banner section */}
+    {/* launch banner section tabs */}
 
     <section className="w-full bg-white flex hidden sm:flex lg:hidden">
       <div className="container mx-auto py-10">
@@ -461,7 +506,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
 
       </div>
     </section>
-    {/* launch banner section */}
+    {/* launch banner section  mob */}
 
     <section className="w-full bg-white flex sm:hidden">
       <div className="container mx-auto py-10">
@@ -506,7 +551,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           </div>
           ))
           : packages.map((pkg) => (
-          <div key={pkg._id} className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full pb-20 relative">
+          <div key={pkg._id} className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-5 lg:px-10 w-full pb-20 relative">
             <h1 className="text-[22px] lg:text-[30px] font-bold text-center my-3 text-green-dark">
               {pkg.title}
               <span className="text-[22px]">{pkg.shortDesc}</span>

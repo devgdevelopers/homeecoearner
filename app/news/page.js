@@ -12,10 +12,10 @@ const page = () => {
     <section className="relative bg-green min-h-[396px] flex justify-center ">
         <div className=" container mx-auto flex flex-col justify-center items-center">
           <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
-            News
+           Blogs
           </h1>
           <h2 className="w-5/6 md:w-1/2 text-base  text-center font-semibold text-white mx-auto">
-          Stay updated with the latest News, featuring advancements in renewable energy, company updates, and exciting developments in the industry.
+          Stay updated with the latest Blogs, featuring advancements in renewable energy, company updates, and exciting developments in the industry.
           </h2>
         </div>
       </section>
