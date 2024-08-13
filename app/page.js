@@ -42,7 +42,6 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
   arrows: false,
   dots: true,
 
- 
   };
 
   const verticalSlider = {
@@ -107,20 +106,20 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
   return (
   <main className="flex min-h-screen flex-col items-center overflow-hidden relative top-0 left-0 w-full">
     {/* banner section */}
-    <section className=" flex hidden lg:flex main-banner w-full min-h-[680px] overflow-hidden flex-col justify-end  ">
-      <div className=" container mx-auto my-auto z-10 flex lg:flex-row flex-col">
+    <section className=" flex hidden xl:flex main-banner w-full min-h-[680px] overflow-hidden flex-col justify-end  ">
+      <div className=" container mx-auto lg:my-auto z-10 flex lg:flex-row flex-col">
         <div className="flex flex-col mx-auto w-1/2 xl:w-1/2 justify-start gap-6 p-4">
           <h1 className=" 2xl:text-[78px] sm:text-[48px] text-[25px]   text-white font-bold banner-header ">
             Home EcoEarner <br className="hidden md:block" /> Power System
           </h1>
           <p className=" text-white ">
             Ready to get your electricity costs under control and give your
-            self <br className="hidden lg:block" /> the chance to transform your costs into income?
+            self <br className="hidden xl:block" /> the chance to transform your costs into income?
           </p>
           <Slider {...verticalSlider}>
             <div className="carousel-item">
               <h3 className="text-3xl font-bold text-white">
-               Battery Energy Storage System
+                Battery Energy Storage System
               </h3>
             </div>
             <div className="carousel-item">
@@ -130,7 +129,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
             </div>
             <div className="carousel-item">
               <h3 className="text-3xl font-bold text-white">
-              Solar Panels
+                Solar Panels
               </h3>
             </div>
           </Slider>
@@ -152,7 +151,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
                 <div className="text-center flex justify-end items-center">
                   <Image width={384} height={100} src="assets/images/battery1.svg" alt="product image" unoptimized>
                   </Image>
-                 
+
                 </div>
               </div>
               <div className="carousel-item flex justify-end items-center">
@@ -174,7 +173,8 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
     </section>
 
     {/* tab-banner */}
-    <section className="  flex hidden sm:flex lg:hidden tab-banner w-full min-h-[680px] overflow-hidden flex-col justify-end  ">
+    <section
+      className="  flex hidden sm:flex xl:hidden tab-banner w-full min-h-[680px] overflow-hidden flex-col justify-end  ">
       <div className=" container mx-auto my-auto z-10 flex lg:flex-row flex-col">
         <div className="flex flex-col w-full lg:w-1/2 justify-start gap-6 px-4">
           <h1 className=" 2xl:text-[78px] sm:text-[48px] text-[25px]   text-white font-bold banner-header ">
@@ -182,12 +182,12 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           </h1>
           <p className=" text-white ">
             Ready to get your electricity costs under control and give your
-            self <br className="hidden lg:block" /> the chance to transform your costs into income?
+            self <br className="hidden xl:block" /> the chance to transform your costs into income?
           </p>
           <Slider {...verticalSlider}>
             <div className="carousel-item">
               <h3 className="text-3xl font-bold text-white">
-               Battery Energy Storage System
+                Battery Energy Storage System
               </h3>
             </div>
             <div className="carousel-item">
@@ -197,7 +197,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
             </div>
             <div className="carousel-item">
               <h3 className="text-3xl font-bold text-white">
-              Solar Panels
+                Solar Panels
               </h3>
             </div>
           </Slider>
@@ -219,7 +219,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
                 <div className="text-center flex justify-end items-center">
                   <Image width={384} height={100} src="assets/images/battery1.svg" alt="product image" unoptimized>
                   </Image>
-                 
+
                 </div>
               </div>
               <div className="carousel-item flex justify-end items-center">
@@ -254,7 +254,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           <Slider {...verticalSlider}>
             <div className="carousel-item">
               <h3 className="text-[24px] font-bold text-white">
-               Battery Energy Storage System
+                Battery Energy Storage System
               </h3>
             </div>
             <div className="carousel-item">
@@ -269,13 +269,13 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
             </div>
           </Slider>
           <Linky to="sectionscroll" smooth={true} duration={600}
-              className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
-              <span className="text relative z-10">Sign Up</span>
-              <span
-                className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
-                <ArrowForwardOutlinedIcon className="ml-2" />
-              </span>
-            </Linky>
+            className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+            <span className="text relative z-10">Sign Up</span>
+            <span
+              className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
+              <ArrowForwardOutlinedIcon className="ml-2" />
+            </span>
+          </Linky>
         </div>
         <div className="">
           <div className="w-full  flex justify-center">
@@ -309,68 +309,48 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
       <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 md:my-10">
         Our Products
       </h1>
-     
+
       <section className="container mx-auto my-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 px-10 md:p-10">
           {productsLoading
-            ? [1, 2, 3].map((_, index) => (
-                <div
-                  key={index}
-                  className="p-5 w-full py-10 flex justify-center items-center flex-col "
-                >
-                  <Skeleton width={255} height={250} />
-                  <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
-                    <Skeleton width={150} />
-                  </h2>
-                  <Skeleton width={100} height={30} />
-                </div>
-              ))
-            : products.map((product) => (
-           
-              
-              <div
-                  key={product._id}
-                  className="  w-full  flex flex-col "
-                >
-                  <div className="product-div p-10 w-full md:min-w-[380px] h-[380px] flex justify-center">
-                  <Image
-                    src={product.cardImg}
-                    width={280}
-                    height={280}
-                    alt="productimg"
-                    className=" mx-auto my-auto max-w-[280px]"
-                  />
-                 
-                  </div>
-                 <span
-                 className="font-bold text-[24px]  text-[#385723] text-center  mt-2"
-                 dangerouslySetInnerHTML={{ __html: product.cardHeading }}
-               />
-               {/* <p>
-                {product.cardHeading}
-               </p> */}
-                
-                
-               <Link
-                 href={`/products/${product._id}`}
-                 className="text-lg text-[#028921] text-center"
-               >
-                 <button className="relative overflow-hidden py-1  group rounded-[50px]  priority-btn">
-                   <span className="text relative z-10 text-[20px] my-auto">
-                     View More
-                   </span>
-                   <span className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-                     <ArrowForwardOutlinedIcon className="ml-2" />
-                   </span>
-                 </button>
-               </Link>
-              
-                </div>
-                
-    
-               
-                
-              ))}
+          ? [1, 2, 3].map((_, index) => (
+          <div key={index} className="p-5 w-full py-10 flex justify-center items-center flex-col ">
+            <Skeleton width={255} height={250} />
+            <h2 className="text-[15px] md:text-[22px] text-[#385723] font-semibold text-center mt-2 md:mt-10">
+              <Skeleton width={150} />
+            </h2>
+            <Skeleton width={100} height={30} />
+          </div>
+          ))
+          : products.map((product) => (
+
+          <div key={product._id} className="  w-full  flex flex-col ">
+            <div className="product-div p-10 w-full md:min-w-[380px] h-[380px] flex justify-center">
+              <Image src={product.cardImg} width={280} height={280} alt="productimg"
+                className=" mx-auto my-auto max-w-[280px]" />
+
+            </div>
+            <span className="font-bold text-[24px]  text-[#385723] text-center  mt-2"
+              dangerouslySetInnerHTML={{ __html: product.cardHeading }} />
+            {/* <p>
+              {product.cardHeading}
+            </p> */}
+
+            <Link href={`/products/${product._id}`} className="text-lg text-[#028921] text-center">
+            <button className="relative overflow-hidden py-1  group rounded-[50px]  priority-btn">
+              <span className="text relative z-10 text-[20px] my-auto">
+                View More
+              </span>
+              <span
+                className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </button>
+            </Link>
+
+          </div>
+
+          ))}
         </div>
       </section>
     </section>
@@ -504,7 +484,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
 
       </div>
     </section>
-    {/* launch banner section  mob */}
+    {/* launch banner section mob */}
 
     <section className="w-full bg-white flex sm:hidden">
       <div className="container mx-auto py-10">
@@ -549,7 +529,8 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           </div>
           ))
           : packages.map((pkg) => (
-          <div key={pkg._id} className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-5 lg:px-10 w-full pb-20 relative">
+          <div key={pkg._id}
+            className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-5 lg:px-10 w-full pb-20 relative">
             <h1 className="text-[22px] lg:text-[30px] font-bold text-center my-3 text-green-dark">
               {pkg.title}
               <span className="text-[22px]">{pkg.shortDesc}</span>

@@ -726,6 +726,9 @@ width: 400px;
 line-height: 78px;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 1280px) {
 
+  .banner-header{
+    line-height:48px;
+    }
 }
