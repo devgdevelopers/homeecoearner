@@ -22,7 +22,7 @@ export async function POST(req) {
     from: process.env.EMAIL_USER,
     to: 'nehasharma@digranknow.com', // Replace with your email or recipient's email
     subject: 'Message from Homeecoearner',
-    text: `this message is sent by \n Username: ${name}\n Email: ${email}\n Message: ${message}` ,
+    text: `SIGN UP FORM DETAILS: \n this message is sent by \n Username: ${name}\n Email: ${email}\n Message: ${message}` ,
   };
 
   try {
