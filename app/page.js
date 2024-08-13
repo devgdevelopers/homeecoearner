@@ -268,16 +268,14 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
               </h3>
             </div>
           </Slider>
-          <Link href="#"
-            className="relative overflow-hidden py-1 px-6 bg-[#FFB800]  text-black group w-[155px]  rounded-[50px]  text-center font-bold priority-btn">
-          <span className="text relative z-10 text-[20px] my-auto">
-            Sign Up
-          </span>
-          <span
-            className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-            <ArrowForwardOutlinedIcon className="ml-2" />
-          </span>
-          </Link>
+          <Linky to="sectionscroll" smooth={true} duration={600}
+              className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+              <span className="text relative z-10">Sign Up</span>
+              <span
+                className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
+                <ArrowForwardOutlinedIcon className="ml-2" />
+              </span>
+            </Linky>
         </div>
         <div className="">
           <div className="w-full  flex justify-center">
