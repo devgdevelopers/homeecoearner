@@ -159,14 +159,14 @@ export default function ProfilePage() {
         <div className="flex min-h-screen ">
             {/* Hamburger Menu */}
             <button
-                className="2xl:hidden p-4 font-semibold text-xl z-20 absolute   text-black "
+                className="2xl:hidden p-4 font-semibold text-xl z-20 -left-1 absolute   text-black "
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
             >
                 {isSidebarOpen ? <IoClose /> : <HiMenu />}
             </button>
 
 
-            <aside className={`w-1/5 md:w-[350px] bg-white text-white flex flex-col p-4 absolute h-full overflow-y-auto shadow_menubar z-10 transition-transform transform md:translate-x-0 ${isSidebarOpen ? ' w-[300px] translate-x-0' : '-translate-x-full'
+            <aside className={`w-1/5 lg:w-[350px] bg-white text-white flex flex-col p-4 absolute h-full overflow-y-auto shadow_menubar z-10 transition-transform transform md:translate-x-0 ${isSidebarOpen ? ' w-[300px] translate-x-0' : '-translate-x-full'
                 } md:block`}>
 
 

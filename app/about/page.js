@@ -28,8 +28,8 @@ const page = () => {
 
       {/* ecologicalway */}
       <section className=" bg-[#f5f5f5] py-10 md:py-20">
-        <div className="container mx-auto flex flex-col md:flex-row gap-5 justify-center items-center">
-          <div className="w-3/4 md:w-1/2 ">
+        <div className="container mx-auto flex flex-col lg:flex-row gap-5 justify-center items-center">
+          <div className="w-3/4 lg:w-1/2 ">
             <Image
               src="/assets/images/abotu-usimg.svg"
               alt="img"
@@ -38,7 +38,7 @@ const page = () => {
               className="w-3/4 mx-auto"
             />
           </div>
-          <div className="w-5/6 md:w-[40%] flex flex-col  relative gap-3 mx-auto">
+          <div className="w-5/6 lg:w-[40%] flex flex-col  relative gap-3 mx-auto">
             <h3 className="text-[#385723] text-[22px] font-semibold">
               Ecological Way
             </h3>
@@ -114,8 +114,8 @@ const page = () => {
           </div>
         </div>
 
-        <div className=" w-full flex flex-col md:flex-row justify-center">
-          <div className="w-5/6 md:w-1/2 items-center justify-center flex mx-auto">
+        <div className=" w-full flex flex-col lg:flex-row justify-center">
+          <div className="w-5/6 lg:w-1/2 items-center justify-center flex mx-auto">
             <Image
               src="/assets/images/Group 952.svg"
               alt="img"
@@ -124,7 +124,7 @@ const page = () => {
               className="w-5/6 mx-auto"
             />
           </div>
-          <div className="w-full p-5 md:w-1/2  flex flex-col gap-5">
+          <div className="w-full p-5 lg:w-1/2  flex flex-col gap-5">
             <h3 className="text-[#385723] text-[25px] font-bold ">
               So they can
             </h3>

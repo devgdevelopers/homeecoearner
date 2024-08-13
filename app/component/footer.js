@@ -9,7 +9,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 const footer = () => {
   return (
     <section className="w-full flex flex-col footer-section ">
-      <div className="container mx-auto grid grid-cols-1 grid-flow-row xl:grid-cols-5 p-5 gap-5 py-10">
+      <div className="container mx-auto grid grid-cols-1 grid-flow-row lg:grid-cols-5 p-5 gap-5 py-10">
         <div className="flex flex-col gap-3">
           <Image
             src="/assets/images/logo-final.svg"
@@ -25,7 +25,7 @@ const footer = () => {
             UPGRADE AND EARN
           </p>
         </div>
-        <div className="w-auto flex flex-col justify-start lg:pl-10">
+        <div className="w-auto flex flex-col justify-start lg:pl-2">
           <h5 className="mb-3 font-bold pl-3 text-center md:text-start text-green">
             About
           </h5>

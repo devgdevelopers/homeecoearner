@@ -618,7 +618,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           <div className="px-10">
             <ContactFormHome />
           </div>
-          <div className="px-10 cotact-div-top-border  cotact-div-left-border  ">
+          <div className="px-10 lg:cotact-div-top-border  cotact-div-left-border  ">
             <div className="my-auto bg-white p-5 sm:p-10 flex flex-col gap-4 mt-5 rounded-md shadow-xl ">
               <h2 className="text-[22px] font-bold text-[#385723]">Info</h2>
               <h2 className="text-lg">
