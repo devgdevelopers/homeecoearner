@@ -563,7 +563,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
             </p>
             ))}
 
-            <a href="/contact-us" className="absolute bg-green bottom-5 text-white px-4 py-2 rounded-full">
+            <a href="/packages" className="absolute bg-green bottom-5 text-white px-4 py-2 rounded-full">
               Get A Quote
             </a>
           </div>

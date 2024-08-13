@@ -6,8 +6,8 @@ const page = () => {
   return (
     <>
       <section className=" w-full">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center pt-16 pb-16">
-      <div className="w-[90%] md:w-2/3 gap-7 flex flex-col mx-auto">
+      <div className="container mx-auto flex flex-col xl:flex-row items-center pt-16 pb-16">
+      <div className="w-[90%] xl:w-2/3 gap-7 flex flex-col mx-auto">
           <h1 className="text-xl lg:text-[50px] font-extrabold text-[#15A135] leading-tight">
             Unleash the Power of Your Home: Turn Sunshine into Cash with Solar
             and Battery Systems!
@@ -20,7 +20,7 @@ const page = () => {
             power plant, and you are the boss of your electricity!
           </p>
         </div>
-        <div className="w-[90%] md:w-1/3 mx-auto my-5">
+        <div className="w-[90%] xl:w-1/3 mx-auto my-5">
           <Image
             width={1}
             height={1}
