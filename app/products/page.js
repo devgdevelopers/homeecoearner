@@ -1,12 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-
 import Image from "next/image";
 import Link from "next/link";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TalkAdvisor from "../component/TalkAdvisor";
@@ -71,16 +69,18 @@ const page = () => {
               
               <div
                   key={product._id}
-                  className="  w-full  flex flex-col "
+                  className="w-full flex flex-col "
                 >
                   <div className="product-div p-10 w-full min-w-[250px] lg:min-w-[380px] h-[380px] flex justify-center">
-                  <Image
+                 <a href={`/products/${product._id}`}>
+                 <Image
                     src={product.cardImg}
                     width={280}
                     height={280}
                     alt="productimg"
                     className=" mx-auto my-auto max-w-[280px]"
                   />
+                 </a>
                  
                   </div>
                  <span
