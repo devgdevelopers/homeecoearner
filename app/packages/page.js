@@ -65,28 +65,27 @@ const page = () => {
                 </div>
               ))
             : packages.map((pkg) => (
-              <div
-              key={pkg._id}
-              className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-10 w-full pb-20 relative"
-            >
-              <h1 className="text-[22px] lg:text-[30px] font-bold text-center my-3 text-green-dark">
-                {pkg.title}
-                <span className="text-[22px]">{pkg.shortDesc}</span>
-              </h1>
-              {pkg.features.map((feature, index) => (
-                  <p key={index}>
-                    <VerifiedIcon className="mr-2 verified-icon " />
-                    {feature}
-                  </p>
-                ))}
-            
-              <a
-                href="/contact-us"
-                className="absolute bg-green bottom-5 text-white px-4 py-2 rounded-full"
-              >
-                Get A Quote
-              </a>
-            </div>
+              <a href="/contact-us" className="flex">
+              <div key={pkg._id}
+        className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-5 lg:px-10 w-full pb-20 relative cursor-pointer">
+     
+     <h1 className="text-[22px] lg:text-[30px] font-bold text-center my-3 text-green-dark">
+       {pkg.title}
+       <span className="text-[22px]">{pkg.shortDesc}</span>
+     </h1>
+ 
+     {pkg.features.map((feature, index) => (
+       <p key={index}>
+         <VerifiedIcon className="mr-2 verified-icon " />
+         {feature}
+       </p>
+     ))}
+ 
+     <h3  className="absolute bg-green bottom-5 text-white px-4 py-2 rounded-full">
+       Get A Quote
+     </h3>
+   </div>
+           </a>
               ))}
         </div>
       </section>
