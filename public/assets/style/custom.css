@@ -319,7 +319,7 @@ h5{
   color: #F5F5F5;
 }
 
-.packages-inner-div:hover a {
+.packages-inner-div:hover h3 {
   color: #15A135;
   background-color: #F5F5F5;
 }

@@ -66,13 +66,14 @@ const page = () => {
               ))
             : products.map((product) => (
            
-              
+             
               <div
                   key={product._id}
                   className="w-full flex flex-col "
                 >
-                  <div className="product-div p-10 w-full min-w-[250px] lg:min-w-[380px] h-[380px] flex justify-center">
-                 <a href={`/products/${product._id}`}>
+                   <a href={`/products/${product._id}`}>
+                  <div className="product-div p-10 w-full min-w-[250px] lg:min-w-[380px] h-[380px] flex justify-center items-center">
+               
                  <Image
                     src={product.cardImg}
                     width={280}
@@ -80,9 +81,10 @@ const page = () => {
                     alt="productimg"
                     className=" mx-auto my-auto max-w-[280px]"
                   />
-                 </a>
+               
                  
                   </div>
+                  </a>
                  <span
                  className="font-bold text-[24px]  text-[#385723]  mt-2"
                  dangerouslySetInnerHTML={{ __html: product.cardHeading }}
@@ -110,7 +112,7 @@ const page = () => {
                </Link>
               
                 </div>
-                
+               
     
                
                 

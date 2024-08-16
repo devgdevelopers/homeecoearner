@@ -42,9 +42,9 @@ const UserProfile = () => {
 
   const renderCustomizedContent = (content) => {
     // Custom styles for h1 and h2 tags
-    content = content.replace(/<h1([^>]*)>/g, '<h1$1 style="font-size: 25px; font-weight: bold;">');
-    content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 18px; font-weight: 500;">');
-    content = content.replace(/<p([^>]*)>/g, '<h2$1 style="font-size: 18px; ">');
+    content = content.replace(/<h3([^>]*)>/g, '<h1$1 style="font-size: 18px; font-weight: bold;">');
+    content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 22px; font-weight: 500;">');
+    content = content.replace(/<p([^>]*)>/g, '<p$1 style="font-size: 16px; ">');
     return { __html: content };
 };
 
@@ -66,11 +66,11 @@ const UserProfile = () => {
             </div>
             <div className="w-[90%] lg:w-[60%] flex justify-center gap-2 flex-col mx-auto text-center md:text-left ">
               <span
-                className="text-[36px] lg:text-[52px] font-extrabold text-white"
+                className="text-[36px] lg:text-[48px] font-extrabold text-white"
                 dangerouslySetInnerHTML={{ __html: product.cardHeading }}
               />
               <span
-                className="text-[20px] md:text-[25px] font-extrabold text-white"
+                className="text-[20px] md:text-[24px] font-semibold text-white"
                 dangerouslySetInnerHTML={{ __html: product.cardSubHeading }}
               />
               <span
@@ -83,13 +83,13 @@ const UserProfile = () => {
       </section>
 
       <section className="container mx-auto py-20">
-        <h1 className="text-[30px] md:text-[50px] text-green text-center font-bold pb-10">
+        <h1 className="text-[30px] md:text-[42px] text-green text-center font-bold pb-10">
           Key Features
         </h1>
         <div className="flex flex-col lg:flex-row  ">
         <div className="w-[90%] lg:w-[60%] mx-auto">
   <span
-    className="text-[18px] text-black "
+    className=" text-black "
     dangerouslySetInnerHTML={renderCustomizedContent(product.content)}
   />
 </div>

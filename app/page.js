@@ -325,11 +325,15 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           : products.map((product) => (
 
           <div key={product._id} className="  w-full  flex flex-col ">
-            <div className="product-div p-10 w-full md:min-w-[380px] h-[380px] flex justify-center">
-              <Image src={product.cardImg} width={280} height={280} alt="productimg"
+           <a href={`/products/${product._id}`}>
+           <div className="product-div p-10 w-full md:min-w-[380px] h-[380px] flex justify-center items-center">
+            
+             <Image src={product.cardImg} width={280} height={280} alt="productimg"
                 className=" mx-auto my-auto max-w-[280px]" />
+               
 
             </div>
+           </a>
             <span className="font-bold text-[24px]  text-[#385723] text-center  mt-2"
               dangerouslySetInnerHTML={{ __html: product.cardHeading }} />
             {/* <p>
@@ -529,23 +533,30 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           </div>
           ))
           : packages.map((pkg) => (
-          <div key={pkg._id}
-            className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-5 lg:px-10 w-full pb-20 relative">
-            <h1 className="text-[22px] lg:text-[30px] font-bold text-center my-3 text-green-dark">
-              {pkg.title}
-              <span className="text-[22px]">{pkg.shortDesc}</span>
-            </h1>
-            {pkg.features.map((feature, index) => (
-            <p key={index}>
-              <VerifiedIcon className="mr-2 verified-icon " />
-              {feature}
-            </p>
-            ))}
+        
+          <a href="/packages" className="flex">
+             <div key={pkg._id}
+       className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-5 lg:px-10 w-full pb-20 relative cursor-pointer">
+    
+    <h1 className="text-[22px] lg:text-[30px] font-bold text-center my-3 text-green-dark">
+      {pkg.title}
+      <span className="text-[22px]">{pkg.shortDesc}</span>
+    </h1>
 
-            <a href="/packages" className="absolute bg-green bottom-5 text-white px-4 py-2 rounded-full">
-              Get A Quote
-            </a>
-          </div>
+    {pkg.features.map((feature, index) => (
+      <p key={index}>
+        <VerifiedIcon className="mr-2 verified-icon " />
+        {feature}
+      </p>
+    ))}
+
+    <h3  className="absolute bg-green bottom-5 text-white px-4 py-2 rounded-full">
+      Get A Quote
+    </h3>
+  </div>
+          </a>
+
+
           ))}
         </div>
       </section>
