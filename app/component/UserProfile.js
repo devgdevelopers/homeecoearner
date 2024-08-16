@@ -42,9 +42,9 @@ const UserProfile = () => {
 
   const renderCustomizedContent = (content) => {
     // Custom styles for h1 and h2 tags
-    content = content.replace(/<h3([^>]*)>/g, '<h1$1 style="font-size: 18px; font-weight: bold;">');
-    content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 22px; font-weight: 500;">');
-    content = content.replace(/<p([^>]*)>/g, '<p$1 style="font-size: 16px; ">');
+    content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 25px; margin-bottom:10px; font-weight: 500;">');
+    content = content.replace(/<h3([^>]*)>/g, '<h3$1 style="font-size: 20px; font-weight: bold;">');
+    content = content.replace(/<p([^>]*)>/g, '<p$1 style="font-size: 18px; ">');
     return { __html: content };
 };
 

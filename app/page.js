@@ -135,8 +135,8 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           </Slider>
           <div>
             <Linky to="sectionscroll" smooth={true} duration={600}
-              className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
-              <span className="text relative z-10">Sign Up</span>
+              className="relative overflow-hidden  py-3 px-10 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+              <span className="text-xl relative z-10">Sign Up</span>
               <span
                 className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
                 <ArrowForwardOutlinedIcon className="ml-2" />
@@ -203,8 +203,8 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           </Slider>
           <div>
             <Linky to="sectionscroll" smooth={true} duration={600}
-              className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
-              <span className="text relative z-10">Sign Up</span>
+              className="relative overflow-hidden  py-3 px-10 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+              <span className="text-xl relative z-10">Sign Up</span>
               <span
                 className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
                 <ArrowForwardOutlinedIcon className="ml-2" />
@@ -269,8 +269,8 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
             </div>
           </Slider>
           <Linky to="sectionscroll" smooth={true} duration={600}
-            className="relative overflow-hidden  py-2 px-6 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
-            <span className="text relative z-10">Sign Up</span>
+            className="relative overflow-hidden  py-3 px-8 bg-[#FFB800] rounded-3xl mx-auto text-black group priority-btn text-center font-bold my-5 m-[0 auto]">
+            <span className="text-xl relative z-10">Sign Up</span>
             <span
               className="icon absolute top-1/2 transform -translate-y-1/2 left-full opacity-0 group-hover:opacity-100 transition-all duration-500 z-20">
               <ArrowForwardOutlinedIcon className="ml-2" />
