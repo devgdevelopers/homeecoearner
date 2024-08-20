@@ -21,7 +21,7 @@ export async function POST(req) {
     // Email options
     let mailOptions = {
         from: process.env.EMAIL_USER,
-        to: 'nehasharma@digranknow.com',
+        to: 'info@homeecoearner.com',
         subject: 'Sign Up Notification',
         text: `A new user has signed up.\n\nName: ${name}\nEmail: ${email}`,
     };

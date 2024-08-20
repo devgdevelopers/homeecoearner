@@ -20,7 +20,7 @@ export async function POST(req) {
 
   let mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'nehasharma@digranknow.com', // Replace with your email or recipient's email
+    to: 'info@homeecoearner.com', // Replace with your email or recipient's email
     subject: 'Message from Homeecoearner',
     text: `CONTACT PAGE FORM DETAILS: \n this message is sent by \n Username: ${name}\n Email: ${email}\n Phone: ${phone}\n Message: ${message}` ,
   };
