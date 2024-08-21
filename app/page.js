@@ -463,11 +463,8 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
         <img src="/assets/images/launch-image.svg" className="mx-auto" alt="" />
 
         <Link href="/contact-us"
-          className="relative overflow-hidden py-3 px-6 bg-[#028921] rounded-3xl mx-auto text-white group  text-center font-bold my-5 flex justify-center w-fit">
-        <span className="text-xl relative z-10">
-          Contact Us
-        </span>
-
+          className="relative overflow-hidden py-3 px-6 bg-[#028921] rounded-full mx-auto text-white group  text-center font-bold my-5 flex text-xl justify-center w-fit hover:bg-[#FFB800] hover:text-black transition-all">
+              Contact Us
         </Link>
 
       </div>
