@@ -4,6 +4,7 @@ import { Accordion, AccordionItem } from "@nextui-org/accordion";
 import parse from "html-react-parser";
 import AddIcon from "@mui/icons-material/Add";
 import TalkAdvisor from "../component/TalkAdvisor";
+import Breadcrumb from "../component/BreadCrumb";
 
 const Page = () => {
   const HomeEcoEarnerPowerSystem = [
@@ -357,7 +358,7 @@ const Page = () => {
 
   return (
     <>
-      <section className="relative bg-green min-h-[396px] flex justify-center">
+      <section className="relative bg-green product-page-bg min-h-[396px] flex justify-center">
         <div className=" container mx-auto flex flex-col justify-center items-center">
           <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
             FAQs
@@ -367,6 +368,7 @@ const Page = () => {
           </h2>
         </div>
       </section>
+      <Breadcrumb />
 
       <section className=" container mx-auto flex flex-col p-2 md:p-10">
         <div className="max-w-[100%]   mx-auto">

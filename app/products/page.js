@@ -1,5 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Breadcrumb from "../component/BreadCrumb";
+
 import Image from "next/image";
 import Link from "next/link";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
@@ -48,6 +50,11 @@ const page = () => {
         </h1>
 
       </div>
+
+
+     {/* Breadcrumb */}
+     <Breadcrumb />
+
 
       <section className="container mx-auto my-10">
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 px-10 md:p-10">

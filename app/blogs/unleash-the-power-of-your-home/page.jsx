@@ -1,10 +1,14 @@
 import React from "react";
 import TalkAdvisor from "../../component/TalkAdvisor";
 import Image from "next/image";
+import Breadcrumb from "../../component/BreadCrumb";
 
 const page = () => {
   return (
     <>
+      {/* Breadcrumb */}
+      <Breadcrumb />
+
       <section className=" w-full">
       <div className="container mx-auto flex flex-col xl:flex-row items-center pt-16 pb-16 gap-10">
       <div className="w-[90%] xl:w-2/3 gap-7 flex flex-col mx-auto">

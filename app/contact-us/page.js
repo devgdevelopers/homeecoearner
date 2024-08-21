@@ -4,11 +4,12 @@ import ContactForm from "../component/contactForm";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
+import Breadcrumb from "../component/BreadCrumb";
 
 const page = () => {
   return (
     <>
-      <section className="relative bg-green min-h-[396px] flex justify-center ">
+      <section className="relative product-page-bg min-h-[396px] flex justify-center ">
         <div className=" container mx-auto flex flex-col justify-center items-center">
           <h1 className="text-[25px] lg:text-[60px] text-center text-white font-bold block">
             Need to get in touch with us?
@@ -21,6 +22,7 @@ const page = () => {
           </h2>
         </div>
       </section>
+      <Breadcrumb />
 
       <section className="bg-[#F5F5F5] pt-10">
         <div className="container mx-auto flex flex-col lg:flex-row bg-white md:p-10">

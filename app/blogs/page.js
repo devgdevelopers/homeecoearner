@@ -1,7 +1,7 @@
 import React from "react";
 import TalkAdvisor from "../component/TalkAdvisor";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
-
+import Breadcrumb from "../component/BreadCrumb";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +9,7 @@ const page = () => {
   return (
     <>
     {/* banner  */}
-    <section className="relative bg-green min-h-[396px] flex justify-center ">
+    <section className="hidden lg:flex  relative bg-green min-h-[396px]  justify-center product-page-bg">
         <div className=" container mx-auto flex flex-col justify-center items-center">
           <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
            Blogs
@@ -19,10 +19,24 @@ const page = () => {
           </h2>
         </div>
       </section>
+       {/* mob banner  */}
+       <div className="lg:hidden bg-green min-h-[310px] flex justify-center">
+     <div className="container mx-auto flex flex-col justify-center items-center">
+     <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
+           Blogs
+          </h1>
+          <h2 className="w-5/6 md:w-1/2 text-base  text-center font-semibold text-white mx-auto">
+          Stay updated with the latest Blogs, featuring advancements in renewable energy, company updates, and exciting developments in the industry.
+          </h2>
+     </div>
 
+      </div>
+
+      {/* Breadcrumb */}
+      <Breadcrumb />
 
       {/* news-card  section  */}
-      <section className="min-h-[721px] w-full bg-[#F5F5F5] flex flex-col  justify-center py-10">
+      <section className=" w-full bg-[#F5F5F5] flex flex-col  justify-center py-20">
         <div className="container mx-auto grid grid-flow-row lg:grid-flow-col justify-center lg:justify-start gap-7">
           <div className="h-[438px]  bg-white flex flex-col group rounded hover:shadow-2xl transition-all ease-in-out duration-300 md:ms-0 mx-auto">
             <div className="h-1/2 overflow-hidden transition-all ease-in-out duration-300">
@@ -42,7 +56,7 @@ const page = () => {
                 Solar and Battery Systems!
               </article>
               <div className="w-full h-auto absolute bottom-3">
-                <Link href={`/news/unleash-the-power-of-your-home`} className="text-lg text-[#028921]">
+                <Link href={`/blogs/unleash-the-power-of-your-home`} className="text-lg text-[#028921]">
                   <button className="overflow-hidden py-1 w-fit rounded-[50px] gr_oup priority-btn">
                     <span className="text-[#15A135]   z-10 text-[20px] my-auto">
                       View More
@@ -72,7 +86,7 @@ const page = () => {
                 Energy Freedom At Your Fingertips!
               </article>
               <div className="w-full h-auto absolute bottom-3">
-                <Link href={`/news/energy-freedom-at-your-fingertips`} className="text-lg text-[#028921]">
+                <Link href={`/blogs/energy-freedom-at-your-fingertips`} className="text-lg text-[#028921]">
                   <button className="overflow-hidden py-1 w-fit rounded-[50px] gr_oup priority-btn">
                     <span className="text-[#15A135]   z-10 text-[20px] my-auto">
                       View More

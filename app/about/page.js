@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Breadcrumb from "../component/BreadCrumb";
 import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -16,7 +17,7 @@ const page = () => {
   return (
     <>
       {/* banner */}
-      <section className="relative bg-green min-h-[396px] flex justify-center ">
+      <section className="relative product-page-bg bg-green min-h-[396px] flex justify-center ">
         <div className=" container mx-auto flex flex-col justify-center items-center">
           <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
             About Us
@@ -28,6 +29,8 @@ const page = () => {
           </h2>
         </div>
       </section>
+      {/* Breadcrumb */}
+      <Breadcrumb />
 
       {/* ecologicalway */}
       <section className=" bg-[#f5f5f5] py-10 md:py-20">

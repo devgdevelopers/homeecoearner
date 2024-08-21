@@ -1,9 +1,14 @@
 import Image from "next/image";
 import React from "react";
+import BreadCrumb from "../../component/BreadCrumb";
 
 const page = () => {
   return (
+     
     <>
+     {/* Breadcrumb */}
+     <BreadCrumb />
+
       <section className=" w-full  flex ">
         <div className="container mx-auto flex flex-col lg:flex-row py-10">
           <div className="w-full lg:w-1/2 gap-7 flex flex-col  justify-center p-3">

@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import Breadcrumb from '../component/BreadCrumb'
 import Image from "next/image";
+import Link from "next/link";
 import SignupNewsletter from "../component/TalkAdvisor";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import Skeleton from 'react-loading-skeleton';
@@ -40,6 +42,8 @@ const Page = () => {
         </div>
       </section>
 
+      <Breadcrumb />
+      
       <div>
         {loading ? (
           <>
@@ -71,9 +75,9 @@ const Page = () => {
                   className="text-[25px] md:text-[50px] text-green font-extrabold text-center my-2 md:my-8"
                   dangerouslySetInnerHTML={{ __html: service.cardHeading }}
                 />
-                <div className="grid gap-0 justify-center grid-flow-row lg:grid-flow-col overflow-hidden image">
+                <div className="grid gap-0 justify-center grid-flow-row lg:grid-flow-col overflow-hidden ">
                   {service?.images.map((img, id) => (
-                   <div className="services-imgwrapper">
+                   <div className="w-full h-full services-imgwrapper overflow-hidden">
                      <Image
                       src={img}
                       width={200}

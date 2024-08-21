@@ -3,6 +3,7 @@ import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import TalkAdvisor from "./TalkAdvisor";
+import Breadcrumb from '../component/BreadCrumb'
 
 const UserProfile = () => {
   const searchParams = useSearchParams();
@@ -50,6 +51,7 @@ const UserProfile = () => {
 
   return (
     <>
+    
       <section className="bg-green">
         <div className="container mx-auto" key={product._id}>
           <div className="flex flex-col lg:flex-row py-10 gap-10">
@@ -81,8 +83,9 @@ const UserProfile = () => {
           </div>
         </div>
       </section>
+      <Breadcrumb />
 
-      <section className="container mx-auto py-20">
+      <section className="container mx-auto py-10">
         <h1 className="text-[30px] md:text-[42px] text-green text-center font-bold pb-10">
           Key Features
         </h1>

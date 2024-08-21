@@ -42,7 +42,7 @@ export default function Page() {
     },
     {
       page: "Blog",
-      link: "/news",
+      link: "/blogs",
     },
     {
       page: "About Us",
@@ -114,8 +114,8 @@ export default function Page() {
           </NavbarItem>
           <NavbarItem>
             <Link
-              href="/news"
-              className={`navLink ${pathname === "/news" ? "active " : ""}`}
+              href="/blogs"
+              className={`navLink ${pathname === "/blogs" ? "active " : ""}`}
             >
               Blogs
             </Link>

@@ -1,5 +1,6 @@
 "use client";
 import VerifiedIcon from '@mui/icons-material/Verified';
+import Breadcrumb from '../component/BreadCrumb';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';
 import { useState, useEffect } from "react";
@@ -34,7 +35,7 @@ const page = () => {
     <>
 
 
-      <section className="relative bg-green min-h-[396px] flex justify-center">
+      <section className="relative product-page-bg bg-green min-h-[396px] flex justify-center">
         <div className=" container mx-auto flex flex-col justify-center items-center">
           <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
           Customer Packages 
@@ -44,6 +45,13 @@ const page = () => {
           </h2>
         </div>
       </section>
+
+
+
+{/* breadcrumb section  */}
+      <Breadcrumb />
+
+
 
       <section className="w-full py-10 ">
       
