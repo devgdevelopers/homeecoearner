@@ -170,14 +170,14 @@ const page = () => {
             <h2 className="text-center text-[#FFB800] text-5xl mb-2">
               {" "}
               <strong>
-                <Counter start={0} end={68} />{" "}
+                55 KW  <span className="text-2xl">HZ</span>
               </strong>{" "}
             </h2>
             <h2 className="text-[#385723] text-[25px] text-center font-bold">
-              Panels installed
+               Panels installed
             </h2>
             <p className="text-black text-center">
-              Over 68 panels installed to power your sustainable future
+              Over 15+ panels installed to power your sustainable future
               efficiently.
             </p>
           </div>
