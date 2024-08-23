@@ -43,7 +43,7 @@ const page = () => {
               <Image
                 width={1}
                 height={1}
-                src="assets/images/Group 887.svg"
+                src="assets/images/blog1-img.svg"
                 alt="product image"
                 className="w-full h-full bg-no-repeat bg-center bg-cover group-hover:scale-110 transition-all ease-in-out duration-300"
                 
@@ -74,7 +74,7 @@ const page = () => {
               <Image
                 width={1}
                 height={1}
-                src="assets/images/Group 887 (1).svg"
+                src="assets/images/blog2-img.svg"
                 alt="product image"
                 className="w-full h-full bg-no-repeat bg-center bg-cover group-hover:scale-110 transition-all ease-in-out duration-300"
                 
