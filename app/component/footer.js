@@ -111,7 +111,7 @@ const footer = () => {
             className=" text-center md:text-start"
           >
              <strong>E-mail:</strong>{" "}
-             <span className="px-2">info@homeecoearner.com</span>
+             <span className="px-1">info@homeecoearner.com</span>
           </Link>
           <Link
             
@@ -119,7 +119,7 @@ const footer = () => {
             className=" text-center md:text-start"
           >
              <strong>Mobile: </strong>
-             <span className="px-2">0203 286 5350</span>
+             <span className="px-1">02032865350</span>
           </Link>
         
         </div>

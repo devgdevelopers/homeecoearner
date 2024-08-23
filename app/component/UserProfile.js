@@ -54,7 +54,7 @@ const UserProfile = () => {
     
       <section className="bg-green">
         <div className="container mx-auto" key={product._id}>
-          <div className="flex flex-col lg:flex-row py-10 gap-10">
+          <div className="flex flex-col lg:flex-row px-5 py-10 gap-10">
             <div className="flex justify-center items-center w-full lg:w-[40%] ">
               <div className="product-img-bg w-[360px] h-[330px] p-10 my-auto flex">
                 <Image
@@ -85,7 +85,7 @@ const UserProfile = () => {
       </section>
       <Breadcrumb />
 
-      <section className="container mx-auto py-10">
+      <section className="container mx-auto p-10">
         <h1 className="text-[30px] md:text-[42px] text-green text-center font-bold pb-10">
           Key Features
         </h1>

@@ -10,7 +10,7 @@ const page = () => {
      <BreadCrumb />
 
       <section className=" w-full  flex ">
-        <div className="container mx-auto flex flex-col lg:flex-row py-10">
+        <div className="container mx-auto flex flex-col lg:flex-row px-10 lg:px-10 py-10">
           <div className="w-full lg:w-1/2 gap-7 flex flex-col  justify-center p-3">
             <h1 className="text-xl md:text-[42px] font-extrabold text-[#15A135] leading-tight ">
               Energy Freedom at Your Fingertips!

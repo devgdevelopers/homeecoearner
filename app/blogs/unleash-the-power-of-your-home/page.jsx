@@ -10,8 +10,8 @@ const page = () => {
       <Breadcrumb />
 
       <section className=" w-full">
-      <div className="container mx-auto flex flex-col xl:flex-row items-center pt-16 pb-16 gap-10">
-      <div className="w-[90%] xl:w-2/3 gap-7 flex flex-col mx-auto">
+      <div className="container mx-auto flex flex-col xl:flex-row items-center pt-16 pb-16 gap-10 px-10">
+      <div className="w-[90%] xl:w-2/3 gap-3 lg:gap-7 flex flex-col mx-auto">
           <h1 className="text-xl xl:text-[42px] font-extrabold text-[#15A135] leading-tight">
             Unleash the Power of Your Home: Turn Sunshine into Cash with Solar
             and Battery Systems!

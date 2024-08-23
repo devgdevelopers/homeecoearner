@@ -36,7 +36,7 @@ const page = () => {
       <Breadcrumb />
 
       {/* news-card  section  */}
-      <section className=" w-full bg-[#F5F5F5] flex flex-col  justify-center py-20">
+      <section className=" w-full bg-[#F5F5F5] flex flex-col  justify-center px-10 py-20">
         <div className="container mx-auto grid grid-flow-row lg:grid-flow-col justify-center lg:justify-start gap-7">
           <div className="h-[438px]  bg-white flex flex-col group rounded hover:shadow-2xl transition-all ease-in-out duration-300 md:ms-0 mx-auto">
             <div className="h-1/2 overflow-hidden transition-all ease-in-out duration-300">
