@@ -85,7 +85,7 @@ const UserProfile = () => {
       </section>
       <Breadcrumb />
 
-      <section className="container mx-auto p-10">
+      <section className="container mx-auto px-10 pb-10">
         <h1 className="text-[30px] md:text-[42px] text-green text-center font-bold pb-10">
           Key Features
         </h1>

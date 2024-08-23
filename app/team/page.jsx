@@ -28,7 +28,7 @@ const page = () => {
       <section className="w-full lg:py-20 flex flex-col gap-9">
         
         <div className="container mx-auto grid grid-flow-row lg:grid-flow-col  place-content-center gap-10">
-          <div className="bg-white w-full lg:min-w-1/2  py-10 pb-20 rounded mx-auto team-bg-section">
+          <div className="bg-white w-full lg:max-w-[450px]  py-10 pb-20 rounded mx-auto team-bg-section">
             <img
               src="/assets/images/david.svg"
               className="w-[170px] rounded-full  mx-auto"
@@ -46,7 +46,7 @@ const page = () => {
             </h4>
           </div>
 
-          <div className="bg-white w-full lg:min-w-1/2 py-10 pb-20 rounded mx-auto team-bg-section">
+          <div className="bg-white w-full lg:max-w-[450px] py-10 pb-20 rounded mx-auto team-bg-section">
             <img
               src="/assets/images/rory.svg"
               className="w-[170px] rounded-full  mx-auto"

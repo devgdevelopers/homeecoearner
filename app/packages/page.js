@@ -53,8 +53,7 @@ const page = () => {
 
 
 
-      <section className="w-full py-10 ">
-      
+      <section className="w-full p-10">
         <div className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
           {packagesLoading
             ? [1, 2, 3].map((_, index) => (
@@ -75,9 +74,9 @@ const page = () => {
             : packages.map((pkg) => (
               <a href="/contact-us" className="flex">
               <div key={pkg._id}
-        className="flex flex-col gap-5 p-5 packages-inner-div py-10 px-5 lg:px-10 w-full pb-20 relative cursor-pointer">
+        className="flex flex-col gap-5  packages-inner-div py-10 pl-6 pr-3 w-full pb-20 relative cursor-pointer">
      
-     <h1 className="text-[22px] lg:text-[30px] font-bold text-center my-3 text-green-dark">
+     <h1 className="text-[22px] lg:text-[24px] font-bold text-center my-3 text-green-dark px-2">
        {pkg.title}
        <span className="text-[22px]">{pkg.shortDesc}</span>
      </h1>

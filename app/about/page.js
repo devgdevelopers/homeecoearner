@@ -164,8 +164,8 @@ const page = () => {
       </section>
 
       {/* numbers */}
-      <section className="min-h-[379px] my-auto flex justify-center bg-[#f5f5f5]">
-        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-auto items-center gap-10 py-10">
+      <section className="min-h-[379px] my-auto flex justify-center bg-[#f5f5f5] px-10">
+        <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 py-10">
           <div className=" my-auto  bg-white p-10 rounded-md mx-auto">
             <h2 className="text-center text-[#FFB800] text-5xl mb-2">
               {" "}
@@ -173,7 +173,7 @@ const page = () => {
                 55 KW  <span className="text-2xl">HZ</span>
               </strong>{" "}
             </h2>
-            <h2 className="text-[#385723] text-[25px] text-center font-bold">
+            <h2 className="text-[#385723] text-[20px] lg:text-[25px] text-center font-bold leading-7 my-5">
                Panels installed
             </h2>
             <p className="text-black text-center">
@@ -185,7 +185,7 @@ const page = () => {
             <h2 className="text-center text-[#FFB800] text-5xl mb-2">
               <strong> 24*7 </strong>{" "}
             </h2>
-            <h2 className="text-[#385723] text-[25px] text-center font-bold">
+            <h2 className="text-[#385723] text-[25px] text-center font-bold leading-7 my-5">
               Technical Support
             </h2>
             <p className="text-black text-center">
@@ -200,7 +200,7 @@ const page = () => {
                 <Counter start={0} end={50} />{" "}
               </strong>{" "}
             </h2>
-            <h2 className="text-[#385723] text-[25px] text-center font-bold">
+            <h2 className="text-[#385723] text-[25px] text-center font-bold leading-7 my-5">
              Years of team experience
             </h2>
             <p className="text-black text-center">
@@ -215,7 +215,7 @@ const page = () => {
                 <Counter start={0} end={23} />{" "}
               </strong>{" "}
             </h2>
-            <h2 className="text-[#385723] text-[25px] text-center font-bold">
+            <h2 className="text-[#385723] text-[25px] text-center font-bold leading-7 my-5">
               Five Star Reviews
             </h2>
             <p className="text-black text-center">
@@ -239,7 +239,7 @@ const page = () => {
               Customer Feedback
             </h2>
           </div>
-          <div className=" w-full grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className=" w-full grid grid-cols-1 md:grid-cols-3 gap-5 px-10">
             <div className="bg_test  flex flex-col justify-center gap-4 items-start pt-16 px-10 py-auto">
               <p className="text-[#525C60]  font-medium">
               Generating our own electricity for over a year has been amazing. No more bills, no price hikes, and we're even earning from our excess power. It's a win for us and the planet.
