@@ -37,11 +37,12 @@ const page = () => {
         <div className="container mx-auto flex flex-col lg:flex-row gap-5 justify-center items-center">
           <div className="w-3/4 lg:w-1/2 ">
             <Image
-              src="/assets/images/abotu-usimg.svg"
+              src="/assets/images/about-us.png"
               alt="img"
-              width={1}
-              height={1}
+              width={100}
+              height={100}
               className="w-3/4 mx-auto"
+              unoptimized
             />
           </div>
           <div className="w-5/6 lg:w-[40%] flex flex-col  relative gap-3 mx-auto">

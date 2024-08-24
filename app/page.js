@@ -503,16 +503,17 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
     </section>
 
     {/* customer packages */}
-    <div className="w-full bg-[#ccedd9]">
-      <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green my-5 mb-10">
-        Customer Packages
-      </h1>
-    </div>
+   
 
     {/* Power Booster three step section */}
 
-    <section className="w-full main-section py-2 lg:py-20">
-      <section className="w-full py-10 ">
+    <section className="w-full bg-[#ccedd9] lg:pt-20 px-10">
+    <div className="w-full ">
+      <h1 className="font-bold text-[35px] md:text-[50px] text-center text-green mb-10">
+        Customer Packages
+      </h1>
+    </div>
+      <section className="w-full main-section  py-10 ">
 
         <div
           className="w-full grid grid-cols-1 md:grid-cols-3 container mx-auto packages-div justify-center gap-5 lg:gap-20">
