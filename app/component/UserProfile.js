@@ -41,13 +41,26 @@ const UserProfile = () => {
     return <p>Error: {error.message}</p>;
   }
 
-  const renderCustomizedContent = (content) => {
-    // Custom styles for h1 and h2 tags
-    content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 25px; margin-bottom:10px; font-weight: 500;">');
-    content = content.replace(/<h3([^>]*)>/g, '<h3$1 style="font-size: 20px; font-weight: bold;">');
-    content = content.replace(/<p([^>]*)>/g, '<p$1 style="font-size: 18px; ">');
-    return { __html: content };
+//   const renderCustomizedContent = (content) => {
+//     content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 25px; margin-bottom:10px; font-weight: 500;">');
+//     content = content.replace(/<h3([^>]*)>/g, '<h3$1 style="font-size: 20px; font-weight: bold;">');
+//     content = content.replace(/<p([^>]*)>/g, '<p$1 style="font-size: 18px; ">');
+//     return { __html: content };
+// };
+
+const renderCustomizedContent = (content) => {
+  if (!content) {
+    return { __html: '' }; // Return an empty string if content is undefined or null
+  }
+  
+  // Custom styles for h1 and h2 tags
+  content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 25px; margin-bottom:10px; font-weight: 500;">');
+  content = content.replace(/<h3([^>]*)>/g, '<h3$1 style="font-size: 20px; font-weight: bold;">');
+  content = content.replace(/<p([^>]*)>/g, '<p$1 style="font-size: 18px; ">');
+  
+  return { __html: content };
 };
+
 
   return (
     <>
