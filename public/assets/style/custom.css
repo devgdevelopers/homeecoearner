@@ -9,8 +9,9 @@
 
 .link-div-head li a {
   font-weight: 500;
- 
+
 }
+
 /* Navbar.module.css */
 
 .navLink {
@@ -29,18 +30,20 @@
   left: 50%;
   width: 0;
   height: 2px;
-  background-color:  #15a135;
+  background-color: #15a135;
   transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
 .navLink:hover::after {
   width: 100%;
   left: 0;
- 
+
 }
+
 .navLink:hover {
   color: #15a135;
 }
+
 .active {
   color: #15a135;
 }
@@ -50,10 +53,6 @@
   left: 0;
 }
 
-
-.home-link {
-  border-bottom: 2px solid #15a135;
-}
 
 .contact-btn-head:hover {
   background-color: #15a135;
@@ -74,6 +73,11 @@
   color: white;
   transition: .5s;
 }
+
+
+
+
+
 
 .call-btn-head {
   padding: 7px 20px 7px 20px;
@@ -102,28 +106,21 @@
   width: 100%;
 
 }
+
 .product-div:hover {
   background-image: url(/assets/images/yellow-bg-img.svg);
   background-size: auto;
- 
-  background-position: top  center;
+
+  background-position: top center;
   background-repeat: no-repeat;
- 
+
   width: 100%;
 }
 
-/* .product-div:hover {
-  background-image: url(/assets/images/yellow-bg-img.svg);
-
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
-  background-position: c center;
-  background-repeat: no-repeat;
-  background-color: white !important;
-} */
-
 .product-div img {
-    transition:  .2s ;
+  transition: .2s;
 }
+
 .product-div:hover img {
   transform: translateY(-15px);
   transition: .2s linear;
@@ -139,7 +136,8 @@
   height: 80vh;
 
 }
-.tab-banner{
+
+.tab-banner {
   background-image: url(/assets/images/tab-banner.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -147,6 +145,7 @@
   background-size: cover;
   height: auto;
 }
+
 .mob-main-banner {
   background-image: url(/assets/images/mob-banner.svg);
   background-repeat: no-repeat;
@@ -156,7 +155,8 @@
 
   padding-bottom: 40px;
 }
- /* p {
+
+/* p {
   font-size: 18px !important;
 }
 
@@ -178,17 +178,19 @@ h5{
   font-size: 20px;
 }  */
 
-.bg-green{
-   background-color: #15A135;
+.bg-green {
+  background-color: #15A135;
 }
 
 .text-green {
   color: #028921;
 }
-.text-green-dark{
+
+.text-green-dark {
   color: #005C15;
 }
-.verified-icon{
+
+.verified-icon {
   color: #028921;
 }
 
@@ -224,9 +226,7 @@ h5{
   font-weight: 600;
 }
 
-.product-sec-bg {
-  background-color: #b8edc5;
-}
+
 
 .join-signup-form {
   background-repeat: no-repeat;
@@ -270,32 +270,16 @@ h5{
 
 .steps-inner-div {
   background-color: #F5F5F5E5;
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10px;
- 
+
 }
 
-/* 
-@media screen and (max-width: 768px) {
-  .steps-section {
 
-    background-image: url(/assets/images/home-ecoearner-snippet.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 100%;
-    background-position: top center;
-    height:300px;
-  }
-  .steps-inner-div {
-    background-color: #F5F5F5E5;
-    transform: translate(0%, 0%);
-   
-  }
-} */
+
 
 
 
@@ -327,14 +311,15 @@ h5{
 
 
 @media (max-width: 768px) {
-  .cotact-div-top-border{
+  .cotact-div-top-border {
     border-top: 1px solid #fff;
   }
 }
+
 @media (min-width: 768px) {
-  .cotact-div-left-border{
+  .cotact-div-left-border {
     border-left: 1px solid #fff;
-  
+
   }
 }
 
@@ -344,19 +329,20 @@ h5{
 /* styles.css */
 
 .signup-form-input {
-  background-color: initial; /* Or any default background color */
-  color: white; /* Default text color */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  background-color: initial;
+  /* Or any default background color */
+  color: white;
+  /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Smooth transition */
 }
 
 .signup-form-input:focus {
-  background-color: white; /* Change background to white on focus */
-  color: #005C15; /* Change text color to black on focus */
+  background-color: white;
+  /* Change background to white on focus */
+  color: #005C15;
+  /* Change text color to black on focus */
 }
-
-
-
-
 
 
 .data-\[justify\=start\]\:justify-start[data-justify="start"] {
@@ -384,19 +370,8 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
   }
 }
 
-.accordion-title {
-  background-color: #f0f0f0;
-  /* Change this to your desired background color */
-  padding: 10px;
-  border-radius: 5px;
-}
 
-.accordion-item {
-  border: none;
-  /* Remove the border */
-  box-shadow: none;
-  /* Remove any shadow if present */
-}
+
 
 .group.is-splitted .group-\[\.is-splitted\]\:shadow-medium {
   --tw-shadow: none;
@@ -411,17 +386,6 @@ ul.h-full.flex-row.flex-nowrap.items-center.data-\[justify\=start\]\:justify-sta
   gap: 0 !important;
 }
 
-.contact-banner-section {
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  width: 100% !important;
-  background-color: #0a890d;
-  background:
-    /* top, transparent red */
-    linear-gradient(#0a890d1f, #0a890d4a),
-    /* bottom, image */
-    url(/assets/images/form-bg.jpg);
-}
 
 .contact-page-input {
   background-color: #F5F5F5;
@@ -618,50 +582,64 @@ section.what-we-do {
   margin: 10px;
   background-color: #ffffffb3;
 }
-.services-p-div img{
+
+.services-p-div img {
   background-color: transparent !important;
 }
-.services-p-div h1{
+
+.services-p-div h1 {
   color: #008000;
 }
-.services-p-div p{
+
+.services-p-div p {
   color: #008000;
 }
+
 .loader_ {
-  border-top-color: #196901; /* Tailwind CSS blue-400 color */
+  border-top-color: #196901;
+  /* Tailwind CSS blue-400 color */
   animation: spin 1s linear infinite;
 }
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
 .shadow_menubar {
   box-shadow: 5px 0 30px -10px rgba(0, 0, 0, 0.1);
 }
 
-.footerLink{
+.footerLink {
   padding-left: 10px;
 }
-.footerLink:hover{
+
+.footerLink:hover {
   color: #00a241;
   transition: .5s;
   transform: translateX(10px);
-
 }
-.product-img-bg{
+
+.product-img-bg {
   background-image: url('/assets/images/pro-bg-img.svg');
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
 
-.product-page-bg{
+.product-page-bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-image: url(/assets/images/product-pg-banner.svg);
 }
-.product-page-bg-mob{
+
+.product-page-bg-mob {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -674,6 +652,7 @@ section.what-we-do {
   background-position: center;
   background-size: cover;
 }
+
 @media (max-width: 768px) {
   .advisor-mob-bg {
     background-image: url(/assets/images/advisor-mob-bg.svg);
@@ -683,13 +662,14 @@ section.what-we-do {
   }
 }
 
-.team-bg-section{
+.team-bg-section {
   background-image: url(/assets/images/team-sec-bg.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-.bg_test{
+
+.bg_test {
   background-image: url(/assets/images/Group-953.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -702,31 +682,32 @@ nav.z-40.h-auto.items-center.justify-center.data-\[menu-open\=true\]\:border-non
 }
 
 
-.main-section{
+.main-section {
   background-image: url('/assets/images/packages-bg.svg');
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 }
 
-.services-imgwrapper{
+.services-imgwrapper {
   width: 400px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
-.services-imgs:hover{
-transform: scale(1.1);
-transition: 2s;
-overflow: hidden;
-width: 400px;
-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-duration: 300ms;
-transition-property: all;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-transition-duration: 250ms;
+.services-imgs:hover {
+  transform: scale(1.1);
+  transition: 2s;
+  overflow: hidden;
+  width: 400px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
 
 }
+
 .services-imgs:hover .services-imgwrapper {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
@@ -739,13 +720,13 @@ transition-duration: 250ms;
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.banner-header{
-line-height: 78px;
+.banner-header {
+  line-height: 78px;
 }
 
 @media (max-width: 1280px) {
 
-  .banner-header{
-    line-height:48px;
-    }
+  .banner-header {
+    line-height: 48px;
+  }
 }

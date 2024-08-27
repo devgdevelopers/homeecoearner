@@ -374,7 +374,7 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
           </h1>
           <p className="text-left  py-4 px-4 md:px-10">
             Experience the future of renewable energy today with our Home
-            EcoEarner Power System, designed to
+            EcoEarner Power System, designed to 
             <br className="hidden md:flex" />
             seamlessly integrate sustainable power solutions into your home.
           </p>

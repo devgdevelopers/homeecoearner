@@ -82,33 +82,6 @@ export default function AddPackage() {
                         <QuillEditor value={title} onChange={setTitle} />
                     </div>
 
-                    {/* <div>
-                        <label htmlFor="shortDesc" className="block text-sm font-medium text-gray-700">Short Description:</label>
-                        <textarea
-                            id="shortDesc"
-                            value={shortDesc}
-                            onChange={(e) => setShortDesc(e.target.value)}
-                            className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                        />
-                    </div>
-
-                    <div>
-                        <label htmlFor="content" className="block text-sm font-medium text-gray-700">Content:</label>
-                        <QuillEditor value={content} onChange={setContent} />
-                    </div>
-
-                    <div>
-                        <label htmlFor="img" className="block text-sm font-medium text-gray-700">Image:</label>
-                        <input
-                            name="myFile"
-                            id="file-upload"
-                            type="file"
-                            accept='.jpeg, .png, .jpg'
-                            onChange={handleFileUpload}
-                            className="text-black mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                        />
-                    </div> */}
-
                     <div>
                         <label htmlFor="features" className="block text-sm font-medium text-gray-700">Features:</label>
                         {features.map((feature, index) => (
@@ -126,6 +99,7 @@ export default function AddPackage() {
                             </div>
                         ))}
                     </div>
+
                     <button type="submit" className="px-4 py-2 bg-indigo-600 text-white font-semibold rounded hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                         Add Package
                     </button>
