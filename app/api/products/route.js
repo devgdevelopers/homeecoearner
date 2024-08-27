@@ -37,12 +37,44 @@ export async function GET(req) {
         try {
             const posts = await db.collection('products').find({}).toArray();
             const count = await db.collection('products').countDocuments();
-            return new Response(JSON.stringify({ status: 200, data: posts, count }), { status: 200 });
+            return new Response(JSON.stringify({ status: 200, data: posts, count }), { status: 200,
+                                headers: {
+                                    'Cache-Control': 'max-age=3600' // Cache for 1 hour
+                                } });
         } catch (error) {
             return new Response(JSON.stringify({ error: error.message }), { status: 500 });
         }
     }
 }
+
+// export async function GET(req) {
+//     const client = await clientPromise;
+//     const db = client.db('homeeco');
+//     const { searchParams } = new URL(req.url);
+//     const id = searchParams.get('id');
+
+//     try {
+//         if (id) {
+//             const post = await db.collection('products').findOne({ _id: new ObjectId(id) });
+//             if (post) {
+//                 return new Response(JSON.stringify(post), { status: 200 });
+//             } else {
+//                 return new Response(JSON.stringify({ error: 'Product not found' }), { status: 404 });
+//             }
+//         } else {
+//             // Consider implementing pagination if the dataset is large
+//             const posts = await db.collection('products').find({}).toArray();
+//             return new Response(JSON.stringify({ data: posts }), { 
+//                 status: 200,
+//                 headers: {
+//                     'Cache-Control': 'max-age=3600' // Cache for 1 hour
+//                 }
+//             });
+//         }
+//     } catch (error) {
+//         return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500 });
+//     }
+// }
 
 export async function DELETE(req) {
     const client = await clientPromise;

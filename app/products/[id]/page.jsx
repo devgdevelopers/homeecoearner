@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import UserProfile from "../../component/UserProfile";
-
+import Skeleton from "../../component/Skeleton"
 // Example data fetching function, replace with your actual data source
 const fetchProducts = async () => {
   // Mock data
@@ -20,7 +20,7 @@ const ProductPage = ({ params }) => {
   const { id } = params;
   return (
     <div className="">
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Skeleton />}>
         <UserProfile productId={id} />
       </Suspense>
     </div>

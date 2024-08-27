@@ -1,11 +1,8 @@
 "use client"
-
-
 import { createContext, useContext, useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 
 const AuthContext = createContext();
-
 export function AuthProvider({ children }) {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -15,7 +12,6 @@ export function AuthProvider({ children }) {
     }, []);
 
     const login = (token) => {
-
         Cookies.set('token', token, { expires: 1, path: '/' });
         setIsLoggedIn(true);
     };
