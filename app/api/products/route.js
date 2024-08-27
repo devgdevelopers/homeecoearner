@@ -37,13 +37,7 @@ export async function GET(req) {
         try {
             const posts = await db.collection('products').find({}).toArray();
             const count = await db.collection('products').countDocuments();
-            // return new Response(JSON.stringify({ status: 200, data: posts, count }), { status: 200 });
-            return new Response(JSON.stringify({ data: posts, count }), { 
-                status: 200,
-                headers: {
-                    'Cache-Control': 'max-age=3600' // Cache for 1 hour
-                }
-            });
+            return new Response(JSON.stringify({ status: 200, data: posts, count }), { status: 200 });
         } catch (error) {
             return new Response(JSON.stringify({ error: error.message }), { status: 500 });
         }
