@@ -2,9 +2,9 @@ import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
 
 export async function POST(req) {
-  const { name, email, message } = await req.json();
+  const { name, email, message,phone } = await req.json();
 
-  if (!email || !message || !name) {
+  if (!email || !message|| !name|| !phone) {
     return NextResponse.json({ error: 'Email and message are required' }, { status: 400 });
   }
 
@@ -20,9 +20,9 @@ export async function POST(req) {
 
   let mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'as77468@gmail.com', // Replace with your email or recipient's email
+    to: 'info@homeecoearner.com', // Replace with your email or recipient's email
     subject: 'Message from Homeecoearner',
-    text: `this message is sent by \n Username: ${name}\n Email: ${email}\n Message: ${message}` ,
+    text: `CONTACT PAGE FORM DETAILS: \n this message is sent by \n Username: ${name}\n Email: ${email}\n Phone: ${phone}\n Message: ${message}` ,
   };
 
   try {

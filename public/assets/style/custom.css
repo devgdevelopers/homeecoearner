@@ -99,15 +99,17 @@
 
 .product-div {
   background: #F5F5F5;
+  width: 100%;
 
 }
 .product-div:hover {
   background-image: url(/assets/images/yellow-bg-img.svg);
-  /* background-size: contain; */
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  background-size: auto;
+ 
   background-position: top  center;
   background-repeat: no-repeat;
-  background-color: white !important;
+ 
+  width: 100%;
 }
 
 /* .product-div:hover {
@@ -129,25 +131,53 @@
 }
 
 .main-banner {
-  background-image: url(/assets/images/banner.svg);
+  background-image: url(/assets/images/banner-2.svg);
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center;
   width: 100%;
   background-size: cover;
+  height: 80vh;
 
 }
-.mob-main-banner {
-  background-image: url(/assets/images/mobile-banner-home.svg);
+.tab-banner{
+  background-image: url(/assets/images/tab-banner.svg);
   background-repeat: no-repeat;
-  background-position: bottom center;
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  height: auto;
+}
+.mob-main-banner {
+  background-image: url(/assets/images/mob-banner.svg);
+  background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   background-size: cover;
 
   padding-bottom: 40px;
 }
-p {
-  font-size: 16px !important;
+ /* p {
+  font-size: 18px !important;
 }
+
+h1{
+  font-size: 48px;
+}
+h2{
+  font-size:36px;
+}
+h3{
+  font-size: 28px;
+}
+
+h4{
+  font-size: 24px;
+}
+
+h5{
+  font-size: 20px;
+}  */
+
 .bg-green{
    background-color: #15A135;
 }
@@ -269,22 +299,32 @@ p {
 
 
 
-.packages-div div{
+.packages-div div {
   background-color: #F5F5F5;
-  transition: 1s;
+  transition: background-color 1s, color 1s;
 }
-.packages-inner-div:hover{
+
+.packages-inner-div {
+  position: relative;
+}
+
+.packages-inner-div:hover {
   background-color: #15A135;
   color: white;
-  transition: 1s;
 }
 
-.packages-div div:hover h1,
-.packages-div div:hover p,
-.packages-div div:hover .verified-icon{
+.packages-inner-div:hover h1,
+.packages-inner-div:hover p,
+.packages-inner-div:hover .verified-icon {
   color: #F5F5F5;
-
 }
+
+.packages-inner-div:hover h3 {
+  color: #15A135;
+  background-color: #F5F5F5;
+}
+
+
 
 @media (max-width: 768px) {
   .cotact-div-top-border{
@@ -621,6 +661,12 @@ section.what-we-do {
   background-size: cover;
   background-image: url(/assets/images/product-pg-banner.svg);
 }
+.product-page-bg-mob{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/assets/images/pro-bg-mob.svg);
+}
 
 .talk-advisor-bg {
   background-image: url(/assets/images/talkadvisor-bg.svg);
@@ -656,3 +702,50 @@ nav.z-40.h-auto.items-center.justify-center.data-\[menu-open\=true\]\:border-non
 }
 
 
+.main-section{
+  background-image: url('/assets/images/packages-bg.svg');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.services-imgwrapper{
+  width: 400px;
+  overflow: hidden; 
+}
+
+.services-imgs:hover{
+transform: scale(1.1);
+transition: 2s;
+overflow: hidden;
+width: 400px;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 300ms;
+transition-property: all;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+transition-duration: 250ms;
+
+}
+.services-imgs:hover .services-imgwrapper {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+}
+
+
+.hover\:shadow-2xl:hover {
+  --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.banner-header{
+line-height: 78px;
+}
+
+@media (max-width: 1280px) {
+
+  .banner-header{
+    line-height:48px;
+    }
+}

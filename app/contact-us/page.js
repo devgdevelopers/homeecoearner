@@ -4,13 +4,14 @@ import ContactForm from "../component/contactForm";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import PlaceOutlinedIcon from "@mui/icons-material/PlaceOutlined";
+import Breadcrumb from "../component/BreadCrumb";
 
 const page = () => {
   return (
     <>
-      <section className="relative bg-green min-h-[396px] flex justify-center ">
+      <section className="relative product-page-bg min-h-[396px] flex justify-center ">
         <div className=" container mx-auto flex flex-col justify-center items-center">
-          <h1 className="text-[25px] md:text-[60px] text-center text-white font-bold block">
+          <h1 className="text-[25px] lg:text-[60px] text-center text-white font-bold block">
             Need to get in touch with us?
           </h1>
           <h2 className="w-[90%] md:w-1/2 text-base text-center font-semibold text-white mx-auto">
@@ -21,16 +22,17 @@ const page = () => {
           </h2>
         </div>
       </section>
+      <Breadcrumb />
 
-      <section className=" bg-[#F5F5F5] pt-10">
-        <div className="container mx-auto flex flex-col md:flex-row bg-white p-10">
+      <section className="bg-[#F5F5F5] pt-10">
+        <div className="container mx-auto flex flex-col lg:flex-row bg-white md:p-10">
          
-          <div className="w-[90%] mx-auto md:w-2/4 my-auto">
-            <h1 className="text-[25px] font-extrabold py-4 text-green font-semibold"> Fill out the form with your details.</h1>
+          <div className="w-[90%] mx-auto lg:w-2/4 my-auto lg:px-10">
+            <h1 className="text-[25px] py-4 text-green font-semibold"> Fill out the form with your details.</h1>
             <ContactForm />
           </div>
           <div className="flex flex-col gap-3 w-[90%] mx-auto md:w-2/4 my-auto">
-           <Image width={400} height={400} className="mx-auto" src="/assets/images/contact-img.svg"></Image>
+           <Image width={500} height={400} className="mx-auto" src="/assets/images/contact-img.svg"></Image>
           </div>
         </div>
       </section>
@@ -38,8 +40,8 @@ const page = () => {
      
       <section className="w-full  bg-[#F5F5F5]  py-10">
         <div className="container mx-auto bg-white flex justify-center flex-col  items-center">
-          <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 my-10 gap-5 ">
-            <div className="px-10 my-auto">
+          <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 my-10 gap-5 ">
+            <div className="md:px-10 my-auto">
               <div className="my-auto bg-white p-5 sm:p-10 flex flex-col gap-4 mt-5 ">
                 <h2 className="text-[25px] font-bold text-[#385723]">Info</h2>
                 <h2 className="text-lg">
@@ -62,7 +64,7 @@ const page = () => {
                 </h2>
               </div>
             </div>
-            <div className="px-10">
+            <div className="md:px-10">
               <div
                 className="mx-auto w-[90%] h-96 md:w-3/4"
                 style={{

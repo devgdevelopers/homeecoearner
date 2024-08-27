@@ -1,12 +1,12 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Breadcrumb from "../component/BreadCrumb";
 
 import Image from "next/image";
 import Link from "next/link";
 import ArrowForwardOutlinedIcon from "@mui/icons-material/ArrowForwardOutlined";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
-
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TalkAdvisor from "../component/TalkAdvisor";
@@ -35,15 +35,29 @@ const page = () => {
   }, []);
   return (
     <>
-      <div className="product-page-bg min-h-[310px] flex justify-center">
+      <div className="hidden product-page-bg min-h-[396px] lg:flex justify-center">
         <h1 className="font-bold text-[35px] md:text-[60px] text-center text-white my-auto">
           All Products
         </h1>
 
       </div>
 
+
+      {/* mob banner  */}
+      <div className="lg:hidden product-page-bg-mob min-h-[310px] flex justify-center">
+        <h1 className="font-bold text-[35px] md:text-[60px] text-center text-white my-auto">
+          All Products
+        </h1>
+
+      </div>
+
+
+     {/* Breadcrumb */}
+     <Breadcrumb />
+
+
       <section className="container mx-auto my-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-10 md:p-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10 px-10 md:p-10">
           {productsLoading
             ? [1, 2, 3].map((_, index) => (
                 <div
@@ -59,25 +73,33 @@ const page = () => {
               ))
             : products.map((product) => (
            
-              
+             
               <div
                   key={product._id}
-                  className="  w-full  flex justify-start items-start flex-col "
+                  className="w-full flex flex-col "
                 >
-                  <div className="product-div py-10 w-full rounded-xl">
-                  <Image
+                   <a href={`/products/${product._id}`}>
+                  <div className="product-div p-10 w-full min-w-[250px] lg:min-w-[380px] h-[380px] flex justify-center items-center">
+               
+                 <Image
                     src={product.cardImg}
                     width={280}
                     height={280}
                     alt="productimg"
-                    className="w-[280px] h-[280px] mx-auto bg-center bg-cover "
+                    className=" mx-auto my-auto max-w-[280px]"
                   />
+               
                  
                   </div>
-                  <h2
-                 className="text-[18px] md:text-[22px] text-[#385723] font-bold mt-2"
+                  </a>
+                 <span
+                 className="font-bold text-[24px]  text-[#385723]  mt-2"
                  dangerouslySetInnerHTML={{ __html: product.cardHeading }}
                />
+               {/* <p>
+                {product.cardHeading}
+               </p> */}
+                
                   <h2
                  className="text-[18px]  text-black mt-2"
                  dangerouslySetInnerHTML={{ __html: product.cardSubHeading }}
@@ -97,7 +119,7 @@ const page = () => {
                </Link>
               
                 </div>
-                
+               
     
                
                 

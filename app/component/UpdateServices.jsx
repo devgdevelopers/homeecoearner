@@ -136,13 +136,13 @@ export default function UpdateServices() {
             ):
             <div className="flex flex-wrap m-4 w-full justify-center">
                 {services.map(service => (
-                    <div key={service._id} className="p-4 max-w-xs">
+                    <div key={service._id} className="p-4 min-w-xs">
                         <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-md">
                             <div className="p-6 flex flex-col gap-2">
-                                <img src={service.cardImg} alt="" className="object-cover h-48 w-full" />
-                                <h2 className="text-xl font-semibold truncate" dangerouslySetInnerHTML={{ __html: service.cardHeading }}></h2>
+                                {/* <img src={service.cardImg} alt="" className="object-cover h-48 w-full" /> */}
+                                <h2 className="text-xl font-semibold truncate w-auto my-5" dangerouslySetInnerHTML={{ __html: service.cardHeading }}></h2>
                                 <p className="text-gray-600">{service.cardSubHeading}</p>
-                                <div className='flex gap-3'>
+                                <div className=' gap-3 flex justify-center'>
                                     <button onClick={() => deleteService(service._id)} className="bg-red-500 text-white rounded p-2 border border-red-500 hover:border-white">Delete</button>
                                     <button onClick={() => startEditing(service)} className="bg-green-500 text-white p-2 rounded border border-green-500 hover:border-white">Update</button>
                                 </div>

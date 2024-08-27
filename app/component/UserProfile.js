@@ -3,6 +3,7 @@ import { useSearchParams } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import TalkAdvisor from "./TalkAdvisor";
+import Breadcrumb from '../component/BreadCrumb'
 
 const UserProfile = () => {
   const searchParams = useSearchParams();
@@ -30,7 +31,7 @@ const UserProfile = () => {
     };
 
     fetchProduct();
-  }, [product]);
+  }, []);
 
   if (isLoading) {
     return <p>Loading...</p>;
@@ -42,18 +43,19 @@ const UserProfile = () => {
 
   const renderCustomizedContent = (content) => {
     // Custom styles for h1 and h2 tags
-    content = content.replace(/<h1([^>]*)>/g, '<h1$1 style="font-size: 25px; font-weight: bold;">');
-    content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 20px; font-weight: 600;">');
-    content = content.replace(/<p([^>]*)>/g, '<h2$1 style="font-size: 18px; ">');
+    content = content.replace(/<h2([^>]*)>/g, '<h2$1 style="font-size: 25px; margin-bottom:10px; font-weight: 500;">');
+    content = content.replace(/<h3([^>]*)>/g, '<h3$1 style="font-size: 20px; font-weight: bold;">');
+    content = content.replace(/<p([^>]*)>/g, '<p$1 style="font-size: 18px; ">');
     return { __html: content };
 };
 
   return (
     <>
+    
       <section className="bg-green">
         <div className="container mx-auto" key={product._id}>
-          <div className="flex flex-col md:flex-row py-10 ">
-            <div className="flex justify-center items-center w-full md:w-[40%] ">
+          <div className="flex flex-col lg:flex-row px-5 py-10 gap-10">
+            <div className="flex justify-center items-center w-full lg:w-[40%] ">
               <div className="product-img-bg w-[360px] h-[330px] p-10 my-auto flex">
                 <Image
                   src={product.cardImg}
@@ -64,46 +66,48 @@ const UserProfile = () => {
                 />
               </div>
             </div>
-            <div className="w-[90%] md:w-[60%] flex justify-center gap-5 flex-col mx-auto text-center md:text-left">
-              <h3
-                className="text-4xl md:text-[60px] font-extrabold text-white"
+            <div className="w-[90%] lg:w-[60%] flex justify-center gap-2 flex-col mx-auto text-center md:text-left ">
+              <span
+                className="text-[36px] lg:text-[48px] font-extrabold text-white"
                 dangerouslySetInnerHTML={{ __html: product.cardHeading }}
               />
-              <h3
-                className="text-xl md:text-[25px] font-extrabold text-white"
+              <span
+                className="text-[20px] md:text-[24px] font-semibold text-white"
                 dangerouslySetInnerHTML={{ __html: product.cardSubHeading }}
               />
-              <h3
-                className="text-[20px] text-white"
+              <span
+                className="text-[18px] text-white"
                 dangerouslySetInnerHTML={{ __html: product.shortDesc }}
               />
             </div>
           </div>
         </div>
       </section>
+      <Breadcrumb />
 
-      <section className="container mx-auto py-20">
-        <h1 className="text-[30px] md:text-[50px] text-green text-center font-bold pb-10">
+      <section className="container mx-auto px-10 pb-10">
+        <h1 className="text-[30px] md:text-[42px] text-green text-center font-bold pb-10">
           Key Features
         </h1>
-        <div className="flex flex-col md:flex-row  ">
-        <div className="w-full md:w-[60%]">
+        <div className="flex flex-col lg:flex-row  ">
+        <div className="w-[90%] lg:w-[60%] mx-auto">
   <span
-    className="text-[18px] text-black"
+    className=" text-black "
     dangerouslySetInnerHTML={renderCustomizedContent(product.content)}
   />
 </div>
 
-          <div className="flex flex-col justify-between items-center p-10 w-[40%]">
+          <div className="flex flex-col justify-between items-center p-10 w-full lg:w-[40%]">
   {product.images && product.images.length > 0 ? (
     product.images.map((image, index) => (
       image ? ( // Check if image is truthy (not null or undefined)
-        <img
+        <Image
           key={`${product._id}-${index}`} // Ensure each key is unique
-          width="450px"
+          width={100}
+          height={100}
           src={image}
           alt={`Image ${index + 1}`}
-          className="mx-auto"
+          className="mx-auto  min-w-full md:min-w-fulll"
         />
       ) : null // If image is null or undefined, do not render
     ))

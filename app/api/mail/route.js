@@ -22,9 +22,9 @@ export async function POST(req) {
   // Email options
   let mailOptions = {
     from: process.env.EMAIL_USER,
-    to: 'as77468@gmail.com',
+    to: 'info@homeecoearner.com',
     subject: 'Message from Homeecoearner',
-    text: `this message is sent by \n Username: ${name}\n Mobile number: ${phone}\n Email: ${email}\n Message: ${message}` ,
+    text: `HOMEPAGE CONTACT FORM DETAILS: \n this message is sent by \n Username: ${name}\n Mobile number: ${phone}\n Email: ${email}\n Message: ${message}` ,
   };
 
   try {

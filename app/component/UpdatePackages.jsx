@@ -118,12 +118,13 @@ export default function UpdatePackages() {
                             <div key={pack._id} className="p-4">
                                 <div className=" border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden shadow-md">
                                     <div className="p-6 flex flex-col gap-4 w-80 relative">
-                                        <img src={pack.img} alt="" height={300} width={300} />
+                                       
                                         <h2 className="text-xl font-semibold truncate">{pack.title}</h2>
-                                        <div className='flex gap-3 absolute top-[270px]'>
+                                        <div className='flex gap-3 '>
                                             <button onClick={() => deletePack(pack._id)} className="bg-red-500 text-white rounded p-2 border border-red-500 hover:border-white">Delete</button>
                                             <button onClick={() => startEditing(pack)} className="bg-green-500 text-white p-2 rounded border border-green-500 hover:border-white">Update</button>
                                         </div>
+                                        {/* <img src={pack.img} alt="" height={300} width={300} /> */}
                                     </div>
                                 </div>
                             </div>

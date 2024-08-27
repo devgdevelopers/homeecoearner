@@ -5,6 +5,7 @@ const ContactFormHome = () => {
   const [data, setData] = useState({
     name: "",
     email: "",
+    phone: "", // Ensure phone is included
     message: "",
     errors: {},
   });
@@ -24,23 +25,24 @@ const ContactFormHome = () => {
 
   const onSubmitForm = async (e) => {
     e.preventDefault();
-    const { name, email, message,phone, errors } = data;
+    const { name, email, phone, message, errors } = data;
 
     const nameError = validateInput("name", name);
     const emailError = validateInput("email", email);
+    const phoneError = validateInput("phone", phone);
     const messageError = validateInput("message", message);
 
-    const hasErrors = nameError || emailError || messageError;
+    const hasErrors = nameError || emailError || phoneError || messageError;
 
     if (!hasErrors) {
       setLoading(true);
       try {
-        const response = await fetch("/api/mail", { // Adjusted endpoint URL
+        const response = await fetch("/api/mail", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name, email, message, phone }),
+          body: JSON.stringify({ name, email, phone, message }),
         });
 
         if (!response.ok) {
@@ -50,7 +52,7 @@ const ContactFormHome = () => {
         const result = await response.json();
         if (result.message) {
           setSuccess(true);
-          setData({ name: "", email: "", message: "",phone: "", errors: {} });
+          setData({ name: "", email: "", phone: "", message: "", errors: {} });
         } else {
           console.error("Failed to send email");
         }
@@ -77,6 +79,11 @@ const ContactFormHome = () => {
           error = "Invalid email format";
         }
         break;
+      case "phone":
+        if (!/^\+?44\s?\d{4}[\s-]?\d{6}$/.test(value)) {
+          error = "Invalid UK phone number format";
+        }
+        break;
       case "message":
         if (value.length < 10) {
           error = "Message must be at least 10 characters long";
@@ -91,7 +98,7 @@ const ContactFormHome = () => {
   return (
     <>
       <form onSubmit={onSubmitForm}>
-        <input type="hidden" name="formType"  />
+        <input type="hidden" name="formType" />
         
         {/* Full Name */}
         <div className="flex flex-col gap-1 mb-3">
@@ -107,9 +114,9 @@ const ContactFormHome = () => {
             placeholder="Enter your full name"
             className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
           />
-        {data.errors.name && (
-          <p className="error-message text-[red]">{data.errors.name}</p>
-        )}
+          {data.errors.name && (
+            <p className="error-message text-[red]">{data.errors.name}</p>
+          )}
         </div>
         
         {/* Email Address */}
@@ -123,12 +130,12 @@ const ContactFormHome = () => {
             name="email"
             value={data.email}
             onChange={onChangeHandler}
-            placeholder="Enter Your email address"
+            placeholder="Enter your email address"
             className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
           />
-        {data.errors.email && (
-          <p className="error-message text-[red]">{data.errors.email}</p>
-        )}
+          {data.errors.email && (
+            <p className="error-message text-[red]">{data.errors.email}</p>
+          )}
         </div>
         
         {/* Mobile Number */}
@@ -142,10 +149,14 @@ const ContactFormHome = () => {
             name="phone"
             value={data.phone}
             onChange={onChangeHandler}
-            placeholder="Enter Your mobile number"
+            placeholder="+44 7123 456 789"
+            pattern="^\+?44\s?\d{4}[\s-]?\d{6}$"
+            title="Please enter a valid UK phone number"
             className="bg-white p-2 text-[#525C60] outline-none rounded-md h-[45px] pl-[20px]"
           />
-
+          {data.errors.phone && (
+            <p className="error-message text-[red]">{data.errors.phone}</p>
+          )}
         </div>
         
         {/* Message */}
@@ -159,12 +170,12 @@ const ContactFormHome = () => {
             name="message"
             value={data.message}
             onChange={onChangeHandler}
-            placeholder="Enter Your Message"
+            placeholder="Enter your message"
             className="bg-white p-2 text-[#525C60] outline-none h-[90px] rounded-md pl-[20px]"
           />
-        {data.errors.message && (
-          <p className="error-message text-[red]">{data.errors.message}</p>
-        )}
+          {data.errors.message && (
+            <p className="error-message text-[red]">{data.errors.message}</p>
+          )}
         </div>
         
         {/* Submit Button */}
@@ -181,14 +192,6 @@ const ContactFormHome = () => {
           </button>
           {success && <div className="text-black font-bold">Email sent successfully!</div>}
         </div>
-        
-        {/* Error and Success Messages
-        {submitError && (
-          <p className="text-red-500">{submitError}</p>
-        )}
-        {submitSuccess && (
-          <p className="text-black font-bold">Form submitted successfully!</p>
-        )} */}
       </form>
     </>
   );
