@@ -70,7 +70,7 @@ const page = () => {
                     width={280}
                     height={280}
                     alt="productimg"
-                    className="w-[280px] h-[280px] mx-auto"
+                    className="w-[280px] h-[280px] mx-auto bg-center bg-cover "
                   />
                  
                   </div>
