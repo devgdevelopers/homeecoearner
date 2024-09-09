@@ -17,12 +17,14 @@ const page = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("/api/products");
+        const response = await fetch("/api/products", {
+          cache:'force-cache'
+        });
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
-        console.log("Fetched products:", data);
+        // console.log("Fetched products:", data);
         setProducts(data.data); // Assuming your API returns { data: productsArray }
       } catch (error) {
         console.error("Error fetching products:", error);

@@ -66,7 +66,9 @@ if (rect.top >= 0 && rect.bottom <= window.innerHeight) { section1.classList.add
   useEffect(() => {
   const fetchProducts = async () => {
   try {
-  const response = await fetch("/api/products");
+  const response = await fetch("/api/products", {
+    cache:'force-cache'
+  })
   if (!response.ok) {
   throw new Error("Network response was not ok");
   }
