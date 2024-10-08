@@ -171,7 +171,7 @@ const page = () => {
             <h2 className="text-center text-[#FFB800] text-5xl mb-2">
               {" "}
               <strong>
-                550W  <span className="text-2xl">HZ</span>
+                550W
               </strong>{" "}
             </h2>
             <h2 className="text-[#385723] text-[20px] lg:text-[25px] text-center font-bold leading-7 my-5">
