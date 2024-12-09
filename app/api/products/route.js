@@ -45,13 +45,11 @@ export async function GET(req) {
 
             // Fetch all products and count
             const posts = await db.collection('products').find({}).toArray();
-            const count = await db.collection('products').estimatedDocumentCount();
 
             // Store data in cache
             cachedData.products = posts;
-            cachedData.count = count;
 
-            return new Response(JSON.stringify({ status: 200, data: posts, count }), { status: 200 });
+            return new Response(JSON.stringify({ status: 200, data: posts }), { status: 200 });
         }
     } catch (error) {
         return new Response(JSON.stringify({ error: error.message }), { status: 500 });
